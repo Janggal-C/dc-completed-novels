@@ -3,11 +3,11 @@
  "backfill_done": true,
  "data_start": "2026-05",
  "dict_stats": {
-  "aliases": 196,
-  "authors": 16,
-  "needs_review": 64,
-  "new_today": 196,
-  "new_week": 196,
+  "aliases": 288,
+  "authors": 30,
+  "needs_review": 86,
+  "new_today": 288,
+  "new_week": 288,
   "recent": [
    {
     "alias": "13악녀",
@@ -34,6 +34,12 @@
     "via": "검색"
    },
    {
+    "alias": "6성가챠",
+    "date": "2026-11-24",
+    "title": "6★ 가챠 캐릭터가 되었다",
+    "via": "serper"
+   },
+   {
     "alias": "b헌살",
     "date": "2026-11-24",
     "title": "B급 헌터로 살아남기",
@@ -44,6 +50,12 @@
     "date": "2026-11-24",
     "title": "S.K.T.2",
     "via": "검색"
+   },
+   {
+    "alias": "s급",
+    "date": "2026-11-24",
+    "title": "내가 키운 S급들",
+    "via": "serper"
    },
    {
     "alias": "s급여친",
@@ -68,6 +80,12 @@
     "date": "2026-11-24",
     "title": "가문을 살릴 막내 수사가 되었다",
     "via": "검색"
+   },
+   {
+    "alias": "가차펑크",
+    "date": "2026-11-24",
+    "title": "가챠 중독자의 퓨전펑크 생활",
+    "via": "serper"
    },
    {
     "alias": "가챠펑크",
@@ -109,6 +127,18 @@
     "alias": "겜바바",
     "date": "2026-11-24",
     "title": "게임 속 바바리안으로 살아남기",
+    "via": "serper"
+   },
+   {
+    "alias": "격리구역완장",
+    "date": "2026-11-24",
+    "title": "격리 구역의 완장이 되었다",
+    "via": "serper"
+   },
+   {
+    "alias": "겸허견실",
+    "date": "2026-11-24",
+    "title": "겸허, 견실을 모토로 살고 있습니다!",
     "via": "serper"
    },
    {
@@ -158,41 +188,11 @@
     "date": "2026-11-24",
     "title": "공포 쯔꾸르 생존기",
     "via": "검색"
-   },
-   {
-    "alias": "괴담경비원",
-    "date": "2026-11-24",
-    "title": "괴담 학교의 경비원이 되었다",
-    "via": "serper"
-   },
-   {
-    "alias": "괴담동",
-    "date": "2026-11-24",
-    "title": "괴담 동아리",
-    "via": "검색"
-   },
-   {
-    "alias": "괴담텔",
-    "date": "2026-11-24",
-    "title": "괴담 호텔 탈출기",
-    "via": "검색"
-   },
-   {
-    "alias": "괴라리",
-    "date": "2026-11-24",
-    "title": "괴담에 휘말렸다",
-    "via": "검색"
-   },
-   {
-    "alias": "군필돌",
-    "date": "2026-11-24",
-    "title": "아이돌이 군필을 숨김",
-    "via": "검색"
    }
   ],
-  "unresolved": 1028,
-  "unresolved_ranked": 80,
-  "works": 186
+  "unresolved": 937,
+  "unresolved_ranked": 22,
+  "works": 265
  },
  "dictionary": [
   {
@@ -220,6 +220,12 @@
    "title": "단종 구하러 4군6진"
   },
   {
+   "alias": "6성가챠",
+   "author": "성좌조아",
+   "needs_review": false,
+   "title": "6★ 가챠 캐릭터가 되었다"
+  },
+  {
    "alias": "b헌살",
    "author": "",
    "needs_review": true,
@@ -230,6 +236,12 @@
    "author": "김철곤",
    "needs_review": true,
    "title": "S.K.T.2"
+  },
+  {
+   "alias": "s급",
+   "author": "근서",
+   "needs_review": true,
+   "title": "내가 키운 S급들"
   },
   {
    "alias": "s급여친",
@@ -254,6 +266,12 @@
    "author": "태양물고기",
    "needs_review": false,
    "title": "가문을 살릴 막내 수사가 되었다"
+  },
+  {
+   "alias": "가차펑크",
+   "author": "섦게지는꽃",
+   "needs_review": false,
+   "title": "가챠 중독자의 퓨전펑크 생활"
   },
   {
    "alias": "가챠펑크",
@@ -296,6 +314,18 @@
    "author": "정윤강",
    "needs_review": false,
    "title": "게임 속 바바리안으로 살아남기"
+  },
+  {
+   "alias": "격리구역완장",
+   "author": "시민 보호 기동대",
+   "needs_review": false,
+   "title": "격리 구역의 완장이 되었다"
+  },
+  {
+   "alias": "겸허견실",
+   "author": "병아리 케이크(ひよこのケーキ)",
+   "needs_review": false,
+   "title": "겸허, 견실을 모토로 살고 있습니다!"
   },
   {
    "alias": "경성헌터",
@@ -358,7 +388,25 @@
    "title": "괴담 동아리"
   },
   {
+   "alias": "괴담미소녀",
+   "author": "마법소녀G",
+   "needs_review": true,
+   "title": "괴담에 미소녀 모드를 잘못 깔았다"
+  },
+  {
+   "alias": "괴담미소녀모드",
+   "author": "마법소녀G",
+   "needs_review": true,
+   "title": "괴담에 미소녀 모드를 잘못 깔았다"
+  },
+  {
    "alias": "괴담텔",
+   "author": "쿠크루",
+   "needs_review": false,
+   "title": "괴담 호텔 탈출기"
+  },
+  {
+   "alias": "괴담호텔",
    "author": "쿠크루",
    "needs_review": false,
    "title": "괴담 호텔 탈출기"
@@ -370,9 +418,21 @@
    "title": "괴담에 휘말렸다"
   },
   {
+   "alias": "괴이왕국",
+   "author": "",
+   "needs_review": false,
+   "title": "괴이왕국의 패왕군주"
+  },
+  {
    "alias": "군필돌",
    "author": "자몽펀치",
-   "needs_review": false,
+   "needs_review": true,
+   "title": "아이돌이 군필을 숨김"
+  },
+  {
+   "alias": "군필아이돌",
+   "author": "자몽펀치",
+   "needs_review": true,
    "title": "아이돌이 군필을 숨김"
   },
   {
@@ -380,6 +440,18 @@
    "author": "",
    "needs_review": false,
    "title": "그렇게 내 손을 떠났다"
+  },
+  {
+   "alias": "그살",
+   "author": "AngelTear",
+   "needs_review": false,
+   "title": "그래도 살아간다."
+  },
+  {
+   "alias": "글먹빙",
+   "author": "목마",
+   "needs_review": false,
+   "title": "글러먹은 빙의"
   },
   {
    "alias": "기계공주",
@@ -400,6 +472,12 @@
    "title": "괴담에 휘말렸다"
   },
   {
+   "alias": "꼬겜잘",
+   "author": "",
+   "needs_review": false,
+   "title": "꼬마가 게임을 잘함"
+  },
+  {
    "alias": "나만",
    "author": "",
    "needs_review": true,
@@ -418,10 +496,34 @@
    "title": "내 고향엔 무림인이 산다"
   },
   {
+   "alias": "내스급",
+   "author": "근서",
+   "needs_review": true,
+   "title": "내가 키운 S급들"
+  },
+  {
    "alias": "내청코",
    "author": "와타리 와타루 (검색으로 미확인, 사전 지식)",
    "needs_review": true,
    "title": "내 청춘 러브코메디는 잘못됐다"
+  },
+  {
+   "alias": "냥모잘",
+   "author": "",
+   "needs_review": false,
+   "title": "냥이가 모험을 잘함"
+  },
+  {
+   "alias": "네크천재",
+   "author": "일제사격",
+   "needs_review": true,
+   "title": "네크로맨서 학교의 소환천재"
+  },
+  {
+   "alias": "노나메",
+   "author": "시엘클레",
+   "needs_review": true,
+   "title": "마나 살 돈 없어서 인방함"
   },
   {
    "alias": "누나로판",
@@ -446,6 +548,12 @@
    "author": "쿠크루",
    "needs_review": false,
    "title": "괴담 호텔 탈출기"
+  },
+  {
+   "alias": "당문전외전",
+   "author": "제이허빈",
+   "needs_review": true,
+   "title": "당문전"
   },
   {
    "alias": "당선후회",
@@ -508,10 +616,40 @@
    "title": "던전 디펜스"
   },
   {
+   "alias": "던만추",
+   "author": "오모리 후지노",
+   "needs_review": false,
+   "title": "던전에서 만남을 추구하면 안 되는 걸까"
+  },
+  {
+   "alias": "독일배팅",
+   "author": "yunwun",
+   "needs_review": false,
+   "title": "내 독일 제국은 세계대전에 풀배팅하지 않는다!"
+  },
+  {
+   "alias": "돌아와서",
+   "author": "2RE",
+   "needs_review": true,
+   "title": "돌아와서 말하기"
+  },
+  {
    "alias": "랫따싶",
    "author": "데스와처녀",
    "needs_review": true,
    "title": "[림월드]변방계에서 회귀자로 살아남기"
+  },
+  {
+   "alias": "랭집대",
+   "author": "",
+   "needs_review": true,
+   "title": "랭커들이 집착하는 대장장이가 되었다"
+  },
+  {
+   "alias": "러스트",
+   "author": "글라딘",
+   "needs_review": false,
+   "title": "러스트 [ RUST ]"
   },
   {
    "alias": "럽코빙",
@@ -520,9 +658,21 @@
    "title": "이거 럽코 빙의물인가요"
   },
   {
+   "alias": "럽코서브",
+   "author": "플로오옷",
+   "needs_review": false,
+   "title": "럽코 속 서브 남주가 되었다"
+  },
+  {
+   "alias": "럽코엑스트라",
+   "author": "몰입력",
+   "needs_review": false,
+   "title": "러브코미디 엑스트라는 우결을 한다"
+  },
+  {
    "alias": "럽코오타쿠",
    "author": "",
-   "needs_review": false,
+   "needs_review": true,
    "title": "러브코미디 속 오타쿠군이 되었다"
   },
   {
@@ -532,13 +682,43 @@
    "title": "러브 코미디 속 엑스트라는 너무 잘생겨졌다"
   },
   {
+   "alias": "럽타쿠",
+   "author": "",
+   "needs_review": true,
+   "title": "러브코미디 속 오타쿠군이 되었다"
+  },
+  {
+   "alias": "로무원",
+   "author": "보르지긴",
+   "needs_review": false,
+   "title": "로판 속 공무원"
+  },
+  {
+   "alias": "로판공무원",
+   "author": "보르지긴",
+   "needs_review": false,
+   "title": "로판 속 공무원"
+  },
+  {
    "alias": "로판벌레",
    "author": "mayve",
    "needs_review": true,
    "title": "로판 속 벌레술사가 되었다"
   },
   {
+   "alias": "로판황태자",
+   "author": "민트초코주먹밥",
+   "needs_review": true,
+   "title": "로판 속 호구 황태자는 이제 없다"
+  },
+  {
    "alias": "롤로로빙",
+   "author": "커리우유",
+   "needs_review": true,
+   "title": "프롤로그에서 죽는 히로인에 빙의했다"
+  },
+  {
+   "alias": "롤로빙",
    "author": "커리우유",
    "needs_review": true,
    "title": "프롤로그에서 죽는 히로인에 빙의했다"
@@ -560,6 +740,12 @@
    "author": "시엘클레",
    "needs_review": true,
    "title": "마나 살 돈 없어서 인방함"
+  },
+  {
+   "alias": "마녀시티",
+   "author": "섦게지는꽃",
+   "needs_review": false,
+   "title": "마녀의 도시"
   },
   {
    "alias": "마대살",
@@ -604,10 +790,34 @@
    "title": "최약체 마왕의 스승이 되었다"
   },
   {
+   "alias": "마왕당근",
+   "author": "제리사촌",
+   "needs_review": false,
+   "title": "마왕에게 잡혀 계시다면 당근을 흔들어주세요"
+  },
+  {
+   "alias": "마좋좋좋",
+   "author": "이상혁",
+   "needs_review": false,
+   "title": "마법 좋아좋아좋아"
+  },
+  {
+   "alias": "마줍",
+   "author": "방구석와룡",
+   "needs_review": false,
+   "title": "마도서를 줍다 마법사가 되다"
+  },
+  {
    "alias": "마탑갤주",
    "author": "월하야상곡",
    "needs_review": false,
    "title": "이세계 마탑의 갤주가 되었다"
+  },
+  {
+   "alias": "마학간",
+   "author": "글쟁이S",
+   "needs_review": false,
+   "title": "마왕은 학원에 간다"
   },
   {
    "alias": "말랑길",
@@ -652,6 +862,12 @@
    "title": "무공 뭐 별거 없더라"
   },
   {
+   "alias": "무당엘프",
+   "author": "처량한날",
+   "needs_review": true,
+   "title": "무당파 둔재의 엘프환생"
+  },
+  {
    "alias": "무랑캐",
    "author": "정중선",
    "needs_review": false,
@@ -662,6 +878,18 @@
    "author": "",
    "needs_review": false,
    "title": "무림in 소드마스터"
+  },
+  {
+   "alias": "무림인소마",
+   "author": "",
+   "needs_review": false,
+   "title": "무림in 소드마스터"
+  },
+  {
+   "alias": "무직전생",
+   "author": "리후진 나 마고노테",
+   "needs_review": false,
+   "title": "무직전생 ~이세계에 갔으면 최선을 다한다~"
   },
   {
    "alias": "무친년",
@@ -682,10 +910,22 @@
    "title": "약먹는 천재마법사"
   },
   {
+   "alias": "뮒뫚",
+   "author": "이만두",
+   "needs_review": false,
+   "title": "무림마조"
+  },
+  {
    "alias": "미래편지",
    "author": "알콜중독",
    "needs_review": true,
    "title": "미래에서 온 연애편지"
+  },
+  {
+   "alias": "미소녀모드",
+   "author": "마법소녀G",
+   "needs_review": true,
+   "title": "괴담에 미소녀 모드를 잘못 깔았다"
   },
   {
    "alias": "미시회귀",
@@ -742,6 +982,24 @@
    "title": "별을 품은 소드마스터"
   },
   {
+   "alias": "부인밀밭",
+   "author": "papapa",
+   "needs_review": false,
+   "title": "부인은 밀밭에서 기다렸다"
+  },
+  {
+   "alias": "블러디드",
+   "author": "전민희",
+   "needs_review": false,
+   "title": "룬의 아이들 - 블러디드"
+  },
+  {
+   "alias": "빚세구",
+   "author": "1_394",
+   "needs_review": false,
+   "title": "빚을 져서라도 세상은 구해야 할 거 아니야"
+  },
+  {
    "alias": "사펑드",
    "author": "짱빠른토끼",
    "needs_review": false,
@@ -772,6 +1030,18 @@
    "title": "아카데미 생존 갤러리"
   },
   {
+   "alias": "서로건살인남매",
+   "author": "SirLogan",
+   "needs_review": false,
+   "title": "아포칼립스의 살인 남매"
+  },
+  {
+   "alias": "서폿다따먹",
+   "author": "",
+   "needs_review": false,
+   "title": "서포터가 다 해먹음"
+  },
+  {
    "alias": "선태창",
    "author": "재미혼",
    "needs_review": false,
@@ -784,9 +1054,21 @@
    "title": "선협식 수련에 드래곤 하트를 더하면"
   },
   {
+   "alias": "성녀소꿉",
+   "author": "",
+   "needs_review": true,
+   "title": "악신의 성녀와 소꿉친구가 되었다"
+  },
+  {
+   "alias": "세계수",
+   "author": "야명",
+   "needs_review": true,
+   "title": "세계수를 따먹다"
+  },
+  {
    "alias": "세따먹",
    "author": "야명",
-   "needs_review": false,
+   "needs_review": true,
    "title": "세계수를 따먹다"
   },
   {
@@ -802,16 +1084,46 @@
    "title": "소드 아트 온라인"
   },
   {
+   "alias": "소엑웹툰",
+   "author": "지갑송",
+   "needs_review": false,
+   "title": "소설 속 엑스트라"
+  },
+  {
+   "alias": "솔직히1년뒤",
+   "author": "",
+   "needs_review": true,
+   "title": "1년 뒤 죽는 다이묘로 살아남기"
+  },
+  {
    "alias": "수선전",
    "author": "미확인",
    "needs_review": true,
    "title": "회귀수선전"
   },
   {
+   "alias": "수호룡",
+   "author": "",
+   "needs_review": true,
+   "title": "늬들이 날 수호룡이라 부르든 말든 난 잘거야"
+  },
+  {
+   "alias": "스급",
+   "author": "근서",
+   "needs_review": true,
+   "title": "내가 키운 S급들"
+  },
+  {
    "alias": "스급여친",
    "author": "왕뚜껑국물라볶이",
    "needs_review": true,
    "title": "S급 히어로 여자친구를 빌려드립니다"
+  },
+  {
+   "alias": "스급친",
+   "author": "근서",
+   "needs_review": true,
+   "title": "내가 키운 S급들"
   },
   {
    "alias": "스자헌",
@@ -838,6 +1150,12 @@
    "title": "시한부 누나와 결혼합니다"
   },
   {
+   "alias": "심해법사",
+   "author": "상한김밥",
+   "needs_review": false,
+   "title": "심해의 마법사"
+  },
+  {
    "alias": "심해스트",
    "author": "부들리",
    "needs_review": false,
@@ -856,10 +1174,28 @@
    "title": "심해 엠생 스트리머"
   },
   {
+   "alias": "심해인방",
+   "author": "",
+   "needs_review": true,
+   "title": "심해어 사냥 전문방송"
+  },
+  {
    "alias": "쌍둥이연예계",
    "author": "",
    "needs_review": false,
    "title": "쌍둥이가 연예계를 집어삼킴."
+  },
+  {
+   "alias": "썩은물망자",
+   "author": "",
+   "needs_review": false,
+   "title": "썩은물 망자가 버튜버로 데뷔함"
+  },
+  {
+   "alias": "아르벨",
+   "author": "",
+   "needs_review": true,
+   "title": "전쟁이 끝난 뒤에야 대장장이가 되었다"
   },
   {
    "alias": "아생",
@@ -886,10 +1222,28 @@
    "title": "아카데미 플레이어를 죽였다"
   },
   {
+   "alias": "아카데미피해자",
+   "author": "양파랑",
+   "needs_review": false,
+   "title": "아카데미의 피해자"
+  },
+  {
+   "alias": "아카메디",
+   "author": "",
+   "needs_review": true,
+   "title": "아카메디 아카데미"
+  },
+  {
    "alias": "아카살",
    "author": "코리타",
    "needs_review": false,
    "title": "아카데미에서 살아남기"
+  },
+  {
+   "alias": "아카살외전",
+   "author": "코리타",
+   "needs_review": false,
+   "title": "아카데미에서 살아남기 외전"
   },
   {
    "alias": "아카편",
@@ -958,10 +1312,28 @@
    "title": "어떤 마술의 금서목록"
   },
   {
+   "alias": "얼불노",
+   "author": "조지 R.R. 마틴",
+   "needs_review": false,
+   "title": "얼음과 불의 노래"
+  },
+  {
    "alias": "엑칼뽑",
    "author": "NariaTa",
    "needs_review": false,
    "title": "엑스칼리버 뽑습니다"
+  },
+  {
+   "alias": "엘드미아",
+   "author": "Muinarbiv",
+   "needs_review": false,
+   "title": "절대 엘드미아 에가를 건드리지 마라"
+  },
+  {
+   "alias": "엘페리온",
+   "author": "Cadilet",
+   "needs_review": false,
+   "title": "불굴의 엘페리온"
   },
   {
    "alias": "여사친최면",
@@ -982,6 +1354,12 @@
    "title": "여자가 되었으니, 버튜버 합니다."
   },
   {
+   "alias": "여혐수기",
+   "author": "",
+   "needs_review": false,
+   "title": "여혐 소설가의 TS 수기"
+  },
+  {
    "alias": "연인기사",
    "author": "",
    "needs_review": false,
@@ -992,6 +1370,12 @@
    "author": "막쓰는 계정",
    "needs_review": true,
    "title": "예수천국 불신지옥"
+  },
+  {
+   "alias": "예언아이",
+   "author": "Cadilet",
+   "needs_review": true,
+   "title": "예언의 아이가 살아남는 법"
   },
   {
    "alias": "예언의아이",
@@ -1018,10 +1402,22 @@
    "title": "오지는 치질입니다"
   },
   {
+   "alias": "용사옆집",
+   "author": "세트앙크",
+   "needs_review": false,
+   "title": "용사의 옆집에 산다는 것"
+  },
+  {
    "alias": "용파",
    "author": "NariaTa",
    "needs_review": false,
    "title": "용사 파티 때려치웁니다"
+  },
+  {
+   "alias": "용파만",
+   "author": "",
+   "needs_review": true,
+   "title": "용사파티만화"
   },
   {
    "alias": "우주천마",
@@ -1034,6 +1430,18 @@
    "author": "",
    "needs_review": true,
    "title": "납치혼 당했다 유목엘프들의 칸에게"
+  },
+  {
+   "alias": "육수방송",
+   "author": "philceta",
+   "needs_review": false,
+   "title": "TS육수방송이에요"
+  },
+  {
+   "alias": "이멸갤",
+   "author": "안녕검",
+   "needs_review": false,
+   "title": "이세계 멸망 갤러리"
   },
   {
    "alias": "이밀헌",
@@ -1060,6 +1468,12 @@
    "title": "이세계 TRPG 게임마스터"
   },
   {
+   "alias": "일제시대바둑천재",
+   "author": "테르치",
+   "needs_review": false,
+   "title": "거물들이 집착하는 일제시대 바둑천재"
+  },
+  {
    "alias": "임기",
    "author": "피아조아",
    "needs_review": true,
@@ -1072,10 +1486,22 @@
    "title": "임기 첫날에 게이트가 열렸다"
   },
   {
+   "alias": "임신황녀",
+   "author": "열이틀",
+   "needs_review": false,
+   "title": "동로마 황녀가 내 아이를 임신하셨다"
+  },
+  {
    "alias": "자본스트",
    "author": "장수(壯洙)",
    "needs_review": true,
    "title": "자본주의 스트라이커"
+  },
+  {
+   "alias": "자장가",
+   "author": "Colorpants",
+   "needs_review": true,
+   "title": "방랑 마법사의 자장가"
   },
   {
    "alias": "자학방송",
@@ -1086,7 +1512,7 @@
   {
    "alias": "저능버",
    "author": "",
-   "needs_review": false,
+   "needs_review": true,
    "title": "저능아 하꼬 버튜버가 나데나데 받는다"
   },
   {
@@ -1098,7 +1524,13 @@
   {
    "alias": "전검",
    "author": "구로수번",
-   "needs_review": false,
+   "needs_review": true,
+   "title": "전생검신"
+  },
+  {
+   "alias": "전검화귀",
+   "author": "구로수번",
+   "needs_review": true,
    "title": "전생검신"
   },
   {
@@ -1138,6 +1570,12 @@
    "title": "정치인이 정치를 너무 잘함"
   },
   {
+   "alias": "종말갤",
+   "author": "조무송",
+   "needs_review": false,
+   "title": "종말 후 외톨이 갤러리"
+  },
+  {
    "alias": "종말뱀",
    "author": "비도",
    "needs_review": false,
@@ -1162,10 +1600,28 @@
    "title": "죽었다 깨어도 수선"
   },
   {
+   "alias": "중세검희",
+   "author": "루루챠",
+   "needs_review": false,
+   "title": "중세시대 검희가 되었다"
+  },
+  {
    "alias": "즉사무림",
    "author": "오늘도요",
    "needs_review": false,
    "title": "즉사기 들고 무림에 떨어지다"
+  },
+  {
+   "alias": "지잡아카",
+   "author": "",
+   "needs_review": false,
+   "title": "지잡 아카데미와 폐급 히로인들"
+  },
+  {
+   "alias": "짱햄",
+   "author": "",
+   "needs_review": true,
+   "title": "저능아 하꼬 버튜버가 나데나데 받는다"
   },
   {
    "alias": "창작물",
@@ -1190,6 +1646,12 @@
    "author": "학수월만지",
    "needs_review": false,
    "title": "초성마문:선협 속 마교에서 인간재료로 살아남기"
+  },
+  {
+   "alias": "초차원미식가",
+   "author": "검은학자",
+   "needs_review": false,
+   "title": "초차원 미식가의 일상"
   },
   {
    "alias": "총대장",
@@ -1228,10 +1690,28 @@
    "title": "아카데미 흑막의 딸이 되었다"
   },
   {
+   "alias": "컨셉방송",
+   "author": "philceta",
+   "needs_review": false,
+   "title": "[TS] 컨셉방송 스트리머"
+  },
+  {
+   "alias": "코노스바",
+   "author": "",
+   "needs_review": false,
+   "title": "이 멋진 세계에 축복을!"
+  },
+  {
    "alias": "코락스도끼재벌",
    "author": "코락스",
    "needs_review": false,
    "title": "Ex급 도끼로 조선 재벌"
+  },
+  {
+   "alias": "코메",
+   "author": "",
+   "needs_review": false,
+   "title": "코믹 메이플스토리 오프라인 RPG"
   },
   {
    "alias": "탑매",
@@ -1246,10 +1726,22 @@
    "title": "태엽과 모래의 마녀"
   },
   {
+   "alias": "태엽마녀",
+   "author": "겨울잠쥐",
+   "needs_review": false,
+   "title": "태엽과 모래의 마녀"
+  },
+  {
    "alias": "태탑",
    "author": "전민희",
    "needs_review": false,
    "title": "태양의 탑"
+  },
+  {
+   "alias": "톱스타소유",
+   "author": "아기소금",
+   "needs_review": false,
+   "title": "톱스타들이 나를 소유하려 한다"
   },
   {
    "alias": "판초",
@@ -1270,6 +1762,18 @@
    "title": "판초우의의 마법사"
   },
   {
+   "alias": "페그오",
+   "author": "",
+   "needs_review": false,
+   "title": "페이트/그랜드 오더"
+  },
+  {
+   "alias": "폭잘꼬",
+   "author": "",
+   "needs_review": false,
+   "title": "폭군을 너무 잘 꼬셔버렸다"
+  },
+  {
    "alias": "폰무림",
    "author": "대롱닥",
    "needs_review": false,
@@ -1282,10 +1786,52 @@
    "title": "퓨전펑크의 전생자"
   },
   {
+   "alias": "프롤30",
+   "author": "맠엘라하",
+   "needs_review": false,
+   "title": "프롤로그에서 30년이 흘렀다"
+  },
+  {
+   "alias": "프롤30년",
+   "author": "맠엘라하",
+   "needs_review": false,
+   "title": "프롤로그에서 30년이 흘렀다"
+  },
+  {
    "alias": "플레시골렘",
    "author": "raLullaby",
    "needs_review": false,
    "title": "미궁도시의 플레시골렘"
+  },
+  {
+   "alias": "하남자탑공략",
+   "author": "꾸찌꾸찌",
+   "needs_review": false,
+   "title": "하남자의 탑 공략법"
+  },
+  {
+   "alias": "한요일",
+   "author": "",
+   "needs_review": false,
+   "title": "오늘의 한요일은 여자다"
+  },
+  {
+   "alias": "할케씰브",
+   "author": "퉁구스카",
+   "needs_review": false,
+   "title": "할케기니아 씰브레이커"
+  },
+  {
+   "alias": "합스힙스로판공녀",
+   "author": "합스힙스",
+   "needs_review": false,
+   "title": "로판 속 반역가문의 공녀님"
+  },
+  {
+   "alias": "해골병사",
+   "author": "소소리",
+   "needs_review": true,
+   "title": "해골병사는 던전을 지키지 못했다"
   },
   {
    "alias": "해방노예",
@@ -1334,6 +1880,12 @@
    "author": "처량한날",
    "needs_review": true,
    "title": "무당파 둔재의 엘프환생"
+  },
+  {
+   "alias": "회귀13",
+   "author": "사자혼",
+   "needs_review": false,
+   "title": "회귀도 13번이면 지랄 맞다"
   },
   {
    "alias": "회세구",
@@ -1396,6 +1948,14 @@
    "status": "연재중",
    "title": "괴담에 휘말렸다",
    "writers": 54
+  },
+  {
+   "c": 47,
+   "q": 10,
+   "reason": "연재처 표시: 연재중",
+   "status": "연재중",
+   "title": "프롤로그에서 죽는 히로인에 빙의했다",
+   "writers": 41
   },
   {
    "c": 28,
@@ -1511,7 +2071,7 @@
   },
   {
    "c": 4,
-   "q": 40,
+   "q": 42,
    "reason": "연재처 표시: 연재중",
    "status": "연재중",
    "title": "가챠 중독자의 퓨전펑크 생활",
@@ -1543,7 +2103,7 @@
   },
   {
    "c": 4,
-   "q": 26,
+   "q": 28,
    "reason": "연재처 표시: 연재중",
    "status": "연재중",
    "title": "괴담 호텔 탈출기",
@@ -1602,7 +2162,7 @@
    "q": 0,
    "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
    "status": "보류",
-   "title": "6성가챠 (미확인)",
+   "title": "[TS] 컨셉방송 스트리머",
    "writers": 2
   },
   {
@@ -1618,31 +2178,7 @@
    "q": 0,
    "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
    "status": "보류",
-   "title": "격리구역완장 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 2,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 50%)",
-   "status": "보류",
-   "title": "괴담미소녀 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "괴담미소녀모드 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "냥모잘 (미확인)",
+   "title": "냥이가 모험을 잘함",
    "writers": 2
   },
   {
@@ -1666,23 +2202,7 @@
    "q": 0,
    "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
    "status": "보류",
-   "title": "당문전외전 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 2,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 50%)",
-   "status": "보류",
-   "title": "대롱닥 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "독일배팅 (미확인)",
+   "title": "늬들이 날 수호룡이라 부르든 말든 난 잘거야",
    "writers": 2
   },
   {
@@ -1698,22 +2218,6 @@
    "q": 0,
    "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
    "status": "보류",
-   "title": "러스트 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "럽타쿠 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
    "title": "로나좋은 (미확인)",
    "writers": 2
   },
@@ -1722,55 +2226,7 @@
    "q": 0,
    "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
    "status": "보류",
-   "title": "로판황태자 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "롤로빙 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 1,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 67%)",
-   "status": "보류",
-   "title": "리리쟝 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "리리쟝신작 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "리턴투플레이어 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "릿테 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "마도유화 (미확인)",
+   "title": "마도유화",
    "writers": 2
   },
   {
@@ -1786,23 +2242,7 @@
    "q": 0,
    "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
    "status": "보류",
-   "title": "마왕당근 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "마좋좋좋 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "마학간 (미확인)",
+   "title": "마왕에게 잡혀 계시다면 당근을 흔들어주세요",
    "writers": 2
   },
   {
@@ -1832,9 +2272,9 @@
   {
    "c": 2,
    "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "미소녀모드 (미확인)",
+   "reason": "연재처 표시: 연재중",
+   "status": "연재중",
+   "title": "방랑 마법사의 자장가",
    "writers": 2
   },
   {
@@ -1850,7 +2290,7 @@
    "q": 0,
    "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
    "status": "보류",
-   "title": "부인밀밭 (미확인)",
+   "title": "블리치",
    "writers": 2
   },
   {
@@ -1858,7 +2298,7 @@
    "q": 0,
    "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
    "status": "보류",
-   "title": "블러디드 (미확인)",
+   "title": "심해어 사냥 전문방송",
    "writers": 2
   },
   {
@@ -1866,103 +2306,7 @@
    "q": 0,
    "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
    "status": "보류",
-   "title": "블리치 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "서로건살인남매 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 2,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 50%)",
-   "status": "보류",
-   "title": "섦꽃 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "세계수 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 1,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 67%)",
-   "status": "보류",
-   "title": "세계수를 따먹다",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "수호룡 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "스급 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 1,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 67%)",
-   "status": "보류",
-   "title": "스급친 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "신노아신 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "심해인방 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "썩은물망자 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "아카데미피해자 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "아카메디 (미확인)",
+   "title": "썩은물 망자가 버튜버로 데뷔함",
    "writers": 2
   },
   {
@@ -1978,39 +2322,7 @@
    "q": 0,
    "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
    "status": "보류",
-   "title": "여혐수기 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "예언아이 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
    "title": "옛날 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "용파만 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "유주 (미확인)",
    "writers": 2
   },
   {
@@ -2023,34 +2335,10 @@
   },
   {
    "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "이계진입리로디드 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "일제시대바둑천재 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
    "q": 3,
    "reason": "근거 부족 (작성자 2명, 완결 글 비율 40%)",
    "status": "보류",
    "title": "일편독심",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "자장가 (미확인)",
    "writers": 2
   },
   {
@@ -2071,8 +2359,8 @@
   },
   {
    "c": 2,
-   "q": 16,
-   "reason": "완결 글 비율 11% ('언제 완결' 글 16개)",
+   "q": 18,
+   "reason": "완결 글 비율 10% ('언제 완결' 글 18개)",
    "status": "연재중",
    "title": "저능아 하꼬 버튜버가 나데나데 받는다",
    "writers": 2
@@ -2103,10 +2391,10 @@
   },
   {
    "c": 2,
-   "q": 3,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 40%)",
-   "status": "보류",
-   "title": "지갑송 (미확인)",
+   "q": 0,
+   "reason": "연재처 표시: 연재중",
+   "status": "연재중",
+   "title": "체인소 맨",
    "writers": 2
   },
   {
@@ -2114,111 +2402,7 @@
    "q": 0,
    "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
    "status": "보류",
-   "title": "체인소맨 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "초차원미식가 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "컨셉방송 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "코노스바 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "코메 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "쿠라에빵 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "파파파신 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "판다빌런 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "픽미업 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "하남자탑공략 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 3,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 40%)",
-   "status": "보류",
-   "title": "합스힙스 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 1,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 67%)",
-   "status": "보류",
-   "title": "합스힙스로판공녀 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 2,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 50%)",
-   "status": "보류",
-   "title": "현질수선전 (미확인)",
-   "writers": 2
-  },
-  {
-   "c": 2,
-   "q": 0,
-   "reason": "근거 부족 (작성자 2명, 완결 글 비율 100%)",
-   "status": "보류",
-   "title": "회귀13 (미확인)",
+   "title": "코믹 메이플스토리 오프라인 RPG",
    "writers": 2
   },
   {
@@ -2509,7 +2693,7 @@
    "total_posts": 5608
   }
  ],
- "in_progress": true,
+ "in_progress": false,
  "metrics": {
   "agreement": 91.5,
   "ai_accuracy": 69.6,
@@ -2517,7 +2701,7 @@
   "compared": 2669,
   "gold": 227,
   "mode": "verify",
-  "no_work": 213,
+  "no_work": 242,
   "pending": 0,
   "review_open": 0,
   "rule_accuracy": 30.4,
@@ -2816,36 +3000,6 @@
     "writers": 1
    },
    {
-    "author": "제이허빈",
-    "before_start": true,
-    "completion_date": "2026-05-27",
-    "completion_month": "2026-05",
-    "id": "당문전",
-    "mentions": 1,
-    "needs_review": false,
-    "new": true,
-    "samples": [
-     {
-      "no": 12308534,
-      "title": "당문전 완결까지 봤는데 내용 기억이 안남"
-     }
-    ],
-    "series": [
-     1,
-     1,
-     1,
-     0,
-     3,
-     0,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
-    "title": "당문전",
-    "unresolved": false,
-    "writers": 1
-   },
-   {
     "author": "",
     "before_start": true,
     "completion_date": "2026-05-28",
@@ -2930,7 +3084,7 @@
      1
     ],
     "status": "예전 완결",
-    "status_reason": "완결 글 비율 94%, 몰린 시점 없음",
+    "status_reason": "완결 글 비율 84%, 몰린 시점 없음",
     "title": "무림마조",
     "unresolved": false,
     "writers": 1
@@ -3226,7 +3380,7 @@
      1
     ],
     "status": "예전 완결",
-    "status_reason": "완결 글 비율 94%, 몰린 시점 없음",
+    "status_reason": "완결 글 비율 84%, 몰린 시점 없음",
     "title": "무림마조",
     "unresolved": false,
     "writers": 8
@@ -3308,6 +3462,44 @@
     "writers": 6
    },
    {
+    "author": "양파랑",
+    "before_start": false,
+    "completion_date": "2026-06-11",
+    "completion_month": "2026-06",
+    "id": "아카데미의피해자",
+    "mentions": 7,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12478228,
+      "title": "아카피해자 완결낫는데 재밋엇음????"
+     },
+     {
+      "no": 12414115,
+      "title": "오 몰랐는데 아카피해자 거의 완결났구나"
+     },
+     {
+      "no": 12473274,
+      "title": "아카피해자 완결났네"
+     }
+    ],
+    "series": [
+     0,
+     6,
+     1,
+     0,
+     0,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 89%, 몰린 시점 없음",
+    "title": "아카데미의 피해자",
+    "unresolved": false,
+    "writers": 6
+   },
+   {
     "author": "피아조아",
     "before_start": false,
     "completion_date": "2026-06-24",
@@ -3344,44 +3536,6 @@
     "title": "임기 첫날에 게이트가 열렸다",
     "unresolved": false,
     "writers": 6
-   },
-   {
-    "author": "양파랑",
-    "before_start": false,
-    "completion_date": "2026-06-11",
-    "completion_month": "2026-06",
-    "id": "아카데미의피해자",
-    "mentions": 6,
-    "needs_review": false,
-    "new": true,
-    "samples": [
-     {
-      "no": 12478228,
-      "title": "아카피해자 완결낫는데 재밋엇음????"
-     },
-     {
-      "no": 12414115,
-      "title": "오 몰랐는데 아카피해자 거의 완결났구나"
-     },
-     {
-      "no": 12473274,
-      "title": "아카피해자 완결났네"
-     }
-    ],
-    "series": [
-     0,
-     5,
-     0,
-     0,
-     0,
-     0,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
-    "title": "아카데미의 피해자",
-    "unresolved": false,
-    "writers": 5
    },
    {
     "author": "어두운글",
@@ -3870,6 +4024,40 @@
     "writers": 2
    },
    {
+    "author": "papapa",
+    "before_start": false,
+    "completion_date": "2026-06-10",
+    "completion_month": "2026-06",
+    "id": "부인은밀밭에서기다렸다",
+    "mentions": 2,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12384700,
+      "title": "근데 부인밀밭은 급완결은 ㄹㅇ 아니긴함..."
+     },
+     {
+      "no": 12419987,
+      "title": "생각해보니 부인밀밭 완결까지 연재하고"
+     }
+    ],
+    "series": [
+     0,
+     2,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "부인은 밀밭에서 기다렸다",
+    "unresolved": false,
+    "writers": 2
+   },
+   {
     "author": "",
     "before_start": false,
     "completion_date": "2026-06-25",
@@ -4164,36 +4352,6 @@
     "writers": 1
    },
    {
-    "author": "제이허빈",
-    "before_start": true,
-    "completion_date": "2026-05-27",
-    "completion_month": "2026-05",
-    "id": "당문전",
-    "mentions": 1,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 12479142,
-      "title": "뭐야 당문전 웹툰 시즌1 완결 났네"
-     }
-    ],
-    "series": [
-     1,
-     1,
-     1,
-     0,
-     3,
-     0,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
-    "title": "당문전",
-    "unresolved": false,
-    "writers": 1
-   },
-   {
     "author": "유헌화",
     "before_start": false,
     "completion_date": "2026-06-03",
@@ -4284,6 +4442,66 @@
     "writers": 1
    },
    {
+    "author": "전민희",
+    "before_start": false,
+    "completion_date": "2026-06-05",
+    "completion_month": "2026-06",
+    "id": "룬의아이들블러디드",
+    "mentions": 1,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12357032,
+      "title": "블러디드 보는데 완결 조젔다니까 존나 안읽히네"
+     }
+    ],
+    "series": [
+     0,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "룬의 아이들 - 블러디드",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "인덱스",
+    "before_start": false,
+    "completion_date": "2026-06-15",
+    "completion_month": "2026-06",
+    "id": "리턴투플레이어",
+    "mentions": 1,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12410551,
+      "title": "리턴 투 플레이어 이거 웹툰 완결났구나"
+     }
+    ],
+    "series": [
+     0,
+     1,
+     1,
+     0,
+     0,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "리턴 투 플레이어",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
     "author": "제이허빈",
     "before_start": true,
     "completion_date": "2026-05-27",
@@ -4340,6 +4558,36 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 60%, 몰린 시점 없음",
     "title": "무한 회귀자인데 썰 푼다",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "야명",
+    "before_start": false,
+    "completion_date": "2026-06-19",
+    "completion_month": "2026-06",
+    "id": "세계수를따먹다",
+    "mentions": 1,
+    "needs_review": true,
+    "new": true,
+    "samples": [
+     {
+      "no": 12434269,
+      "title": "세따먹 완결날려면 볼려고 존버했었는다"
+     }
+    ],
+    "series": [
+     0,
+     1,
+     0,
+     1,
+     0,
+     1,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 80%, 몰린 시점 없음",
+    "title": "세계수를 따먹다",
     "unresolved": false,
     "writers": 1
    },
@@ -4614,6 +4862,66 @@
     "writers": 1
    },
    {
+    "author": "맠엘라하",
+    "before_start": false,
+    "completion_date": "2026-06-15",
+    "completion_month": "2026-06",
+    "id": "프롤로그에서30년이흘렀다",
+    "mentions": 1,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12411406,
+      "title": "프롤30 완결공지는 지금 다시 봐도 ㄹㅇ잘썼음"
+     }
+    ],
+    "series": [
+     0,
+     1,
+     0,
+     2,
+     0,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "프롤로그에서 30년이 흘렀다",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "꾸찌꾸찌",
+    "before_start": false,
+    "completion_date": "2026-06-16",
+    "completion_month": "2026-06",
+    "id": "하남자의탑공략법",
+    "mentions": 1,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12417185,
+      "title": "하남자 탑공략 완결났구나"
+     }
+    ],
+    "series": [
+     0,
+     1,
+     1,
+     0,
+     0,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "하남자의 탑 공략법",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
     "author": "J.K. 롤링",
     "before_start": false,
     "completion_date": "2026-06-30",
@@ -4640,36 +4948,6 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 100%, 몰린 시점 없음",
     "title": "해리 포터",
-    "unresolved": false,
-    "writers": 1
-   },
-   {
-    "author": "하나호",
-    "before_start": false,
-    "completion_date": "2026-06-01",
-    "completion_month": "2026-06",
-    "id": "후회안하는프로듀서",
-    "mentions": 1,
-    "needs_review": false,
-    "new": true,
-    "samples": [
-     {
-      "no": 12335008,
-      "title": "후회프듀 존나재밌네 2주만에 완결까지 다달려버림"
-     }
-    ],
-    "series": [
-     0,
-     1,
-     2,
-     1,
-     1,
-     1,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
-    "title": "후회 안 하는 프로듀서",
     "unresolved": false,
     "writers": 1
    }
@@ -4719,8 +4997,8 @@
     "completion_date": "2026-07-17",
     "completion_month": "2026-07",
     "id": "아이돌이군필을숨김",
-    "mentions": 24,
-    "needs_review": false,
+    "mentions": 25,
+    "needs_review": true,
     "new": true,
     "samples": [
      {
@@ -4739,7 +5017,7 @@
     "series": [
      0,
      0,
-     23,
+     24,
      1,
      1,
      1,
@@ -4749,7 +5027,7 @@
     "status_reason": "07/17부터 3일간 16명이 완결 언급",
     "title": "아이돌이 군필을 숨김",
     "unresolved": false,
-    "writers": 23
+    "writers": 24
    },
    {
     "author": "",
@@ -4757,7 +5035,7 @@
     "completion_date": "2026-07-15",
     "completion_month": "2026-07",
     "id": "무림in소드마스터",
-    "mentions": 11,
+    "mentions": 12,
     "needs_review": false,
     "new": true,
     "samples": [
@@ -4826,6 +5104,44 @@
     "title": "군림천하",
     "unresolved": false,
     "writers": 8
+   },
+   {
+    "author": "마법소녀G",
+    "before_start": false,
+    "completion_date": "2026-07-26",
+    "completion_month": "2026-07",
+    "id": "괴담에미소녀모드를잘못깔았다",
+    "mentions": 6,
+    "needs_review": true,
+    "new": true,
+    "samples": [
+     {
+      "no": 12635692,
+      "title": "괴담미소녀 완결이라니...!!!"
+     },
+     {
+      "no": 12641316,
+      "title": "괴담 미소녀 모드가 완결이 났구나"
+     },
+     {
+      "no": 12637752,
+      "title": "미소녀모드 완결났나보네"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     6,
+     0,
+     0,
+     0,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "07/26부터 3일간 5명이 완결 언급",
+    "title": "괴담에 미소녀 모드를 잘못 깔았다",
+    "unresolved": false,
+    "writers": 6
    },
    {
     "author": "",
@@ -4974,7 +5290,7 @@
      1
     ],
     "status": "예전 완결",
-    "status_reason": "완결 글 비율 94%, 몰린 시점 없음",
+    "status_reason": "완결 글 비율 84%, 몰린 시점 없음",
     "title": "무림마조",
     "unresolved": false,
     "writers": 4
@@ -5204,6 +5520,40 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
     "title": "악역의 엔딩은 죽음뿐",
+    "unresolved": false,
+    "writers": 2
+   },
+   {
+    "author": "테르치",
+    "before_start": false,
+    "completion_date": "2026-07-17",
+    "completion_month": "2026-07",
+    "id": "거물들이집착하는일제시대바둑천재",
+    "mentions": 2,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12587009,
+      "title": "일제시대 바둑천재 완결낫구나"
+     },
+     {
+      "no": 12581940,
+      "title": "일제시대 바둑천재 완결났네"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "거물들이 집착하는 일제시대 바둑천재",
     "unresolved": false,
     "writers": 2
    },
@@ -5634,36 +5984,6 @@
     "writers": 1
    },
    {
-    "author": "제이허빈",
-    "before_start": true,
-    "completion_date": "2026-05-27",
-    "completion_month": "2026-05",
-    "id": "당문전",
-    "mentions": 1,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 12577237,
-      "title": "당문전 완결 후 사존이 누구누구지"
-     }
-    ],
-    "series": [
-     1,
-     1,
-     1,
-     0,
-     3,
-     0,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
-    "title": "당문전",
-    "unresolved": false,
-    "writers": 1
-   },
-   {
     "author": "",
     "before_start": false,
     "completion_date": "2026-06-13",
@@ -5690,6 +6010,96 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 100%, 몰린 시점 없음",
     "title": "러브 코미디 속 엑스트라는 너무 잘생겨졌다",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "인덱스",
+    "before_start": false,
+    "completion_date": "2026-06-15",
+    "completion_month": "2026-06",
+    "id": "리턴투플레이어",
+    "mentions": 1,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 12531469,
+      "title": "리턴투플레이어 웹툰 완결났네"
+     }
+    ],
+    "series": [
+     0,
+     1,
+     1,
+     0,
+     0,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "리턴 투 플레이어",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "이상혁",
+    "before_start": false,
+    "completion_date": "2026-07-21",
+    "completion_month": "2026-07",
+    "id": "마법좋아좋아좋아",
+    "mentions": 1,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12606703,
+      "title": "마좋좋좋왜 완결임?"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     1,
+     1,
+     0,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "마법 좋아좋아좋아",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "글쟁이S",
+    "before_start": false,
+    "completion_date": "2026-07-17",
+    "completion_month": "2026-07",
+    "id": "마왕은학원에간다",
+    "mentions": 1,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12580819,
+      "title": "마학간 홀린듯이 5일만에 완결까지 다봤는데"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     1,
+     0,
+     0,
+     1,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "마왕은 학원에 간다",
     "unresolved": false,
     "writers": 1
    },
@@ -5934,6 +6344,36 @@
     "writers": 1
    },
    {
+    "author": "양파랑",
+    "before_start": false,
+    "completion_date": "2026-06-11",
+    "completion_month": "2026-06",
+    "id": "아카데미의피해자",
+    "mentions": 1,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 12516343,
+      "title": "아카데미 피해자 완결 났네"
+     }
+    ],
+    "series": [
+     0,
+     6,
+     1,
+     0,
+     0,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 89%, 몰린 시점 없음",
+    "title": "아카데미의 피해자",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
     "author": "로드워리어",
     "before_start": false,
     "completion_date": "2026-07-03",
@@ -6012,14 +6452,44 @@
      0,
      0,
      1,
-     2,
+     3,
      1,
+     1,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
+    "title": "예언의 아이가 살아남는 법",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "임경배",
+    "before_start": false,
+    "completion_date": "2026-07-04",
+    "completion_month": "2026-07",
+    "id": "이계진입리로디드",
+    "mentions": 1,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12513601,
+      "title": "이계진입 리로디드 웹툰도 완결이났구나"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     1,
+     1,
+     0,
      0,
      0
     ],
     "status": "예전 완결",
-    "status_reason": "완결 글 비율 80%, 몰린 시점 없음",
-    "title": "예언의 아이가 살아남는 법",
+    "status_reason": "연재처 표시: 완결",
+    "title": "이계진입 리로디드",
     "unresolved": false,
     "writers": 1
    },
@@ -6080,6 +6550,36 @@
     "status": "예전 완결",
     "status_reason": "연재처 표시: 완결",
     "title": "전지적 독자 시점",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "Muinarbiv",
+    "before_start": false,
+    "completion_date": "2026-07-29",
+    "completion_month": "2026-07",
+    "id": "절대엘드미아에가를건드리지마라",
+    "mentions": 1,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12647115,
+      "title": "엘드미아 이거 완결났었네"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "절대 엘드미아 에가를 건드리지 마라",
     "unresolved": false,
     "writers": 1
    },
@@ -6306,6 +6806,44 @@
     "writers": 5
    },
    {
+    "author": "",
+    "before_start": false,
+    "completion_date": "2026-08-10",
+    "completion_month": "2026-08",
+    "id": "러브코미디속오타쿠군이되었다",
+    "mentions": 5,
+    "needs_review": true,
+    "new": true,
+    "samples": [
+     {
+      "no": 12716669,
+      "title": "럽코오타쿠 급완결 너무 슬프다"
+     },
+     {
+      "no": 12716242,
+      "title": "럽코오타쿠 완결이다요"
+     },
+     {
+      "no": 12717603,
+      "title": "럽코오타쿠는 33화 이후로 망가져서 완결나버렸네.."
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     5,
+     0,
+     0,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "08/10부터 3일간 5명이 완결 언급",
+    "title": "러브코미디 속 오타쿠군이 되었다",
+    "unresolved": false,
+    "writers": 5
+   },
+   {
     "author": "용대운",
     "before_start": false,
     "completion_date": "2026-07-10",
@@ -6340,6 +6878,44 @@
     "status": "완결",
     "status_reason": "07/10부터 3일간 5명이 완결 언급",
     "title": "군림천하",
+    "unresolved": false,
+    "writers": 4
+   },
+   {
+    "author": "근서",
+    "before_start": false,
+    "completion_date": "2026-08-22",
+    "completion_month": "2026-08",
+    "id": "내가키운s급들",
+    "mentions": 4,
+    "needs_review": true,
+    "new": true,
+    "samples": [
+     {
+      "no": 12802546,
+      "title": "뭐야 스급친 벌써 완결이야?"
+     },
+     {
+      "no": 12799596,
+      "title": "사실 내스급 급완결 자체는 내 알빠가 아니긴한데"
+     },
+     {
+      "no": 12794157,
+      "title": "근데 s급 완결 맞긴 한지요?"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     4,
+     1,
+     0,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "08/22부터 3일간 4명이 완결 언급",
+    "title": "내가 키운 S급들",
     "unresolved": false,
     "writers": 4
    },
@@ -6382,44 +6958,6 @@
     "writers": 4
    },
    {
-    "author": "",
-    "before_start": false,
-    "completion_date": "2026-08-10",
-    "completion_month": "2026-08",
-    "id": "러브코미디속오타쿠군이되었다",
-    "mentions": 4,
-    "needs_review": false,
-    "new": true,
-    "samples": [
-     {
-      "no": 12716669,
-      "title": "럽코오타쿠 급완결 너무 슬프다"
-     },
-     {
-      "no": 12716242,
-      "title": "럽코오타쿠 완결이다요"
-     },
-     {
-      "no": 12717603,
-      "title": "럽코오타쿠는 33화 이후로 망가져서 완결나버렸네.."
-     }
-    ],
-    "series": [
-     0,
-     0,
-     0,
-     4,
-     0,
-     0,
-     0
-    ],
-    "status": "완결",
-    "status_reason": "08/10부터 3일간 4명이 완결 언급",
-    "title": "러브코미디 속 오타쿠군이 되었다",
-    "unresolved": false,
-    "writers": 4
-   },
-   {
     "author": "짱빠른토끼",
     "before_start": false,
     "completion_date": "2026-07-31",
@@ -6456,6 +6994,44 @@
     "title": "사이버펑크 속 드래곤이 되었다",
     "unresolved": false,
     "writers": 4
+   },
+   {
+    "author": "합스힙스",
+    "before_start": false,
+    "completion_date": "2026-08-06",
+    "completion_month": "2026-08",
+    "id": "로판속반역가문의공녀님",
+    "mentions": 3,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12700115,
+      "title": "합스힙스 로판공녀 완결쳤네...."
+     },
+     {
+      "no": 12697063,
+      "title": "그래도 반역공녀 완결내줘서 고맙지요"
+     },
+     {
+      "no": 12696984,
+      "title": "합스힙스 로판공녀 완결 내러왔구나"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     3,
+     0,
+     0,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "08/06부터 3일간 3명이 완결 언급",
+    "title": "로판 속 반역가문의 공녀님",
+    "unresolved": false,
+    "writers": 3
    },
    {
     "author": "mayve",
@@ -6568,6 +7144,44 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 100%, 몰린 시점 없음",
     "title": "사이버 펑크 10년 차, 드래곤이 찾아왔다",
+    "unresolved": false,
+    "writers": 3
+   },
+   {
+    "author": "Cadilet",
+    "before_start": false,
+    "completion_date": "2026-07-25",
+    "completion_month": "2026-07",
+    "id": "예언의아이가살아남는법",
+    "mentions": 3,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 12745793,
+      "title": "스포) 최근 완결작중에선 예언의 아이가 제일 낫더라"
+     },
+     {
+      "no": 12803264,
+      "title": "예언의 아이 완결까지 본사람만 와봐..."
+     },
+     {
+      "no": 12668179,
+      "title": "예언아이 언제 완결났대"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     1,
+     3,
+     1,
+     1,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
+    "title": "예언의 아이가 살아남는 법",
     "unresolved": false,
     "writers": 3
    },
@@ -6992,40 +7606,6 @@
     "writers": 2
    },
    {
-    "author": "Cadilet",
-    "before_start": false,
-    "completion_date": "2026-07-25",
-    "completion_month": "2026-07",
-    "id": "예언의아이가살아남는법",
-    "mentions": 2,
-    "needs_review": true,
-    "new": false,
-    "samples": [
-     {
-      "no": 12745793,
-      "title": "스포) 최근 완결작중에선 예언의 아이가 제일 낫더라"
-     },
-     {
-      "no": 12803264,
-      "title": "예언의 아이 완결까지 본사람만 와봐..."
-     }
-    ],
-    "series": [
-     0,
-     0,
-     1,
-     2,
-     1,
-     0,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "완결 글 비율 80%, 몰린 시점 없음",
-    "title": "예언의 아이가 살아남는 법",
-    "unresolved": false,
-    "writers": 2
-   },
-   {
     "author": "",
     "before_start": false,
     "completion_date": "2026-08-10",
@@ -7128,6 +7708,40 @@
     "writers": 2
    },
    {
+    "author": "맠엘라하",
+    "before_start": false,
+    "completion_date": "2026-06-15",
+    "completion_month": "2026-06",
+    "id": "프롤로그에서30년이흘렀다",
+    "mentions": 2,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 12806254,
+      "title": "프롤30 완결까지 다봤는데 원래도 엔딩 이랬음?"
+     },
+     {
+      "no": 12830188,
+      "title": "프롤30년 시리즈에서 완결작 중 잘나가는데?"
+     }
+    ],
+    "series": [
+     0,
+     1,
+     0,
+     2,
+     0,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "프롤로그에서 30년이 흘렀다",
+    "unresolved": false,
+    "writers": 2
+   },
+   {
     "author": "라구.B.P",
     "before_start": false,
     "completion_date": "2026-07-13",
@@ -7218,6 +7832,36 @@
     "writers": 1
    },
    {
+    "author": "글라딘",
+    "before_start": false,
+    "completion_date": "2026-08-17",
+    "completion_month": "2026-08",
+    "id": "러스트rust",
+    "mentions": 1,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12767677,
+      "title": "러스트 완결 어케냈음?"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "러스트 [ RUST ]",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
     "author": "버베나",
     "before_start": false,
     "completion_date": "2026-06-16",
@@ -7244,6 +7888,126 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 62%, 몰린 시점 없음",
     "title": "로나좋",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "보르지긴",
+    "before_start": false,
+    "completion_date": "2026-08-15",
+    "completion_month": "2026-08",
+    "id": "로판속공무원",
+    "mentions": 1,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12750638,
+      "title": "로무원 완결 아니었음?"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "로판 속 공무원",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "전민희",
+    "before_start": false,
+    "completion_date": "2026-06-05",
+    "completion_month": "2026-06",
+    "id": "룬의아이들블러디드",
+    "mentions": 1,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 12759951,
+      "title": "그러고보니 블러디드 완결났다메 진짜냐"
+     }
+    ],
+    "series": [
+     0,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "룬의 아이들 - 블러디드",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "이상혁",
+    "before_start": false,
+    "completion_date": "2026-07-21",
+    "completion_month": "2026-07",
+    "id": "마법좋아좋아좋아",
+    "mentions": 1,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 12695635,
+      "title": "마좋좋좋 완결남?"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     1,
+     1,
+     0,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "마법 좋아좋아좋아",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "야명",
+    "before_start": false,
+    "completion_date": "2026-06-19",
+    "completion_month": "2026-06",
+    "id": "세계수를따먹다",
+    "mentions": 1,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 12687424,
+      "title": "머냐 세따먹 파쿠리 연재했었네 ㅋㅋㅋㅋ 완결까지냄"
+     }
+    ],
+    "series": [
+     0,
+     1,
+     0,
+     1,
+     0,
+     1,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 80%, 몰린 시점 없음",
+    "title": "세계수를 따먹다",
     "unresolved": false,
     "writers": 1
    },
@@ -7284,7 +8048,7 @@
     "completion_month": "2026-07",
     "id": "아이돌이군필을숨김",
     "mentions": 1,
-    "needs_review": false,
+    "needs_review": true,
     "new": false,
     "samples": [
      {
@@ -7295,7 +8059,7 @@
     "series": [
      0,
      0,
-     23,
+     24,
      1,
      1,
      1,
@@ -7458,6 +8222,66 @@
     "writers": 1
    },
    {
+    "author": "",
+    "before_start": false,
+    "completion_date": "2026-08-20",
+    "completion_month": "2026-08",
+    "id": "이멋진세계에축복을",
+    "mentions": 1,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12782595,
+      "title": "코노스바가 유일하게 완결까지 본거임"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "이 멋진 세계에 축복을!",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "임경배",
+    "before_start": false,
+    "completion_date": "2026-07-04",
+    "completion_month": "2026-07",
+    "id": "이계진입리로디드",
+    "mentions": 1,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 12666777,
+      "title": "이계진입리로디드 웹툰 완결나서 보고있는데"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     1,
+     1,
+     0,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "이계진입 리로디드",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
     "author": "1_394",
     "before_start": false,
     "completion_date": "2026-06-04",
@@ -7486,117 +8310,23 @@
     "title": "이세계 TRPG 게임마스터",
     "unresolved": false,
     "writers": 1
-   },
-   {
-    "author": "피아조아",
-    "before_start": false,
-    "completion_date": "2026-06-24",
-    "completion_month": "2026-06",
-    "id": "임기첫날에게이트가열렸다",
-    "mentions": 1,
-    "needs_review": true,
-    "new": false,
-    "samples": [
-     {
-      "no": 12778265,
-      "title": "시발 임기첫날 완결볼때 느낌딱이거였음"
-     }
-    ],
-    "series": [
-     0,
-     6,
-     0,
-     1,
-     3,
-     0,
-     0
-    ],
-    "status": "완결",
-    "status_reason": "06/24부터 3일간 6명이 완결 언급",
-    "title": "임기 첫날에 게이트가 열렸다",
-    "unresolved": false,
-    "writers": 1
-   },
-   {
-    "author": "하나호",
-    "before_start": false,
-    "completion_date": "2026-06-01",
-    "completion_month": "2026-06",
-    "id": "후회안하는프로듀서",
-    "mentions": 1,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 12775559,
-      "title": "후회프듀 완결이 작년이었어?"
-     }
-    ],
-    "series": [
-     0,
-     1,
-     2,
-     1,
-     1,
-     1,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
-    "title": "후회 안 하는 프로듀서",
-    "unresolved": false,
-    "writers": 1
    }
   ],
   "2026-09": [
-   {
-    "author": "커리우유",
-    "before_start": false,
-    "completion_date": "2026-09-05",
-    "completion_month": "2026-09",
-    "id": "프롤로그에서죽는히로인에빙의했다",
-    "mentions": 43,
-    "needs_review": true,
-    "new": true,
-    "samples": [
-     {
-      "no": 12870718,
-      "title": "롤로로빙 왜 갑자기 완결친지 알겠네 ㅋㅋㅋ"
-     },
-     {
-      "no": 12870781,
-      "title": "롤로로빙 완결 후기 돚거해왔다에요??????(풀버전임)"
-     },
-     {
-      "no": 12870837,
-      "title": "ts)머야 롤로로빙 완결남??"
-     }
-    ],
-    "series": [
-     0,
-     0,
-     0,
-     0,
-     39,
-     0,
-     2
-    ],
-    "status": "완결",
-    "status_reason": "09/05부터 3일간 36명이 완결 언급",
-    "title": "프롤로그에서 죽는 히로인에 빙의했다",
-    "unresolved": false,
-    "writers": 39
-   },
    {
     "author": "시엘클레",
     "before_start": false,
     "completion_date": "2026-09-23",
     "completion_month": "2026-09",
     "id": "마나살돈없어서인방함",
-    "mentions": 33,
+    "mentions": 34,
     "needs_review": true,
     "new": true,
     "samples": [
+     {
+      "no": 12950467,
+      "title": "이게 완결시점 노나메임"
+     },
      {
       "no": 12950535,
       "title": "헤이헤이 마나인방 완결 났다는데 재밌음?"
@@ -7604,10 +8334,6 @@
      {
       "no": 12953806,
       "title": "마나인방 완결 진짜 나버렸네"
-     },
-     {
-      "no": 12956794,
-      "title": "마나인방완결후기"
      }
     ],
     "series": [
@@ -7702,6 +8428,44 @@
     "writers": 9
    },
    {
+    "author": "민트초코주먹밥",
+    "before_start": false,
+    "completion_date": "2026-09-16",
+    "completion_month": "2026-09",
+    "id": "로판속호구황태자는이제없다",
+    "mentions": 8,
+    "needs_review": true,
+    "new": true,
+    "samples": [
+     {
+      "no": 12920285,
+      "title": "호구 황태자 완결났다고?"
+     },
+     {
+      "no": 12918905,
+      "title": "호구황태자 완결났네"
+     },
+     {
+      "no": 12918939,
+      "title": "로판 황태자 완결남"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     8,
+     1,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "09/16부터 3일간 5명이 완결 언급",
+    "title": "로판 속 호구 황태자는 이제 없다",
+    "unresolved": false,
+    "writers": 8
+   },
+   {
     "author": "뚜근남",
     "before_start": false,
     "completion_date": "2026-09-28",
@@ -7740,26 +8504,26 @@
     "writers": 8
    },
    {
-    "author": "민트초코주먹밥",
+    "author": "제이허빈",
     "before_start": false,
-    "completion_date": "2026-09-16",
+    "completion_date": "2026-09-11",
     "completion_month": "2026-09",
-    "id": "로판속호구황태자는이제없다",
-    "mentions": 6,
+    "id": "당문전",
+    "mentions": 5,
     "needs_review": true,
     "new": true,
     "samples": [
      {
-      "no": 12920285,
-      "title": "호구 황태자 완결났다고?"
+      "no": 12897368,
+      "title": "오늘자 당문전 외전 완결로 완성된 미장셴"
      },
      {
-      "no": 12918905,
-      "title": "호구황태자 완결났네"
+      "no": 12897689,
+      "title": "스포) 당문전 외전 완결났구나"
      },
      {
-      "no": 12918395,
-      "title": "호구 황태자 완결이구나"
+      "no": 12897319,
+      "title": "당문전 찐 완결 났네"
      }
     ],
     "series": [
@@ -7767,15 +8531,15 @@
      0,
      0,
      0,
-     6,
-     1,
+     5,
+     0,
      0
     ],
     "status": "완결",
-    "status_reason": "09/16부터 3일간 4명이 완결 언급",
-    "title": "로판 속 호구 황태자는 이제 없다",
+    "status_reason": "09/11부터 3일간 4명이 완결 언급",
+    "title": "당문전",
     "unresolved": false,
-    "writers": 6
+    "writers": 5
    },
    {
     "author": "처량한날",
@@ -8082,44 +8846,6 @@
     "writers": 3
    },
    {
-    "author": "제이허빈",
-    "before_start": true,
-    "completion_date": "2026-05-27",
-    "completion_month": "2026-05",
-    "id": "당문전",
-    "mentions": 3,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 12897319,
-      "title": "당문전 찐 완결 났네"
-     },
-     {
-      "no": 12920510,
-      "title": "당문전 외전 완결났구나"
-     },
-     {
-      "no": 12898104,
-      "title": "당문전 완결이네"
-     }
-    ],
-    "series": [
-     1,
-     1,
-     1,
-     0,
-     3,
-     0,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
-    "title": "당문전",
-    "unresolved": false,
-    "writers": 3
-   },
-   {
     "author": "백수귀족",
     "before_start": true,
     "completion_date": "2026-05-29",
@@ -8272,6 +8998,74 @@
     "writers": 3
    },
    {
+    "author": "시민 보호 기동대",
+    "before_start": false,
+    "completion_date": "2026-09-03",
+    "completion_month": "2026-09",
+    "id": "격리구역의완장이되었다",
+    "mentions": 2,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12856709,
+      "title": "격리구역완장 완결났네"
+     },
+     {
+      "no": 12856741,
+      "title": "격리구역 완장 완결 뭔가 깔끔하네;"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     2,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "격리 구역의 완장이 되었다",
+    "unresolved": false,
+    "writers": 2
+   },
+   {
+    "author": "yunwun",
+    "before_start": false,
+    "completion_date": "2026-09-22",
+    "completion_month": "2026-09",
+    "id": "내독일제국은세계대전에풀배팅하지않는다",
+    "mentions": 2,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12946613,
+      "title": "독일배팅 급완결이냐?"
+     },
+     {
+      "no": 12946513,
+      "title": "독일배팅 완결났네"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     2,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "내 독일 제국은 세계대전에 풀배팅하지 않는다!",
+    "unresolved": false,
+    "writers": 2
+   },
+   {
     "author": "알콜중독",
     "before_start": false,
     "completion_date": "2026-06-01",
@@ -8374,6 +9168,36 @@
     "writers": 2
    },
    {
+    "author": "성좌조아",
+    "before_start": false,
+    "completion_date": "2026-09-04",
+    "completion_month": "2026-09",
+    "id": "6가챠캐릭터가되었다",
+    "mentions": 1,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12862899,
+      "title": "6성가챠도 완결났었구나"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "6★ 가챠 캐릭터가 되었다",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
     "author": "코락스",
     "before_start": false,
     "completion_date": "2026-09-03",
@@ -8430,6 +9254,36 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 75%, 몰린 시점 없음",
     "title": "공포 쯔꾸르 생존기",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "근서",
+    "before_start": false,
+    "completion_date": "2026-08-22",
+    "completion_month": "2026-08",
+    "id": "내가키운s급들",
+    "mentions": 1,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 12849872,
+      "title": "스급 완결이라며!"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     4,
+     1,
+     0,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "08/22부터 3일간 4명이 완결 언급",
+    "title": "내가 키운 S급들",
     "unresolved": false,
     "writers": 1
    },
@@ -8578,7 +9432,7 @@
      1
     ],
     "status": "예전 완결",
-    "status_reason": "완결 글 비율 94%, 몰린 시점 없음",
+    "status_reason": "완결 글 비율 84%, 몰린 시점 없음",
     "title": "무림마조",
     "unresolved": false,
     "writers": 1
@@ -8680,7 +9534,7 @@
     "completion_month": "2026-07",
     "id": "아이돌이군필을숨김",
     "mentions": 1,
-    "needs_review": false,
+    "needs_review": true,
     "new": false,
     "samples": [
      {
@@ -8691,7 +9545,7 @@
     "series": [
      0,
      0,
-     23,
+     24,
      1,
      1,
      1,
@@ -8794,6 +9648,36 @@
     "writers": 1
    },
    {
+    "author": "",
+    "before_start": false,
+    "completion_date": "2026-09-11",
+    "completion_month": "2026-09",
+    "id": "아카메디아카데미",
+    "mentions": 1,
+    "needs_review": true,
+    "new": true,
+    "samples": [
+     {
+      "no": 12897993,
+      "title": "아카메디 뭔데 완결났지"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 100%, 몰린 시점 없음",
+    "title": "아카메디 아카데미",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
     "author": "로드워리어",
     "before_start": false,
     "completion_date": "2026-07-03",
@@ -8854,6 +9738,66 @@
     "writers": 1
    },
    {
+    "author": "",
+    "before_start": false,
+    "completion_date": "2026-09-22",
+    "completion_month": "2026-09",
+    "id": "악신의성녀와소꿉친구가되었다",
+    "mentions": 1,
+    "needs_review": true,
+    "new": true,
+    "samples": [
+     {
+      "no": 12946150,
+      "title": "성녀소꿉 완결났네"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "악신의 성녀와 소꿉친구가 되었다",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "",
+    "before_start": false,
+    "completion_date": "2026-09-03",
+    "completion_month": "2026-09",
+    "id": "여혐소설가의ts수기",
+    "mentions": 1,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12859763,
+      "title": "여혐수기 완결때 클로이때메 너무 찝찝하긴 했음"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "여혐 소설가의 TS 수기",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
     "author": "Cadilet",
     "before_start": false,
     "completion_date": "2026-07-25",
@@ -8872,13 +9816,13 @@
      0,
      0,
      1,
-     2,
+     3,
      1,
-     0,
+     1,
      0
     ],
     "status": "예전 완결",
-    "status_reason": "완결 글 비율 80%, 몰린 시점 없음",
+    "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
     "title": "예언의 아이가 살아남는 법",
     "unresolved": false,
     "writers": 1
@@ -9090,6 +10034,44 @@
     "writers": 6
    },
    {
+    "author": "SirLogan",
+    "before_start": false,
+    "completion_date": "2026-10-17",
+    "completion_month": "2026-10",
+    "id": "아포칼립스의살인남매",
+    "mentions": 5,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 13098884,
+      "title": "서로건 살인 남매 완결났네"
+     },
+     {
+      "no": 13099554,
+      "title": "살인남매 완결이구나"
+     },
+     {
+      "no": 13098740,
+      "title": "서로건 살인남매 완결 났지요"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     5,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "10/17부터 3일간 4명이 완결 언급",
+    "title": "아포칼립스의 살인 남매",
+    "unresolved": false,
+    "writers": 5
+   },
+   {
     "author": "망크빵",
     "before_start": false,
     "completion_date": "2026-10-20",
@@ -9238,44 +10220,6 @@
     "status": "완결",
     "status_reason": "09/23부터 3일간 24명이 완결 언급",
     "title": "마나 살 돈 없어서 인방함",
-    "unresolved": false,
-    "writers": 3
-   },
-   {
-    "author": "SirLogan",
-    "before_start": false,
-    "completion_date": "2026-10-17",
-    "completion_month": "2026-10",
-    "id": "아포칼립스의살인남매",
-    "mentions": 3,
-    "needs_review": false,
-    "new": true,
-    "samples": [
-     {
-      "no": 13099554,
-      "title": "살인남매 완결이구나"
-     },
-     {
-      "no": 13093704,
-      "title": "살인남매) 이제 완결이구만"
-     },
-     {
-      "no": 13130415,
-      "title": "살인남매 완결 표지 진짜"
-     }
-    ],
-    "series": [
-     0,
-     0,
-     0,
-     0,
-     0,
-     3,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "완결 글 비율 100%, 몰린 시점 없음",
-    "title": "아포칼립스의 살인 남매",
     "unresolved": false,
     "writers": 3
    },
@@ -9526,6 +10470,74 @@
     "writers": 2
    },
    {
+    "author": "",
+    "before_start": false,
+    "completion_date": "2026-10-30",
+    "completion_month": "2026-10",
+    "id": "용사파티만화",
+    "mentions": 2,
+    "needs_review": true,
+    "new": true,
+    "samples": [
+     {
+      "no": 13158347,
+      "title": "용파만 완결났음"
+     },
+     {
+      "no": 13161135,
+      "title": "아 유일하게 보던 웹툰 용사파티만화가 완결되다니..."
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 100%, 몰린 시점 없음",
+    "title": "용사파티만화",
+    "unresolved": false,
+    "writers": 2
+   },
+   {
+    "author": "검은학자",
+    "before_start": false,
+    "completion_date": "2026-10-27",
+    "completion_month": "2026-10",
+    "id": "초차원미식가의일상",
+    "mentions": 2,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 13161450,
+      "title": "초차원 미식가 완결 ~완결 기념 리뷰대회~"
+     },
+     {
+      "no": 13144859,
+      "title": "초차원 미식가 완결났네"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "초차원 미식가의 일상",
+    "unresolved": false,
+    "writers": 2
+   },
+   {
     "author": "미확인",
     "before_start": false,
     "completion_date": "2026-06-15",
@@ -9669,12 +10681,12 @@
      0,
      0,
      0,
-     6,
+     8,
      1,
      0
     ],
     "status": "완결",
-    "status_reason": "09/16부터 3일간 4명이 완결 언급",
+    "status_reason": "09/16부터 3일간 5명이 완결 언급",
     "title": "로판 속 호구 황태자는 이제 없다",
     "unresolved": false,
     "writers": 1
@@ -9710,6 +10722,36 @@
     "writers": 1
    },
    {
+    "author": "글쟁이S",
+    "before_start": false,
+    "completion_date": "2026-07-17",
+    "completion_month": "2026-07",
+    "id": "마왕은학원에간다",
+    "mentions": 1,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 13157746,
+      "title": "마학간이 완결난지 4년이 지낫는데 글쟁이는 뭐하고있을까"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     1,
+     0,
+     0,
+     1,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "마왕은 학원에 간다",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
     "author": "이만두",
     "before_start": true,
     "completion_date": "2026-05-31",
@@ -9734,8 +10776,38 @@
      1
     ],
     "status": "예전 완결",
-    "status_reason": "완결 글 비율 94%, 몰린 시점 없음",
+    "status_reason": "완결 글 비율 84%, 몰린 시점 없음",
     "title": "무림마조",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "야명",
+    "before_start": false,
+    "completion_date": "2026-06-19",
+    "completion_month": "2026-06",
+    "id": "세계수를따먹다",
+    "mentions": 1,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 13019127,
+      "title": "로판 세계수 완결났군"
+     }
+    ],
+    "series": [
+     0,
+     1,
+     0,
+     1,
+     0,
+     1,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 80%, 몰린 시점 없음",
+    "title": "세계수를 따먹다",
     "unresolved": false,
     "writers": 1
    },
@@ -9776,7 +10848,7 @@
     "completion_month": "2026-07",
     "id": "아이돌이군필을숨김",
     "mentions": 1,
-    "needs_review": false,
+    "needs_review": true,
     "new": false,
     "samples": [
      {
@@ -9787,7 +10859,7 @@
     "series": [
      0,
      0,
-     23,
+     24,
      1,
      1,
      1,
@@ -9886,6 +10958,66 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 89%, 몰린 시점 없음",
     "title": "아카데미 플레이어를 죽였다",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "",
+    "before_start": false,
+    "completion_date": "2026-09-11",
+    "completion_month": "2026-09",
+    "id": "아카메디아카데미",
+    "mentions": 1,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 13114647,
+      "title": "아카메디 완결낫엇구나"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 100%, 몰린 시점 없음",
+    "title": "아카메디 아카데미",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "Cadilet",
+    "before_start": false,
+    "completion_date": "2026-07-25",
+    "completion_month": "2026-07",
+    "id": "예언의아이가살아남는법",
+    "mentions": 1,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 13052932,
+      "title": "예언아이 완결났었네"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     1,
+     3,
+     1,
+     1,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
+    "title": "예언의 아이가 살아남는 법",
     "unresolved": false,
     "writers": 1
    },
@@ -10010,6 +11142,66 @@
     "writers": 1
    },
    {
+    "author": "겨울잠쥐",
+    "before_start": false,
+    "completion_date": "2026-10-25",
+    "completion_month": "2026-10",
+    "id": "태엽과모래의마녀",
+    "mentions": 1,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 13133827,
+      "title": "머야 태엽마녀 완결났네"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     3
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 67%, 몰린 시점 없음",
+    "title": "태엽과 모래의 마녀",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "소소리",
+    "before_start": false,
+    "completion_date": "2026-10-07",
+    "completion_month": "2026-10",
+    "id": "해골병사는던전을지키지못했다",
+    "mentions": 1,
+    "needs_review": true,
+    "new": true,
+    "samples": [
+     {
+      "no": 13032019,
+      "title": "해골병사는 완결한지 3년 넘었는데 왜 카카오 실베 11위임?"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "해골병사는 던전을 지키지 못했다",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
     "author": "J.K. 롤링",
     "before_start": false,
     "completion_date": "2026-06-30",
@@ -10036,6 +11228,36 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 100%, 몰린 시점 없음",
     "title": "해리 포터",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "사자혼",
+    "before_start": false,
+    "completion_date": "2026-07-10",
+    "completion_month": "2026-07",
+    "id": "회귀도13번이면지랄맞다",
+    "mentions": 1,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 13044107,
+      "title": "회귀 13 완결난지 5년됐대"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     1,
+     0,
+     0,
+     1,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "회귀도 13번이면 지랄 맞다",
     "unresolved": false,
     "writers": 1
    },
@@ -10294,12 +11516,12 @@
    {
     "author": "겨울잠쥐",
     "before_start": false,
-    "completion_date": "2026-11-02",
-    "completion_month": "2026-11",
+    "completion_date": "2026-10-25",
+    "completion_month": "2026-10",
     "id": "태엽과모래의마녀",
     "mentions": 3,
     "needs_review": false,
-    "new": true,
+    "new": false,
     "samples": [
      {
       "no": 13283242,
@@ -10320,11 +11542,11 @@
      0,
      0,
      0,
-     0,
+     1,
      3
     ],
     "status": "예전 완결",
-    "status_reason": "완결 글 비율 75%, 몰린 시점 없음",
+    "status_reason": "완결 글 비율 67%, 몰린 시점 없음",
     "title": "태엽과 모래의 마녀",
     "unresolved": false,
     "writers": 3
@@ -10432,22 +11654,18 @@
     "writers": 2
    },
    {
-    "author": "커리우유",
+    "author": "성좌조아",
     "before_start": false,
-    "completion_date": "2026-09-05",
+    "completion_date": "2026-09-04",
     "completion_month": "2026-09",
-    "id": "프롤로그에서죽는히로인에빙의했다",
-    "mentions": 2,
-    "needs_review": true,
+    "id": "6가챠캐릭터가되었다",
+    "mentions": 1,
+    "needs_review": false,
     "new": false,
     "samples": [
      {
-      "no": 13198662,
-      "title": "속보)) 롤로로빙 찐완결"
-     },
-     {
-      "no": 13183021,
-      "title": "니케 파쿠리지만 완결 잘 낸 롤로로빙의 승리네"
+      "no": 13241491,
+      "title": "6성가챠 완결났구나"
      }
     ],
     "series": [
@@ -10455,15 +11673,15 @@
      0,
      0,
      0,
-     39,
+     1,
      0,
-     2
+     1
     ],
-    "status": "완결",
-    "status_reason": "09/05부터 3일간 36명이 완결 언급",
-    "title": "프롤로그에서 죽는 히로인에 빙의했다",
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "6★ 가챠 캐릭터가 되었다",
     "unresolved": false,
-    "writers": 2
+    "writers": 1
    },
    {
     "author": "검미성",
@@ -10616,6 +11834,36 @@
     "writers": 1
    },
    {
+    "author": "글라딘",
+    "before_start": false,
+    "completion_date": "2026-08-17",
+    "completion_month": "2026-08",
+    "id": "러스트rust",
+    "mentions": 1,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 13254539,
+      "title": "러스트 완결 났구나?"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "러스트 [ RUST ]",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
     "author": "버베나",
     "before_start": false,
     "completion_date": "2026-06-16",
@@ -10670,7 +11918,7 @@
      1
     ],
     "status": "예전 완결",
-    "status_reason": "완결 글 비율 94%, 몰린 시점 없음",
+    "status_reason": "완결 글 비율 84%, 몰린 시점 없음",
     "title": "무림마조",
     "unresolved": false,
     "writers": 1
@@ -10736,6 +11984,36 @@
     "writers": 1
    },
    {
+    "author": "야명",
+    "before_start": false,
+    "completion_date": "2026-06-19",
+    "completion_month": "2026-06",
+    "id": "세계수를따먹다",
+    "mentions": 1,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 13190088,
+      "title": "로판 세계수 완결이네"
+     }
+    ],
+    "series": [
+     0,
+     1,
+     0,
+     1,
+     0,
+     1,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 80%, 몰린 시점 없음",
+    "title": "세계수를 따먹다",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
     "author": "청시소",
     "before_start": false,
     "completion_date": "2026-06-13",
@@ -10762,6 +12040,36 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 80%, 몰린 시점 없음",
     "title": "시한부 천재가 살아남는 법",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "",
+    "before_start": false,
+    "completion_date": "2026-09-11",
+    "completion_month": "2026-09",
+    "id": "아카메디아카데미",
+    "mentions": 1,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 13283526,
+      "title": "아카메디 아카데미 완결까지 다 봤다"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 100%, 몰린 시점 없음",
+    "title": "아카메디 아카데미",
     "unresolved": false,
     "writers": 1
    },
@@ -10856,6 +12164,66 @@
     "writers": 1
    },
    {
+    "author": "",
+    "before_start": false,
+    "completion_date": "2026-09-03",
+    "completion_month": "2026-09",
+    "id": "여혐소설가의ts수기",
+    "mentions": 1,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 13262715,
+      "title": "알레미카는 여혐수기 완결내고 쓰는게 롤 프로물이던데"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "여혐 소설가의 TS 수기",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "",
+    "before_start": false,
+    "completion_date": "2026-10-30",
+    "completion_month": "2026-10",
+    "id": "용사파티만화",
+    "mentions": 1,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 13276461,
+      "title": "용파만이 존나 잘 완결났음"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 100%, 몰린 시점 없음",
+    "title": "용사파티만화",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
     "author": "복숭아작가",
     "before_start": false,
     "completion_date": "2026-06-10",
@@ -10882,6 +12250,36 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 100%, 몰린 시점 없음",
     "title": "우주의 함대장",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "",
+    "before_start": false,
+    "completion_date": "2026-08-20",
+    "completion_month": "2026-08",
+    "id": "이멋진세계에축복을",
+    "mentions": 1,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 13187352,
+      "title": "코노스바 완결 어떻게남?"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "이 멋진 세계에 축복을!",
     "unresolved": false,
     "writers": 1
    },
@@ -10958,6 +12356,42 @@
  ],
  "not_found": [
   {
+   "alias": "100화 미만",
+   "checked": "2026-11-24",
+   "examples": [
+    "100화 미만 완결 박혀 있으면 왠지 급완결같음",
+    "100화미만 완결은"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "1부 완결",
+   "checked": "2026-11-24",
+   "examples": [
+    "1부 완결<- 이거 유언 같은 건지요",
+    "1부완결 <-이거 사실상 연중이란 소리지?"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "200화",
+   "checked": "2026-11-24",
+   "examples": [
+    "200화 완결이 제일 깔끔한 것 같음",
+    "200화 완결은 ㄹㅇ 손이 안가네"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "300화",
+   "checked": "2026-11-24",
+   "examples": [
+    "300화 완결이 딱임 딱 10권분량",
+    "300화 완결이면 사실 딱 적당하게 끝난건대"
+   ],
+   "via": "serper"
+  },
+  {
    "alias": "TS",
    "checked": "2026-11-24",
    "examples": [
@@ -10998,12 +12432,48 @@
    "via": "serper"
   },
   {
+   "alias": "개인적으로",
+   "checked": "2026-11-24",
+   "examples": [
+    "개인적으로 완결은 딱 200화 300화 언저리가 완벽한느낌",
+    "개인적으로 완결 어찌날지 궁금한 카카페 소설..jpg"
+   ],
+   "via": "serper"
+  },
+  {
    "alias": "갤러리물",
    "checked": "2026-11-24",
    "examples": [
     "갤러리물이 완결난걸 본적없는데?",
     "갤러리물 완결이 없긴하지만",
     "근데 갤러리물 완결은"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "공모전",
+   "checked": "2026-11-24",
+   "examples": [
+    "[공모전] 첫 완결, 잘 쓴건지... 어떤건지... 피드백이라도",
+    "공모전 완결 므ㅓ냐"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "근래",
+   "checked": "2026-11-24",
+   "examples": [
+    "근래 완결난 TS물들 추천좀 해보지요 개잔빙",
+    "근래 완결 난 것 중에 갤에서 화제 많았던 거 뭐 있음?"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "나 처럼",
+   "checked": "2026-11-24",
+   "examples": [
+    "나 처럼 완결 읽기 무서운 사람 있나",
+    "나처럼 완결작 안보고 연재작만 보는사람잇음?"
    ],
    "via": "serper"
   },
@@ -11018,12 +12488,48 @@
    "via": "serper"
   },
   {
+   "alias": "내가 이래서",
+   "checked": "2026-11-24",
+   "examples": [
+    "내가 이래서 완결작만 벽갤질함",
+    "내가 이래서 완결만봐"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "념글",
+   "checked": "2026-11-24",
+   "examples": [
+    "념글 완결 홍보작 다 봤는데 쪼끔 거시기함",
+    "념글 완결소설 소개글 어지럽네"
+   ],
+   "via": "serper"
+  },
+  {
    "alias": "노벨피아",
    "checked": "2026-11-24",
    "examples": [
     "노벨피아는 완결기준이 좀 병신인듯",
     "노벨피아 완결작 추천 좀여",
     "노벨피아 완결작 ㄱㅊ은거 ㅊㅊ좀 tag 탑, 미궁"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "노태그 ts",
+   "checked": "2026-11-24",
+   "examples": [
+    "노태그 ts는 완결나기전까지 안보는거지요",
+    "노태그ts는 외전완결날때까지 보는거아님"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "노피아 곧",
+   "checked": "2026-11-24",
+   "examples": [
+    "노피아 곧 완결 나겠다 싶은 거 추천 좀",
+    "노피아 곧 완결 나는 작품 없나"
    ],
    "via": "serper"
   },
@@ -11038,12 +12544,66 @@
    "via": "serper"
   },
   {
+   "alias": "노피아 최근",
+   "checked": "2026-11-24",
+   "examples": [
+    "노피아 최근 완결난 거 중에 잘 쓴 거 없냐",
+    "노피아 최근 완결난거중에 잼난거 추천좀"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "댓천사",
+   "checked": "2026-11-24",
+   "examples": [
+    "댓천사 완결각인가",
+    "댓천사 완결각인가...?"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "드볼",
+   "checked": "2026-11-24",
+   "examples": [
+    "드볼이 급완결이라니",
+    "드볼 급완결은 뭔 개소리냐"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "로나좋은",
+   "checked": "2026-11-24",
+   "examples": [
+    "솔직히 로나좋은 급완결 얼버무리고간거 생각하면 고평가 못함",
+    "로나좋은 급완결해서 오히려 평가 좋은것같음"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "로판공녀",
+   "checked": "2026-11-24",
+   "examples": [
+    "합스힙스 좋은 말 할때 로판공녀 완결 내라.",
+    "합스힙스꺼 로판공녀 이거 완결났었네"
+   ],
+   "via": "serper"
+  },
+  {
    "alias": "마소ㄴ",
    "checked": "2026-11-24",
    "examples": [
     "근데 마소ㄴ 아직 완결 나기엔 좀 멀지않음???????",
     "마소ㄴ는 완결나면 보려고 묵히는중이야",
     "마소ㄴ 완결까지 얼마 남음?"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "\"많이 안 사랑해줘서 급",
+   "checked": "2026-11-24",
+   "examples": [
+    "\"많이 안 사랑해줘서 급완결 친거 아니냐고?",
+    "\"많이 안 사랑해줘서 급완결친 거라고?\""
    ],
    "via": "serper"
   },
@@ -11056,6 +12616,15 @@
     "문쉰내 99랩의 아 요즘 ㅈㄴ볼거없네 하며 보는 완결작 리뷰 (1"
    ],
    "via": "ai"
+  },
+  {
+   "alias": "미궁물",
+   "checked": "2026-11-24",
+   "examples": [
+    "'미궁물의 엔딩은 ts 연중 그리고 한줌의 완결작으로 나뉜다'",
+    "미궁물은 완결까지 본게 없음"
+   ],
+   "via": "serper"
   },
   {
    "alias": "미츄리",
@@ -11078,6 +12647,15 @@
    "via": "serper"
   },
   {
+   "alias": "볼만한",
+   "checked": "2026-11-24",
+   "examples": [
+    "볼만한 완결틋물<<<추천좀",
+    "볼만한 완결작들 추천좀 해줘ㅠㅠ"
+   ],
+   "via": "serper"
+  },
+  {
    "alias": "사펑드래곤",
    "checked": "2026-11-24",
    "examples": [
@@ -11088,6 +12666,15 @@
    "via": "ai"
   },
   {
+   "alias": "성적 안나와서 급",
+   "checked": "2026-11-24",
+   "examples": [
+    "성적 안나와서 급완결은 좀 이해는됨",
+    "성적 안나와서 급완결하거나 연중하는거 이해는 가지요"
+   ],
+   "via": "serper"
+  },
+  {
    "alias": "소꿉전여친",
    "checked": "2026-11-24",
    "examples": [
@@ -11096,6 +12683,15 @@
     "소꿉전여친은 ㅈㄴ 웃긴게 원작 웹소보다 웹툰이 먼저 완결남 ㅋㅋㅋ"
    ],
    "via": "ai"
+  },
+  {
+   "alias": "솔직히",
+   "checked": "2026-11-24",
+   "examples": [
+    "근데 솔직히 완결난 소설보다",
+    "솔직히 완결작 웹툰화되면 작가가 기념외전 필수로 써줘야함"
+   ],
+   "via": "serper"
   },
   {
    "alias": "신노아",
@@ -11118,12 +12714,30 @@
    "via": "serper"
   },
   {
+   "alias": "암타물 <",
+   "checked": "2026-11-24",
+   "examples": [
+    "암타물 < 완결나면 봐야됨",
+    "암타물 이거 언제 완결했냐"
+   ],
+   "via": "serper"
+  },
+  {
    "alias": "언제",
    "checked": "2026-11-24",
    "examples": [
     "이거 언제 완결 났대",
     "언제 완결 붙였냐 ㅅㅂ⋯⋯",
     "언제 완결날까"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "역키잡",
+   "checked": "2026-11-24",
+   "examples": [
+    "역키잡완결goat작 추천해주는거지요",
+    "역키잡을 완결까지 보며 생각하는 건"
    ],
    "via": "serper"
   },
@@ -11138,12 +12752,39 @@
    "via": "serper"
   },
   {
+   "alias": "연중이나 급",
+   "checked": "2026-11-24",
+   "examples": [
+    "연중이나 급완결 아닌 ts물은 추천비가 ㅈㄴ 높음",
+    "연중이나 급완결 같은거"
+   ],
+   "via": "serper"
+  },
+  {
    "alias": "예전에",
    "checked": "2026-11-24",
    "examples": [
     "예전에 완결나면 볼려했는데",
     "예전에 완결낸 작가 찾아볼려는데 기억이 안나네",
     "예전에 완결된 소설 보는데"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "옛날",
+   "checked": "2026-11-24",
+   "examples": [
+    "옛날 완결작 업뎃 표시 뜨길래보니",
+    "옛날 완결작인데 맛있지요"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "올해",
+   "checked": "2026-11-24",
+   "examples": [
+    "올해 완결 낸 판무 몇 편 정도임",
+    "올해 완결난거 머있지"
    ],
    "via": "serper"
   },
@@ -11158,12 +12799,48 @@
    "via": "google"
   },
   {
+   "alias": "웹소중에",
+   "checked": "2026-11-24",
+   "examples": [
+    "웹소중에 완결성 지리는거 뭐있을까?",
+    "웹소 중에 완결까지 보고도 나중에 다시 정주행했던 거 뭐 있음"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "웹툰",
+   "checked": "2026-11-24",
+   "examples": [
+    "웹툰은 완결까지 본게 하나도 없네",
+    "웹툰 완결까지 괜찮은 럽코 뭐있냐에요"
+   ],
+   "via": "serper"
+  },
+  {
    "alias": "의외로",
    "checked": "2026-11-24",
    "examples": [
     "의외로 완결안난 소설",
     "의외로 완결작까지 본 웹소설이 많지가 않음..",
     "의외로 완결난 뒤에도 서성이는 편이었네"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "이것들",
+   "checked": "2026-11-24",
+   "examples": [
+    "이것들 완결 나긴 할까",
+    "이것들이 완결까지살아있을까"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "이미",
+   "checked": "2026-11-24",
+   "examples": [
+    "이미 완결까지 다 써놓고 연재시작하는 작가가 있을까",
+    "이미 완결난 소설을 뒤늦게 보는거는 그 나름의 재미가 있음"
    ],
    "via": "serper"
   },
@@ -11176,6 +12853,15 @@
     "피아조아 복귀 vs 이블파티 완결 후 외전"
    ],
    "via": "ai"
+  },
+  {
+   "alias": "이상하게",
+   "checked": "2026-11-24",
+   "examples": [
+    "이상하게 완결작은 손이 안간단말이지",
+    "근데 이상하게 완결난거 보기 싫긴 함"
+   ],
+   "via": "serper"
   },
   {
    "alias": "인방물",
@@ -11216,14 +12902,41 @@
    "via": "serper"
   },
   {
+   "alias": "재밌",
+   "checked": "2026-11-24",
+   "examples": [
+    "진짜 재밌는 완결작 없음?",
+    "재밌는 완결 판타지 소개시켜줄사람"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "재밌게 본 패러디",
+   "checked": "2026-11-24",
+   "examples": [
+    "재밌게 본 패러디가 완결나버림",
+    "재밌게 본 패러디가 완결나버림"
+   ],
+   "via": "serper"
+  },
+  {
    "alias": "전그개",
    "checked": "2026-11-24",
    "examples": [
+    "전그개 아직도 완결 안낫었구나",
     "어 전그개 이제 완결인가보네",
-    "전그개 완결이 났네",
-    "어 뭐야 전그개 완결 낫었구나"
+    "전그개 소제목 보니 슬슬 완결인가보네"
    ],
-   "via": "google"
+   "via": "serper"
+  },
+  {
+   "alias": "전남친",
+   "checked": "2026-11-24",
+   "examples": [
+    "전남친 완결 내고 다음 작품도 백합물이구나",
+    "어느날 전남친 완결이구나"
+   ],
+   "via": "serper"
   },
   {
    "alias": "전마수",
@@ -11242,6 +12955,15 @@
     "지금 완결하는 야설들 이벤트 때문인가",
     "지금 완결난다고 빡친애들은 재밌게 보긴 했네",
     "지금 완결각 보는 작가들 공모전 준비중인가"
+   ],
+   "via": "serper"
+  },
+  {
+   "alias": "진득하게",
+   "checked": "2026-11-24",
+   "examples": [
+    "진득하게 완결작 하나 냠냠하고싶은데",
+    "진득하게 완결까지 읽을거 추천좀"
    ],
    "via": "serper"
   },
@@ -11493,7 +13215,7 @@
      1
     ],
     "status": "예전 완결",
-    "status_reason": "완결 글 비율 94%, 몰린 시점 없음",
+    "status_reason": "완결 글 비율 84%, 몰린 시점 없음",
     "title": "무림마조",
     "unresolved": false,
     "writers": 9
@@ -11575,6 +13297,44 @@
     "writers": 6
    },
    {
+    "author": "양파랑",
+    "before_start": false,
+    "completion_date": "2026-06-11",
+    "completion_month": "2026-06",
+    "id": "아카데미의피해자",
+    "mentions": 7,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 12478228,
+      "title": "아카피해자 완결낫는데 재밋엇음????"
+     },
+     {
+      "no": 12414115,
+      "title": "오 몰랐는데 아카피해자 거의 완결났구나"
+     },
+     {
+      "no": 12473274,
+      "title": "아카피해자 완결났네"
+     }
+    ],
+    "series": [
+     0,
+     6,
+     1,
+     0,
+     0,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 89%, 몰린 시점 없음",
+    "title": "아카데미의 피해자",
+    "unresolved": false,
+    "writers": 6
+   },
+   {
     "author": "피아조아",
     "before_start": false,
     "completion_date": "2026-06-24",
@@ -11649,44 +13409,6 @@
     "title": "예수천국 불신지옥",
     "unresolved": false,
     "writers": 6
-   },
-   {
-    "author": "양파랑",
-    "before_start": false,
-    "completion_date": "2026-06-11",
-    "completion_month": "2026-06",
-    "id": "아카데미의피해자",
-    "mentions": 6,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 12478228,
-      "title": "아카피해자 완결낫는데 재밋엇음????"
-     },
-     {
-      "no": 12414115,
-      "title": "오 몰랐는데 아카피해자 거의 완결났구나"
-     },
-     {
-      "no": 12473274,
-      "title": "아카피해자 완결났네"
-     }
-    ],
-    "series": [
-     0,
-     5,
-     0,
-     0,
-     0,
-     0,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
-    "title": "아카데미의 피해자",
-    "unresolved": false,
-    "writers": 5
    },
    {
     "author": "어두운글",
@@ -12137,40 +13859,6 @@
     "writers": 2
    },
    {
-    "author": "제이허빈",
-    "before_start": true,
-    "completion_date": "2026-05-27",
-    "completion_month": "2026-05",
-    "id": "당문전",
-    "mentions": 2,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 12479142,
-      "title": "뭐야 당문전 웹툰 시즌1 완결 났네"
-     },
-     {
-      "no": 12308534,
-      "title": "당문전 완결까지 봤는데 내용 기억이 안남"
-     }
-    ],
-    "series": [
-     1,
-     1,
-     1,
-     0,
-     3,
-     0,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
-    "title": "당문전",
-    "unresolved": false,
-    "writers": 2
-   },
-   {
     "author": "고스름도치",
     "before_start": true,
     "completion_date": "2026-05-28",
@@ -12235,6 +13923,40 @@
     "status": "예전 완결",
     "status_reason": "연재처 표시: 완결",
     "title": "망한 교단의 성기사",
+    "unresolved": false,
+    "writers": 2
+   },
+   {
+    "author": "papapa",
+    "before_start": false,
+    "completion_date": "2026-06-10",
+    "completion_month": "2026-06",
+    "id": "부인은밀밭에서기다렸다",
+    "mentions": 2,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 12384700,
+      "title": "근데 부인밀밭은 급완결은 ㄹㅇ 아니긴함..."
+     },
+     {
+      "no": 12419987,
+      "title": "생각해보니 부인밀밭 완결까지 연재하고"
+     }
+    ],
+    "series": [
+     0,
+     2,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "부인은 밀밭에서 기다렸다",
     "unresolved": false,
     "writers": 2
    },
@@ -12627,6 +14349,66 @@
     "writers": 1
    },
    {
+    "author": "전민희",
+    "before_start": false,
+    "completion_date": "2026-06-05",
+    "completion_month": "2026-06",
+    "id": "룬의아이들블러디드",
+    "mentions": 1,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 12357032,
+      "title": "블러디드 보는데 완결 조젔다니까 존나 안읽히네"
+     }
+    ],
+    "series": [
+     0,
+     1,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "룬의 아이들 - 블러디드",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "인덱스",
+    "before_start": false,
+    "completion_date": "2026-06-15",
+    "completion_month": "2026-06",
+    "id": "리턴투플레이어",
+    "mentions": 1,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 12410551,
+      "title": "리턴 투 플레이어 이거 웹툰 완결났구나"
+     }
+    ],
+    "series": [
+     0,
+     1,
+     1,
+     0,
+     0,
+     0,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "리턴 투 플레이어",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
     "author": "",
     "before_start": true,
     "completion_date": "2026-05-28",
@@ -12743,6 +14525,36 @@
     "status": "예전 완결",
     "status_reason": "연재처 표시: 완결",
     "title": "선협에서 상태창 개발하기",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "야명",
+    "before_start": false,
+    "completion_date": "2026-06-19",
+    "completion_month": "2026-06",
+    "id": "세계수를따먹다",
+    "mentions": 1,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 12434269,
+      "title": "세따먹 완결날려면 볼려고 존버했었는다"
+     }
+    ],
+    "series": [
+     0,
+     1,
+     0,
+     1,
+     0,
+     1,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 80%, 몰린 시점 없음",
+    "title": "세계수를 따먹다",
     "unresolved": false,
     "writers": 1
    },
@@ -12925,96 +14737,6 @@
     "title": "전생하고 보니 크툴루",
     "unresolved": false,
     "writers": 1
-   },
-   {
-    "author": "싱숑",
-    "before_start": true,
-    "completion_date": "2026-05-25",
-    "completion_month": "2026-05",
-    "id": "전지적독자시점",
-    "mentions": 1,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 12295955,
-      "title": "전독시 추천받아서 대충 본편 완결본 후기 3줄 요약"
-     }
-    ],
-    "series": [
-     1,
-     0,
-     1,
-     0,
-     0,
-     1,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "연재처 표시: 완결",
-    "title": "전지적 독자 시점",
-    "unresolved": false,
-    "writers": 1
-   },
-   {
-    "author": "망룡",
-    "before_start": false,
-    "completion_date": "2026-06-26",
-    "completion_month": "2026-06",
-    "id": "천재뉴비의흡수수선전",
-    "mentions": 1,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 12473432,
-      "title": "생각해보니까 흡수수선전은 왜 급완결 친거였더라"
-     }
-    ],
-    "series": [
-     0,
-     1,
-     0,
-     0,
-     1,
-     0,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "연재처 표시: 완결",
-    "title": "천재 뉴비의 흡수수선전",
-    "unresolved": false,
-    "writers": 1
-   },
-   {
-    "author": "J.K. 롤링",
-    "before_start": false,
-    "completion_date": "2026-06-30",
-    "completion_month": "2026-06",
-    "id": "해리포터",
-    "mentions": 1,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 12492954,
-      "title": "해리포터도 완결된지 오래돼서 그런지"
-     }
-    ],
-    "series": [
-     0,
-     1,
-     2,
-     0,
-     0,
-     1,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "완결 글 비율 100%, 몰린 시점 없음",
-    "title": "해리 포터",
-    "unresolved": false,
-    "writers": 1
    }
   ],
   "2026-Q3": [
@@ -13095,53 +14817,19 @@
     "writers": 41
    },
    {
-    "author": "커리우유",
-    "before_start": false,
-    "completion_date": "2026-09-05",
-    "completion_month": "2026-09",
-    "id": "프롤로그에서죽는히로인에빙의했다",
-    "mentions": 43,
-    "needs_review": true,
-    "new": false,
-    "samples": [
-     {
-      "no": 12870718,
-      "title": "롤로로빙 왜 갑자기 완결친지 알겠네 ㅋㅋㅋ"
-     },
-     {
-      "no": 12870781,
-      "title": "롤로로빙 완결 후기 돚거해왔다에요??????(풀버전임)"
-     },
-     {
-      "no": 12870837,
-      "title": "ts)머야 롤로로빙 완결남??"
-     }
-    ],
-    "series": [
-     0,
-     0,
-     0,
-     0,
-     39,
-     0,
-     2
-    ],
-    "status": "완결",
-    "status_reason": "09/05부터 3일간 36명이 완결 언급",
-    "title": "프롤로그에서 죽는 히로인에 빙의했다",
-    "unresolved": false,
-    "writers": 39
-   },
-   {
     "author": "시엘클레",
     "before_start": false,
     "completion_date": "2026-09-23",
     "completion_month": "2026-09",
     "id": "마나살돈없어서인방함",
-    "mentions": 33,
+    "mentions": 34,
     "needs_review": true,
     "new": false,
     "samples": [
+     {
+      "no": 12950467,
+      "title": "이게 완결시점 노나메임"
+     },
      {
       "no": 12950535,
       "title": "헤이헤이 마나인방 완결 났다는데 재밌음?"
@@ -13149,10 +14837,6 @@
      {
       "no": 12953806,
       "title": "마나인방 완결 진짜 나버렸네"
-     },
-     {
-      "no": 12956794,
-      "title": "마나인방완결후기"
      }
     ],
     "series": [
@@ -13176,8 +14860,8 @@
     "completion_date": "2026-07-17",
     "completion_month": "2026-07",
     "id": "아이돌이군필을숨김",
-    "mentions": 26,
-    "needs_review": false,
+    "mentions": 27,
+    "needs_review": true,
     "new": false,
     "samples": [
      {
@@ -13196,7 +14880,7 @@
     "series": [
      0,
      0,
-     23,
+     24,
      1,
      1,
      1,
@@ -13206,7 +14890,45 @@
     "status_reason": "07/17부터 3일간 16명이 완결 언급",
     "title": "아이돌이 군필을 숨김",
     "unresolved": false,
-    "writers": 25
+    "writers": 26
+   },
+   {
+    "author": "",
+    "before_start": false,
+    "completion_date": "2026-07-15",
+    "completion_month": "2026-07",
+    "id": "무림in소드마스터",
+    "mentions": 13,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 12573928,
+      "title": "무림소마 급완결 후기 시발"
+     },
+     {
+      "no": 12574179,
+      "title": "무림소마 작가 입대 완결 이슈를 보니"
+     },
+     {
+      "no": 12615291,
+      "title": "진짜 무림소마 군지완결 난거 아직도 너무 슬프다진짜 눈물이 잉잉 남"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     10,
+     0,
+     1,
+     0,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "07/15부터 3일간 9명이 완결 언급",
+    "title": "무림in 소드마스터",
+    "unresolved": false,
+    "writers": 11
    },
    {
     "author": "용대운",
@@ -13243,44 +14965,6 @@
     "status": "완결",
     "status_reason": "07/10부터 3일간 5명이 완결 언급",
     "title": "군림천하",
-    "unresolved": false,
-    "writers": 11
-   },
-   {
-    "author": "",
-    "before_start": false,
-    "completion_date": "2026-07-15",
-    "completion_month": "2026-07",
-    "id": "무림in소드마스터",
-    "mentions": 12,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 12573928,
-      "title": "무림소마 급완결 후기 시발"
-     },
-     {
-      "no": 12574179,
-      "title": "무림소마 작가 입대 완결 이슈를 보니"
-     },
-     {
-      "no": 12615291,
-      "title": "진짜 무림소마 군지완결 난거 아직도 너무 슬프다진짜 눈물이 잉잉 남"
-     }
-    ],
-    "series": [
-     0,
-     0,
-     10,
-     0,
-     1,
-     0,
-     0
-    ],
-    "status": "완결",
-    "status_reason": "07/15부터 3일간 9명이 완결 언급",
-    "title": "무림in 소드마스터",
     "unresolved": false,
     "writers": 11
    },
@@ -13357,6 +15041,44 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
     "title": "나작소 작가에게 감금당했다.",
+    "unresolved": false,
+    "writers": 8
+   },
+   {
+    "author": "민트초코주먹밥",
+    "before_start": false,
+    "completion_date": "2026-09-16",
+    "completion_month": "2026-09",
+    "id": "로판속호구황태자는이제없다",
+    "mentions": 8,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 12920285,
+      "title": "호구 황태자 완결났다고?"
+     },
+     {
+      "no": 12918905,
+      "title": "호구황태자 완결났네"
+     },
+     {
+      "no": 12918939,
+      "title": "로판 황태자 완결남"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     8,
+     1,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "09/16부터 3일간 5명이 완결 언급",
+    "title": "로판 속 호구 황태자는 이제 없다",
     "unresolved": false,
     "writers": 8
    },
@@ -13589,6 +15311,44 @@
     "writers": 7
    },
    {
+    "author": "마법소녀G",
+    "before_start": false,
+    "completion_date": "2026-07-26",
+    "completion_month": "2026-07",
+    "id": "괴담에미소녀모드를잘못깔았다",
+    "mentions": 6,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 12635692,
+      "title": "괴담미소녀 완결이라니...!!!"
+     },
+     {
+      "no": 12641316,
+      "title": "괴담 미소녀 모드가 완결이 났구나"
+     },
+     {
+      "no": 12637752,
+      "title": "미소녀모드 완결났나보네"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     6,
+     0,
+     0,
+     0,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "07/26부터 3일간 5명이 완결 언급",
+    "title": "괴담에 미소녀 모드를 잘못 깔았다",
+    "unresolved": false,
+    "writers": 6
+   },
+   {
     "author": "mayve",
     "before_start": false,
     "completion_date": "2026-07-27",
@@ -13623,44 +15383,6 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 67%, 몰린 시점 없음",
     "title": "로판 속 벌레술사가 되었다",
-    "unresolved": false,
-    "writers": 6
-   },
-   {
-    "author": "민트초코주먹밥",
-    "before_start": false,
-    "completion_date": "2026-09-16",
-    "completion_month": "2026-09",
-    "id": "로판속호구황태자는이제없다",
-    "mentions": 6,
-    "needs_review": true,
-    "new": false,
-    "samples": [
-     {
-      "no": 12920285,
-      "title": "호구 황태자 완결났다고?"
-     },
-     {
-      "no": 12918905,
-      "title": "호구황태자 완결났네"
-     },
-     {
-      "no": 12918395,
-      "title": "호구 황태자 완결이구나"
-     }
-    ],
-    "series": [
-     0,
-     0,
-     0,
-     0,
-     6,
-     1,
-     0
-    ],
-    "status": "완결",
-    "status_reason": "09/16부터 3일간 4명이 완결 언급",
-    "title": "로판 속 호구 황태자는 이제 없다",
     "unresolved": false,
     "writers": 6
    },
@@ -13931,6 +15653,120 @@
     "writers": 5
    },
    {
+    "author": "근서",
+    "before_start": false,
+    "completion_date": "2026-08-22",
+    "completion_month": "2026-08",
+    "id": "내가키운s급들",
+    "mentions": 5,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 12802546,
+      "title": "뭐야 스급친 벌써 완결이야?"
+     },
+     {
+      "no": 12849872,
+      "title": "스급 완결이라며!"
+     },
+     {
+      "no": 12799596,
+      "title": "사실 내스급 급완결 자체는 내 알빠가 아니긴한데"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     4,
+     1,
+     0,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "08/22부터 3일간 4명이 완결 언급",
+    "title": "내가 키운 S급들",
+    "unresolved": false,
+    "writers": 5
+   },
+   {
+    "author": "제이허빈",
+    "before_start": false,
+    "completion_date": "2026-09-11",
+    "completion_month": "2026-09",
+    "id": "당문전",
+    "mentions": 5,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 12897368,
+      "title": "오늘자 당문전 외전 완결로 완성된 미장셴"
+     },
+     {
+      "no": 12897689,
+      "title": "스포) 당문전 외전 완결났구나"
+     },
+     {
+      "no": 12897319,
+      "title": "당문전 찐 완결 났네"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     5,
+     0,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "09/11부터 3일간 4명이 완결 언급",
+    "title": "당문전",
+    "unresolved": false,
+    "writers": 5
+   },
+   {
+    "author": "",
+    "before_start": false,
+    "completion_date": "2026-08-10",
+    "completion_month": "2026-08",
+    "id": "러브코미디속오타쿠군이되었다",
+    "mentions": 5,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 12716669,
+      "title": "럽코오타쿠 급완결 너무 슬프다"
+     },
+     {
+      "no": 12716242,
+      "title": "럽코오타쿠 완결이다요"
+     },
+     {
+      "no": 12717603,
+      "title": "럽코오타쿠는 33화 이후로 망가져서 완결나버렸네.."
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     5,
+     0,
+     0,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "08/10부터 3일간 5명이 완결 언급",
+    "title": "러브코미디 속 오타쿠군이 되었다",
+    "unresolved": false,
+    "writers": 5
+   },
+   {
     "author": "suerte",
     "before_start": false,
     "completion_date": "2026-07-03",
@@ -14039,8 +15875,46 @@
      1
     ],
     "status": "예전 완결",
-    "status_reason": "완결 글 비율 94%, 몰린 시점 없음",
+    "status_reason": "완결 글 비율 84%, 몰린 시점 없음",
     "title": "무림마조",
+    "unresolved": false,
+    "writers": 5
+   },
+   {
+    "author": "Cadilet",
+    "before_start": false,
+    "completion_date": "2026-07-25",
+    "completion_month": "2026-07",
+    "id": "예언의아이가살아남는법",
+    "mentions": 5,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 12745793,
+      "title": "스포) 최근 완결작중에선 예언의 아이가 제일 낫더라"
+     },
+     {
+      "no": 12803264,
+      "title": "예언의 아이 완결까지 본사람만 와봐..."
+     },
+     {
+      "no": 12668179,
+      "title": "예언아이 언제 완결났대"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     1,
+     3,
+     1,
+     1,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
+    "title": "예언의 아이가 살아남는 법",
     "unresolved": false,
     "writers": 5
    },
@@ -14197,82 +16071,6 @@
     "writers": 4
    },
    {
-    "author": "제이허빈",
-    "before_start": true,
-    "completion_date": "2026-05-27",
-    "completion_month": "2026-05",
-    "id": "당문전",
-    "mentions": 4,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 12577237,
-      "title": "당문전 완결 후 사존이 누구누구지"
-     },
-     {
-      "no": 12897319,
-      "title": "당문전 찐 완결 났네"
-     },
-     {
-      "no": 12920510,
-      "title": "당문전 외전 완결났구나"
-     }
-    ],
-    "series": [
-     1,
-     1,
-     1,
-     0,
-     3,
-     0,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
-    "title": "당문전",
-    "unresolved": false,
-    "writers": 4
-   },
-   {
-    "author": "",
-    "before_start": false,
-    "completion_date": "2026-08-10",
-    "completion_month": "2026-08",
-    "id": "러브코미디속오타쿠군이되었다",
-    "mentions": 4,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 12716669,
-      "title": "럽코오타쿠 급완결 너무 슬프다"
-     },
-     {
-      "no": 12716242,
-      "title": "럽코오타쿠 완결이다요"
-     },
-     {
-      "no": 12717603,
-      "title": "럽코오타쿠는 33화 이후로 망가져서 완결나버렸네.."
-     }
-    ],
-    "series": [
-     0,
-     0,
-     0,
-     4,
-     0,
-     0,
-     0
-    ],
-    "status": "완결",
-    "status_reason": "08/10부터 3일간 4명이 완결 언급",
-    "title": "러브코미디 속 오타쿠군이 되었다",
-    "unresolved": false,
-    "writers": 4
-   },
-   {
     "author": "백수귀족",
     "before_start": true,
     "completion_date": "2026-05-29",
@@ -14345,44 +16143,6 @@
     "status": "완결",
     "status_reason": "05/29부터 3일간 3명이 완결 언급",
     "title": "예수천국 불신지옥",
-    "unresolved": false,
-    "writers": 4
-   },
-   {
-    "author": "Cadilet",
-    "before_start": false,
-    "completion_date": "2026-07-25",
-    "completion_month": "2026-07",
-    "id": "예언의아이가살아남는법",
-    "mentions": 4,
-    "needs_review": true,
-    "new": false,
-    "samples": [
-     {
-      "no": 12745793,
-      "title": "스포) 최근 완결작중에선 예언의 아이가 제일 낫더라"
-     },
-     {
-      "no": 12803264,
-      "title": "예언의 아이 완결까지 본사람만 와봐..."
-     },
-     {
-      "no": 12852469,
-      "title": "예언의 아이 완결까지 본사람 있냐"
-     }
-    ],
-    "series": [
-     0,
-     0,
-     1,
-     2,
-     1,
-     0,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "완결 글 비율 80%, 몰린 시점 없음",
-    "title": "예언의 아이가 살아남는 법",
     "unresolved": false,
     "writers": 4
    },
@@ -14615,6 +16375,44 @@
     "writers": 3
    },
    {
+    "author": "합스힙스",
+    "before_start": false,
+    "completion_date": "2026-08-06",
+    "completion_month": "2026-08",
+    "id": "로판속반역가문의공녀님",
+    "mentions": 3,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 12700115,
+      "title": "합스힙스 로판공녀 완결쳤네...."
+     },
+     {
+      "no": 12697063,
+      "title": "그래도 반역공녀 완결내줘서 고맙지요"
+     },
+     {
+      "no": 12696984,
+      "title": "합스힙스 로판공녀 완결 내러왔구나"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     3,
+     0,
+     0,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "08/06부터 3일간 3명이 완결 언급",
+    "title": "로판 속 반역가문의 공녀님",
+    "unresolved": false,
+    "writers": 3
+   },
+   {
     "author": "대벌레",
     "before_start": false,
     "completion_date": "2026-08-05",
@@ -14841,82 +16639,6 @@
     "title": "아포칼립스에 집을 숨김",
     "unresolved": false,
     "writers": 3
-   },
-   {
-    "author": "어두운글",
-    "before_start": false,
-    "completion_date": "2026-06-18",
-    "completion_month": "2026-06",
-    "id": "악수를두다",
-    "mentions": 3,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 12891532,
-      "title": "완결 홍보) 악수를 두다 완결 홍보입니다."
-     },
-     {
-      "no": 12513430,
-      "title": "와 악수를 두다 완결 났었네"
-     },
-     {
-      "no": 12583130,
-      "title": "그러고보니 악수를 두다 완결났었지"
-     }
-    ],
-    "series": [
-     0,
-     5,
-     2,
-     0,
-     1,
-     0,
-     0
-    ],
-    "status": "완결",
-    "status_reason": "06/18부터 3일간 4명이 완결 언급",
-    "title": "악수를 두다",
-    "unresolved": false,
-    "writers": 3
-   },
-   {
-    "author": "",
-    "before_start": false,
-    "completion_date": "2026-09-03",
-    "completion_month": "2026-09",
-    "id": "여사친들이최면어플을쓰려고한다",
-    "mentions": 3,
-    "needs_review": true,
-    "new": false,
-    "samples": [
-     {
-      "no": 12861701,
-      "title": "여사친최면 멘탈나가서 급완결쳤네"
-     },
-     {
-      "no": 12861422,
-      "title": "여사친최면 멘헤라 집착 하렘 맛깔났엇는데 급완결은 하"
-     },
-     {
-      "no": 12864831,
-      "title": "여사친최면 작가는 전작도 급완결이였는데"
-     }
-    ],
-    "series": [
-     0,
-     0,
-     0,
-     0,
-     3,
-     0,
-     0
-    ],
-    "status": "완결",
-    "status_reason": "09/03부터 3일간 3명이 완결 언급",
-    "title": "여사친들이 최면 어플을 쓰려고 한다",
-    "unresolved": false,
-    "writers": 3
    }
   ],
   "2026-Q4": [
@@ -15107,6 +16829,44 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 89%, 몰린 시점 없음",
     "title": "아카데미 플레이어를 죽였다",
+    "unresolved": false,
+    "writers": 5
+   },
+   {
+    "author": "SirLogan",
+    "before_start": false,
+    "completion_date": "2026-10-17",
+    "completion_month": "2026-10",
+    "id": "아포칼립스의살인남매",
+    "mentions": 5,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 13098884,
+      "title": "서로건 살인 남매 완결났네"
+     },
+     {
+      "no": 13099554,
+      "title": "살인남매 완결이구나"
+     },
+     {
+      "no": 13098740,
+      "title": "서로건 살인남매 완결 났지요"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     5,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "10/17부터 3일간 4명이 완결 언급",
+    "title": "아포칼립스의 살인 남매",
     "unresolved": false,
     "writers": 5
    },
@@ -15377,6 +17137,44 @@
     "writers": 4
    },
    {
+    "author": "겨울잠쥐",
+    "before_start": false,
+    "completion_date": "2026-10-25",
+    "completion_month": "2026-10",
+    "id": "태엽과모래의마녀",
+    "mentions": 4,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 13283242,
+      "title": "완결 홍보 - 태엽과 모래의 마녀"
+     },
+     {
+      "no": 13283357,
+      "title": "태모마가 완결나는 걸 보네"
+     },
+     {
+      "no": 13133827,
+      "title": "머야 태엽마녀 완결났네"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     3
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 67%, 몰린 시점 없음",
+    "title": "태엽과 모래의 마녀",
+    "unresolved": false,
+    "writers": 4
+   },
+   {
     "author": "시엘클레",
     "before_start": false,
     "completion_date": "2026-09-23",
@@ -15453,26 +17251,26 @@
     "writers": 3
    },
    {
-    "author": "SirLogan",
+    "author": "",
     "before_start": false,
-    "completion_date": "2026-10-17",
+    "completion_date": "2026-10-30",
     "completion_month": "2026-10",
-    "id": "아포칼립스의살인남매",
+    "id": "용사파티만화",
     "mentions": 3,
-    "needs_review": false,
+    "needs_review": true,
     "new": false,
     "samples": [
      {
-      "no": 13099554,
-      "title": "살인남매 완결이구나"
+      "no": 13158347,
+      "title": "용파만 완결났음"
      },
      {
-      "no": 13093704,
-      "title": "살인남매) 이제 완결이구만"
+      "no": 13161135,
+      "title": "아 유일하게 보던 웹툰 용사파티만화가 완결되다니..."
      },
      {
-      "no": 13130415,
-      "title": "살인남매 완결 표지 진짜"
+      "no": 13276461,
+      "title": "용파만이 존나 잘 완결났음"
      }
     ],
     "series": [
@@ -15481,12 +17279,12 @@
      0,
      0,
      0,
-     3,
-     0
+     2,
+     1
     ],
     "status": "예전 완결",
     "status_reason": "완결 글 비율 100%, 몰린 시점 없음",
-    "title": "아포칼립스의 살인 남매",
+    "title": "용사파티만화",
     "unresolved": false,
     "writers": 3
    },
@@ -15525,44 +17323,6 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 75%, 몰린 시점 없음",
     "title": "최면 야겜에 빙의했다",
-    "unresolved": false,
-    "writers": 3
-   },
-   {
-    "author": "겨울잠쥐",
-    "before_start": false,
-    "completion_date": "2026-11-02",
-    "completion_month": "2026-11",
-    "id": "태엽과모래의마녀",
-    "mentions": 3,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 13283242,
-      "title": "완결 홍보 - 태엽과 모래의 마녀"
-     },
-     {
-      "no": 13283357,
-      "title": "태모마가 완결나는 걸 보네"
-     },
-     {
-      "no": 13171192,
-      "title": "태모마 완결났었네"
-     }
-    ],
-    "series": [
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     3
-    ],
-    "status": "예전 완결",
-    "status_reason": "완결 글 비율 75%, 몰린 시점 없음",
-    "title": "태엽과 모래의 마녀",
     "unresolved": false,
     "writers": 3
    },
@@ -15875,8 +17635,42 @@
      1
     ],
     "status": "예전 완결",
-    "status_reason": "완결 글 비율 94%, 몰린 시점 없음",
+    "status_reason": "완결 글 비율 84%, 몰린 시점 없음",
     "title": "무림마조",
+    "unresolved": false,
+    "writers": 2
+   },
+   {
+    "author": "야명",
+    "before_start": false,
+    "completion_date": "2026-06-19",
+    "completion_month": "2026-06",
+    "id": "세계수를따먹다",
+    "mentions": 2,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 13019127,
+      "title": "로판 세계수 완결났군"
+     },
+     {
+      "no": 13190088,
+      "title": "로판 세계수 완결이네"
+     }
+    ],
+    "series": [
+     0,
+     1,
+     0,
+     1,
+     0,
+     1,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 80%, 몰린 시점 없음",
+    "title": "세계수를 따먹다",
     "unresolved": false,
     "writers": 2
    },
@@ -15911,6 +17705,40 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 80%, 몰린 시점 없음",
     "title": "시한부 천재가 살아남는 법",
+    "unresolved": false,
+    "writers": 2
+   },
+   {
+    "author": "",
+    "before_start": false,
+    "completion_date": "2026-09-11",
+    "completion_month": "2026-09",
+    "id": "아카메디아카데미",
+    "mentions": 2,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 13114647,
+      "title": "아카메디 완결낫엇구나"
+     },
+     {
+      "no": 13283526,
+      "title": "아카메디 아카데미 완결까지 다 봤다"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 100%, 몰린 시점 없음",
+    "title": "아카메디 아카데미",
     "unresolved": false,
     "writers": 2
    },
@@ -15983,22 +17811,22 @@
     "writers": 2
    },
    {
-    "author": "커리우유",
+    "author": "검은학자",
     "before_start": false,
-    "completion_date": "2026-09-05",
-    "completion_month": "2026-09",
-    "id": "프롤로그에서죽는히로인에빙의했다",
+    "completion_date": "2026-10-27",
+    "completion_month": "2026-10",
+    "id": "초차원미식가의일상",
     "mentions": 2,
-    "needs_review": true,
+    "needs_review": false,
     "new": false,
     "samples": [
      {
-      "no": 13198662,
-      "title": "속보)) 롤로로빙 찐완결"
+      "no": 13161450,
+      "title": "초차원 미식가 완결 ~완결 기념 리뷰대회~"
      },
      {
-      "no": 13183021,
-      "title": "니케 파쿠리지만 완결 잘 낸 롤로로빙의 승리네"
+      "no": 13144859,
+      "title": "초차원 미식가 완결났네"
      }
     ],
     "series": [
@@ -16006,15 +17834,45 @@
      0,
      0,
      0,
-     39,
      0,
-     2
+     2,
+     0
     ],
-    "status": "완결",
-    "status_reason": "09/05부터 3일간 36명이 완결 언급",
-    "title": "프롤로그에서 죽는 히로인에 빙의했다",
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "초차원 미식가의 일상",
     "unresolved": false,
     "writers": 2
+   },
+   {
+    "author": "성좌조아",
+    "before_start": false,
+    "completion_date": "2026-09-04",
+    "completion_month": "2026-09",
+    "id": "6가챠캐릭터가되었다",
+    "mentions": 1,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 13241491,
+      "title": "6성가챠 완결났구나"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "6★ 가챠 캐릭터가 되었다",
+    "unresolved": false,
+    "writers": 1
    },
    {
     "author": "papapa",
@@ -16047,6 +17905,36 @@
     "writers": 1
    },
    {
+    "author": "글라딘",
+    "before_start": false,
+    "completion_date": "2026-08-17",
+    "completion_month": "2026-08",
+    "id": "러스트rust",
+    "mentions": 1,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 13254539,
+      "title": "러스트 완결 났구나?"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "러스트 [ RUST ]",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
     "author": "민트초코주먹밥",
     "before_start": false,
     "completion_date": "2026-09-16",
@@ -16066,12 +17954,12 @@
      0,
      0,
      0,
-     6,
+     8,
      1,
      0
     ],
     "status": "완결",
-    "status_reason": "09/16부터 3일간 4명이 완결 언급",
+    "status_reason": "09/16부터 3일간 5명이 완결 언급",
     "title": "로판 속 호구 황태자는 이제 없다",
     "unresolved": false,
     "writers": 1
@@ -16103,6 +17991,36 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 100%, 몰린 시점 없음",
     "title": "룬의 아이들",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "글쟁이S",
+    "before_start": false,
+    "completion_date": "2026-07-17",
+    "completion_month": "2026-07",
+    "id": "마왕은학원에간다",
+    "mentions": 1,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 13157746,
+      "title": "마학간이 완결난지 4년이 지낫는데 글쟁이는 뭐하고있을까"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     1,
+     0,
+     0,
+     1,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "마왕은 학원에 간다",
     "unresolved": false,
     "writers": 1
    },
@@ -16143,7 +18061,7 @@
     "completion_month": "2026-07",
     "id": "아이돌이군필을숨김",
     "mentions": 1,
-    "needs_review": false,
+    "needs_review": true,
     "new": false,
     "samples": [
      {
@@ -16154,7 +18072,7 @@
     "series": [
      0,
      0,
-     23,
+     24,
      1,
      1,
      1,
@@ -16257,6 +18175,66 @@
     "writers": 1
    },
    {
+    "author": "",
+    "before_start": false,
+    "completion_date": "2026-09-03",
+    "completion_month": "2026-09",
+    "id": "여혐소설가의ts수기",
+    "mentions": 1,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 13262715,
+      "title": "알레미카는 여혐수기 완결내고 쓰는게 롤 프로물이던데"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "여혐 소설가의 TS 수기",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "Cadilet",
+    "before_start": false,
+    "completion_date": "2026-07-25",
+    "completion_month": "2026-07",
+    "id": "예언의아이가살아남는법",
+    "mentions": 1,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 13052932,
+      "title": "예언아이 완결났었네"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     1,
+     3,
+     1,
+     1,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
+    "title": "예언의 아이가 살아남는 법",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
     "author": "복숭아작가",
     "before_start": false,
     "completion_date": "2026-06-10",
@@ -16283,6 +18261,36 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 100%, 몰린 시점 없음",
     "title": "우주의 함대장",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "",
+    "before_start": false,
+    "completion_date": "2026-08-20",
+    "completion_month": "2026-08",
+    "id": "이멋진세계에축복을",
+    "mentions": 1,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 13187352,
+      "title": "코노스바 완결 어떻게남?"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     1
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "이 멋진 세계에 축복을!",
     "unresolved": false,
     "writers": 1
    },
@@ -16343,156 +18351,6 @@
     "status": "예전 완결",
     "status_reason": "연재처 표시: 완결",
     "title": "이세계 밀프 헌터",
-    "unresolved": false,
-    "writers": 1
-   },
-   {
-    "author": "감기도령",
-    "before_start": false,
-    "completion_date": "2026-06-05",
-    "completion_month": "2026-06",
-    "id": "전생하고보니크툴루",
-    "mentions": 1,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 13105655,
-      "title": "근데 전툴루도 사실 급완결 느낌나긴함"
-     }
-    ],
-    "series": [
-     0,
-     1,
-     0,
-     0,
-     0,
-     1,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "연재처 표시: 완결",
-    "title": "전생하고 보니 크툴루",
-    "unresolved": false,
-    "writers": 1
-   },
-   {
-    "author": "싱숑",
-    "before_start": true,
-    "completion_date": "2026-05-25",
-    "completion_month": "2026-05",
-    "id": "전지적독자시점",
-    "mentions": 1,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 13128119,
-      "title": "그래서 전독시 완결은 어케난거임?"
-     }
-    ],
-    "series": [
-     1,
-     0,
-     1,
-     0,
-     0,
-     1,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "연재처 표시: 완결",
-    "title": "전지적 독자 시점",
-    "unresolved": false,
-    "writers": 1
-   },
-   {
-    "author": "J.K. 롤링",
-    "before_start": false,
-    "completion_date": "2026-06-30",
-    "completion_month": "2026-06",
-    "id": "해리포터",
-    "mentions": 1,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 13103328,
-      "title": "해리포터 완결내준것만으로도 ㅅㅌㅊ 인거 같다"
-     }
-    ],
-    "series": [
-     0,
-     1,
-     2,
-     0,
-     0,
-     1,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "완결 글 비율 100%, 몰린 시점 없음",
-    "title": "해리 포터",
-    "unresolved": false,
-    "writers": 1
-   },
-   {
-    "author": "하나호",
-    "before_start": false,
-    "completion_date": "2026-06-01",
-    "completion_month": "2026-06",
-    "id": "후회안하는프로듀서",
-    "mentions": 1,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 13143729,
-      "title": "아 씨발 후회프듀도 완결 직전에 케이어스 이겼지"
-     }
-    ],
-    "series": [
-     0,
-     1,
-     2,
-     1,
-     1,
-     1,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
-    "title": "후회 안 하는 프로듀서",
-    "unresolved": false,
-    "writers": 1
-   },
-   {
-    "author": "서은하",
-    "before_start": false,
-    "completion_date": "2026-06-12",
-    "completion_month": "2026-06",
-    "id": "히어로가집착하는악당이되었다",
-    "mentions": 1,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 13080877,
-      "title": "히집악은 내가 완결까지 본 몇 안되는 소설임"
-     }
-    ],
-    "series": [
-     0,
-     2,
-     0,
-     0,
-     3,
-     1,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "완결 글 비율 100%, 몰린 시점 없음",
-    "title": "히어로가 집착하는 악당이 되었다",
     "unresolved": false,
     "writers": 1
    }
@@ -18772,10 +20630,10 @@
   }
  ],
  "status_counts": {
-  "보류": 74,
-  "연재중": 34,
-  "예전 완결": 62,
-  "완결": 42
+  "보류": 25,
+  "연재중": 37,
+  "예전 완결": 82,
+  "완결": 46
  },
  "trend": [
   {
@@ -18818,19 +20676,6 @@
    "title": "대마법사였던것은 다시 대마법사를 꿈꾼다"
   },
   {
-   "id": "프롤로그에서죽는히로인에빙의했다",
-   "series": [
-    0,
-    0,
-    0,
-    0,
-    39,
-    0,
-    2
-   ],
-   "title": "프롤로그에서 죽는 히로인에 빙의했다"
-  },
-  {
    "id": "아카데미생존갤러리",
    "series": [
     16,
@@ -18855,6 +20700,19 @@
     0
    ],
    "title": "마나 살 돈 없어서 인방함"
+  },
+  {
+   "id": "아이돌이군필을숨김",
+   "series": [
+    0,
+    0,
+    24,
+    1,
+    1,
+    1,
+    0
+   ],
+   "title": "아이돌이 군필을 숨김"
   }
  ],
  "unresolved": [
@@ -18879,66 +20737,12 @@
    ]
   },
   {
-   "alias": "쿠라에빵",
-   "key": "쿠라에빵",
-   "n": 2,
-   "titles": [
-    "쿠라에빵 갑자기 돌아온거 급완결낸거임?",
-    "념글 보고 쿠라에빵 ts백합 보러갔더니 왜 완결딱지 붙어있지요...?"
-   ]
-  },
-  {
-   "alias": "아카데미 피해자",
-   "key": "아카데미피해자",
-   "n": 2,
-   "titles": [
-    "아카데미 피해자도 완결이네",
-    "아카데미 피해자 완결 났네"
-   ]
-  },
-  {
    "alias": "후피집",
    "key": "후피집",
    "n": 2,
    "titles": [
     "완결난 후피집은 맨날 액기스만 뽑아서 봄",
     "헤픈소꿉 작가가 후피집만 3,4개 완결치지 않았나"
-   ]
-  },
-  {
-   "alias": "심해인방",
-   "key": "심해인방",
-   "n": 2,
-   "titles": [
-    "심해인방 완결까지 본 사람 있나?",
-    "아니 심해인방 갑자기 여기서 완결을때린다고??"
-   ]
-  },
-  {
-   "alias": "파파파 신",
-   "key": "파파파신",
-   "n": 2,
-   "titles": [
-    "파파파 신작 완결난거 어느정도 급임?",
-    "파파파 신작 완결났네"
-   ]
-  },
-  {
-   "alias": "부인밀밭",
-   "key": "부인밀밭",
-   "n": 2,
-   "titles": [
-    "생각해보니 부인밀밭 완결까지 연재하고",
-    "근데 부인밀밭은 급완결은 ㄹㅇ 아니긴함..."
-   ]
-  },
-  {
-   "alias": "하남자탑공략",
-   "key": "하남자탑공략",
-   "n": 2,
-   "titles": [
-    "하남자 탑공략 완결났구나",
-    "하남자탑공략 외전도 완결났구나"
    ]
   },
   {
@@ -18951,66 +20755,12 @@
    ]
   },
   {
-   "alias": "프롤30",
-   "key": "프롤30",
-   "n": 2,
-   "titles": [
-    "프롤30 완결공지는 지금 다시 봐도 ㄹㅇ잘썼음",
-    "프롤30 완결까지 다봤는데 원래도 엔딩 이랬음?"
-   ]
-  },
-  {
-   "alias": "리턴투플레이어",
-   "key": "리턴투플레이어",
-   "n": 2,
-   "titles": [
-    "리턴 투 플레이어 이거 웹툰 완결났구나",
-    "리턴투플레이어 웹툰 완결났네"
-   ]
-  },
-  {
-   "alias": "럽타쿠",
-   "key": "럽타쿠",
-   "n": 2,
-   "titles": [
-    "럽타쿠 죽는거보니 새삼 여러번 꼴아박고 완결친 후회프듀가",
-    "럽타쿠 완결났노"
-   ]
-  },
-  {
-   "alias": "코메",
-   "key": "코메",
-   "n": 2,
-   "titles": [
-    "코메는 내가봤을때 가짜세계수 컷하고 완결냈어야했음",
-    "코메는 100권 완결이 아닐수도 있었다는게 놀랍지요"
-   ]
-  },
-  {
-   "alias": "판다빌런",
-   "key": "판다빌런",
-   "n": 2,
-   "titles": [
-    "흑흑 판다빌런 신작 완결났구나",
-    "판다빌런 완결작 홍보온거 나쁘지않네"
-   ]
-  },
-  {
    "alias": "괴물인턴",
    "key": "괴물인턴",
    "n": 2,
    "titles": [
     "괴물인턴 ★완결★ 입니다!",
     "[괴물인턴] 완결입니다!! 괴물 신입이 되었다!!"
-   ]
-  },
-  {
-   "alias": "합스힙스",
-   "key": "합스힙스",
-   "n": 2,
-   "titles": [
-    "합스힙스 최근작들이 거의 60화 이내 완결이라",
-    "합스힙스 급완결이라고 욕 좀 먹었나보네"
    ]
   },
   {
@@ -19023,102 +20773,12 @@
    ]
   },
   {
-   "alias": "블러디드",
-   "key": "블러디드",
-   "n": 2,
-   "titles": [
-    "블러디드 보는데 완결 조젔다니까 존나 안읽히네",
-    "그러고보니 블러디드 완결났다메 진짜냐"
-   ]
-  },
-  {
-   "alias": "지갑송",
-   "key": "지갑송",
-   "n": 2,
-   "titles": [
-    "지갑송 소설은 70화 완결이지요",
-    "지갑송 프로듀서물 완결내긴 했구나"
-   ]
-  },
-  {
-   "alias": "릿테",
-   "key": "릿테",
-   "n": 2,
-   "titles": [
-    "그거아시나오 그림자별 아니 릿테완결낸거",
-    "릿테 배터링램 나오는 거 완결남?"
-   ]
-  },
-  {
-   "alias": "블리치",
-   "key": "블리치",
-   "n": 2,
-   "titles": [
-    "근데 블리치는 그냥 여기서 1부 완결 냈어야했음",
-    "블리치 완결났네?"
-   ]
-  },
-  {
-   "alias": "미소녀모드",
-   "key": "미소녀모드",
-   "n": 2,
-   "titles": [
-    "야호 미소녀모드 완결",
-    "미소녀모드 완결났나보네"
-   ]
-  },
-  {
-   "alias": "썩은물망자",
-   "key": "썩은물망자",
-   "n": 2,
-   "titles": [
-    "썩은물망자 완결이네",
-    "썩은물망자 완결났네ㅋㅋ"
-   ]
-  },
-  {
-   "alias": "괴담미소녀모드",
-   "key": "괴담미소녀모드",
-   "n": 2,
-   "titles": [
-    "괴담 미소녀 모드가 완결이 났구나",
-    "ts)괴담미소녀모드 완결났네"
-   ]
-  },
-  {
    "alias": "보던 소설",
    "key": "보던소설",
    "n": 2,
    "titles": [
     "보던 소설이 완결난거지요",
     "보던 소설이 완결났다"
-   ]
-  },
-  {
-   "alias": "괴담미소녀",
-   "key": "괴담미소녀",
-   "n": 2,
-   "titles": [
-    "괴담미소녀 완결이라니...!!!",
-    "괴담미소녀가 완결이 난거지요..."
-   ]
-  },
-  {
-   "alias": "리리쟝",
-   "key": "리리쟝",
-   "n": 2,
-   "titles": [
-    "리리쟝 완결 후기 좀 괘씸하긴 하지요",
-    "자유로 쓰면서 꾸역꾸역 완결내준 리리쟝이 고맙네"
-   ]
-  },
-  {
-   "alias": "리리쟝 신작",
-   "key": "리리쟝신작",
-   "n": 2,
-   "titles": [
-    "리리쟝신작 완결났구나",
-    "뭐야 리리쟝 신작 완결냈네"
    ]
   },
   {
@@ -19131,93 +20791,12 @@
    ]
   },
   {
-   "alias": "마좋좋좋",
-   "key": "마좋좋좋",
-   "n": 2,
-   "titles": [
-    "마좋좋좋왜 완결임?",
-    "마좋좋좋 완결남?"
-   ]
-  },
-  {
-   "alias": "일제시대 바둑천재",
-   "key": "일제시대바둑천재",
-   "n": 2,
-   "titles": [
-    "일제시대 바둑천재 완결낫구나",
-    "일제시대 바둑천재 완결났네"
-   ]
-  },
-  {
-   "alias": "픽미업",
-   "key": "픽미업",
-   "n": 2,
-   "titles": [
-    "픽미업 예전에 보다가 완결나서 다 봤는데",
-    "픽미업 완결은 에휴..그래도 그정도면수고했다."
-   ]
-  },
-  {
-   "alias": "마학간",
-   "key": "마학간",
-   "n": 2,
-   "titles": [
-    "마학간 홀린듯이 5일만에 완결까지 다봤는데",
-    "마학간이 완결난지 4년이 지낫는데 글쟁이는 뭐하고있을까"
-   ]
-  },
-  {
-   "alias": "수호룡",
-   "key": "수호룡",
-   "n": 2,
-   "titles": [
-    "수호룡 완결까지 본사람?",
-    "머야 수호룡 이거 완결낫내??"
-   ]
-  },
-  {
-   "alias": "체인소맨",
-   "key": "체인소맨",
-   "n": 2,
-   "titles": [
-    "뭔가 체인소맨 완결때 반응같네",
-    "체인소맨은 1부완결이라고 생각하면 완벽함"
-   ]
-  },
-  {
-   "alias": "현질수선전",
-   "key": "현질수선전",
-   "n": 2,
-   "titles": [
-    "현질수선전 완결임?",
-    "아 현질수선전 완결났네"
-   ]
-  },
-  {
-   "alias": "회귀 13",
-   "key": "회귀13",
-   "n": 2,
-   "titles": [
-    "아 시발 ㅋㅋ 회귀13 완결나기 전날에 장갤에 300결사단 모여서",
-    "회귀 13 완결난지 5년됐대"
-   ]
-  },
-  {
    "alias": "오느릐",
    "key": "오느릐",
    "n": 2,
    "titles": [
     "오느릐 완결좍운~~~~~~♡♡♡♡♡♡♡♡♡♡",
     "오느릐 완결은~~~~~~~♡♡♡♡♡♡♡♡♡"
-   ]
-  },
-  {
-   "alias": "이계진입리로디드",
-   "key": "이계진입리로디드",
-   "n": 2,
-   "titles": [
-    "이계진입 리로디드 웹툰도 완결이났구나",
-    "이계진입리로디드 웹툰 완결나서 보고있는데"
    ]
   },
   {
@@ -19257,15 +20836,6 @@
    ]
   },
   {
-   "alias": "마도유화",
-   "key": "마도유화",
-   "n": 2,
-   "titles": [
-    "마도유화는 그냥 완결딱지 땟네",
-    "마도유화 완결났었네?"
-   ]
-  },
-  {
    "alias": "\"많이 안 사랑해줘서 급",
    "key": "많이안사랑해줘서급",
    "n": 2,
@@ -19284,102 +20854,12 @@
    ]
   },
   {
-   "alias": "스급친",
-   "key": "스급친",
-   "n": 2,
-   "titles": [
-    "뭐야 스급친 벌써 완결이야?",
-    "스급친 공지보니까 쥐흔때문에 얼른 본편완결낸듯"
-   ]
-  },
-  {
-   "alias": "스급",
-   "key": "스급",
-   "n": 2,
-   "titles": [
-    "사실 내스급 급완결 자체는 내 알빠가 아니긴한데",
-    "스급 완결이라며!"
-   ]
-  },
-  {
-   "alias": "코노스바",
-   "key": "코노스바",
-   "n": 2,
-   "titles": [
-    "코노스바가 유일하게 완결까지 본거임",
-    "코노스바 완결 어떻게남?"
-   ]
-  },
-  {
-   "alias": "유주",
-   "key": "유주",
-   "n": 2,
-   "titles": [
-    "유주 하니까 화나네 어흑 왜 급완결냈냐 ㅅㅂ",
-    "드유보단 유주 어흑 급완결때문에 더 타지않았았나"
-   ]
-  },
-  {
-   "alias": "섦꽃",
-   "key": "섦꽃",
-   "n": 2,
-   "titles": [
-    "성실연재 섦꽃(전전작 급완결 연중)",
-    "섦꽃 << 얘 완결작 볼만함????? 괴담이 자자하던데"
-   ]
-  },
-  {
-   "alias": "러스트",
-   "key": "러스트",
-   "n": 2,
-   "titles": [
-    "러스트 완결 어케냈음?",
-    "러스트 완결 났구나?"
-   ]
-  },
-  {
    "alias": "재밌게 본 패러디",
    "key": "재밌게본패러디",
    "n": 2,
    "titles": [
     "재밌게 본 패러디가 완결나버림",
     "재밌게 본 패러디가 완결나버림"
-   ]
-  },
-  {
-   "alias": "합스힙스 로판공녀",
-   "key": "합스힙스로판공녀",
-   "n": 2,
-   "titles": [
-    "합스힙스 로판공녀 완결쳤네....",
-    "합스힙스 로판공녀 완결 내러왔구나"
-   ]
-  },
-  {
-   "alias": "자장가",
-   "key": "자장가",
-   "n": 2,
-   "titles": [
-    "자장가는 미궁골렘때도 급전개 급완결 하지 않았나",
-    "근데 자장가는 전작 급완결때린거 신기할 정도로 욕 안먹더라"
-   ]
-  },
-  {
-   "alias": "예언아이",
-   "key": "예언아이",
-   "n": 2,
-   "titles": [
-    "예언아이 언제 완결났대",
-    "예언아이 완결났었네"
-   ]
-  },
-  {
-   "alias": "마왕당근",
-   "key": "마왕당근",
-   "n": 2,
-   "titles": [
-    "니여친 작가 마왕당근은 어케 완결친거냐",
-    "마왕당근 본편 완결 다 봤네..."
    ]
   },
   {
@@ -19401,75 +20881,12 @@
    ]
   },
   {
-   "alias": "신노아신",
-   "key": "신노아신",
-   "n": 2,
-   "titles": [
-    "신노아신작 완결이구나 ㅠㅠ",
-    "신노아신작 완결"
-   ]
-  },
-  {
-   "alias": "컨셉방송",
-   "key": "컨셉방송",
-   "n": 2,
-   "titles": [
-    "컨셉방송도 완결났네",
-    "ts)컨셉방송 마침내 완결남.."
-   ]
-  },
-  {
-   "alias": "로판 황태자",
-   "key": "로판황태자",
-   "n": 2,
-   "titles": [
-    "로판황태자 급완결쳤나보네",
-    "로판 황태자 완결남"
-   ]
-  },
-  {
-   "alias": "독일배팅",
-   "key": "독일배팅",
-   "n": 2,
-   "titles": [
-    "독일배팅 급완결이냐?",
-    "독일배팅 완결났네"
-   ]
-  },
-  {
    "alias": "내고향",
    "key": "내고향",
    "n": 2,
    "titles": [
     "스포) 내고향 나름 완결 깔끔하다",
     "내고향 완결 후기 뜸"
-   ]
-  },
-  {
-   "alias": "아카메디",
-   "key": "아카메디",
-   "n": 2,
-   "titles": [
-    "아카메디 뭔데 완결났지",
-    "아카메디 완결낫엇구나"
-   ]
-  },
-  {
-   "alias": "당문전 외전",
-   "key": "당문전외전",
-   "n": 2,
-   "titles": [
-    "스포) 당문전 외전 완결났구나",
-    "오늘자 당문전 외전 완결로 완성된 미장셴"
-   ]
-  },
-  {
-   "alias": "대롱닥",
-   "key": "대롱닥",
-   "n": 2,
-   "titles": [
-    "오늘은 kfc먹으면서 대롱닥 완결작이나 봐야지",
-    "대롱닥 신작 완결났네"
    ]
   },
   {
@@ -19482,42 +20899,6 @@
    ]
   },
   {
-   "alias": "롤로빙",
-   "key": "롤로빙",
-   "n": 2,
-   "titles": [
-    "롤로빙의 완결남?",
-    "ts)롤로빙 왜 완결임"
-   ]
-  },
-  {
-   "alias": "6성가챠",
-   "key": "6성가챠",
-   "n": 2,
-   "titles": [
-    "6성가챠도 완결났었구나",
-    "6성가챠 완결났구나"
-   ]
-  },
-  {
-   "alias": "여혐수기",
-   "key": "여혐수기",
-   "n": 2,
-   "titles": [
-    "여혐수기 완결때 클로이때메 너무 찝찝하긴 했음",
-    "알레미카는 여혐수기 완결내고 쓰는게 롤 프로물이던데"
-   ]
-  },
-  {
-   "alias": "격리구역완장",
-   "key": "격리구역완장",
-   "n": 2,
-   "titles": [
-    "격리구역 완장 완결 뭔가 깔끔하네;",
-    "격리구역완장 완결났네"
-   ]
-  },
-  {
    "alias": "S급 여친 탁란",
    "key": "s급여친탁란",
    "n": 2,
@@ -19527,57 +20908,12 @@
    ]
   },
   {
-   "alias": "초차원 미식가",
-   "key": "초차원미식가",
-   "n": 2,
-   "titles": [
-    "초차원 미식가 완결 ~완결 기념 리뷰대회~",
-    "초차원 미식가 완결났네"
-   ]
-  },
-  {
-   "alias": "용파만",
-   "key": "용파만",
-   "n": 2,
-   "titles": [
-    "용파만 완결났음",
-    "용파만이 존나 잘 완결났음"
-   ]
-  },
-  {
-   "alias": "냥모잘",
-   "key": "냥모잘",
-   "n": 2,
-   "titles": [
-    "ts 냥모잘 완결났네",
-    "냥모잘 완결 딱지가 붙어버렸어"
-   ]
-  },
-  {
-   "alias": "서로건 살인남매",
-   "key": "서로건살인남매",
-   "n": 2,
-   "titles": [
-    "서로건 살인 남매 완결났네",
-    "서로건 살인남매 완결 났지요"
-   ]
-  },
-  {
    "alias": "잘생인방",
    "key": "잘생인방",
    "n": 2,
    "titles": [
     "잘생인방은 괜찮은 소재가지고 아쉽게 완결냈네",
     "일단 나는 완결난 잘생인방 마저보고있지요"
-   ]
-  },
-  {
-   "alias": "세계수",
-   "key": "세계수",
-   "n": 2,
-   "titles": [
-    "로판 세계수 완결났군",
-    "로판 세계수 완결이네"
    ]
   },
   {
@@ -20013,14 +21349,6 @@
    ]
   },
   {
-   "alias": "글근육",
-   "key": "글근육",
-   "n": 1,
-   "titles": [
-    "글근육 완결 후기"
-   ]
-  },
-  {
    "alias": "천재흑마, 시천살, 약먹마",
    "key": "천재흑마시천살약먹마",
    "n": 1,
@@ -20042,14 +21370,6 @@
    "n": 1,
    "titles": [
     "그시절 천재물 이제 다 완결났네"
-   ]
-  },
-  {
-   "alias": "개돌",
-   "key": "개돌",
-   "n": 1,
-   "titles": [
-    "근데 개돌 존나 놀리더나 완결까지 읽은놈이 없지요"
    ]
   },
   {
@@ -20234,22 +21554,6 @@
    "n": 1,
    "titles": [
     "완결난 풀맨스 <- 찾기 뒤지게 어렵지요"
-   ]
-  },
-  {
-   "alias": "무당 엘프",
-   "key": "무당엘프",
-   "n": 1,
-   "titles": [
-    "무당 엘프 완결났네"
-   ]
-  },
-  {
-   "alias": "파랑손",
-   "key": "파랑손",
-   "n": 1,
-   "titles": [
-    "파랑손 빨리 완결치고 영지물 쓰고 그거완결치고"
    ]
   },
   {
@@ -20539,7 +21843,503 @@
    "titles": [
     "지금 편vs정 떡임 아니면 급완결런 떡임?"
    ]
+  },
+  {
+   "alias": "편결런 급",
+   "key": "편결런급",
+   "n": 1,
+   "titles": [
+    "편결런 급완결 실드는 왜 치는거임?"
+   ]
+  },
+  {
+   "alias": "돈벌겠다고 급",
+   "key": "돈벌겠다고급",
+   "n": 1,
+   "titles": [
+    "돈벌겠다고 급완결한건 어쩔 수없지...."
+   ]
+  },
+  {
+   "alias": "약먹마, 갤질의사",
+   "key": "약먹마갤질의사",
+   "n": 1,
+   "titles": [
+    "뭐야 약먹마 갤질의사 등 완결떡이야? 이건 수선전의 승리네."
+   ]
+  },
+  {
+   "alias": "돈벌려고 최상위권 작품 빠르게",
+   "key": "돈벌려고최상위권작품빠르게",
+   "n": 1,
+   "titles": [
+    "와 돈벌려고 최상위권 작품 빠르게 완결하는건 말 안된다고 생각했는데"
+   ]
+  },
+  {
+   "alias": "편결도 힘든 월천작을 급",
+   "key": "편결도힘든월천작을급",
+   "n": 1,
+   "titles": [
+    "편결도 힘든 월천작을 급완결한다고?"
+   ]
+  },
+  {
+   "alias": "연중 급",
+   "key": "연중급",
+   "n": 1,
+   "titles": [
+    "연중 급완결 외전유기 작가들 후장 자유이용권이 필요함"
+   ]
+  },
+  {
+   "alias": "니 이거",
+   "key": "니이거",
+   "n": 1,
+   "titles": [
+    "아니 이거 완결이 아니었음?"
+   ]
+  },
+  {
+   "alias": "댓글천재",
+   "key": "댓글천재",
+   "n": 1,
+   "titles": [
+    "댓글천재 왜ㅜ완결임???"
+   ]
+  },
+  {
+   "alias": ":급",
+   "key": "급",
+   "n": 1,
+   "titles": [
+    "???:급완결은 아닌듯?"
+   ]
+  },
+  {
+   "alias": "로유진",
+   "key": "로유진",
+   "n": 1,
+   "titles": [
+    "단적으로는 로유진도 메모 완결치고 편결갔음"
+   ]
+  },
+  {
+   "alias": "댓글천재의사",
+   "key": "댓글천재의사",
+   "n": 1,
+   "titles": [
+    "댓글천재의사 갑자기 완결나버렸네.."
+   ]
+  },
+  {
+   "alias": "과연 시리즈 연재계획없었어도 오늘 저렇게",
+   "key": "과연시리즈연재계획없었어도오늘저렇게",
+   "n": 1,
+   "titles": [
+    "과연 시리즈 연재계획없었어도 오늘 저렇게 완결했을까?"
+   ]
+  },
+  {
+   "alias": "내가 본",
+   "key": "내가본",
+   "n": 1,
+   "titles": [
+    "내가 본 완결 후기 중 짠했던거"
+   ]
+  },
+  {
+   "alias": "오리너구리",
+   "key": "오리너구리",
+   "n": 1,
+   "titles": [
+    "난 솔직히 오리너구리 급완결은 별 생각없는데"
+   ]
+  },
+  {
+   "alias": "댓글의사",
+   "key": "댓글의사",
+   "n": 1,
+   "titles": [
+    "댓글의사 왜 완결이야!"
+   ]
+  },
+  {
+   "alias": "편결가서 돈벌려고",
+   "key": "편결가서돈벌려고",
+   "n": 1,
+   "titles": [
+    "편결가서 돈벌려고 완결은 절대 아닐것같은데;;"
+   ]
+  },
+  {
+   "alias": "따라가던 작품들 2개",
+   "key": "따라가던작품들2개",
+   "n": 1,
+   "titles": [
+    "따라가던 작품들 2개 완결됐네"
+   ]
+  },
+  {
+   "alias": "갤천",
+   "key": "갤천",
+   "n": 1,
+   "titles": [
+    "이정도면 갤천의 완결 난 만족"
+   ]
+  },
+  {
+   "alias": "댓주빈",
+   "key": "댓주빈",
+   "n": 1,
+   "titles": [
+    "댓주빈이 완결이났구나"
+   ]
+  },
+  {
+   "alias": "마녀도시 매도엘프",
+   "key": "마녀도시매도엘프",
+   "n": 1,
+   "titles": [
+    "혹시 마녀도시 매도엘프 완결 잘 나왔음?"
+   ]
+  },
+  {
+   "alias": "이틀만더 빨리",
+   "key": "이틀만더빨리",
+   "n": 1,
+   "titles": [
+    "아 이틀만더 빨리완결내지"
+   ]
+  },
+  {
+   "alias": "바이오주사라",
+   "key": "바이오주사라",
+   "n": 1,
+   "titles": [
+    "바이오주사라 완결내고 바로 신작내는거 뭐임,,"
+   ]
+  },
+  {
+   "alias": "ts 마도유화",
+   "key": "ts마도유화",
+   "n": 1,
+   "titles": [
+    "ts 마도유화 작가도 완결났으니"
+   ]
+  },
+  {
+   "alias": "산지직송",
+   "key": "산지직송",
+   "n": 1,
+   "titles": [
+    "산지직송꺼 완결났네"
+   ]
+  },
+  {
+   "alias": "히로인회귀뺏",
+   "key": "히로인회귀뺏",
+   "n": 1,
+   "titles": [
+    "히로인회귀뺏 드디어 완결났네"
+   ]
+  },
+  {
+   "alias": "재밌게 보던 소설",
+   "key": "재밌게보던소설",
+   "n": 1,
+   "titles": [
+    "재밌게 보던 소설 완결났네"
+   ]
+  },
+  {
+   "alias": "주말에 후피집",
+   "key": "주말에후피집",
+   "n": 1,
+   "titles": [
+    "주말에 후피집 완결 몇개 짧은리뷰"
+   ]
+  },
+  {
+   "alias": "귀나딸",
+   "key": "귀나딸",
+   "n": 1,
+   "titles": [
+    "귀나딸 본 게이들아 완결 스포 좀"
+   ]
+  },
+  {
+   "alias": "내가 첨으로 후원한 소설은 잘",
+   "key": "내가첨으로후원한소설은잘",
+   "n": 1,
+   "titles": [
+    "내가 첨으로 후원한 소설은 잘완결냈네"
+   ]
+  },
+  {
+   "alias": "순수 표지빨로 내",
+   "key": "순수표지빨로내",
+   "n": 1,
+   "titles": [
+    "순수 표지빨로 내가 완결까지 다 봤던 작품"
+   ]
+  },
+  {
+   "alias": "악수두다",
+   "key": "악수두다",
+   "n": 1,
+   "titles": [
+    "악수두다 완결남?"
+   ]
+  },
+  {
+   "alias": "최근에 보던 작품 6개의",
+   "key": "최근에보던작품6개의",
+   "n": 1,
+   "titles": [
+    "최근에 보던 작품 6개의 완결을 마주했다"
+   ]
+  },
+  {
+   "alias": "떡전사",
+   "key": "떡전사",
+   "n": 1,
+   "titles": [
+    "떡전사 완결 났다길래 잠시 노피아 갔는데"
+   ]
+  },
+  {
+   "alias": "0희망",
+   "key": "0희망",
+   "n": 1,
+   "titles": [
+    "0희망 완결도 났겠다 주인공 행복한거 보니까 좋구만"
+   ]
+  },
+  {
+   "alias": "니 이거 개재밌는데 급",
+   "key": "니이거개재밌는데급",
+   "n": 1,
+   "titles": [
+    "아니 이거 개재밌는데 급완결 머지"
+   ]
+  },
+  {
+   "alias": "범인수선전",
+   "key": "범인수선전",
+   "n": 1,
+   "titles": [
+    "범인수선전 완결까지 읽을려니깐 못읽겠던데"
+   ]
+  },
+  {
+   "alias": "장르폭군",
+   "key": "장르폭군",
+   "n": 1,
+   "titles": [
+    "장르폭군 120화 완결이네"
+   ]
+  },
+  {
+   "alias": "여자일진나를먹음",
+   "key": "여자일진나를먹음",
+   "n": 1,
+   "titles": [
+    "여자일진나를먹음 완결내긴했네"
+   ]
+  },
+  {
+   "alias": "보던거 하나",
+   "key": "보던거하나",
+   "n": 1,
+   "titles": [
+    "보던거 하나 완결났네"
+   ]
+  },
+  {
+   "alias": "대마대마",
+   "key": "대마대마",
+   "n": 1,
+   "titles": [
+    "뭐야 대마대마 완결났네?"
+   ]
+  },
+  {
+   "alias": "장빙이 즐기던 웹툰이 잘",
+   "key": "장빙이즐기던웹툰이잘",
+   "n": 1,
+   "titles": [
+    "장빙이 즐기던 웹툰이 잘 완결나서 기분이 좋구나"
+   ]
+  },
+  {
+   "alias": "역전성좌",
+   "key": "역전성좌",
+   "n": 1,
+   "titles": [
+    "역전성좌 저건 급완결도 아니고 그냥 연중인걸 완결돌린건데"
+   ]
+  },
+  {
+   "alias": "비상사료",
+   "key": "비상사료",
+   "n": 1,
+   "titles": [
+    "볼거없을때 보던 비상사료 완결남 비상"
+   ]
+  },
+  {
+   "alias": "아싸찐따 네크로맨서",
+   "key": "아싸찐따네크로맨서",
+   "n": 1,
+   "titles": [
+    "아싸찐따 네크로맨서 이거 왤키 급완결임..."
+   ]
+  },
+  {
+   "alias": "미수",
+   "key": "미수",
+   "n": 1,
+   "titles": [
+    "ㄱㄱ미수하니까 급완결한 병신소설 생각나네"
+   ]
+  },
+  {
+   "alias": "오늬뤠",
+   "key": "오늬뤠",
+   "n": 1,
+   "titles": [
+    "오늬뤠~~~~~ 완결좍은~~~~~~~~~~"
+   ]
+  },
+  {
+   "alias": "솔직히 몇년전",
+   "key": "솔직히몇년전",
+   "n": 1,
+   "titles": [
+    "솔직히 몇년전 완결난 글 정실논쟁 웃기지요"
+   ]
+  },
+  {
+   "alias": "도서관마법",
+   "key": "도서관마법",
+   "n": 1,
+   "titles": [
+    "도서관마법 급완결임??"
+   ]
+  },
+  {
+   "alias": "꼴랑",
+   "key": "꼴랑",
+   "n": 1,
+   "titles": [
+    "꼴랑 완결 324화짜리가 15화지나자마자 연금화시작하네"
+   ]
+  },
+  {
+   "alias": "\"근데 결국 나는 3만2천 결사대로",
+   "key": "근데결국나는3만2천결사대로",
+   "n": 1,
+   "titles": [
+    "\"근데 결국 나는 3만2천 결사대로 완결냈는데?\""
+   ]
+  },
+  {
+   "alias": "마도마줍",
+   "key": "마도마줍",
+   "n": 1,
+   "titles": [
+    "마도마줍 완결공지 떴네"
+   ]
+  },
+  {
+   "alias": "거미집 탈출",
+   "key": "거미집탈출",
+   "n": 1,
+   "titles": [
+    "거미집 탈출 완결났네"
+   ]
+  },
+  {
+   "alias": "럽코망가 이제 완전",
+   "key": "럽코망가이제완전",
+   "n": 1,
+   "titles": [
+    "럽코망가 이제 완전 완결이라고?"
+   ]
+  },
+  {
+   "alias": "럽코망가 외전까지",
+   "key": "럽코망가외전까지",
+   "n": 1,
+   "titles": [
+    "럽코망가 외전까지 완결났네"
+   ]
+  },
+  {
+   "alias": "지유악",
+   "key": "지유악",
+   "n": 1,
+   "titles": [
+    "지유악 완결까지 보고왔지요"
+   ]
+  },
+  {
+   "alias": "림조가",
+   "key": "림조가",
+   "n": 1,
+   "titles": [
+    "림조가 완결이 났었네"
+   ]
+  },
+  {
+   "alias": "재밌었는데 41화만에",
+   "key": "재밌었는데41화만에",
+   "n": 1,
+   "titles": [
+    "재밌었는데 41화만에 완결났어"
+   ]
+  },
+  {
+   "alias": "병기소녀",
+   "key": "병기소녀",
+   "n": 1,
+   "titles": [
+    "병기소녀 완결 났었네"
+   ]
+  },
+  {
+   "alias": "100화도 못채우고",
+   "key": "100화도못채우고",
+   "n": 1,
+   "titles": [
+    "100화도 못채우고 완결쳤었네"
+   ]
+  },
+  {
+   "alias": "카드아카",
+   "key": "카드아카",
+   "n": 1,
+   "titles": [
+    "카드아카는 급완결인데도 ㄹㅇ 개호감이었음"
+   ]
+  },
+  {
+   "alias": "황장미",
+   "key": "황장미",
+   "n": 1,
+   "titles": [
+    "황장미 신작 벌써 완결이네"
+   ]
+  },
+  {
+   "alias": "닥판쌀먹",
+   "key": "닥판쌀먹",
+   "n": 1,
+   "titles": [
+    "뭐야 닥판쌀먹 완전 완결낫엇네??"
+   ]
   }
  ],
- "updated": "2026-11-24 19:21"
+ "updated": "2026-11-24 19:29"
 }
