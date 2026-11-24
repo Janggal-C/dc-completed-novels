@@ -1,0 +1,25 @@
+name: 수집 테스트 (2페이지)
+
+# 코드 고칠 때 빠르게 확인용. 저장소에 아무것도 저장하지 않는다.
+on:
+  push:
+    paths: [".github/run-test"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m src.fullcrawl test
