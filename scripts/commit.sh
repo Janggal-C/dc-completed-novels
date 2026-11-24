@@ -9,13 +9,13 @@ if git diff --cached --quiet; then
   exit 0
 fi
 git commit -q -m "$1"
-for i in 1 2 3; do
+for i in 1 2 3 4 5 6 7 8; do
   if git pull --rebase -q origin main; then
     git push -q origin HEAD:main && exit 0
   else
     git rebase --abort 2>/dev/null || true   # 충돌 시 원격 데이터를 덮어쓰지 않고 중단
   fi
-  sleep 5
+  sleep $(( (RANDOM % 10) + 3 ))   # 동시에 여러 작업이 저장할 때 엇갈리게
 done
 echo "푸시 실패" >&2
 exit 1
