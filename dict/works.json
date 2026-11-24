@@ -250,12 +250,19 @@
  "a급헌터가살아가는법": {
   "added": "2026-11-24",
   "author": "검미성",
+  "needs_review": true,
   "platform": "문피아 → 네이버 시리즈",
   "source": "https://namu.wiki/w/A%EA%B8%89%20%ED%97%8C%ED%84%B0%EA%B0%80%20%EC%82%B4%EC%95%84%EA%B0%80%EB%8A%94%20%EB%B2%95",
   "status": "완결",
   "status_checked": "2026-11-24",
   "status_source": "google-bulk",
   "title": "A급 헌터가 살아가는 법"
+ },
+ "blacksouls": {
+  "added": "2026-11-25",
+  "needs_review": true,
+  "source": "https://namu.wiki/w/BLACK%20SOULS",
+  "title": "BLACK SOULS"
  },
  "b급헌터로살아남기": {
   "added": "2026-11-24",
@@ -295,6 +302,7 @@
  "fff급관심용사": {
   "added": "2026-11-25",
   "author": "파르나르",
+  "needs_review": true,
   "platform": "네이버 시리즈",
   "source": "https://series.naver.com/novel/detail.series?productNo=5687263",
   "status": "완결",
@@ -480,6 +488,13 @@
   "status_source": "google-bulk",
   "title": "가문을 살릴 막내 수사가 되었다"
  },
+ "가정교사히트맨reborn": {
+  "added": "2026-11-25",
+  "author": "아마노 아키라",
+  "needs_review": true,
+  "source": "https://namu.wiki/w/%EA%B0%80%EC%A0%95%EA%B5%90%EC%82%AC%20%ED%9E%88%ED%8A%B8%EB%A7%A8%20REBORN!",
+  "title": "가정교사 히트맨 REBORN!"
+ },
  "가족친화적인게임": {
   "added": "2026-11-25",
   "author": "서로건",
@@ -511,6 +526,16 @@
   "platform": "노벨피아",
   "source": "https://namu.wiki/w/%EA%B0%93%EA%B2%9C%EC%9D%98%20%EB%94%94%EB%A0%89%ED%84%B0%EA%B0%80%20%EB%90%98%EC%97%88%EB%8B%A4",
   "title": "갓겜의 디렉터가 되었다"
+ },
+ "개미키우다외신으로오해받았다": {
+  "added": "2026-11-25",
+  "author": "하늘바다땅",
+  "platform": "문피아",
+  "source": "https://m.munpia.com/novel/detail/459174",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "개미 키우다 외신으로 오해 받았다"
  },
  "개차반성녀의보좌관이되었다": {
   "added": "2026-11-24",
@@ -621,6 +646,16 @@
   "status_checked": "2026-11-25",
   "status_source": "google-bulk",
   "title": "검은탑"
+ },
+ "검투수선劍鬪修仙": {
+  "added": "2026-11-25",
+  "author": "쿠우울",
+  "platform": "문피아",
+  "source": "https://m.munpia.com/novel/detail/592123",
+  "status": "연재중",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "검투수선劍鬪修仙"
  },
  "게임4판타지": {
   "added": "2026-11-25",
@@ -767,6 +802,12 @@
   "platform": "노벨피아",
   "source": "https://arca.live/b/novelchannel/174058719",
   "title": "고아가 예언을 잘함"
+ },
+ "고아가음악을너무잘함": {
+  "added": "2026-11-25",
+  "platform": "노벨피아",
+  "source": "https://novelpia.com/novel/411152",
+  "title": "고아가 음악을 너무 잘함"
  },
  "고아파는고아원장현제목착한고아원장아닙니다": {
   "added": "2026-11-24",
@@ -1079,6 +1120,17 @@
   "status_source": "google-bulk",
   "title": "귀쟁이 투기장의 역배 기사님"
  },
+ "귀족영애아카데미의여장남자로살아남기": {
+  "added": "2026-11-25",
+  "author": "섬마을김씨",
+  "needs_review": true,
+  "platform": "문피아",
+  "source": "https://m.munpia.com/novel/detail/445377",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "귀족영애 아카데미의 여장남자로 살아남기"
+ },
  "귀축교사": {
   "added": "2026-11-24",
   "author": "섦게지는꽃",
@@ -1161,6 +1213,16 @@
   "status_checked": "2026-11-25",
   "status_source": "google-bulk",
   "title": "그저 여명일 뿐"
+ },
+ "근육조선": {
+  "added": "2026-11-25",
+  "author": "차돌박E",
+  "platform": "네이버 시리즈",
+  "source": "https://series.naver.com/novel/detail.series?productNo=4481665",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "근육조선"
  },
  "글러먹은빙의": {
   "added": "2026-11-24",
@@ -1393,6 +1455,14 @@
   "status_source": "google-bulk",
   "title": "나 혼자만 레벨업"
  },
+ "나혼자만무림힐러": {
+  "added": "2026-11-25",
+  "author": "도덕생활",
+  "needs_review": true,
+  "platform": "문피아",
+  "source": "https://m.munpia.com/novel/detail/375819",
+  "title": "나 혼자만 무림 힐러"
+ },
  "나혼자만솔플러": {
   "added": "2026-11-25",
   "author": "예신하루",
@@ -1419,6 +1489,16 @@
   "platform": "노벨피아",
   "source": "https://novelpia.com/novel/412578",
   "title": "낙제 헌터의 소환수가 되었다"
+ },
+ "난가기연": {
+  "added": "2026-11-25",
+  "author": "진비사",
+  "platform": "네이버 시리즈",
+  "source": "https://series.naver.com/novel/detail.series?productNo=8443495",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "난가기연"
  },
  "날차버린소꿉친구와전여친이같은반이라곤란하다": {
   "added": "2026-11-24",
@@ -1498,6 +1578,13 @@
   "platform": "노벨피아",
   "source": "https://novelpia.com/novel/406661",
   "title": "내가 바로 그 식칼 든 아가헌터지요"
+ },
+ "내가바로그아가성녀지요": {
+  "added": "2026-11-25",
+  "needs_review": true,
+  "platform": "노벨피아",
+  "source": "https://novelpia.com/novel/410663",
+  "title": "내가 바로 그 아가성녀지요"
  },
  "내가연인이될수있을리없잖아무리무리무리가아니었다": {
   "added": "2026-11-25",
@@ -1696,6 +1783,13 @@
   "status_checked": "2026-11-25",
   "status_source": "google-bulk",
   "title": "눈물을 마시는 새"
+ },
+ "느그플랑은무료로해줍니다": {
+  "added": "2026-11-25",
+  "author": "치킨떙긴다",
+  "platform": "노벨피아",
+  "source": "https://novelpia.com/novel/627",
+  "title": "느그 플랑은 무료로 해줍니다"
  },
  "늑대와향신료": {
   "added": "2026-11-25",
@@ -2145,6 +2239,16 @@
   "status_source": "google-bulk",
   "title": "돈 많고 멍청한 악역영애를 키우게 되었다"
  },
+ "돌아온용병왕": {
+  "added": "2026-11-25",
+  "needs_review": true,
+  "platform": "네이버 시리즈",
+  "source": "https://series.naver.com/novel/detail.series?productNo=13925059",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "돌아온 용병왕"
+ },
  "돌아와서말하기": {
   "added": "2026-11-24",
   "author": "2RE",
@@ -2192,6 +2296,13 @@
   "platform": "노벨피아",
   "source": "https://novelpia.com/novel/173356",
   "title": "[동방] 무녀님"
+ },
+ "동방불패": {
+  "added": "2026-11-25",
+  "needs_review": true,
+  "platform": "카카오페이지",
+  "source": "https://page.kakao.com/home/%EB%8F%99%EB%B0%A9%EB%B6%88%ED%8C%A8/60936990",
+  "title": "동방불패"
  },
  "동탄헌터": {
   "added": "2026-11-25",
@@ -2451,6 +2562,14 @@
   "status_source": "google-bulk",
   "title": "로판에 약을 풀었다"
  },
+ "로판제국의치매검성이되었다": {
+  "added": "2026-11-25",
+  "author": "몰입력",
+  "needs_review": true,
+  "platform": "노벨피아",
+  "source": "https://novelpia.com/novel/435703",
+  "title": "로판제국의 치매 검성이 되었다"
+ },
  "롤빵영애를교정하는집사가되었다": {
   "added": "2026-11-25",
   "platform": "노벨피아",
@@ -2568,6 +2687,16 @@
   "platform": "노벨피아",
   "source": "https://novelpia.com/novel/368823",
   "title": "마도유화"
+ },
+ "마도전생기": {
+  "added": "2026-11-25",
+  "author": "codezero",
+  "platform": "네이버 시리즈",
+  "source": "https://series.naver.com/novel/detail.series?productNo=4871293",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "마도전생기"
  },
  "마두아니라니까요": {
   "added": "2026-11-25",
@@ -2741,6 +2870,16 @@
   "status_checked": "2026-11-24",
   "status_source": "google-bulk",
   "title": "마왕은 학원에 간다"
+ },
+ "마왕이됐더니전여친들이후회하네": {
+  "added": "2026-11-25",
+  "author": "김밥군주",
+  "platform": "노벨피아",
+  "source": "https://novelpia.com/novel/427935",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "마왕이 됐더니 전여친들이 후회하네"
  },
  "마왕탑갤러리의천재뉴비": {
   "added": "2026-11-25",
@@ -2920,6 +3059,12 @@
   "status_checked": "2026-11-25",
   "status_source": "google-bulk",
   "title": "매도당하고 싶은 엘프님"
+ },
+ "매료에서해방된나에게기다리고있던것은": {
+  "added": "2026-11-25",
+  "needs_review": true,
+  "source": "https://arca.live/b/regrets/36392370",
+  "title": "매료에서 해방된 나에게 기다리고있던것은..."
  },
  "먼가작고귀여운녀석먼작귀": {
   "added": "2026-11-25",
@@ -3313,6 +3458,17 @@
   "status_source": "google-bulk",
   "title": "미국 남부의 악덕 대지주가 되었다"
  },
+ "미국시골에서올드카복원으로대박": {
+  "added": "2026-11-25",
+  "author": "우수상",
+  "needs_review": true,
+  "platform": "문피아",
+  "source": "https://m.munpia.com/novel/detail/525227",
+  "status": "연재중",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "미국 시골에서 올드카 복원으로 대박"
+ },
  "미국으로튀었더니장사가대박남": {
   "added": "2026-11-25",
   "needs_review": true,
@@ -3445,6 +3601,16 @@
   "status_source": "google-bulk",
   "title": "바바리안 퀘스트"
  },
+ "바보와시험과소환수": {
+  "added": "2026-11-25",
+  "author": "이노우에 켄지",
+  "platform": "네이버 시리즈",
+  "source": "https://series.naver.com/novel/detail.series?productNo=1542251",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "바보와 시험과 소환수"
+ },
  "바텐더는건들지말것": {
   "added": "2026-11-25",
   "needs_review": true,
@@ -3461,6 +3627,12 @@
   "status_checked": "2026-11-25",
   "status_source": "google-bulk",
   "title": "반강제적 제국주의자"
+ },
+ "반드시죽는히로인": {
+  "added": "2026-11-25",
+  "platform": "노벨피아",
+  "source": "https://novelpia.com/novel/77206",
+  "title": "반드시 죽는 히로인"
  },
  "반로환동한천마의마경방송": {
   "added": "2026-11-25",
@@ -3614,6 +3786,16 @@
   "source": "https://novelpia.com/novel/390877",
   "title": "뱀파이어 소서리스"
  },
+ "뱅퀴어더드래곤": {
+  "added": "2026-11-25",
+  "author": "YAGI",
+  "platform": "문피아",
+  "source": "https://m.munpia.com/novel/detail/212440",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "뱅퀴어 더 드래곤"
+ },
  "버튜버지만출근합니다": {
   "added": "2026-11-24",
   "author": "망크빵",
@@ -3714,6 +3896,13 @@
   "platform": "네이버웹툰",
   "source": "https://m.comic.naver.com/webtoon/list?titleId=848454",
   "title": "봇치 더 록!"
+ },
+ "봇치더록고토히토리는강간당한다": {
+  "added": "2026-11-25",
+  "needs_review": true,
+  "platform": "노벨피아",
+  "source": "https://novelpia.com/novel/167384",
+  "title": "[봇치더록]고토 히토리는 강간 당한다"
  },
  "부인은밀밭에서기다렸다": {
   "added": "2026-11-24",
@@ -3876,6 +4065,16 @@
   "source": "https://novelpia.com/novel/308695",
   "title": "비키니아머는 방어구가 아니다"
  },
+ "빌런독재자플레이어의세계정상화": {
+  "added": "2026-11-25",
+  "author": "한혜주",
+  "platform": "문피아",
+  "source": "https://ssn.so/series/247837/",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "빌런 독재자 플레이어의 세계 정상화"
+ },
  "빌런옆자리의마법소녀": {
   "added": "2026-11-25",
   "author": "이불짱",
@@ -3931,6 +4130,7 @@
  "빚을져서라도세상은구해야할거아니야": {
   "added": "2026-11-24",
   "author": "1_394",
+  "needs_review": true,
   "platform": "네이버 시리즈",
   "source": "https://series.naver.com/novel/detail.series?productNo=13598334",
   "status": "연재중",
@@ -4667,6 +4867,16 @@
   "status_source": "google-bulk",
   "title": "쓰르라미 울 적에"
  },
+ "아기는악당을키운다": {
+  "added": "2026-11-25",
+  "author": "리샤",
+  "platform": "카카오페이지",
+  "source": "https://ssn.so/series/7767/",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "아기는 악당을 키운다"
+ },
  "아기다람쥐가다잘해요": {
   "added": "2026-11-25",
   "needs_review": true,
@@ -4680,6 +4890,16 @@
   "platform": "노벨피아",
   "source": "https://novelpia.com/novel/334864",
   "title": "아니 제가 세구라고요?!"
+ },
+ "아빠가너무강함": {
+  "added": "2026-11-25",
+  "author": "개벽S",
+  "platform": "문피아",
+  "source": "https://m.munpia.com/novel/detail/140616",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "아빠가 너무 강함"
  },
  "아역배우를키잡하는미친매니저가되었다": {
   "added": "2026-11-25",
@@ -4801,6 +5021,16 @@
   "status_checked": "2026-11-25",
   "status_source": "google-bulk",
   "title": "아카데미에 오랑캐가 입학했다"
+ },
+ "아카데미에위장취업당했다": {
+  "added": "2026-11-25",
+  "author": "sayren",
+  "platform": "네이버 시리즈",
+  "source": "https://series.naver.com/novel/detail.series?productNo=6729246",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "아카데미에 위장취업당했다"
  },
  "아카데미의피해자": {
   "added": "2026-11-24",
@@ -5024,6 +5254,13 @@
   "status_checked": "2026-11-24",
   "status_source": "google-bulk",
   "title": "아포칼립스에 집을 숨김"
+ },
+ "아포칼립스의물리치료사가되었다": {
+  "added": "2026-11-25",
+  "needs_review": true,
+  "platform": "카카오페이지",
+  "source": "https://page.kakao.com/home/%EC%95%84%ED%8F%AC%EC%B9%BC%EB%A6%BD%EC%8A%A4%EC%9D%98-%EB%AC%BC%EB%A6%AC%28%3F%29%EC%B9%98%EB%A3%8C%EC%82%AC%EA%B0%80-%EB%90%98%EC%97%88%EB%8B%A4/65259534",
+  "title": "아포칼립스의 물리(?)치료사가 되었다"
  },
  "아포칼립스의살인남매": {
   "added": "2026-11-24",
@@ -5315,6 +5552,16 @@
   "status_source": "google-bulk",
   "title": "양심 없는 파티의 짐이 되었다"
  },
+ "양철기사가되었다": {
+  "added": "2026-11-25",
+  "author": "모노카카",
+  "platform": "노벨피아",
+  "source": "https://ssn.so/series/279174/",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "양철 기사가 되었다"
+ },
  "양치기마법사": {
   "added": "2026-11-25",
   "author": "수박복숭아",
@@ -5366,6 +5613,16 @@
   "status_checked": "2026-11-25",
   "status_source": "google-bulk",
   "title": "어스탐 경의 임사전언"
+ },
+ "언더그라운드피셔맨클럽": {
+  "added": "2026-11-25",
+  "needs_review": true,
+  "platform": "네이버 시리즈",
+  "source": "https://series.naver.com/novel/detail.series?productNo=3198304",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "언더그라운드 피셔맨 클럽"
  },
  "언데드의복수는20년이걸려도늦지않는다": {
   "added": "2026-11-25",
@@ -5425,6 +5682,16 @@
   "status_checked": "2026-11-24",
   "status_source": "google-bulk",
   "title": "엑스칼리버 뽑습니다"
+ },
+ "엑스트라히로인을위한전쟁": {
+  "added": "2026-11-25",
+  "author": "카르밀라",
+  "platform": "노벨피아",
+  "source": "https://arca.live/b/tsfiction/71200831",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "엑스트라 히로인을 위한 전쟁"
  },
  "엔딩메이커": {
   "added": "2026-11-25",
@@ -5637,6 +5904,15 @@
   "source": "https://m.comic.naver.com/webtoon/list?titleId=837504",
   "title": "오늘의 한요일은 여자다"
  },
+ "오라전대피스메이커": {
+  "added": "2026-11-25",
+  "author": "반재원",
+  "source": "https://arca.live/b/novelchannel/177235432",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "오라전대 피스메이커"
+ },
  "오버로드": {
   "added": "2026-11-25",
   "platform": "카카오페이지",
@@ -5675,6 +5951,12 @@
   "status_checked": "2026-11-24",
   "status_source": "google-bulk",
   "title": "오지는 치질입니다"
+ },
+ "오타쿠에게상냥한갸루타이탄에탄다": {
+  "added": "2026-11-25",
+  "platform": "노벨피아",
+  "source": "https://novelpia.com/novel/383682",
+  "title": "오타쿠에게 상냥한 갸루 타이탄에 탄다"
  },
  "옥타곤의제왕": {
   "added": "2026-11-25",
@@ -6016,11 +6298,27 @@
   "source": "https://novelpia.com/novel/440398",
   "title": "육성선수가 야구를 잘함"
  },
+ "육아물악녀가인성을안숨김": {
+  "added": "2026-11-25",
+  "needs_review": true,
+  "platform": "카카오페이지",
+  "source": "https://ssn.so/series/286297/",
+  "title": "육아물 악녀가 인성을 안 숨김"
+ },
  "육아천재가악녀를너무잘키움": {
   "added": "2026-11-25",
   "platform": "노벨피아",
   "source": "https://novelpia.com/novel/434202",
   "title": "육아 천재가 악녀를 너무 잘 키움"
+ },
+ "은하영웅전설": {
+  "added": "2026-11-25",
+  "author": "다나카 요시키",
+  "source": "https://ssn.so/series/88946/?filter=rating&order_by=recently&page=18",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "은하영웅전설"
  },
  "은하천마전설": {
   "added": "2026-11-24",
@@ -6121,6 +6419,16 @@
   "platform": "노벨피아",
   "source": "https://novelpia.com/novel/51211",
   "title": "이단심문관은 은퇴하고 싶다"
+ },
+ "이드": {
+  "added": "2026-11-25",
+  "author": "김대우",
+  "platform": "네이버 시리즈",
+  "source": "https://series.naver.com/novel/detail.series?productNo=1912646",
+  "status": "연재중",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "이드"
  },
  "이련": {
   "added": "2026-11-25",
@@ -6279,6 +6587,16 @@
   "status_checked": "2026-11-25",
   "status_source": "google-bulk",
   "title": "인류보호회사"
+ },
+ "인벤토리로암시장의거물이되었다": {
+  "added": "2026-11-25",
+  "author": "블랙카드",
+  "platform": "네이버 시리즈",
+  "source": "https://series.naver.com/novel/detail.series?productNo=14442925",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "인벤토리로 암시장의 거물이 되었다."
  },
  "인생설계사차강준": {
   "added": "2026-11-25",
@@ -6483,6 +6801,11 @@
   "status_source": "google-bulk",
   "title": "재앙급 진조는 방구석에서 꿀 빱니다"
  },
+ "재앙을입양하다": {
+  "added": "2026-11-25",
+  "source": "https://www.inven.co.kr/board/lol/4625/3347784",
+  "title": "재앙을 입양하다"
+ },
  "저그런악녀아닌데요": {
   "added": "2026-11-25",
   "needs_review": true,
@@ -6518,6 +6841,16 @@
   "platform": "문피아, 네이버 시리즈",
   "source": "https://namu.wiki/w/%EC%A0%84%EA%B5%AD%EC%8B%9C%EB%8C%80%20:%20%EC%A7%84%EC%8B%9C%ED%99%A9%EC%9D%98%20%EC%98%A4%EB%A5%B8%ED%8C%94%EC%9D%B4%20%EB%90%98%EB%8B%A4.",
   "title": "전국시대 : 진시황의 오른팔이 되다."
+ },
+ "전남친이품절됐다": {
+  "added": "2026-11-25",
+  "author": "막둥둥이",
+  "platform": "노벨피아",
+  "source": "https://namu.wiki/w/%EC%A0%84%20%EB%82%A8%EC%B9%9C%EC%9D%B4%20%ED%92%88%EC%A0%88%EB%90%90%EB%8B%A4",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "전 남친이 품절됐다"
  },
  "전능의뇌를얻었다": {
   "added": "2026-11-25",
@@ -6773,6 +7106,12 @@
   "status_checked": "2026-11-25",
   "status_source": "google-bulk",
   "title": "절대회귀"
+ },
+ "절창": {
+  "added": "2026-11-25",
+  "author": "구병모",
+  "source": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000011967872",
+  "title": "절창"
  },
  "점괘보는공녀님": {
   "added": "2026-11-25",
@@ -7124,6 +7463,16 @@
   "source": "https://novelpia.com/novel/44679",
   "title": "진격거 속의 이레귤러가 되었다"
  },
+ "진문장생": {
+  "added": "2026-11-25",
+  "author": "관허",
+  "platform": "네이버 시리즈",
+  "source": "https://series.naver.com/novel/detail.series?productNo=14243509",
+  "status": "연재중",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "진문장생"
+ },
  "진화하는우주괴물이되었다": {
   "added": "2026-11-25",
   "platform": "노벨피아",
@@ -7218,6 +7567,16 @@
   "status_source": "google-bulk",
   "title": "천마육성 시뮬레이션"
  },
+ "천마홈즈런던앙복": {
+  "added": "2026-11-25",
+  "author": "옴니버",
+  "platform": "네이버 시리즈",
+  "source": "https://series.naver.com/novel/detail.series?productNo=9516496",
+  "status": "연재중",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "천마홈즈 런던앙복"
+ },
  "천만번죽어본검투사는죽지않는다": {
   "added": "2026-11-25",
   "platform": "노벨피아",
@@ -7243,6 +7602,16 @@
   "status_checked": "2026-11-24",
   "status_source": "google-bulk",
   "title": "천재 뉴비의 흡수수선전"
+ },
+ "천재타자가강속구를숨김": {
+  "added": "2026-11-25",
+  "author": "이블라인",
+  "platform": "네이버 시리즈",
+  "source": "https://series.naver.com/novel/detail.series?productNo=6229371",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "천재 타자가 강속구를 숨김"
  },
  "천재흑마법사": {
   "added": "2026-11-25",
@@ -7359,6 +7728,16 @@
   "status_checked": "2026-11-24",
   "status_source": "google-bulk",
   "title": "초차원 미식가의 일상"
+ },
+ "초초수련천년": {
+  "added": "2026-11-25",
+  "author": "임아소",
+  "platform": "문피아",
+  "source": "https://m.munpia.com/novel/detail/432845",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "초초수련천년"
  },
  "촉법소년": {
   "added": "2026-11-25",
@@ -7803,6 +8182,16 @@
   "status_source": "google-bulk",
   "title": "튜토리얼이 너무 어렵다"
  },
+ "트로츠키와우리조선빨갛게빨갛게": {
+  "added": "2026-11-25",
+  "author": "간다왼쪽",
+  "platform": "네이버 시리즈",
+  "source": "https://series.naver.com/novel/detail.series?productNo=11047102",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "트로츠키와 우리 조선 빨갛게 빨갛게"
+ },
  "파브르in사천당가": {
   "added": "2026-11-25",
   "author": "에르훗",
@@ -7891,6 +8280,16 @@
   "status_source": "google-bulk",
   "title": "패스파인더"
  },
+ "패왕": {
+  "added": "2026-11-25",
+  "needs_review": true,
+  "platform": "네이버 시리즈",
+  "source": "https://series.naver.com/novel/detail.series?productNo=5769340",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "패왕"
+ },
  "패왕영애": {
   "added": "2026-11-24",
   "author": "홍정훈",
@@ -7968,6 +8367,16 @@
   "platform": "카카오페이지",
   "source": "https://page.kakao.com/home/%ED%8F%B4%EB%9D%BC%EB%A6%AC%EC%8A%A4%28%EC%99%B8%EC%A0%84%ED%95%A9%EB%B3%B8%29/47018011",
   "title": "폴라리스"
+ },
+ "폴라리스랩소디": {
+  "added": "2026-11-25",
+  "author": "이영도",
+  "platform": "네이버 시리즈",
+  "source": "https://series.naver.com/novel/detail.series?productNo=12579712",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "폴라리스 랩소디"
  },
  "폴란드여왕키우기": {
   "added": "2026-11-25",
@@ -8190,6 +8599,17 @@
   "source": "https://m.munpia.com/novel/detail/592421",
   "title": "해고당한 삼촌이 천재 기타리스트라고?"
  },
+ "해고후인생역전": {
+  "added": "2026-11-25",
+  "author": "새가람",
+  "needs_review": true,
+  "platform": "네이버 시리즈",
+  "source": "https://series.naver.com/novel/detail.series?productNo=12387965",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "해고 후 인생역전"
+ },
  "해골병사는던전을지키지못했다": {
   "added": "2026-11-24",
   "author": "소소리",
@@ -8367,6 +8787,12 @@
   "status_source": "google-bulk",
   "title": "화약시대의 소드마스터"
  },
+ "환생자에게는미학이필요해": {
+  "added": "2026-11-25",
+  "platform": "노벨피아",
+  "source": "https://novelpia.com/novel/404614",
+  "title": "환생자에게는 미학이 필요해"
+ },
  "환생자의스트리밍": {
   "added": "2026-11-25",
   "author": "흑아인",
@@ -8414,6 +8840,17 @@
   "status_checked": "2026-11-25",
   "status_source": "google-bulk",
   "title": "황금 사과"
+ },
+ "황제의외동딸": {
+  "added": "2026-11-25",
+  "author": "윤슬",
+  "needs_review": true,
+  "platform": "카카오페이지",
+  "source": "https://page.kakao.com/home/%ED%99%A9%EC%A0%9C%EC%9D%98-%EC%99%B8%EB%8F%99%EB%94%B8/46803116",
+  "status": "완결",
+  "status_checked": "2026-11-25",
+  "status_source": "google-bulk",
+  "title": "황제의 외동딸"
  },
  "회귀가너무과하다": {
   "added": "2026-11-24",
