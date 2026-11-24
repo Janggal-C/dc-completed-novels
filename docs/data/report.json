@@ -10,6 +10,12 @@
    "title": "21세기 반로환동전"
   },
   {
+   "alias": "b헌살",
+   "author": "",
+   "needs_review": true,
+   "title": "B급 헌터로 살아남기"
+  },
+  {
    "alias": "ts대마대",
    "author": "day2day",
    "needs_review": false,
@@ -106,6 +112,12 @@
    "title": "프롤로그에서 죽는 히로인에 빙의했다"
   },
   {
+   "alias": "룬아",
+   "author": "",
+   "needs_review": true,
+   "title": "룬의 아이들"
+  },
+  {
    "alias": "마나인방",
    "author": "시엘클레",
    "needs_review": true,
@@ -136,9 +148,15 @@
    "title": "약먹는 천재마법사"
   },
   {
+   "alias": "미래편지",
+   "author": "알콜중독",
+   "needs_review": true,
+   "title": "미래에서 온 연애편지"
+  },
+  {
    "alias": "미편",
    "author": "알콜중독",
-   "needs_review": false,
+   "needs_review": true,
    "title": "미래에서 온 연애편지"
   },
   {
@@ -454,9 +472,37 @@
    "rules_version": 3,
    "searched": 40,
    "total_posts": 5607
+  },
+  {
+   "agreement": 91.5,
+   "ai_accuracy": 69.6,
+   "ai_done": 5607,
+   "ai_judged": 0,
+   "ai_stopped": false,
+   "ai_usage": {
+    "cache_read_tokens": 433617,
+    "calls": 8,
+    "cost_usd": 1.0173,
+    "input_tokens": 89330,
+    "output_tokens": 9264
+   },
+   "compared": 2668,
+   "crawled_backfill": 0,
+   "crawled_new": 0,
+   "date": "2026-11-24 17:13",
+   "gold": 227,
+   "mode": "verify",
+   "no_work": 162,
+   "pending": 0,
+   "review_open": 0,
+   "rule_accuracy": 30.4,
+   "rule_coverage": 47.6,
+   "rules_version": 3,
+   "searched": 40,
+   "total_posts": 5607
   }
  ],
- "in_progress": true,
+ "in_progress": false,
  "metrics": {
   "agreement": 91.5,
   "ai_accuracy": 69.6,
@@ -665,9 +711,9 @@
    {
     "author": "",
     "completion_month": "2026-05",
-    "id": "?룬아",
+    "id": "룬의아이들",
     "mentions": 2,
-    "needs_review": false,
+    "needs_review": true,
     "new": true,
     "samples": [
      {
@@ -679,8 +725,8 @@
       "title": "룬아 완결 나왔었네"
      }
     ],
-    "title": "룬아 (미확인)",
-    "unresolved": true,
+    "title": "룬의 아이들",
+    "unresolved": false,
     "writers": 2
    },
    {
@@ -1816,6 +1862,31 @@
     "writers": 4
    },
    {
+    "author": "알콜중독",
+    "completion_month": "2026-06",
+    "id": "미래에서온연애편지",
+    "mentions": 4,
+    "needs_review": true,
+    "new": true,
+    "samples": [
+     {
+      "no": 12335299,
+      "title": "미래편지는 완결난 시점에서 단점이 너무 명확함"
+     },
+     {
+      "no": 12445023,
+      "title": "미래편지 완결났다길래 눌러봤는데 지금 내용이 기억이 하나도 안남"
+     },
+     {
+      "no": 12444975,
+      "title": "아니 미래편지 완결남?????"
+     }
+    ],
+    "title": "미래에서 온 연애편지",
+    "unresolved": false,
+    "writers": 3
+   },
+   {
     "author": "미확인",
     "completion_month": "2026-06",
     "id": "괴담동아리",
@@ -1914,31 +1985,6 @@
     "title": "아카데미 흑막의 딸이 되었다",
     "unresolved": false,
     "writers": 3
-   },
-   {
-    "author": "",
-    "completion_month": "2026-06",
-    "id": "?미래편지",
-    "mentions": 3,
-    "needs_review": false,
-    "new": true,
-    "samples": [
-     {
-      "no": 12335299,
-      "title": "미래편지는 완결난 시점에서 단점이 너무 명확함"
-     },
-     {
-      "no": 12445023,
-      "title": "미래편지 완결났다길래 눌러봤는데 지금 내용이 기억이 하나도 안남"
-     },
-     {
-      "no": 12444975,
-      "title": "아니 미래편지 완결남?????"
-     }
-    ],
-    "title": "미래편지 (미확인)",
-    "unresolved": true,
-    "writers": 2
    },
    {
     "author": "",
@@ -3146,6 +3192,27 @@
     "writers": 2
    },
    {
+    "author": "알콜중독",
+    "completion_month": "2026-06",
+    "id": "미래에서온연애편지",
+    "mentions": 2,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 12589453,
+      "title": "미편 완결낫다구 들엇는데"
+     },
+     {
+      "no": 12589408,
+      "title": "뭐야 미래편지 완결났었네"
+     }
+    ],
+    "title": "미래에서 온 연애편지",
+    "unresolved": false,
+    "writers": 2
+   },
+   {
     "author": "",
     "completion_month": "2026-07",
     "id": "?미소녀모드",
@@ -3560,23 +3627,6 @@
      }
     ],
     "title": "skt 2부 (미확인)",
-    "unresolved": true,
-    "writers": 1
-   },
-   {
-    "author": "",
-    "completion_month": "2026-07",
-    "id": "?ts물보던거하나",
-    "mentions": 1,
-    "needs_review": false,
-    "new": true,
-    "samples": [
-     {
-      "no": 12526249,
-      "title": "ts물 보던 거 하나 완결났네"
-     }
-    ],
-    "title": "ts물 보던 거 하나 (미확인)",
     "unresolved": true,
     "writers": 1
    }
@@ -4305,11 +4355,11 @@
     "writers": 2
    },
    {
-    "author": "",
+    "author": "알콜중독",
     "completion_month": "2026-06",
-    "id": "?미래편지",
+    "id": "미래에서온연애편지",
     "mentions": 2,
-    "needs_review": false,
+    "needs_review": true,
     "new": false,
     "samples": [
      {
@@ -4321,8 +4371,8 @@
       "title": "미래편지 완결났길래 보려는데 내용 하나도 기억 안남"
      }
     ],
-    "title": "미래편지 (미확인)",
-    "unresolved": true,
+    "title": "미래에서 온 연애편지",
+    "unresolved": false,
     "writers": 2
    },
    {
@@ -5642,6 +5692,27 @@
     "writers": 2
    },
    {
+    "author": "알콜중독",
+    "completion_month": "2026-06",
+    "id": "미래에서온연애편지",
+    "mentions": 2,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 12884187,
+      "title": "미편은 그래도 완결시점에 엘시가 정실 먹은거 보면"
+     },
+     {
+      "no": 12877675,
+      "title": "미래편지 완결까지 본 사람들 있음?"
+     }
+    ],
+    "title": "미래에서 온 연애편지",
+    "unresolved": false,
+    "writers": 2
+   },
+   {
     "author": "",
     "completion_month": "2026-09",
     "id": "?배본블",
@@ -5852,27 +5923,6 @@
      }
     ],
     "title": "S급 여친 탁란 (미확인)",
-    "unresolved": true,
-    "writers": 1
-   },
-   {
-    "author": "",
-    "completion_month": "2026-09",
-    "id": "?미소녀밴드물에빙의했다",
-    "mentions": 2,
-    "needs_review": false,
-    "new": true,
-    "samples": [
-     {
-      "no": 12969213,
-      "title": "완결리뷰:미소녀 밴드물에 빙의했다"
-     },
-     {
-      "no": 12860249,
-      "title": "미소녀밴드물에 빙의했다 완결후기"
-     }
-    ],
-    "title": "미소녀밴드물에 빙의했다 (미확인)",
     "unresolved": true,
     "writers": 1
    }
@@ -6131,9 +6181,9 @@
    {
     "author": "",
     "completion_month": "2026-10",
-    "id": "?b헌살",
+    "id": "b급헌터로살아남기",
     "mentions": 3,
-    "needs_review": false,
+    "needs_review": true,
     "new": true,
     "samples": [
      {
@@ -6149,8 +6199,8 @@
       "title": "B헌살 완결났네"
      }
     ],
-    "title": "b헌살 (미확인)",
-    "unresolved": true,
+    "title": "B급 헌터로 살아남기",
+    "unresolved": false,
     "writers": 3
    },
    {
@@ -7407,6 +7457,23 @@
    },
    {
     "author": "",
+    "completion_month": "2026-10",
+    "id": "b급헌터로살아남기",
+    "mentions": 1,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 13208986,
+      "title": "컵라면 b헌살 완결났대서 읽는 중인데 이거"
+     }
+    ],
+    "title": "B급 헌터로 살아남기",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "",
     "completion_month": "2026-11",
     "id": "?ai똥찌꺼기로글쓰던시발련",
     "mentions": 1,
@@ -7419,23 +7486,6 @@
      }
     ],
     "title": "ai똥찌꺼기로 글쓰던 시발련 (미확인)",
-    "unresolved": true,
-    "writers": 1
-   },
-   {
-    "author": "",
-    "completion_month": "2026-10",
-    "id": "?b헌살",
-    "mentions": 1,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 13208986,
-      "title": "컵라면 b헌살 완결났대서 읽는 중인데 이거"
-     }
-    ],
-    "title": "b헌살 (미확인)",
     "unresolved": true,
     "writers": 1
    },
@@ -7875,7 +7925,341 @@
   "2026-10",
   "2026-11"
  ],
- "not_found": [],
+ "not_found": [
+  {
+   "alias": "S급여친",
+   "checked": "2026-11-24",
+   "examples": [
+    "S급여친 급완결해서 아쉬운게",
+    "머야 s급 여친 벌써 완결났네",
+    "S급 여친은 너무 성급하게 완결낸 거 같음"
+   ]
+  },
+  {
+   "alias": "ㅁㅁ세계",
+   "checked": "2026-11-24",
+   "examples": [
+    "ㅁㅁ세계 완결났음?",
+    "ㅁㅁ세계 본편 완결났구나",
+    "ㅁㅁ세계 완결낫길래 보려는데 설정 기억이 안나지요"
+   ]
+  },
+  {
+   "alias": "가챠펑크",
+   "checked": "2026-11-24",
+   "examples": [
+    "가챠펑크 완결 외전이 제일 재밌을 것 같음",
+    "가챠펑크 완결까지 재밌었다",
+    "가챠펑크 안본지 일주일정도됐는데 완결남?"
+   ]
+  },
+  {
+   "alias": "게이살",
+   "checked": "2026-11-24",
+   "examples": [
+    "게이살 웹툰 완결났지요",
+    "앵 게이살 이거 웹툰 완결이냐?",
+    "게이살 웹툰 완결까지 무료분으로 드디어 풀렸노"
+   ]
+  },
+  {
+   "alias": "괴담텔",
+   "checked": "2026-11-24",
+   "examples": [
+    "그래도 괴담텔 이만큼 봤는데 완결은 봐야지...",
+    "괴담텔 완결남?",
+    "뭐야 괴담텔 완결났나보네??"
+   ]
+  },
+  {
+   "alias": "기계공주",
+   "checked": "2026-11-24",
+   "examples": [
+    "갤떡 뭐임? 기계공주 완결남?",
+    "기계공주 완결!!!",
+    "아니 기계공주 완결남?"
+   ]
+  },
+  {
+   "alias": "나작소",
+   "checked": "2026-11-24",
+   "examples": [
+    "완결 안내는 나작소를 납치하였다.",
+    "내가 보던 나작소가 결국 유사 완결 낫네..",
+    "최근 완결난 나작소 두개 짧은 후기"
+   ]
+  },
+  {
+   "alias": "니생들",
+   "checked": "2026-11-24",
+   "examples": [
+    "니생들 완결 기념 현대 럽코 소설 추천좀",
+    "니생들 완결남?",
+    "니생들 완결표지 정실이 먹었지요ㅋㅋㅋㅋㅋㅋㅋㅋ"
+   ]
+  },
+  {
+   "alias": "대마대",
+   "checked": "2026-11-24",
+   "examples": [
+    "대마대조차 완결이 났는데",
+    "머시발 대마대 완결낫음????????",
+    "대마대 완결 났구나"
+   ]
+  },
+  {
+   "alias": "대영선비",
+   "checked": "2026-11-24",
+   "examples": [
+    "대영선비 완결났네",
+    "대영선비완결났네",
+    "대영선비 완결났네"
+   ]
+  },
+  {
+   "alias": "댓천",
+   "checked": "2026-11-24",
+   "examples": [
+    "댓천의 완결 확정이누",
+    "댓천의 완결이구나",
+    "아 댓천의 완결났구나..."
+   ]
+  },
+  {
+   "alias": "럽코 오타쿠",
+   "checked": "2026-11-24",
+   "examples": [
+    "럽코 오타쿠 완결났지요",
+    "럽코오타쿠는 33화 이후로 망가져서 완결나버렸네..",
+    "럽코오타쿠 급완결 너무 슬프다"
+   ]
+  },
+  {
+   "alias": "럽코존잘",
+   "checked": "2026-11-24",
+   "examples": [
+    "럽코존잘 완결도 났는데 비판리뷰나 써볼까",
+    "럽코존잘 급완결보고 갤질의사 보면",
+    "럽코존잘 급완결 했네"
+   ]
+  },
+  {
+   "alias": "림조",
+   "checked": "2026-11-24",
+   "examples": [
+    "림조 완결 평 어땟음?",
+    "림조 완결하니 줜나 볼거 없네",
+    "림조 완결딱지 뭐지요"
+   ]
+  },
+  {
+   "alias": "무림소마",
+   "checked": "2026-11-24",
+   "examples": [
+    "진짜 무림소마 군지완결 난거 아직도 너무 슬프다진짜 눈물이 잉잉 남",
+    "머여 무림소마 갑자기완결났내",
+    "무림소마 완결소감 올라왔네"
+   ]
+  },
+  {
+   "alias": "미시회귀",
+   "checked": "2026-11-24",
+   "examples": [
+    "이제 누군가 미시회귀 완결 후기를 써오겠지",
+    "미시회귀 완결났네?",
+    "ts)미시회귀 완결이구나"
+   ]
+  },
+  {
+   "alias": "미츄리",
+   "checked": "2026-11-24",
+   "examples": [
+    "미츄리 완결후기 개웃기네",
+    "미츄리 이번 완결작 재밌긴 하네",
+    "묵혀놨던 미츄리 소설 완결나서 읽는데 이거 뭐지요"
+   ]
+  },
+  {
+   "alias": "배본블",
+   "checked": "2026-11-24",
+   "examples": [
+    "근데 배본블 완결표시 왜 없는거임?",
+    "배본블하니까 완결난지도 1년반인데",
+    "새벽에 배본블 완결까지 보고 그 충격이 아직까지 남음."
+   ]
+  },
+  {
+   "alias": "사펑드",
+   "checked": "2026-11-24",
+   "examples": [
+    "사펑드 완결났네",
+    "사펑드가 완결이 났구나",
+    "ts)사펑드 완결!!!!!!!!!!"
+   ]
+  },
+  {
+   "alias": "심해스트",
+   "checked": "2026-11-24",
+   "examples": [
+    "머야 심해스트 대가리박고 완결수정햇네?",
+    "심해스트 완결 잘고쳤네",
+    "심해스트 완결 고쳤대서 읽어봤는데말이지"
+   ]
+  },
+  {
+   "alias": "아생",
+   "checked": "2026-11-24",
+   "examples": [
+    "아생갤 완결나서 서재에 하나 들여야 하는데",
+    "근데 아생갤 완결도 좀 병신같이 남",
+    "아생갤은 완결 이후에 TS 해버리니 진짜 거부감이 너무 커짐;;"
+   ]
+  },
+  {
+   "alias": "아생갤",
+   "checked": "2026-11-24",
+   "examples": [
+    "아생갤 완결이래서 달린다 ㅋㅋㅋ",
+    "아생갤도 완결이구나",
+    "아생갤 결국 완결이네 아쉽긴 하다"
+   ]
+  },
+  {
+   "alias": "아카게이살",
+   "checked": "2026-11-24",
+   "examples": [
+    "아카게이살 웹툰본편완결",
+    "아카게이살 웹툰 완결 났던데",
+    "아카게이살 웹툰 완결났었네"
+   ]
+  },
+  {
+   "alias": "아카피해자",
+   "checked": "2026-11-24",
+   "examples": [
+    "아카피해자 완결낫는데 재밋엇음????",
+    "아카피해자 완결났네",
+    "잠시 냉동인간처럼 살다가 완결난 아카피해자가 시리즈에 올라오면"
+   ]
+  },
+  {
+   "alias": "약천마",
+   "checked": "2026-11-24",
+   "examples": [
+    "머야 약천마 완결낫네",
+    "약천마 완결났던데 볼만하냐",
+    "약천마 완결났었어???"
+   ]
+  },
+  {
+   "alias": "예천불지",
+   "checked": "2026-11-24",
+   "examples": [
+    "예천불지가 완결이났구나",
+    "예천불지 완결 잘 났음?",
+    "뭐야 예천불지 왜 완결딱지 달림?"
+   ]
+  },
+  {
+   "alias": "울캐시",
+   "checked": "2026-11-24",
+   "examples": [
+    "내가 울캐시의 급완결을 용서하는 두가지 경우의 수",
+    "울캐시 급완결뭐지요?",
+    "근데 울캐시 그냥 전개 싹다 유기때리고 완결이네"
+   ]
+  },
+  {
+   "alias": "이티알",
+   "checked": "2026-11-24",
+   "examples": [
+    "이티알 완결났네?",
+    "오랜만에 노피아 결제하니 이티알 완결났길래 이제 정독하는데",
+    "이티알 외전 완결 어떰?"
+   ]
+  },
+  {
+   "alias": "임기",
+   "checked": "2026-11-24",
+   "examples": [
+    "근데 솔직히 걍 임기 급완결 맞다고 봐도 무방함 ㅇㅇ",
+    "임기 안봤는데 급완결 맞음",
+    "임기 완결 그래도 잘 매듭 짓지 않았나"
+   ]
+  },
+  {
+   "alias": "자학방송",
+   "checked": "2026-11-24",
+   "examples": [
+    "자학방송 완결낫구나",
+    "자학방송 완결 후기 ㅅㅂㅋㅋㅋㅋㅋㅋㅋ",
+    "자학방송 완결이네"
+   ]
+  },
+  {
+   "alias": "정정잘",
+   "checked": "2026-11-24",
+   "examples": [
+    "~정정잘 완결~",
+    "뭐야 정정잘 완결이네",
+    "정정잘 뭔가 300화즈음 완결이 적절했을거 같은데"
+   ]
+  },
+  {
+   "alias": "주버지",
+   "checked": "2026-11-24",
+   "examples": [
+    "뭐야 주버지 완결났네",
+    "주버지 완결...",
+    "주버지가 완결이 났구나"
+   ]
+  },
+  {
+   "alias": "친애언니",
+   "checked": "2026-11-24",
+   "examples": [
+    "친애언니 완결남?",
+    "와 친애언니가 완결이 나네",
+    "친애언니 본편완결 ㅇㄱ ㅈㅉㅇㅇ?"
+   ]
+  },
+  {
+   "alias": "판초",
+   "checked": "2026-11-24",
+   "examples": [
+    "판초 완결까지 기다리기 잘했지요",
+    "백제민도 무투가였으면 이미 판초 완결이었음",
+    "판초 완결남?"
+   ]
+  },
+  {
+   "alias": "판초법사",
+   "checked": "2026-11-24",
+   "examples": [
+    "판초법사 급완결 뭐임;;",
+    "판초법사 완결작임?",
+    "판초법사도 완결"
+   ]
+  },
+  {
+   "alias": "환생엘프",
+   "checked": "2026-11-24",
+   "examples": [
+    "환생엘프 완결났네",
+    "환생엘프 완결!!!!",
+    "환생 엘프 완결났구나"
+   ]
+  },
+  {
+   "alias": "흑막입양",
+   "checked": "2026-11-24",
+   "examples": [
+    "흑막입양 완결났지에",
+    "흑막입양 완결이구나",
+    "속보)) 흑막입양 완결!!!!!"
+   ]
+  }
+ ],
  "quarterly": {
   "2026-Q2": [
    {
@@ -8329,6 +8713,31 @@
     "writers": 4
    },
    {
+    "author": "알콜중독",
+    "completion_month": "2026-06",
+    "id": "미래에서온연애편지",
+    "mentions": 4,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 12335299,
+      "title": "미래편지는 완결난 시점에서 단점이 너무 명확함"
+     },
+     {
+      "no": 12445023,
+      "title": "미래편지 완결났다길래 눌러봤는데 지금 내용이 기억이 하나도 안남"
+     },
+     {
+      "no": 12444975,
+      "title": "아니 미래편지 완결남?????"
+     }
+    ],
+    "title": "미래에서 온 연애편지",
+    "unresolved": false,
+    "writers": 3
+   },
+   {
     "author": "미확인",
     "completion_month": "2026-06",
     "id": "괴담동아리",
@@ -8381,9 +8790,9 @@
    {
     "author": "",
     "completion_month": "2026-05",
-    "id": "?룬아",
+    "id": "룬의아이들",
     "mentions": 3,
-    "needs_review": false,
+    "needs_review": true,
     "new": false,
     "samples": [
      {
@@ -8399,8 +8808,8 @@
       "title": "룬아 완결 나왔었네"
      }
     ],
-    "title": "룬아 (미확인)",
-    "unresolved": true,
+    "title": "룬의 아이들",
+    "unresolved": false,
     "writers": 3
    },
    {
@@ -8477,31 +8886,6 @@
     "title": "전 버튜버가 하고 싶은데요",
     "unresolved": false,
     "writers": 3
-   },
-   {
-    "author": "",
-    "completion_month": "2026-06",
-    "id": "?미래편지",
-    "mentions": 3,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 12335299,
-      "title": "미래편지는 완결난 시점에서 단점이 너무 명확함"
-     },
-     {
-      "no": 12445023,
-      "title": "미래편지 완결났다길래 눌러봤는데 지금 내용이 기억이 하나도 안남"
-     },
-     {
-      "no": 12444975,
-      "title": "아니 미래편지 완결남?????"
-     }
-    ],
-    "title": "미래편지 (미확인)",
-    "unresolved": true,
-    "writers": 2
    },
    {
     "author": "",
@@ -9681,6 +10065,31 @@
     "writers": 6
    },
    {
+    "author": "알콜중독",
+    "completion_month": "2026-06",
+    "id": "미래에서온연애편지",
+    "mentions": 6,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 12704228,
+      "title": "미래편지 완결남?"
+     },
+     {
+      "no": 12681898,
+      "title": "미래편지 완결났길래 보려는데 내용 하나도 기억 안남"
+     },
+     {
+      "no": 12884187,
+      "title": "미편은 그래도 완결시점에 엘시가 정실 먹은거 보면"
+     }
+    ],
+    "title": "미래에서 온 연애편지",
+    "unresolved": false,
+    "writers": 6
+   },
+   {
     "author": "",
     "completion_month": "2026-07",
     "id": "?미시회귀",
@@ -10103,31 +10512,6 @@
     ],
     "title": "로판 속 벌레술사가 되었다",
     "unresolved": false,
-    "writers": 4
-   },
-   {
-    "author": "",
-    "completion_month": "2026-06",
-    "id": "?미래편지",
-    "mentions": 4,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 12704228,
-      "title": "미래편지 완결남?"
-     },
-     {
-      "no": 12681898,
-      "title": "미래편지 완결났길래 보려는데 내용 하나도 기억 안남"
-     },
-     {
-      "no": 12877675,
-      "title": "미래편지 완결까지 본 사람들 있음?"
-     }
-    ],
-    "title": "미래편지 (미확인)",
-    "unresolved": true,
     "writers": 4
    },
    {
@@ -10560,9 +10944,9 @@
    {
     "author": "",
     "completion_month": "2026-10",
-    "id": "?b헌살",
+    "id": "b급헌터로살아남기",
     "mentions": 4,
-    "needs_review": false,
+    "needs_review": true,
     "new": false,
     "samples": [
      {
@@ -10578,8 +10962,8 @@
       "title": "B헌살 완결났던데 어떰?"
      }
     ],
-    "title": "b헌살 (미확인)",
-    "unresolved": true,
+    "title": "B급 헌터로 살아남기",
+    "unresolved": false,
     "writers": 4
    },
    {
@@ -13926,16 +14310,6 @@
    ]
   },
   {
-   "alias": "미래편지",
-   "key": "미래편지",
-   "n": 7,
-   "titles": [
-    "미래편지 완결났다길래 눌러봤는데 지금 내용이 기억이 하나도 안남",
-    "아니 미래편지 완결남?????",
-    "미래편지는 완결난 시점에서 단점이 너무 명확함"
-   ]
-  },
-  {
    "alias": "사펑드",
    "key": "사펑드",
    "n": 7,
@@ -14086,16 +14460,6 @@
    ]
   },
   {
-   "alias": "룬아",
-   "key": "룬아",
-   "n": 4,
-   "titles": [
-    "룬아 완결됐다해서 정주행 중인데",
-    "룬아 완결 나왔었네",
-    "그러고보니 룬아 3부 완결났었지?"
-   ]
-  },
-  {
    "alias": "약천마",
    "key": "약천마",
    "n": 4,
@@ -14183,16 +14547,6 @@
     "뭐야 주버지 완결났네",
     "주버지 완결...",
     "주버지가 완결이 났구나"
-   ]
-  },
-  {
-   "alias": "b헌살",
-   "key": "b헌살",
-   "n": 4,
-   "titles": [
-    "B헌살 완결났던데 어떰?",
-    "B헌살 완결났네",
-    "컵라면 B헌살 완결!!!(댓글 스포)"
    ]
   },
   {
@@ -15663,7 +16017,31 @@
    "titles": [
     "괴파트 어느새 완결나있네"
    ]
+  },
+  {
+   "alias": "개종빙",
+   "key": "개종빙",
+   "n": 1,
+   "titles": [
+    "개종빙 30년만에 완결소설 처음부터 끝까지 다읽음"
+   ]
+  },
+  {
+   "alias": "메말랑",
+   "key": "메말랑",
+   "n": 1,
+   "titles": [
+    "메말랑 이 새끼는 또 급완결때렸네"
+   ]
+  },
+  {
+   "alias": "안일고 쌓아둔 노피아",
+   "key": "안일고쌓아둔노피아",
+   "n": 1,
+   "titles": [
+    "안일고 쌓아둔 노피아 완결닥이 272개네"
+   ]
   }
  ],
- "updated": "2026-11-24 17:10"
+ "updated": "2026-11-24 17:13"
 }
