@@ -14,3 +14,4 @@
   font-family: "Malgun Gothic", sans-serif; box-sizing: border-box;
 }
 .dcnx-tip .dcnx-icon { pointer-events: none; }
+.dcnx-fav { display: inline-block; object-fit: contain; border-radius: 3px; background: none; }
