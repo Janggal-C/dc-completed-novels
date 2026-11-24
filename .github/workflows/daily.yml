@@ -1,8 +1,9 @@
 name: 매일 수집·집계
 
 on:
-  schedule:
-    - cron: "43 18 * * *"   # 매일 한국시간 03:43 (UTC 18:43). 몇 분~수십 분 늦게 시작될 수 있음
+  # ⏸ 전체 제목 수집 중이라 매일 자동 실행 일시 중지 (다시 켜려면 아래 두 줄 주석 해제)
+  # schedule:
+  #   - cron: "43 18 * * *"   # 매일 한국시간 03:43 (UTC 18:43)
   push:                      # .github/run-now 파일이 바뀌면 바로 실행 (원격으로 실행 요청할 때 사용)
     paths: [".github/run-now"]
   workflow_dispatch:         # Actions 탭에서 수동 실행
