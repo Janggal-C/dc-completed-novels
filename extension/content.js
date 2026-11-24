@@ -33,16 +33,19 @@
       if (href) { a.href = href; a.target = "_blank"; a.rel = "noopener noreferrer"; }
       return a;
     };
-    // 연재처 아이콘 + 제목 → 작품 링크
-    const work = link(w.u, "dcnx-work");
-    const pk = opt.icon && dcnxPickPlatform(w.p, opt.order);
-    if (pk) work.append(dcnxIcon(pk));
+    // 연재처 아이콘 + 제목 → 그 연재처의 작품 페이지 (확인된 링크만, 없으면 클릭 안 됨)
+    const order = opt.order || DCNX_DEFAULT_ORDER;
+    const links = w.l || {};
+    const linked = order.find(k => links[k]);
+    const pk = linked || dcnxPickPlatform(w.p, order);
+    const work = link(linked ? links[linked] : "", "dcnx-work");
+    if (opt.icon && pk) work.append(dcnxIcon(pk));
     work.append(w.t || "");
     tip.append(work);
     // 별 + 평점 → 소설넷 (평점 없으면 표시 안 함)
     const rating = w.r != null ? w.r : (DCNX_DEMO_RATING ? dcnxFakeRating(el.dataset.wid) : null);
     if (rating != null) {
-      const rate = link(w.n || (DCNX_DEMO_RATING ? "https://ssn.so/" : ""), "dcnx-rate");
+      const rate = link(w.n || "", "dcnx-rate");
       rate.append(dcnxStar(rating), Object.assign(document.createElement("span"), {className: "dcnx-score", textContent: rating.toFixed(1)}));
       tip.append(rate);
     }
