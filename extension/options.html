@@ -1,14 +1,26 @@
 <!doctype html>
 <html lang="ko"><meta charset="utf-8"><title>줄임말 사전 설정</title>
+<link rel="stylesheet" href="content.css">
 <style>
-body{font:14px/1.6 "Malgun Gothic",sans-serif;margin:16px;min-width:260px;color:#222}
+body{font:14px/1.6 "Malgun Gothic",sans-serif;margin:16px;min-width:280px;color:#222}
 h1{font-size:16px;margin:0 0 10px} label{display:block;margin:4px 0}
 fieldset{border:1px solid #ddd;border-radius:6px;margin:10px 0;padding:6px 10px}
 small{color:#777}
+#order{list-style:none;margin:4px 0;padding:0}
+#order li{display:flex;align-items:center;gap:4px;padding:3px 4px;border-bottom:1px solid #f0f0f0}
+#order li .n{width:16px;color:#999;font-size:12px}
+#order li .name{flex:1}
+#order button{border:1px solid #ccc;background:#fff;border-radius:4px;width:24px;height:22px;cursor:pointer;padding:0}
+#order button:disabled{opacity:.3;cursor:default}
 </style>
 <h1>장르소설갤 줄임말 사전</h1>
 <label><input type="checkbox" id="popup"> 마우스 올리면 원제목 팝업</label>
 <label>팝업 스킨 <select id="skin"><option value="light">밝게 (흰 바탕)</option><option value="dark">어둡게 (검은 바탕)</option></select></label>
+<label><input type="checkbox" id="icon"> 연재처 아이콘 표시</label>
+<fieldset><legend>연재처 우선순위</legend>
+<small>여러 곳에서 연재하면 위에 있는 곳 하나만 표시</small>
+<ul id="order"></ul>
+</fieldset>
 <fieldset><legend>적용 범위</legend>
 <label><input type="checkbox" id="list"> 글 목록</label>
 <label><input type="checkbox" id="body"> 글 제목·본문</label>
@@ -16,5 +28,6 @@ small{color:#777}
 </fieldset>
 <div><small id="info"></small></div>
 <div><small>설정은 페이지를 새로고침하면 적용됩니다.</small></div>
+<script src="platform.js"></script>
 <script src="options.js"></script>
 </html>

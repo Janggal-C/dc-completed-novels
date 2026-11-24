@@ -4,7 +4,7 @@
     : new URLSearchParams(location.search).get("id") === "genrenovel";
   if (!isGenre) return;
 
-  const DEFAULTS = {popup: true, skin: "light", list: true, body: true, comment: true};
+  const DEFAULTS = {popup: true, skin: "light", icon: true, order: DCNX_DEFAULT_ORDER, list: true, body: true, comment: true};
   const opt = Object.assign({}, DEFAULTS, await chrome.storage.sync.get(DEFAULTS));
   if (!opt.popup) return;
 
@@ -25,8 +25,11 @@
   tip.className = "dcnx-tip dcnx-" + (opt.skin === "dark" ? "dark" : "light");
   document.documentElement.appendChild(tip);
   const show = el => {
-    const {title, done} = M.label(el.dataset.wid);
-    tip.textContent = title;
+    const {title, done, platform} = M.label(el.dataset.wid);
+    tip.textContent = "";
+    const pk = opt.icon && dcnxPickPlatform(platform, opt.order);
+    if (pk) tip.append(dcnxIcon(pk));
+    tip.append(title);
     if (done) {
       const b = document.createElement("b");
       b.textContent = "완";

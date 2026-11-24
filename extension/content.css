@@ -8,3 +8,9 @@
 }
 .dcnx-light { background: #fff; color: #3B4890; border: 1px solid #3B4890; box-shadow: 0 2px 8px rgba(59,72,144,.18); }
 .dcnx-dark { background: #222; color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,.25); }
+.dcnx-icon {
+  display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; position: relative; top: -1px;
+  margin-right: 5px; border-radius: 4px; font-weight: 700; line-height: 1;
+  font-family: "Malgun Gothic", sans-serif; box-sizing: border-box;
+}
+.dcnx-tip .dcnx-icon { pointer-events: none; }
