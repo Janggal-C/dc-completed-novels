@@ -12,7 +12,7 @@ from .fullcrawl import load_titles
 from .matcher import Matcher
 
 
-def run(top_n=100):
+def run(top_n=100, trend_n=6):
     t0 = time.time()
     works = read_json(WORKS, {})
     aliases = read_json(ALIASES, {})
@@ -45,6 +45,10 @@ def run(top_n=100):
         out["periods"][p] = [{"id": wid, "title": works.get(wid, {}).get("title", wid), "n": n,
                               "status": works.get(wid, {}).get("status", ""),
                               "series": [series[wid].get(mm, 0) for mm in months]} for wid, n in top]
+    # 추이: 전체 기간 언급 수 상위 작품의 월별 언급 수
+    total = sorted(series.items(), key=lambda x: -sum(x[1].values()))[:trend_n]
+    out["trend"] = [{"id": wid, "title": works.get(wid, {}).get("title", wid),
+                     "series": [ser.get(mm, 0) for mm in months]} for wid, ser in total]
     write_json(SITE_DATA / "mentions.json", out)
     print(f"언급 집계: 제목 {len(titles):,}개, 작품 {len(daily)}개, {time.time() - t0:.0f}초")
     return out

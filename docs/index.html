@@ -96,6 +96,10 @@ textarea.inp { min-height: 90px; resize: vertical; }
 .seg { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 12px; }
 .empty { padding: 30px 0; text-align: center; color: var(--text-muted); }
 code { font-size: 12px; background: var(--surface-0); padding: 1px 4px; border-radius: 4px; }
+.tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tblwrap table{min-width:max-content}
+.tblwrap td:first-child,.tblwrap th:first-child{white-space:nowrap;position:sticky;left:0;background:var(--surface-1);z-index:1;padding-right:10px}
+.tblwrap td.n,.tblwrap th.n{white-space:nowrap}
 </style>
 </head>
 <body>
@@ -110,7 +114,7 @@ code { font-size: 12px; background: var(--surface-0); padding: 1px 4px; border-r
 const TABS = [["mentions","언급"],["monthly","완결 월별"],["quarterly","완결 분기별"],["trend","추이"],["dict","줄임말 사전"],["check","검수"],["metrics","지표"]];
 const VIEW = document.getElementById("view");
 const REPO = "https://github.com/answhdtjr736-spec/dc-completed-novels";
-let R, tab = location.hash.slice(1) || "monthly", sel = {}, onlyNew = false;
+let R, tab = location.hash.slice(1) || "monthly", sel = {}, onlyNew = false, MEN = null, menKind = "monthly";
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const postUrl = no => `https://gall.dcinside.com/mgallery/board/view/?id=${R.gallery}&no=${no}`;
 const fmtPeriod = p => p.includes("Q") ? p.replace("-Q", "년 ") + "분기" : p.replace("-", "년 ") + "월";
@@ -152,7 +156,7 @@ function rankView(kind) {
     <div class="muted" style="margin-top:6px">완결작만, 완결일 이후 글만 셉니다 · 순위: 고유 작성자 수 → 글 수 · ▸ 월별 그래프</div>${startNote}</div>
     <div class="card"><ol class="rank">${rows.map((e, i) => `<li>
       <div class="no">${i + 1}</div>
-      <div><div class="t">${esc(e.title)}${e.author ? `<span class="au">${esc(e.author)}</span>` : ""}${e.new ? `<span class="badge">이번에 완결</span>` : ""}${e.status === "예전 완결" ? `<span class="badge" style="background:var(--surface-0);color:var(--text-secondary)">예전 완결</span>` : ""}${e.needs_review ? `<span class="badge warn">확인 필요</span>` : ""}</div>
+      <div><div class="t">${esc(e.title)}${e.author ? `<span class="au">${esc(e.author)}</span>` : ""}${e.status === "예전 완결" ? `<span class="badge" style="background:var(--surface-0);color:var(--text-secondary)">예전 완결</span>` : ""}</div>
         <details class="samples"><summary>대표 글 ${e.samples.length}개 · ${e.status === "예전 완결" ? "완결일 불명(데이터 이전)" : `완결 ${esc((e.completion_date || "").slice(5).replace("-", "/"))}`}${e.before_start && e.status !== "예전 완결" ? " (이전 완결 가능)" : ""}</summary>
         <div class="muted" style="font-size:12px">${esc(e.status_reason || "")}</div>
         ${e.samples.map(s => `<a href="${postUrl(s.no)}" target="_blank" rel="noopener">${esc(s.title)}</a>`).join("")}</details></div>
@@ -173,7 +177,6 @@ function rankView(kind) {
 }
 
 // 언급 탭: 완결 여부와 상관없이 언급 수 (하루 단위 작성자 수)
-let MEN = null, menKind = "monthly";
 function mentions() {
   if (!MEN) {
     VIEW.innerHTML = `<div class="empty">불러오는 중…</div>`;
@@ -233,34 +236,45 @@ function monthBars(e, current, months, unit = "명") {
 }
 
 function trend() {
-  const T = R.trend, M = R.months;
-  if (!T.length || M.length < 1) { VIEW.innerHTML = `<div class="empty">추이를 그릴 데이터가 아직 부족합니다.</div>`; return; }
-  const W = Math.max(300, Math.min(880, VIEW.clientWidth - 30)), H = Math.round(Math.min(320, W * 0.6)), pl = 30, pr = 12, pt = 12, pb = 26;
+  if (!MEN) {   // 언급 데이터 먼저 불러오기
+    VIEW.innerHTML = `<div class="empty">불러오는 중…</div>`;
+    fetch("data/mentions.json?" + Date.now()).then(r => r.json()).then(d => { MEN = d; if (tab === "trend") trend(); })
+      .catch(() => { MEN = {trend: [], months: []}; if (tab === "trend") trend(); });
+    return;
+  }
+  VIEW.innerHTML = `<div id="tr1"></div><div id="tr2"></div>`;
+  lineChart(document.getElementById("tr1"), MEN.trend || [], MEN.months || [], "언급 추이", "언급 수 상위", "");
+  lineChart(document.getElementById("tr2"), R.trend, R.months, "완결 추이", "완결작 중 월별 언급 작성자 수 상위", "명");
+}
+
+function lineChart(box, T, M, heading, desc, unit) {
+  if (!T.length || M.length < 1) { box.innerHTML = `<div class="card"><div class="t">${heading}</div><div class="empty">추이를 그릴 데이터가 아직 부족합니다.</div></div>`; return; }
+  const W = Math.max(300, Math.min(880, VIEW.clientWidth - 30)), H = Math.round(Math.min(320, W * 0.6)), pl = 38, pr = 12, pt = 12, pb = 26;
   const max = Math.max(1, ...T.flatMap(t => t.series));
   const x = i => pl + (M.length === 1 ? (W - pl - pr) / 2 : i * (W - pl - pr) / (M.length - 1));
   const y = v => pt + (H - pt - pb) * (1 - v / max);
   const ticks = [0, Math.round(max / 2), max].filter((v, i, a) => a.indexOf(v) === i);
-  const svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="상위 작품 월별 언급 작성자 수">
+  const svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(heading)}">
     ${ticks.map(v => `<line x1="${pl}" x2="${W - pr}" y1="${y(v)}" y2="${y(v)}" stroke="var(--border)" stroke-width="1"/>
-      <text x="${pl - 6}" y="${y(v) + 4}" text-anchor="end" font-size="11" fill="var(--text-muted)">${v}</text>`).join("")}
+      <text x="${pl - 6}" y="${y(v) + 4}" text-anchor="end" font-size="11" fill="var(--text-muted)">${v.toLocaleString()}</text>`).join("")}
     ${M.map((m, i) => `<text x="${x(i)}" y="${H - 8}" text-anchor="middle" font-size="11" fill="var(--text-muted)">${+m.slice(5)}월</text>`).join("")}
     ${T.map((t, k) => `<polyline fill="none" stroke="var(--s${k + 1})" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"
       points="${t.series.map((v, i) => `${x(i)},${y(v)}`).join(" ")}"/>
       ${t.series.map((v, i) => `<circle cx="${x(i)}" cy="${y(v)}" r="4" fill="var(--s${k + 1})" stroke="var(--surface-1)" stroke-width="2"/>`).join("")}`).join("")}
-    <line id="xh" y1="${pt}" y2="${H - pb}" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="3 3" style="display:none"/>
-    <rect id="hit" x="${pl}" y="0" width="${W - pl - pr}" height="${H}" fill="transparent"/></svg>`;
-  VIEW.innerHTML = `<div class="card"><div class="t">상위 ${T.length}개 작품 · 월별 언급 작성자 수</div>
+    <line class="xh" y1="${pt}" y2="${H - pb}" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="3 3" style="display:none"/>
+    <rect x="${pl}" y="0" width="${W - pl - pr}" height="${H}" fill="transparent"/></svg>`;
+  box.innerHTML = `<div class="card"><div class="t">${heading}</div><div class="muted" style="margin-bottom:6px">${desc} ${T.length}개 작품 · 월별</div>
     <div class="legend">${T.map((t, k) => `<span><i style="background:var(--s${k + 1})"></i>${esc(t.title)}</span>`).join("")}</div>
-    <div class="chart">${svg}<div class="tip" id="tip"></div></div></div>
-    <div class="card"><table><tr><th>작품</th>${M.map(m => `<th class="n">${+m.slice(5)}월</th>`).join("")}</tr>
-    ${T.map(t => `<tr><td>${esc(t.title)}</td>${t.series.map(v => `<td class="n">${v}</td>`).join("")}</tr>`).join("")}</table></div>`;
-  const svgEl = VIEW.querySelector("svg"), tip = document.getElementById("tip"), xh = document.getElementById("xh");
+    <div class="chart">${svg}<div class="tip"></div></div></div>
+    <div class="card"><div class="tblwrap"><table><tr><th>작품</th>${M.map(m => `<th class="n">${+m.slice(5)}월</th>`).join("")}</tr>
+    ${T.map(t => `<tr><td>${esc(t.title)}</td>${t.series.map(v => `<td class="n">${v.toLocaleString()}</td>`).join("")}</tr>`).join("")}</table></div></div>`;
+  const svgEl = box.querySelector("svg"), tip = box.querySelector(".tip"), xh = box.querySelector(".xh");
   const move = ev => {
     const b = svgEl.getBoundingClientRect(), px = (ev.clientX - b.left) * W / b.width;
     const i = Math.max(0, Math.min(M.length - 1, Math.round((px - pl) / ((W - pl - pr) / Math.max(1, M.length - 1)))));
     xh.setAttribute("x1", x(i)); xh.setAttribute("x2", x(i)); xh.style.display = "";
     tip.innerHTML = `<b>${fmtPeriod(M[i])}</b>` + T.map((t, k) => ({t, k, v: t.series[i]})).sort((a, b) => b.v - a.v)
-      .map(o => `<div><span><i style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--s${o.k + 1});margin-right:4px"></i>${esc(o.t.title)}</span><b>${o.v}명</b></div>`).join("");
+      .map(o => `<div><span><i style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--s${o.k + 1});margin-right:4px"></i>${esc(o.t.title)}</span><b>${o.v.toLocaleString()}${unit}</b></div>`).join("");
     tip.style.display = "block";
     const left = x(i) * b.width / W;
     tip.style.left = Math.min(left + 12, b.width - tip.offsetWidth) + "px"; tip.style.top = "10px";
