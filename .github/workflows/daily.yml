@@ -91,9 +91,20 @@ jobs:
         with:
           path: docs
           name: pages-final
+      - name: 업로드 반영 대기
+        if: always()
+        run: sleep 15
       - id: deploy2
         uses: actions/deploy-pages@v4
         if: always()
+        continue-on-error: true
+        with:
+          artifact_name: pages-final
+      - name: 배포 재시도 대기
+        if: always() && steps.deploy2.outcome == 'failure'
+        run: sleep 60
+      - uses: actions/deploy-pages@v4     # GitHub 쪽 일시 오류 대비 1회 재시도
+        if: always() && steps.deploy2.outcome == 'failure'
         continue-on-error: true
         with:
           artifact_name: pages-final

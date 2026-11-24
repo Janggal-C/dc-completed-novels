@@ -36,6 +36,8 @@ def _call(prompt, model, allow_search=False, max_turns=3, timeout=600):
         out = json.loads(p.stdout)
     except json.JSONDecodeError:
         raise AIError(f"응답 해석 실패 (code {p.returncode}): {p.stdout[-300:]} {p.stderr[-300:]}")
+    if out.get("permission_denials"):
+        print(f"  (도구 사용 거부됨: {out['permission_denials'][:2]})", flush=True)
     u = out.get("usage") or {}
     USAGE["calls"] += 1
     USAGE["input_tokens"] += u.get("input_tokens", 0) + u.get("cache_creation_input_tokens", 0)
@@ -116,10 +118,24 @@ def search_aliases(names, model):
     if os.environ.get("AI_MOCK") == "1":
         return {a: {"found": True, "title": a, "author": "", "platform": "", "confidence": "low",
                     "url": ""} for a, _ in names}
-    lines = "\n".join(f"- {a}  (예시 제목: {' / '.join(ex[:2])})" for a, ex in names)
-    res = _json_from(_call(SEARCH_PROMPT + lines, model, allow_search=True,
-                           max_turns=4 + 3 * len(names)))
-    return {r.get("alias", ""): r for r in res if r.get("alias")}
+    lines = "\n".join(f"{i + 1}. {a}  (예시 제목: {' / '.join(ex[:2])})" for i, (a, ex) in enumerate(names))
+    text = _call(SEARCH_PROMPT + lines, model, allow_search=True, max_turns=4 + 3 * len(names))
+    res = _json_from(text)
+    # 모델이 이름을 살짝 바꿔 적어도(띄어쓰기 등) 맞출 수 있게 정규화 키 → 원래 이름으로 연결
+    from .common import norm_key
+    want = {norm_key(a): a for a, _ in names}
+    out = {}
+    for i, r in enumerate(res):
+        a = want.get(norm_key(r.get("alias", "")))
+        if a is None and len(res) == len(names):
+            a = names[i][0]          # 순서대로 대응
+        if a:
+            out[a] = r
+    found = sum(bool(r.get("found")) for r in out.values())
+    print(f"  줄임말 검색 {len(names)}개 → 응답 {len(res)}개, 찾음 {found}개", flush=True)
+    if not found:
+        print(f"  (응답 앞부분: {text[:300]!r})", flush=True)
+    return out
 
 
 REVIEW_PROMPT = """너는 디시인사이드 장르소설(웹소설) 갤러리 글 제목 분류의 최종 검수자다.
