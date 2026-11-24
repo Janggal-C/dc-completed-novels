@@ -3,11 +3,11 @@
  "backfill_done": true,
  "data_start": "2026-05",
  "dict_stats": {
-  "aliases": 129,
+  "aliases": 131,
   "authors": 7,
   "needs_review": 52,
-  "new_today": 129,
-  "new_week": 129,
+  "new_today": 131,
+  "new_week": 131,
   "recent": [
    {
     "alias": "21세기무림",
@@ -190,9 +190,9 @@
     "via": "검색"
    }
   ],
-  "unresolved": 1075,
-  "unresolved_ranked": 103,
-  "works": 122
+  "unresolved": 1074,
+  "unresolved_ranked": 102,
+  "works": 123
  },
  "dictionary": [
   {
@@ -542,6 +542,12 @@
    "author": "알콜중독",
    "needs_review": true,
    "title": "미래에서 온 연애편지"
+  },
+  {
+   "alias": "미시회귀",
+   "author": "",
+   "needs_review": false,
+   "title": "미연시 속 회귀하는 히로인이 되었다"
   },
   {
    "alias": "미편",
@@ -944,6 +950,12 @@
    "author": "처량한날",
    "needs_review": true,
    "title": "무당파 둔재의 엘프환생"
+  },
+  {
+   "alias": "후프",
+   "author": "하나호",
+   "needs_review": false,
+   "title": "후회 안 하는 프로듀서"
   },
   {
    "alias": "후회프듀",
@@ -4386,7 +4398,7 @@
    {
     "author": "",
     "completion_month": "2026-07",
-    "id": "?미시회귀",
+    "id": "미연시속회귀하는히로인이되었다",
     "mentions": 6,
     "needs_review": false,
     "new": true,
@@ -4413,8 +4425,8 @@
      0,
      0
     ],
-    "title": "미시회귀 (미확인)",
-    "unresolved": true,
+    "title": "미연시 속 회귀하는 히로인이 되었다",
+    "unresolved": false,
     "writers": 6
    },
    {
@@ -11782,16 +11794,6 @@
    "via": "ai"
   },
   {
-   "alias": "미시회귀",
-   "checked": "2026-11-24",
-   "examples": [
-    "이제 누군가 미시회귀 완결 후기를 써오겠지",
-    "미시회귀 완결났네?",
-    "ts)미시회귀 완결이구나"
-   ],
-   "via": "google2"
-  },
-  {
    "alias": "미츄리",
    "checked": "2026-11-24",
    "examples": [
@@ -14480,7 +14482,7 @@
    {
     "author": "",
     "completion_month": "2026-07",
-    "id": "?미시회귀",
+    "id": "미연시속회귀하는히로인이되었다",
     "mentions": 6,
     "needs_review": false,
     "new": false,
@@ -14507,8 +14509,8 @@
      0,
      0
     ],
-    "title": "미시회귀 (미확인)",
-    "unresolved": true,
+    "title": "미연시 속 회귀하는 히로인이 되었다",
+    "unresolved": false,
     "writers": 6
    },
    {
@@ -19188,16 +19190,6 @@
  ],
  "unresolved": [
   {
-   "alias": "미시회귀",
-   "key": "미시회귀",
-   "n": 6,
-   "titles": [
-    "이제 누군가 미시회귀 완결 후기를 써오겠지",
-    "미시회귀 완결났네?",
-    "ts)미시회귀 완결이구나"
-   ]
-  },
-  {
    "alias": "주버지",
    "key": "주버지",
    "n": 4,
@@ -20896,7 +20888,15 @@
    "titles": [
     "와 근데 빌환 완결난지 벌써 3년이나 지났구나"
    ]
+  },
+  {
+   "alias": "TS메카풀맨스",
+   "key": "ts메카풀맨스",
+   "n": 1,
+   "titles": [
+    "완결 났는데 표지가 새로 나왔어요(TS메카풀맨스)"
+   ]
   }
  ],
- "updated": "2026-11-24 18:16"
+ "updated": "2026-11-24 18:18"
 }
