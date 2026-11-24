@@ -16,8 +16,14 @@ USAGE = {"calls": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_tokens":
 class AIError(Exception):
     """사용량 한도·인증 오류 등. 이번 실행의 AI 작업을 멈추고 다음 실행 때 이어간다."""
 
+    @property
+    def fatal(self):
+        """한도·인증 문제면 True (멈춤). 그 외 일시적 오류면 해당 묶음만 건너뜀."""
+        m = str(self).lower()
+        return any(k in m for k in ("limit", "rate", "auth", "login", "credit", "quota", "실행 실패"))
 
-def _call(prompt, model, allow_search=False, max_turns=1, timeout=600):
+
+def _call(prompt, model, allow_search=False, max_turns=3, timeout=600):
     cmd = ["claude", "-p", "--output-format", "json", "--model", model,
            "--max-turns", str(max_turns)]
     if allow_search:
@@ -36,8 +42,8 @@ def _call(prompt, model, allow_search=False, max_turns=1, timeout=600):
     USAGE["cache_read_tokens"] += u.get("cache_read_input_tokens", 0)
     USAGE["output_tokens"] += u.get("output_tokens", 0)
     USAGE["cost_usd"] += out.get("total_cost_usd") or 0
-    if out.get("is_error"):
-        raise AIError(f"claude 오류: {str(out.get('result'))[:300]}")
+    if out.get("is_error") or out.get("subtype", "success") != "success":
+        raise AIError(f"claude 오류 [{out.get('subtype')}]: {str(out.get('result'))[:300]}")
     return out.get("result", "")
 
 

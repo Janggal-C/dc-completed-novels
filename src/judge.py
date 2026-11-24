@@ -62,9 +62,11 @@ def run(cfg=None):
         try:
             res = ai.classify_titles([{"no": p["no"], "title": p["title"]} for p in batch], jc["model"])
         except ai.AIError as e:
-            stats["stopped"] = str(e)
-            print(f"⚠️ AI 판정 중단 (다음 실행 때 이어감): {e}", file=sys.stderr)
-            break
+            print(f"⚠️ AI 판정 오류: {e}", file=sys.stderr)
+            if e.fatal:
+                stats["stopped"] = str(e)
+                break
+            continue
         for p in batch:
             if p["no"] in res:
                 new_rows.append({**res[p["no"]], "no": p["no"], "date": p["date"]})
@@ -93,9 +95,11 @@ def run(cfg=None):
             try:
                 res = ai.review_titles(batch, jc["review_model"])
             except ai.AIError as e:
-                stats["stopped"] = str(e)
-                print(f"⚠️ AI 검수 중단: {e}", file=sys.stderr)
-                break
+                print(f"⚠️ AI 검수 오류: {e}", file=sys.stderr)
+                if e.fatal:
+                    stats["stopped"] = str(e)
+                    break
+                continue
             merge_monthly(REVIEW_DIR, [{**res[b["no"]], "no": b["no"], "date": b["date"]} for b in batch if b["no"] in res])
             stats["reviewed"] += sum(b["no"] in res for b in batch)
         print(f"  AI 검수 {stats['reviewed']}건", flush=True)
@@ -137,9 +141,11 @@ def run(cfg=None):
         try:
             res = ai.search_aliases([(u["alias"], u["titles"]) for u in batch], jc["model"])
         except ai.AIError as e:
-            stats["stopped"] = stats["stopped"] or str(e)
-            print(f"⚠️ 줄임말 검색 중단: {e}", file=sys.stderr)
-            break
+            print(f"⚠️ 줄임말 검색 오류: {e}", file=sys.stderr)
+            if e.fatal:
+                stats["stopped"] = stats["stopped"] or str(e)
+                break
+            continue
         for u in batch:
             stats["searched"] += 1
             r = res.get(u["alias"]) or {}
