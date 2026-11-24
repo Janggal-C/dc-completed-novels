@@ -1,9 +1,10 @@
 {
  "backfill": {
   "cutoff": "2026-05-25",
-  "done": false,
-  "page": 2,
-  "search_pos": "-12376504"
+  "done": true,
+  "page": 3,
+  "search_pos": "-12256504"
  },
- "newest_no": 13282724
+ "last_run": "2026-11-24 15:34:54",
+ "newest_no": 13283057
 }
