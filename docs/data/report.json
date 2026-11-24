@@ -5,7 +5,7 @@
  "dict_stats": {
   "aliases": 288,
   "authors": 30,
-  "needs_review": 84,
+  "needs_review": 79,
   "new_today": 288,
   "new_week": 288,
   "recent": [
@@ -18,7 +18,7 @@
    {
     "alias": "21세기무림",
     "date": "2026-11-24",
-    "title": "21세기 반로환동전",
+    "title": "21세기를 여행하는 무림인을 위한 안내서",
     "via": "검색"
    },
    {
@@ -192,7 +192,7 @@
   ],
   "unresolved": 937,
   "unresolved_ranked": 22,
-  "works": 264
+  "works": 265
  },
  "dictionary": [
   {
@@ -203,9 +203,9 @@
   },
   {
    "alias": "21세기무림",
-   "author": "검미성",
-   "needs_review": true,
-   "title": "21세기 반로환동전"
+   "author": "",
+   "needs_review": false,
+   "title": "21세기를 여행하는 무림인을 위한 안내서"
   },
   {
    "alias": "444화",
@@ -342,7 +342,7 @@
   {
    "alias": "고능아",
    "author": "집먼지진드기",
-   "needs_review": true,
+   "needs_review": false,
    "title": "저 머리 좋은데요"
   },
   {
@@ -384,19 +384,19 @@
   {
    "alias": "괴담동",
    "author": "미확인",
-   "needs_review": true,
+   "needs_review": false,
    "title": "괴담 동아리"
   },
   {
    "alias": "괴담미소녀",
    "author": "마법소녀G",
-   "needs_review": true,
+   "needs_review": false,
    "title": "괴담에 미소녀 모드를 잘못 깔았다"
   },
   {
    "alias": "괴담미소녀모드",
    "author": "마법소녀G",
-   "needs_review": true,
+   "needs_review": false,
    "title": "괴담에 미소녀 모드를 잘못 깔았다"
   },
   {
@@ -414,7 +414,7 @@
   {
    "alias": "괴라리",
    "author": "김갈비뼈",
-   "needs_review": true,
+   "needs_review": false,
    "title": "괴담에 휘말렸다"
   },
   {
@@ -426,13 +426,13 @@
   {
    "alias": "군필돌",
    "author": "자몽펀치",
-   "needs_review": true,
+   "needs_review": false,
    "title": "아이돌이 군필을 숨김"
   },
   {
    "alias": "군필아이돌",
    "author": "자몽펀치",
-   "needs_review": true,
+   "needs_review": false,
    "title": "아이돌이 군필을 숨김"
   },
   {
@@ -468,7 +468,7 @@
   {
    "alias": "김괴라리",
    "author": "김갈비뼈",
-   "needs_review": true,
+   "needs_review": false,
    "title": "괴담에 휘말렸다"
   },
   {
@@ -924,7 +924,7 @@
   {
    "alias": "미소녀모드",
    "author": "마법소녀G",
-   "needs_review": true,
+   "needs_review": false,
    "title": "괴담에 미소녀 모드를 잘못 깔았다"
   },
   {
@@ -4998,7 +4998,7 @@
     "completion_month": "2026-07",
     "id": "아이돌이군필을숨김",
     "mentions": 25,
-    "needs_review": true,
+    "needs_review": false,
     "new": true,
     "samples": [
      {
@@ -5112,7 +5112,7 @@
     "completion_month": "2026-07",
     "id": "괴담에미소녀모드를잘못깔았다",
     "mentions": 6,
-    "needs_review": true,
+    "needs_review": false,
     "new": true,
     "samples": [
      {
@@ -8010,7 +8010,7 @@
     "completion_month": "2026-07",
     "id": "아이돌이군필을숨김",
     "mentions": 1,
-    "needs_review": true,
+    "needs_review": false,
     "new": false,
     "samples": [
      {
@@ -8572,13 +8572,13 @@
     "writers": 5
    },
    {
-    "author": "검미성",
+    "author": "",
     "before_start": false,
     "completion_date": "2026-09-01",
     "completion_month": "2026-09",
-    "id": "21세기반로환동전",
+    "id": "21세기를여행하는무림인을위한안내서",
     "mentions": 4,
-    "needs_review": true,
+    "needs_review": false,
     "new": true,
     "samples": [
      {
@@ -8600,12 +8600,12 @@
      0,
      0,
      4,
-     2,
+     1,
      0
     ],
     "status": "완결",
     "status_reason": "09/01부터 3일간 3명이 완결 언급",
-    "title": "21세기 반로환동전",
+    "title": "21세기를 여행하는 무림인을 위한 안내서",
     "unresolved": false,
     "writers": 4
    },
@@ -9526,7 +9526,7 @@
     "completion_month": "2026-07",
     "id": "아이돌이군필을숨김",
     "mentions": 1,
-    "needs_review": true,
+    "needs_review": false,
     "new": false,
     "samples": [
      {
@@ -10294,40 +10294,6 @@
    {
     "author": "검미성",
     "before_start": false,
-    "completion_date": "2026-09-01",
-    "completion_month": "2026-09",
-    "id": "21세기반로환동전",
-    "mentions": 2,
-    "needs_review": true,
-    "new": false,
-    "samples": [
-     {
-      "no": 12995871,
-      "title": "21세기 반로환동전<-웹툰 작화빨이 전부인 1xx화따리 급완결 소설"
-     },
-     {
-      "no": 12994881,
-      "title": "21세기무림 완결낫구나"
-     }
-    ],
-    "series": [
-     0,
-     0,
-     0,
-     0,
-     4,
-     2,
-     0
-    ],
-    "status": "완결",
-    "status_reason": "09/01부터 3일간 3명이 완결 언급",
-    "title": "21세기 반로환동전",
-    "unresolved": false,
-    "writers": 2
-   },
-   {
-    "author": "검미성",
-    "before_start": false,
     "completion_date": "2026-08-20",
     "completion_month": "2026-08",
     "id": "a급헌터가살아가는법",
@@ -10562,6 +10528,66 @@
     "title": "회귀수선전",
     "unresolved": false,
     "writers": 2
+   },
+   {
+    "author": "검미성",
+    "before_start": false,
+    "completion_date": "2026-10-01",
+    "completion_month": "2026-10",
+    "id": "21세기반로환동전",
+    "mentions": 1,
+    "needs_review": true,
+    "new": true,
+    "samples": [
+     {
+      "no": 12995871,
+      "title": "21세기 반로환동전<-웹툰 작화빨이 전부인 1xx화따리 급완결 소설"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "21세기 반로환동전",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "",
+    "before_start": false,
+    "completion_date": "2026-09-01",
+    "completion_month": "2026-09",
+    "id": "21세기를여행하는무림인을위한안내서",
+    "mentions": 1,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 12994881,
+      "title": "21세기무림 완결낫구나"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     4,
+     1,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "09/01부터 3일간 3명이 완결 언급",
+    "title": "21세기를 여행하는 무림인을 위한 안내서",
+    "unresolved": false,
+    "writers": 1
    },
    {
     "author": "섦게지는꽃",
@@ -10840,7 +10866,7 @@
     "completion_month": "2026-07",
     "id": "아이돌이군필을숨김",
     "mentions": 1,
-    "needs_review": true,
+    "needs_review": false,
     "new": false,
     "samples": [
      {
@@ -14843,7 +14869,7 @@
     "completion_month": "2026-07",
     "id": "아이돌이군필을숨김",
     "mentions": 27,
-    "needs_review": true,
+    "needs_review": false,
     "new": true,
     "samples": [
      {
@@ -15299,7 +15325,7 @@
     "completion_month": "2026-07",
     "id": "괴담에미소녀모드를잘못깔았다",
     "mentions": 6,
-    "needs_review": true,
+    "needs_review": false,
     "new": true,
     "samples": [
      {
@@ -15939,13 +15965,13 @@
     "writers": 4
    },
    {
-    "author": "검미성",
+    "author": "",
     "before_start": false,
     "completion_date": "2026-09-01",
     "completion_month": "2026-09",
-    "id": "21세기반로환동전",
+    "id": "21세기를여행하는무림인을위한안내서",
     "mentions": 4,
-    "needs_review": true,
+    "needs_review": false,
     "new": true,
     "samples": [
      {
@@ -15967,12 +15993,12 @@
      0,
      0,
      4,
-     2,
+     1,
      0
     ],
     "status": "완결",
     "status_reason": "09/01부터 3일간 3명이 완결 언급",
-    "title": "21세기 반로환동전",
+    "title": "21세기를 여행하는 무림인을 위한 안내서",
     "unresolved": false,
     "writers": 4
    },
@@ -17385,40 +17411,6 @@
     "writers": 2
    },
    {
-    "author": "검미성",
-    "before_start": false,
-    "completion_date": "2026-09-01",
-    "completion_month": "2026-09",
-    "id": "21세기반로환동전",
-    "mentions": 2,
-    "needs_review": true,
-    "new": false,
-    "samples": [
-     {
-      "no": 12995871,
-      "title": "21세기 반로환동전<-웹툰 작화빨이 전부인 1xx화따리 급완결 소설"
-     },
-     {
-      "no": 12994881,
-      "title": "21세기무림 완결낫구나"
-     }
-    ],
-    "series": [
-     0,
-     0,
-     0,
-     0,
-     4,
-     2,
-     0
-    ],
-    "status": "완결",
-    "status_reason": "09/01부터 3일간 3명이 완결 언급",
-    "title": "21세기 반로환동전",
-    "unresolved": false,
-    "writers": 2
-   },
-   {
     "author": "섦게지는꽃",
     "before_start": false,
     "completion_date": "2026-06-12",
@@ -17827,6 +17819,66 @@
     "writers": 2
    },
    {
+    "author": "검미성",
+    "before_start": false,
+    "completion_date": "2026-10-01",
+    "completion_month": "2026-10",
+    "id": "21세기반로환동전",
+    "mentions": 1,
+    "needs_review": true,
+    "new": true,
+    "samples": [
+     {
+      "no": 12995871,
+      "title": "21세기 반로환동전<-웹툰 작화빨이 전부인 1xx화따리 급완결 소설"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0
+    ],
+    "status": "예전 완결",
+    "status_reason": "연재처 표시: 완결",
+    "title": "21세기 반로환동전",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "",
+    "before_start": false,
+    "completion_date": "2026-09-01",
+    "completion_month": "2026-09",
+    "id": "21세기를여행하는무림인을위한안내서",
+    "mentions": 1,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 12994881,
+      "title": "21세기무림 완결낫구나"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     0,
+     0,
+     4,
+     1,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "09/01부터 3일간 3명이 완결 언급",
+    "title": "21세기를 여행하는 무림인을 위한 안내서",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
     "author": "성좌조아",
     "before_start": false,
     "completion_date": "2026-09-04",
@@ -18043,7 +18095,7 @@
     "completion_month": "2026-07",
     "id": "아이돌이군필을숨김",
     "mentions": 1,
-    "needs_review": true,
+    "needs_review": false,
     "new": false,
     "samples": [
      {
@@ -18303,36 +18355,6 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
     "title": "이세계 TRPG 게임마스터",
-    "unresolved": false,
-    "writers": 1
-   },
-   {
-    "author": "오곡전도사",
-    "before_start": false,
-    "completion_date": "2026-06-28",
-    "completion_month": "2026-06",
-    "id": "이세계밀프헌터",
-    "mentions": 1,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 13085106,
-      "title": "생각해보니 이밀헌 웹툰 완결남??"
-     }
-    ],
-    "series": [
-     0,
-     1,
-     0,
-     0,
-     0,
-     1,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "연재처 표시: 완결",
-    "title": "이세계 밀프 헌터",
     "unresolved": false,
     "writers": 1
    }
@@ -22323,5 +22345,5 @@
    ]
   }
  ],
- "updated": "2026-11-24 21:46"
+ "updated": "2026-11-24 22:15"
 }
