@@ -1,11 +1,12 @@
 {
- "cursor": 12706848,
+ "cursor": 12697655,
  "cutoff": "2026-01-01",
- "done": false,
+ "done": true,
  "k": 0,
+ "last_run": "2026-11-25 00:32",
  "lower": 12697719,
- "oldest_date": "2026-08-08",
- "page": 5331,
- "rows": 497820,
+ "oldest_date": "2026-08-06",
+ "page": 5414,
+ "rows": 506046,
  "upper": 13248473
 }
