@@ -845,5 +845,165 @@
   "r": 3.15,
   "rc": 121,
   "title": "리턴 투 플레이어"
+ },
+ "림월드변방계에서회귀자로살아남기": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "마나살돈없어서인방함": {
+  "author": "시엘클레",
+  "checked": "2026-11-25",
+  "id": 288624,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/156911"
+  },
+  "r": 3.67,
+  "rc": 3,
+  "title": "마나 살 돈 없어서 인방함"
+ },
+ "마녀의도시": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "마도서를줍다마법사가되다": {
+  "author": "방구석와룡",
+  "checked": "2026-11-25",
+  "id": 273207,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/477135",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13627231"
+  },
+  "r": 3.31,
+  "rc": 24,
+  "title": "마도서를 줍다 마법사가 되다"
+ },
+ "마도유화": {
+  "author": "흙마법사",
+  "checked": "2026-11-25",
+  "id": 321978,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/368823"
+  },
+  "title": "마도유화"
+ },
+ "마법대학에서살아남기": {
+  "author": "우물안청개구리",
+  "checked": "2026-11-25",
+  "id": 289566,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/307276"
+  },
+  "title": "마법 대학에서 살아남기"
+ },
+ "마법소녀ㄴ은은퇴하고싶다": {
+  "author": "에스필아",
+  "checked": "2026-11-25",
+  "id": 289449,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/347507"
+  },
+  "r": 5.0,
+  "rc": 1,
+  "title": "마법소녀ㄴ은 은퇴하고 싶다"
+ },
+ "마법소녀가승리한세계": {
+  "author": "대벌레",
+  "checked": "2026-11-25",
+  "id": 288942,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/397166"
+  },
+  "title": "마법소녀가 승리한 세계"
+ },
+ "마법소년": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "마법좋아좋아좋아": {
+  "author": "두유하이볼",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 289513,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/326040"
+  },
+  "r": 4.1,
+  "rc": 5,
+  "title": "마법 좋아좋아좋아"
+ },
+ "마법학교마법사로살아가는법": {
+  "author": "글쓰는기계",
+  "checked": "2026-11-25",
+  "id": 119355,
+  "links": {
+   "kakao": "https://page.kakao.com/content/57668776"
+  },
+  "r": 3.74,
+  "rc": 511,
+  "title": "마법학교 마법사로 살아가는 법"
+ },
+ "마왕에게잡혀계시다면당근을흔들어주세요": {
+  "author": "제리사촌",
+  "checked": "2026-11-25",
+  "id": 240072,
+  "links": {
+   "kakao": "https://page.kakao.com/content/69562372"
+  },
+  "title": "마왕에게 잡혀 계시다면 당근을 흔들어주세요"
+ },
+ "마왕은학원에간다": {
+  "author": "글쟁이S",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 105415,
+  "links": {
+   "joara": "https://www.joara.com/book/1648906",
+   "kakao": "https://page.kakao.com/content/61379072",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=9429451",
+   "ridi": "https://ridibooks.com/books/3092019861?_rdt_sid=category_books&_rdt_idx=0"
+  },
+  "r": 3.61,
+  "rc": 317,
+  "title": "마왕은 학원에 간다"
+ },
+ "말랑한길드장님": {
+  "author": "saya",
+  "checked": "2026-11-25",
+  "id": 324412,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/350139"
+  },
+  "title": "말랑한 길드장님"
+ },
+ "망나니용사를너무잘키웠다": {
+  "author": "리틀빅",
+  "checked": "2026-11-25",
+  "id": 289455,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/355198"
+  },
+  "title": "망나니 용사를 너무 잘 키웠다"
+ },
+ "망한교단의성기사": {
+  "author": "제이허빈",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 264043,
+  "links": {
+   "munpia": "https://novel.munpia.com/457750",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=12696086"
+  },
+  "r": 3.81,
+  "rc": 69,
+  "title": "망한 교단의 성기사"
+ },
+ "망할놈의아카데미": {
+  "author": "암흑고라니",
+  "checked": "2026-11-25",
+  "id": 330460,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/110488"
+  },
+  "title": "망할 놈의 아카데미"
  }
 }
