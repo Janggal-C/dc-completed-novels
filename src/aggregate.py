@@ -7,6 +7,7 @@ from .common import (AI_DIR, ALIAS_DATES, ALIASES, AUTHORS, DICT, METRICS, POSTS
 from .resolve import decide, load_reviews, resolve_id, work_name
 from .rules import RULES_VERSION
 from .status import COUNTED, judge as judge_status
+from .matcher import Matcher
 
 
 def run(cfg=None, run_stats=None, partial=False):
@@ -19,6 +20,7 @@ def run(cfg=None, run_stats=None, partial=False):
     aliases = read_json(ALIASES, {})
     state = read_json(STATE, {})
 
+    matcher = Matcher(aliases)
     mentions = defaultdict(lambda: defaultdict(list))   # wid → month → [post]  (완결 글)
     against = defaultdict(list)                         # wid → ['완결 아님' 글] (반대 증거)
     review, pending = [], 0
@@ -46,27 +48,32 @@ def run(cfg=None, run_stats=None, partial=False):
             review.append(item)
         if d["label"] is None:
             pending += 1
-        if d["label"] == "not":
-            name, guess = work_name(p, r, ov)
-            if norm_key(name):
-                against[resolve_id(name, guess, aliases) or "?" + norm_key(name)].append(p)
+        if d["label"] not in ("complete", "not"):
             continue
-        if d["label"] != "complete":
-            continue
+        # 한 제목에 여러 작품이 나오면 전부 센다: 사전 대조(matcher) + AI가 뽑은 이름
+        wids = set(matcher.find(p["title"]))
         name, guess = work_name(p, r, ov)
-        if not norm_key(name):
+        ai_wid = resolve_id(name, guess, aliases) if norm_key(name) else None
+        if ai_wid:
+            wids.add(ai_wid)
+        elif norm_key(name) and not wids:
+            key = norm_key(name)
+            wids.add("?" + key)
+            if d["label"] == "complete":
+                u = unresolved[key]
+                u["alias"] = name
+                u["n"] += 1
+                if len(u["titles"]) < 3:
+                    u["titles"].append(p["title"])
+        if d["label"] == "not":
+            for wid in wids:
+                against[wid].append(p)
+            continue
+        if not wids:
             m["no_work"] = m.get("no_work", 0) + 1   # 작품을 특정할 수 없는 완결 글 → 순위에서 제외
             continue
-        wid = resolve_id(name, guess, aliases)
-        if not wid:
-            key = norm_key(name)
-            wid = "?" + key
-            u = unresolved[key]
-            u["alias"] = name
-            u["n"] += 1
-            if len(u["titles"]) < 3:
-                u["titles"].append(p["title"])
-        mentions[wid][p["date"][:7]].append(p)
+        for wid in wids:
+            mentions[wid][p["date"][:7]].append(p)
 
     def title_of(wid):
         if wid.startswith("?"):
