@@ -39,10 +39,19 @@
     tip.style.top = (below + tip.offsetHeight > innerHeight - 4 ? r.top - tip.offsetHeight - 6 : below) + "px";
     tip.style.left = Math.max(4, Math.min(r.left, innerWidth - tip.offsetWidth - 4)) + "px";
   };
-  const hide = () => { tip.style.display = "none"; };
+  // 줄임말 → 팝업으로 마우스를 옮기는 동안 사라지지 않게 잠깐 기다렸다 닫는다
+  let hideTimer = null, current = null;
+  const hide = () => { clearTimeout(hideTimer); hideTimer = null; current = null; tip.style.display = "none"; };
+  const hideSoon = () => { if (!hideTimer) hideTimer = setTimeout(hide, 300); };
   document.addEventListener("mouseover", e => {
-    const el = e.target.closest && e.target.closest(".dcnx");
-    el ? show(el) : hide();
+    const t = e.target;
+    if (!t.closest) return;
+    if (t.closest(".dcnx-tip")) { clearTimeout(hideTimer); hideTimer = null; return; }
+    const el = t.closest(".dcnx");
+    if (el) {
+      clearTimeout(hideTimer); hideTimer = null;
+      if (el !== current) { current = el; show(el); }
+    } else if (tip.style.display === "block") hideSoon();
   });
   addEventListener("scroll", hide, {passive: true});
 

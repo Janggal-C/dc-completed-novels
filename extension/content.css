@@ -1,7 +1,7 @@
-.dcnx { text-decoration: underline dotted #3B4890; text-decoration-thickness: 2px; text-underline-offset: 3px; cursor: help; }
+.dcnx { text-decoration: underline dotted #3B4890; text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .dcnx-tip b { font-weight: 700; }
 .dcnx-tip {
-  position: fixed; z-index: 2147483647; display: none; pointer-events: none;
+  position: fixed; z-index: 2147483647; display: none; pointer-events: auto;
   max-width: 360px; padding: 5px 10px; border-radius: 6px;
   font: 13px/1.4 "Malgun Gothic", sans-serif;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
