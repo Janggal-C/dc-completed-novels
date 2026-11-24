@@ -95,7 +95,7 @@ SEARCH_PROMPT = """너는 한국 웹소설 제목을 찾는 조사원이다. 아
 아무 근거도 없으면 found=false. 지어내지 마라.
 
 마지막에 아래 JSON 배열만 출력해라.
-[{"alias": "입력 이름 그대로", "found": true/false, "title": "정식 작품명", "author": "작가", "platform": "연재처", "confidence": "high" 또는 "low", "url": "근거 링크"}]
+[{"alias": "입력 이름 그대로", "found": true/false, "is_author": true/false, "title": "정식 작품명", "author": "작가", "platform": "연재처", "confidence": "high" 또는 "low", "url": "근거 링크"}]
 
 이름 목록:
 """
@@ -181,10 +181,10 @@ EXTRACT_PROMPT = """아래는 디시인사이드 장르소설 갤러리에서 �
 - 검색 결과 제목/요약에 정식 작품명이 분명히 보이면 found=true, confidence="high"
 - 결과가 애매하거나 여러 작품이 섞여 확정이 어려우면 confidence="low" (그래도 가장 유력한 것)
 - 결과에 근거가 없으면 found=false. 검색 결과에 없는 제목을 지어내지 마라.
-- 작가 이름이면 found=false, title="작가명"
+- 이름이 작품이 아니라 작가 이름(필명)이면 found=false, is_author=true. 갤러리 예시 제목에 "OO 신작", "OO 이번 작품"처럼 쓰였다면 작가일 가능성이 높다.
 
 아래 JSON 배열만 출력해라.
-[{"alias": "입력 이름 그대로", "found": true/false, "title": "정식 작품명", "author": "작가(보이면)", "platform": "연재처(보이면)", "confidence": "high"/"low", "url": "근거 링크"}]
+[{"alias": "입력 이름 그대로", "found": true/false, "is_author": true/false, "title": "정식 작품명", "author": "작가(보이면)", "platform": "연재처(보이면)", "confidence": "high"/"low", "url": "근거 링크"}]
 
 """
 

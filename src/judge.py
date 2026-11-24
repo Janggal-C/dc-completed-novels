@@ -8,9 +8,10 @@ import sys
 from datetime import datetime, timedelta
 
 from . import ai, google
-from .common import (AI_DIR, ALIASES, POSTS_DIR, REVIEW_DIR, SEARCH_CACHE, WORKS, checkpoint, load_config,
+from .common import (AI_DIR, ALIASES, AUTHORS, RESEARCH_REQ, POSTS_DIR, REVIEW_DIR, SEARCH_CACHE, WORKS, checkpoint, load_config,
                      load_monthly, merge_monthly, norm_key, now_kst, read_json, write_json)
-from .resolve import decide, load_overrides, load_reviews, needs_ai, resolve_id, work_name
+from .resolve import (decide, load_overrides, load_reviews, needs_ai, not_a_work, reload_authors,
+                      resolve_id, work_name)
 
 
 def add_work(works, aliases, title, alias=None, **info):
@@ -127,14 +128,63 @@ def run(cfg=None):
         if len(u["titles"]) < 3:
             u["titles"].append(p["title"])
 
+    authors_list = read_json(AUTHORS, [])
     today = now_kst()
     retry = timedelta(days=jc["search_retry_days"])
+
+    # 집중 재검색 요청이 있으면: 언급 많은 미확인 N개를 검색어를 바꿔(노벨피아·작가) 구글로 다시 찾는다
+    req = read_json(RESEARCH_REQ, None)
+    if req and google.available():
+        top = sorted(unknown.values(), key=lambda u: (-len(u["writers"]), -u["n"]))[: req.get("top", 10)]
+        budget = google.remaining(jc["google_monthly_limit"])
+        items = []
+        for u in top:
+            if budget < 2:
+                break
+            res = []
+            for q in (f'{u["alias"]} 노벨피아', f'{u["alias"]} 소설 작가'):
+                try:
+                    res += google.search(q, num=6)
+                    budget -= 1
+                    stats["google"] = stats.get("google", 0) + 1
+                except Exception as e:
+                    print(f"  구글 검색 실패 ({q}): {e}", file=sys.stderr)
+            items.append((u["alias"], u["titles"], res))
+        try:
+            for i in range(0, len(items), 5):
+                res = ai.extract_from_results(items[i:i + 5], jc.get("search_model", jc["model"]))
+                for a, ex, _ in items[i:i + 5]:
+                    r = res.get(a) or {}
+                    key = norm_key(a)
+                    stats["searched"] += 1
+                    if r.get("is_author"):
+                        if a not in authors_list:
+                            authors_list.append(a)
+                        unknown.pop(key, None)
+                        print(f"  작가로 분류: {a}", flush=True)
+                    elif r.get("found") and r.get("title"):
+                        wid = add_work(works, aliases, r["title"], alias=a, author=r.get("author"),
+                                       platform=r.get("platform"), source=r.get("url"))
+                        if r.get("confidence") != "high" and wid:
+                            works[wid]["needs_review"] = True
+                        stats["found"] += 1
+                        unknown.pop(key, None)
+                        print(f"  찾음: {a} → {r['title']}", flush=True)
+                    else:
+                        cache[key] = {"alias": a, "checked": today.strftime("%Y-%m-%d"), "examples": ex, "via": "google2"}
+                        print(f"  못 찾음: {a}", flush=True)
+            RESEARCH_REQ.unlink(missing_ok=True)
+        except ai.AIError as e:
+            print(f"⚠️ 집중 재검색 오류: {e}", file=sys.stderr)
+        write_json(AUTHORS, sorted(set(authors_list)))
+        reload_authors()
+        unknown = {k: u for k, u in unknown.items() if not not_a_work(u["alias"])}
     queue = []
     for key, u in sorted(unknown.items(), key=lambda kv: -kv[1]["n"]):
         c = cache.get(key)
         recent = c and today - datetime.fromisoformat(c["checked"]).replace(tzinfo=today.tzinfo) < retry
         # AI 검색으로 못 찾은 이름도 구글이 생기면 다시 시도
-        if recent and (c.get("via") == "google" or not google.available() or len(u["writers"]) < jc["google_min_writers"]):
+        if recent and (c.get("via") in ("google", "google2") or not google.available() or len(u["writers"]) < jc["google_min_writers"]):
             continue
         queue.append(u)
     # 구글(SerpApi): 순위에 영향을 주는 이름(작성자 여러 명)부터, 월 무료 한도 안에서만
@@ -155,7 +205,7 @@ def run(cfg=None):
     sb = jc["search_batch_size"]
     for i in range(0, len(rest), sb):
         batches.append(("ai", rest[i:i + sb]))
-    stats["google"] = 0
+    stats.setdefault("google", 0)
     for kind, batch in batches:
         try:
             if kind == "google":
@@ -181,6 +231,9 @@ def run(cfg=None):
             stats["searched"] += 1
             r = res.get(u["alias"]) or {}
             key = norm_key(u["alias"])
+            if r.get("is_author"):
+                authors_list.append(u["alias"])
+                continue
             if r.get("found") and r.get("title"):
                 wid = add_work(works, aliases, r["title"], alias=u["alias"], author=r.get("author"),
                                platform=r.get("platform"), source=r.get("url"))
@@ -198,6 +251,8 @@ def run(cfg=None):
     write_json(WORKS, works)
     write_json(ALIASES, aliases)
     write_json(SEARCH_CACHE, cache)
+    write_json(AUTHORS, sorted(set(authors_list)))
+    reload_authors()
     print(f"판정 완료: AI {stats['ai_judged']}건 (캐시 재사용 {stats['ai_cached']}건), "
           f"줄임말 검색 {stats['searched']}건 중 {stats['found']}건 찾음")
     return stats

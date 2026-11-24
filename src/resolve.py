@@ -2,7 +2,7 @@
 import csv
 import hashlib
 
-from .common import OVERRIDES, REVIEW_DIR, load_monthly, norm_key
+from .common import AUTHORS, OVERRIDES, REVIEW_DIR, load_monthly, norm_key, read_json
 from .rules import NOT_WORKS, classify, extract_work
 
 
@@ -62,18 +62,44 @@ def decide(post, ai, ov):
     return {"label": label, "source": source, "rule": rule, "ai": ai_label, "disagree": disagree}
 
 
+_AUTHORS = None
+
+
+def authors():
+    global _AUTHORS
+    if _AUTHORS is None:
+        _AUTHORS = {norm_key(a) for a in read_json(AUTHORS, [])}
+    return _AUTHORS
+
+
+def reload_authors():
+    global _AUTHORS
+    _AUTHORS = None
+
+
+def not_a_work(name):
+    """연재처·일반 단어·작가 이름·'OO 신작' 은 특정 작품이 아님"""
+    k = norm_key(name)
+    if not k or k in NOT_WORKS or k in authors():
+        return True
+    for suf in ("신작", "작가", "전작", "작품"):
+        if k.endswith(suf) and k[: -len(suf)] in authors():
+            return True
+    return False
+
+
 def work_name(post, ai, ov):
     """→ (제목에 쓰인 작품명, AI가 아는 정식 제목). 작품명이 아니면 ('', '')"""
     if ov and ov.get("work_title"):
         return ov["work_title"], ov["work_title"]
     if ov and ov.get("work") and ov.get("by") == "AI":
         name = ov["work"]
-        return ("" if norm_key(name) in NOT_WORKS else name), (ai or {}).get("guess", "")
+        return ("" if not_a_work(name) else name), (ai or {}).get("guess", "")
     if ai and ai.get("work"):
         name, guess = ai["work"], ai.get("guess", "")
     else:
         name, guess = extract_work(post["title"]), ""
-    if norm_key(name) in NOT_WORKS:
+    if not_a_work(name):
         name = ""
     return name, guess
 
