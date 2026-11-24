@@ -18,6 +18,11 @@ def add_work(works, aliases, title, alias=None, **info):
     wid = norm_key(title)
     if not wid:
         return None
+    src = info.get("source") or ""
+    if src.startswith("http") and wid not in works:
+        same = next((k for k, w in works.items() if w.get("source") == src), None)
+        if same:            # 같은 작품 페이지 = 제목만 바뀐 같은 작품
+            wid = same
     w = works.setdefault(wid, {"title": title, "added": now_kst().strftime("%Y-%m-%d")})
     for k, v in info.items():
         if v and not w.get(k):

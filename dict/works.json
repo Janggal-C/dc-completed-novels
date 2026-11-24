@@ -67,11 +67,12 @@
  },
  "갤질하는천재의사": {
   "added": "2026-11-24",
-  "author": "렛츠두딧스(Let's Do Its)",
-  "needs_review": true,
+  "author": "렛츠두딧스",
+  "needs_review": false,
   "platform": "노벨피아",
   "source": "https://novelpia.com/novel/372180",
-  "title": "갤질하는 천재 의사"
+  "source_note": "사용자 확인 병합",
+  "title": "갤질하는 천재 의사 (댓글 보는 천재 의사)"
  },
  "경제왕연산군": {
   "added": "2026-11-24",
@@ -83,9 +84,10 @@
  "고아파는고아원장현제목착한고아원장아닙니다": {
   "added": "2026-11-24",
   "author": "통후추존맛",
-  "needs_review": true,
+  "needs_review": false,
   "platform": "노벨피아",
   "source": "https://novelpia.com/novel/376032",
+  "source_note": "사용자 확인 병합",
   "title": "고아 파는 고아원장 (현 제목: 착한 고아원장 아닙니다)"
  },
  "공포쯔꾸르생존기": {
@@ -244,14 +246,6 @@
   "platform": "네이버 시리즈",
   "source": "https://series.naver.com/novel/detail.series?productNo=10093363",
   "title": "대영제국에서 작가로 살아남기"
- },
- "댓글보는천재의사": {
-  "added": "2026-11-24",
-  "author": "렛츠두딧스",
-  "needs_review": true,
-  "platform": "노벨피아",
-  "source": "https://novelpia.com/novel/372180",
-  "title": "댓글 보는 천재 의사"
  },
  "댓글창의천재마법사": {
   "added": "2026-11-24",
@@ -663,14 +657,6 @@
   "platform": "노벨피아",
   "source": "https://novelpia.com/novel/51457",
   "title": "■■을 위한 세계는 없다"
- },
- "이계로출근하는고아원장": {
-  "added": "2026-11-24",
-  "author": "릴로드",
-  "needs_review": true,
-  "platform": "문피아",
-  "source": "https://m.munpia.com/novel/detail/206244",
-  "title": "이계로 출근하는 고아원장"
  },
  "이무림의미친년은나야": {
   "added": "2026-11-24",
