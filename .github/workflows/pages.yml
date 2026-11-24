@@ -8,7 +8,7 @@ on:
     paths: ["docs/index.html", "dict/**", "review/**", "data/posts/**", "data/ai/**",
             "src/aggregate.py", "src/export_dict.py", "src/mentions.py", "src/status.py", "src/matcher.py", "config.yaml"]
   workflow_run:
-    workflows: ["소설넷 평점·연재처", "단어 분류 (AI)"]
+    workflows: ["소설넷 평점·연재처", "단어 분류 (AI)", "작품 단어 사전 등록 (Serper)"]
     types: [completed]
   workflow_dispatch:
 

@@ -1,0 +1,38 @@
+name: 작품 단어 사전 등록 (Serper)
+
+# AI가 작품명으로 분류한 단어를 구글(Serper)로 찾아 사전에 등록. 이미 처리한 단어는 건너뛰고 이어서 함.
+on:
+  push:
+    paths: [".github/run-words"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: words
+  cancel-in-progress: false
+
+jobs:
+  words:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    env:
+      COMMIT_PATHS: "dict data/word_resolve.json"
+      SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: npm install -g @anthropic-ai/claude-code
+      - run: python -u -m src.words
+      - name: 저장
+        if: always()
+        run: bash scripts/commit.sh "작품 단어 사전 등록 $(TZ=Asia/Seoul date '+%F %H:%M')"
