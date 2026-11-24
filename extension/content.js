@@ -25,14 +25,29 @@
   tip.className = "dcnx-tip dcnx-" + (opt.skin === "dark" ? "dark" : "light");
   document.documentElement.appendChild(tip);
   const show = el => {
-    const {title, done, platform} = M.label(el.dataset.wid);
+    const w = M.works[el.dataset.wid] || {};
     tip.textContent = "";
-    const pk = opt.icon && dcnxPickPlatform(platform, opt.order);
-    if (pk) tip.append(dcnxIcon(pk));
-    tip.append(title);
-    const rating = dcnxFakeRating(el.dataset.wid);   // TODO: 소설넷 평점으로 교체
-    if (rating != null) tip.append(dcnxStar(rating), Object.assign(document.createElement("span"), {className: "dcnx-score", textContent: rating.toFixed(1)}));
-    if (done) {
+    const link = (href, cls) => {
+      const a = document.createElement(href ? "a" : "span");
+      a.className = cls;
+      if (href) { a.href = href; a.target = "_blank"; a.rel = "noopener noreferrer"; }
+      return a;
+    };
+    // 연재처 아이콘 + 제목 → 작품 링크
+    const work = link(w.u, "dcnx-work");
+    const pk = opt.icon && dcnxPickPlatform(w.p, opt.order);
+    if (pk) work.append(dcnxIcon(pk));
+    work.append(w.t || "");
+    tip.append(work);
+    // 별 + 평점 → 소설넷 (평점 없으면 표시 안 함)
+    const rating = w.r != null ? w.r : (DCNX_DEMO_RATING ? dcnxFakeRating(el.dataset.wid) : null);
+    if (rating != null) {
+      const rate = link(w.n || (DCNX_DEMO_RATING ? "https://ssn.so/" : ""), "dcnx-rate");
+      rate.append(dcnxStar(rating), Object.assign(document.createElement("span"), {className: "dcnx-score", textContent: rating.toFixed(1)}));
+      tip.append(rate);
+    }
+    // [완] 은 클릭 없음
+    if (w.s === "완결") {
       const b = document.createElement("b");
       b.className = "dcnx-done";
       b.textContent = "[완]";

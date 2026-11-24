@@ -59,6 +59,9 @@ function dcnxStar(rating, size = 14) {
   return svg;
 }
 
+// 소설넷 평점(w.r)·주소(w.n)가 사전에 들어오기 전까지 임시 평점으로 모양만 확인
+const DCNX_DEMO_RATING = true;
+
 // 임시 평점: 작품마다 고정된 가짜 값 (1.0~5.0)
 function dcnxFakeRating(wid) {
   let h = 2166136261;

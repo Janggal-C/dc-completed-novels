@@ -18,3 +18,7 @@
 .dcnx-star { display: inline-block; vertical-align: middle; position: relative; top: -1px; margin: 0 2px 0 7px; }
 .dcnx-score { font-size: 12px; }
 .dcnx-done { margin-left: 6px; font-weight: 700; }
+.dcnx-tip a { color: inherit; text-decoration: none; }
+.dcnx-tip a:hover { text-decoration: underline; }
+.dcnx-rate { margin-left: 7px; }
+.dcnx-rate .dcnx-star { margin-left: 0; }
