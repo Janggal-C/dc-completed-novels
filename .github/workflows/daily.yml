@@ -15,6 +15,8 @@ on:
 
 permissions:
   contents: write
+  pages: write       # 보고서 페이지 배포
+  id-token: write
 
 concurrency:
   group: daily
@@ -24,6 +26,9 @@ jobs:
   run:
     runs-on: ubuntu-latest
     timeout-minutes: 150
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy2.outputs.page_url }}
     env:
       WRITER_SALT: ${{ secrets.WRITER_SALT }}
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
@@ -51,6 +56,19 @@ jobs:
         if: always() && (inputs.step == 'all' || inputs.step == '')
         run: bash scripts/commit.sh "크롤링 $(TZ=Asia/Seoul date +%F)"
 
+      # 보고서 페이지 배포 (크롤링 직후 1회) — Pages 설정이 'GitHub Actions'일 때만 동작
+      - uses: actions/upload-pages-artifact@v4
+        if: always() && (inputs.step == 'all' || inputs.step == '')
+        continue-on-error: true
+        with:
+          path: docs
+          name: pages-crawl
+      - uses: actions/deploy-pages@v4
+        if: always() && (inputs.step == 'all' || inputs.step == '')
+        continue-on-error: true
+        with:
+          artifact_name: pages-crawl
+
       - name: 2) AI 판정 + 줄임말 사전 + 보고서
         if: always() && inputs.step != 'report'
         run: python -m src.main judge
@@ -62,3 +80,17 @@ jobs:
       - name: 판정·보고서 저장
         if: always()
         run: bash scripts/commit.sh "판정·보고서 $(TZ=Asia/Seoul date +%F)"
+
+      # 보고서 페이지 배포 (최종)
+      - uses: actions/upload-pages-artifact@v4
+        if: always()
+        continue-on-error: true
+        with:
+          path: docs
+          name: pages-final
+      - id: deploy2
+        uses: actions/deploy-pages@v4
+        if: always()
+        continue-on-error: true
+        with:
+          artifact_name: pages-final

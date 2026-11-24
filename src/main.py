@@ -24,6 +24,8 @@ def main(step="all"):
             sys.exit(2)
         STATS_FILE.parent.mkdir(parents=True, exist_ok=True)
         STATS_FILE.write_text(json.dumps({"crawled_new": s["new"], "crawled_backfill": s["backfill"]}))
+        if step == "crawl":
+            aggregate.run(cfg, partial=True)   # 새로 수집한 글을 바로 보고서에 반영
     if step in ("judge", "all"):
         stats = json.loads(STATS_FILE.read_text()) if STATS_FILE.exists() else {}
         s = judge.run(cfg)
