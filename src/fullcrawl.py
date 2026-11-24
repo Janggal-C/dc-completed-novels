@@ -19,19 +19,22 @@ from .common import FULL_STATE, TITLES_DIR, checkpoint, load_config, now_kst, re
 from .crawl import Blocked, Client
 
 
-def _path(day):
-    return TITLES_DIR / f"{day}.jsonl.gz"
+def _path(day, tag=""):
+    return TITLES_DIR / (f"{day}.{tag}.jsonl.gz" if tag else f"{day}.jsonl.gz")
 
 
-def _read_day(day):
-    p = _path(day)
+def _read_file(p):
     if not p.exists():
         return {}
     with gzip.open(p, "rt", encoding="utf-8") as f:
         return {r["no"]: r for r in (json.loads(l) for l in f if l.strip())}
 
 
-def save_rows(rows):
+def _read_day(day, tag=""):
+    return _read_file(_path(day, tag))
+
+
+def save_rows(rows, tag=""):
     """날짜별 파일에 글번호 기준 병합 저장"""
     by_day = {}
     for r in rows:
@@ -39,21 +42,21 @@ def save_rows(rows):
             {"no": r["no"], "title": r["title"], "date": r["date"], "writer": r["writer"]})
     TITLES_DIR.mkdir(parents=True, exist_ok=True)
     for day, new in by_day.items():
-        cur = _read_day(day)
+        cur = _read_day(day, tag)
         for r in new:
             cur[r["no"]] = r
-        tmp = _path(day).with_suffix(".tmp")
+        tmp = _path(day, tag).with_suffix(".tmp")
         with gzip.open(tmp, "wt", encoding="utf-8", compresslevel=9) as f:
             for r in sorted(cur.values(), key=lambda r: -r["no"]):
                 f.write(json.dumps(r, ensure_ascii=False, sort_keys=True) + "\n")
-        tmp.replace(_path(day))
+        tmp.replace(_path(day, tag))
 
 
 def load_titles():
     """전체 제목 → {no: row}"""
     out = {}
-    for p in sorted(Path(TITLES_DIR).glob("*.jsonl.gz")):
-        out.update(_read_day(p.name[:10]))
+    for p in sorted(Path(TITLES_DIR).glob("*.jsonl.gz")):   # 구간별 파일(YYYY-MM-DD.sN.jsonl.gz)까지 전부 합침
+        out.update(_read_file(p))
     return out
 
 
@@ -164,6 +167,125 @@ def run(max_minutes=None, verbose=False):
     return stats
 
 
+SEG_DIR = FULL_STATE.parent / "fullcrawl"
+
+
+def _seg_path(k):
+    return SEG_DIR / f"seg{k}.json"
+
+
+def find_page(L, pred, lo=1, hi=20000):
+    """pred(rows)가 처음 True가 되는 페이지를 이진 탐색 (페이지 번호가 클수록 오래된 글)"""
+    while lo < hi:
+        mid = (lo + hi) // 2
+        rows = L.page(mid)
+        if not rows or pred(rows):
+            hi = mid
+        else:
+            lo = mid + 1
+    return lo
+
+
+def init_segments(n):
+    """남은 구간(현재 진행 위치 ~ 기준일)을 글번호로 n등분"""
+    cfg = load_config()
+    L = Lister(cfg)
+    st = read_json(FULL_STATE, {})
+    cutoff = cfg["fullcrawl"]["cutoff"]
+    top = st.get("cursor")
+    if top is None:
+        top = L.page(1)[0]["no"] + 1
+        st["newest"] = top - 1
+    p = find_page(L, lambda rows: rows[-1]["date"][:10] < cutoff)
+    bottom = L.page(p)[-1]["no"]
+    step = (top - bottom) // n
+    SEG_DIR.mkdir(parents=True, exist_ok=True)
+    segs = []
+    for k in range(n):
+        upper = top - k * step
+        lower = top - (k + 1) * step if k < n - 1 else None
+        seg = {"k": k, "upper": upper, "lower": lower, "cursor": upper, "page": None,
+               "cutoff": cutoff, "done": False, "rows": 0}
+        write_json(_seg_path(k), seg)
+        segs.append(seg)
+    st["segments"] = n
+    write_json(FULL_STATE, st)
+    print(f"구간 나눔: #{top} ~ #{bottom} (기준일 {cutoff}, {p}페이지 부근) → {n}개")
+    for g in segs:
+        print(f"  구간{g['k']}: #{g['upper']} 아래 ~ {('#' + str(g['lower'])) if g['lower'] else cutoff}")
+    return segs
+
+
+def run_segment(k, max_minutes=None, verbose=False):
+    cfg = load_config()
+    max_minutes = max_minutes or cfg["fullcrawl"]["minutes_per_run"]
+    deadline = time.time() + max_minutes * 60
+    seg = read_json(_seg_path(k), None)
+    if not seg:
+        print(f"구간{k} 없음")
+        return {}
+    if seg["done"]:
+        print(f"구간{k} 이미 완료")
+        return {"done": True}
+    L = Lister(cfg)
+    tag = f"s{k}"
+    stats = {"pages": 0, "rows": 0}
+    buf = []
+    try:
+        if not seg["page"]:
+            seg["page"] = find_page(L, lambda rows: rows[-1]["no"] < seg["cursor"])
+            print(f"구간{k}: #{seg['cursor']} 위치 = {seg['page']}페이지", flush=True)
+        n = seg["page"]
+        while time.time() < deadline:
+            rows = L.page(n)
+            stats["pages"] += 1
+            if not rows:
+                seg["done"] = True
+                break
+            cur = seg["cursor"]
+            if verbose:
+                print(f"  구간{k} p{n}: #{rows[0]['no']}~#{rows[-1]['no']} {rows[-1]['date']} cursor={cur}", flush=True)
+            if rows[-1]["no"] >= cur:              # 새 글 때문에 밀려서 이미 본 구간
+                n += 1
+                continue
+            new = [r for r in rows if r["no"] < cur]
+            keep = [r for r in new if (seg["lower"] is None or r["no"] >= seg["lower"]) and r["date"][:10] >= seg["cutoff"]]
+            buf += keep
+            stats["rows"] += len(keep)
+            seg["cursor"] = min(cur, rows[-1]["no"])
+            seg["page"] = n + 1
+            seg["rows"] = seg.get("rows", 0) + len(keep)
+            seg["oldest_date"] = rows[-1]["date"][:10]
+            if len(keep) < len(new):               # 구간 아래 끝(또는 기준일) 도달
+                seg["done"] = True
+                break
+            if len(buf) >= 2000 or stats["pages"] == 20:
+                save_rows(buf, tag)
+                buf = []
+                write_json(_seg_path(k), seg)
+                checkpoint(f"전체 제목 구간{k} ~{seg['oldest_date']}", force=stats["pages"] == 20, report=False)
+            if stats["pages"] % 20 == 0:
+                print(f"  구간{k} {n}페이지 · {seg['oldest_date']} · 이번 {stats['rows']:,}개", flush=True)
+            checkpoint(f"전체 제목 구간{k} ~{seg['oldest_date']}", report=False)
+            n += 1
+    except (Blocked, RuntimeError) as e:
+        print(f"❌ 구간{k} 중단: {e}", file=sys.stderr)
+        stats["error"] = str(e)
+    finally:
+        if buf:
+            save_rows(buf, tag)
+        seg["last_run"] = now_kst().strftime("%Y-%m-%d %H:%M")
+        write_json(_seg_path(k), seg)
+    # 모든 구간이 끝나면 전체 상태도 완료로
+    segs = [read_json(_seg_path(i), {}) for i in range(read_json(FULL_STATE, {}).get("segments", 0))]
+    if segs and all(g.get("done") for g in segs):
+        st = read_json(FULL_STATE, {})
+        st["done"] = True
+        write_json(FULL_STATE, st)
+    print(f"구간{k}: 이번 {stats['pages']}페이지 {stats['rows']:,}개 · 진행 {seg.get('oldest_date')} · {'완료' if seg['done'] else '진행 중'}")
+    return stats
+
+
 def probe(depth_pages):
     """깊은 페이지 접근 테스트: 1페이지와 depth 페이지를 받아 비교"""
     L = Lister(load_config())
@@ -194,6 +316,24 @@ def quick_test():
 
 
 if __name__ == "__main__":
+    if len(sys.argv) > 2 and sys.argv[1] == "init":
+        init_segments(int(sys.argv[2]))
+        sys.exit(0)
+    if len(sys.argv) > 2 and sys.argv[1] == "seg":
+        st = read_json(FULL_STATE, {})
+        if st.get("done"):
+            if sys.argv[2] == "0":
+                run()          # 전부 끝났으면 0번 작업이 새 글 증분만
+            sys.exit(0)
+        run_segment(int(sys.argv[2]), verbose=len(sys.argv) > 3)
+        sys.exit(0)
+    if len(sys.argv) > 1 and sys.argv[1] == "segtest":
+        import os
+        os.environ.pop("GITHUB_ACTIONS", None)
+        init_segments(3)
+        for k in range(3):
+            run_segment(k, max_minutes=0.15, verbose=True)
+        sys.exit(0)
     if len(sys.argv) > 1 and sys.argv[1] == "test":
         quick_test()
         sys.exit(0)
