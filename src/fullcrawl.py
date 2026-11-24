@@ -170,9 +170,7 @@ def probe(depth_pages):
 
 
 def quick_test():
-    """2페이지만 받아서 그대로 출력 + 수집 로직 1분만 실행 (저장소에 커밋 안 함)"""
-    import os
-    os.environ.pop("GITHUB_ACTIONS", None)   # checkpoint 커밋 끔
+    """1·2페이지만 받아서 그대로 출력 (저장 안 함)"""
     L = Lister(load_config())
     for n in (1, 2):
         t = time.time()
@@ -180,10 +178,6 @@ def quick_test():
         print(f"[{n}페이지] {len(rows)}개, {time.time() - t:.1f}초")
         for r in rows[:3] + rows[-2:]:
             print(f"   #{r['no']} {r['date']} {r['title'][:30]}")
-    print("--- 수집 로직 1분 실행 ---")
-    st = run(max_minutes=1)
-    print(st, read_json(FULL_STATE, {}))
-    print("저장된 날짜 파일:", sorted(p.name for p in Path(TITLES_DIR).glob("*.gz"))[:5])
 
 
 if __name__ == "__main__":
