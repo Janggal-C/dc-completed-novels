@@ -92,7 +92,11 @@ def test(n=100):
     print(f"후보 단어 {len(cands):,}개")
     ranked = sorted(cands, key=lambda w: -cands[w]["w"])
     random.seed(7)
-    pick = ranked[: n // 2] + random.sample(ranked[n // 2:], n - n // 2)
+    if os.environ.get("PICK") == "burst":     # 특정 달에 몰린 단어 위주 (작품명이 많은 쪽)
+        bursty = [w for w in ranked if cands[w]["burst"] >= 0.3 and cands[w]["w"] >= 20]
+        pick = bursty[:n]
+    else:
+        pick = ranked[: n // 2] + random.sample(ranked[n // 2:], n - n // 2)
     res = classify(pick, cands, cfg["judge"]["model"])
     print(f"분류 결과 {len(res)}/{len(pick)}  사용량 {ai.USAGE}")
     by = defaultdict(list)
