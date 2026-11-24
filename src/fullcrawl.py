@@ -286,6 +286,31 @@ def run_segment(k, max_minutes=None, verbose=False):
     return stats
 
 
+def fill_gaps(min_gap=300):
+    """저장된 제목에서 글번호가 크게 빈 구간을 찾아 그 부분만 다시 받는다"""
+    t = load_titles()
+    nos = sorted(t)
+    gaps = [(nos[i], nos[i + 1]) for i in range(len(nos) - 1) if nos[i + 1] - nos[i] > min_gap]
+    print(f"빈 구간 {len(gaps)}개: {gaps}")
+    L = Lister(load_config())
+    total = 0
+    for lo, hi in gaps:
+        n = find_page(L, lambda rows: rows[-1]["no"] < hi)
+        got = []
+        for _ in range(60):
+            rows = L.page(n)
+            if not rows:
+                break
+            got += [r for r in rows if lo < r["no"] < hi]
+            if rows[-1]["no"] <= lo:
+                break
+            n += 1
+        save_rows(got, "gap")
+        total += len(got)
+        print(f"  #{lo}~#{hi}: {len(got)}개 채움 (실제 글이 없으면 삭제된 글)")
+    print(f"채운 글 {total}개")
+
+
 def probe(depth_pages):
     """깊은 페이지 접근 테스트: 1페이지와 depth 페이지를 받아 비교"""
     L = Lister(load_config())
@@ -316,6 +341,9 @@ def quick_test():
 
 
 if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "fillgaps":
+        fill_gaps()
+        sys.exit(0)
     if len(sys.argv) > 2 and sys.argv[1] == "init":
         init_segments(int(sys.argv[2]))
         sys.exit(0)
