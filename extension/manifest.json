@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "장르소설갤 줄임말 사전",
+  "version": "0.1.0",
+  "description": "디시 장르소설 갤러리에서 작품 줄임말에 마우스를 올리면 원제목을 보여줍니다.",
+  "permissions": ["storage", "alarms"],
+  "host_permissions": ["https://answhdtjr736-spec.github.io/*"],
+  "background": {"service_worker": "background.js"},
+  "content_scripts": [{
+    "matches": ["*://gall.dcinside.com/mgallery/board/*", "*://m.dcinside.com/board/genrenovel*"],
+    "js": ["matcher.js", "content.js"],
+    "css": ["content.css"],
+    "run_at": "document_idle"
+  }],
+  "options_page": "options.html",
+  "action": {"default_popup": "options.html", "default_title": "줄임말 사전 설정"},
+  "web_accessible_resources": [{"resources": ["dict.json"], "matches": ["*://gall.dcinside.com/*", "*://m.dcinside.com/*"]}]
+}

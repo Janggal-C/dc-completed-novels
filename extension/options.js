@@ -1,0 +1,23 @@
+const DEFAULTS = {popup: true, expand: false, list: true, body: true, comment: true};
+const info = async () => {
+  const {dict, fetchedAt} = await chrome.storage.local.get(["dict", "fetchedAt"]);
+  let d = dict;
+  if (!d) d = await (await fetch(chrome.runtime.getURL("dict.json"))).json();
+  document.getElementById("info").textContent =
+    `작품 ${Object.keys(d.works).length}개 · 줄임말 ${Object.keys(d.aliases).length}개 · 사전 ${d.version}` +
+    (fetchedAt ? "" : " (내장)");
+};
+chrome.storage.sync.get(DEFAULTS).then(o => {
+  for (const k in DEFAULTS) {
+    const el = document.getElementById(k);
+    el.checked = o[k];
+    el.onchange = () => chrome.storage.sync.set({[k]: el.checked});
+  }
+});
+document.getElementById("refresh").onclick = async e => {
+  e.target.disabled = true;
+  await chrome.runtime.sendMessage("refresh");
+  await info();
+  e.target.disabled = false;
+};
+info();

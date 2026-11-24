@@ -216,6 +216,11 @@ def run(cfg=None, run_stats=None, partial=False):
         "dictionary": dictionary,
     }
     write_json(SITE_DATA / "report.json", report)
+    try:
+        from . import export_dict
+        export_dict.run()          # 확장 프로그램용 사전 (docs/api/dict.json)
+    except Exception as e:
+        print(f"사전 공개 파일 생성 실패: {e}")
     print(f"보고서 생성: {len(months)}개월, 작품 {len(mentions)}개, AI 검수 대기 {sum("final" not in x for x in review)}건")
     return report
 
