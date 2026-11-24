@@ -1,10 +1,10 @@
-// 연재처 아이콘: 각 사이트의 파비콘(북마크에 뜨는 아이콘). 못 불러오면 글자 아이콘으로 대체
+// 연재처 아이콘: 내장된 각 사이트 파비콘 (icons/*.png). 파일이 없으면 글자 아이콘으로 대체
 const DCNX_PLATFORMS = {
-  novelpia: {name: "노벨피아", domain: "novelpia.com", ch: "노", bg: "#6A4CF0", fg: "#fff", re: /노벨피아/},
-  naver:    {name: "네이버", domain: "naver.com",   ch: "네", bg: "#03C75A", fg: "#fff", re: /네이버|시리즈/},
-  kakao:    {name: "카카오", domain: "page.kakao.com",   ch: "카", bg: "#FEE500", fg: "#191919", re: /카카오/},
-  munpia:   {name: "문피아", domain: "munpia.com",   ch: "문", bg: "#E8532D", fg: "#fff", re: /문피아/},
-  ridi:     {name: "리디", domain: "ridibooks.com",     ch: "리", bg: "#1F8CE6", fg: "#fff", re: /리디/},
+  novelpia: {name: "노벨피아", ch: "노", bg: "#6A4CF0", fg: "#fff", re: /노벨피아/},
+  naver:    {name: "네이버",   ch: "네", bg: "#03C75A", fg: "#fff", re: /네이버|시리즈/},
+  kakao:    {name: "카카오",   ch: "카", bg: "#FEE500", fg: "#191919", re: /카카오/},
+  munpia:   {name: "문피아",   ch: "문", bg: "#E8532D", fg: "#fff", re: /문피아/},
+  ridi:     {name: "리디",     ch: "리", bg: "#1F8CE6", fg: "#fff", re: /리디/},
 };
 const DCNX_DEFAULT_ORDER = ["novelpia", "naver", "kakao", "munpia", "ridi"];
 
@@ -26,7 +26,7 @@ function dcnxIcon(key, size = 16) {
   img.className = "dcnx-icon dcnx-fav";
   img.alt = img.title = p.name;
   img.width = img.height = size;
-  img.src = `https://www.google.com/s2/favicons?domain=${p.domain}&sz=${size * 2}`;
+  img.src = chrome.runtime.getURL(`icons/${key}.png`);   // 확장에 내장된 파비콘 (32px)
   img.onerror = () => img.replaceWith(dcnxLetterIcon(key, size));
   return img;
 }
