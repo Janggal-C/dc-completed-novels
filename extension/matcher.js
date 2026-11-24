@@ -61,7 +61,7 @@ class DcnxMatcher {
 
   label(wid) {
     const w = this.works[wid] || {};
-    return (w.t || "") + (w.s === "완결" ? " · 완" : "");
+    return {title: w.t || "", done: w.s === "완결"};
   }
 }
 if (typeof module !== "undefined") module.exports = DcnxMatcher;

@@ -25,7 +25,13 @@
   tip.className = "dcnx-tip dcnx-" + (opt.skin === "dark" ? "dark" : "light");
   document.documentElement.appendChild(tip);
   const show = el => {
-    tip.textContent = M.label(el.dataset.wid);
+    const {title, done} = M.label(el.dataset.wid);
+    tip.textContent = title;
+    if (done) {
+      const b = document.createElement("b");
+      b.textContent = "완";
+      tip.append(" · ", b);
+    }
     tip.style.display = "block";
     const r = el.getBoundingClientRect();
     // 기본은 아래쪽, 화면 밑에 안 들어가면 위쪽
