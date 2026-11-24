@@ -600,7 +600,7 @@
    "total_posts": 5607
   }
  ],
- "in_progress": false,
+ "in_progress": true,
  "metrics": {
   "agreement": 91.5,
   "ai_accuracy": 69.6,
@@ -614,7 +614,7 @@
   "rule_accuracy": 30.4,
   "rule_coverage": 47.6,
   "rules_version": 3,
-  "total_posts": 5607
+  "total_posts": 5608
  },
  "monthly": {
   "2026-05": [
@@ -16023,5 +16023,5 @@
    ]
   }
  ],
- "updated": "2026-11-24 17:27"
+ "updated": "2026-11-24 17:49"
 }
