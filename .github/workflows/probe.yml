@@ -2,6 +2,8 @@ name: 디시 접속 테스트
 
 on:
   workflow_dispatch:   # Actions 탭에서 수동 실행
+  push:
+    paths: [".github/run-probe"]
 
 jobs:
   probe:
