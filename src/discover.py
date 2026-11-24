@@ -84,6 +84,43 @@ def classify(words, cands, model):
     return out
 
 
+def run(batch=150, max_minutes=300):
+    """후보 단어 전체를 AI로 분류 (이미 분류한 단어는 건너뜀). 많이 쓰인 단어부터, 묶음마다 저장"""
+    import time
+    from .common import checkpoint
+    from .fullcrawl import load_titles
+    cfg = load_config()
+    deadline = time.time() + max_minutes * 60
+    cands = build_candidates(load_titles(), cfg.get("discover", {}).get("min_writers", 10))
+    labels = read_json(LABELS, {})
+    todo = [w for w in sorted(cands, key=lambda w: -cands[w]["w"]) if w not in labels]
+    print(f"후보 {len(cands):,}개 중 분류할 것 {len(todo):,}개", flush=True)
+    done = 0
+    for i in range(0, len(todo), batch):
+        if time.time() > deadline:
+            print("시간 제한 → 다음 실행 때 이어서")
+            break
+        chunk = todo[i:i + batch]
+        try:
+            res = classify(chunk, cands, cfg["judge"]["model"])
+        except ai.AIError as e:
+            print(f"⚠️ AI 오류: {e}", file=sys.stderr)
+            if e.fatal:
+                break
+            continue
+        today = now_kst().strftime("%Y-%m-%d")
+        for w in chunk:
+            if w in res:
+                c = cands[w]
+                labels[w] = {"t": res[w], "w": c["w"], "burst": c["burst"], "ex": c["ex"][:2], "date": today}
+        done += len(res)
+        write_json(LABELS, labels)
+        cnt = Counter(v["t"] for v in labels.values())
+        print(f"  {i + len(chunk):,}/{len(todo):,} · 누적 {dict(cnt)}", flush=True)
+        checkpoint(f"단어 분류 {i + len(chunk):,}/{len(todo):,}", force=(i == 0), report=False)
+    print(f"분류 완료 {done:,}개 · AI 사용량 {ai.USAGE}")
+
+
 def test(n=100):
     """후보 n개를 뽑아 분류만 해보고 출력 (저장 안 함)"""
     from .fullcrawl import load_titles
@@ -107,5 +144,8 @@ def test(n=100):
 
 
 if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "run":
+        run()
+        sys.exit(0)
     if len(sys.argv) > 1 and sys.argv[1] == "test":
         test(int(sys.argv[2]) if len(sys.argv) > 2 else 100)

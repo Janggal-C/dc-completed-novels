@@ -1,0 +1,36 @@
+name: 단어 분류 (AI)
+
+# 전체 제목에서 뽑은 후보 단어를 AI(haiku)로 분류. 이미 분류한 단어는 건너뛰고 이어서 함.
+on:
+  push:
+    paths: [".github/run-discover"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: discover
+  cancel-in-progress: false
+
+jobs:
+  classify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    env:
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: npm install -g @anthropic-ai/claude-code
+      - run: python -m src.discover run
+      - name: 저장
+        if: always()
+        run: bash scripts/commit.sh "단어 분류 $(TZ=Asia/Seoul date '+%F %H:%M')"
