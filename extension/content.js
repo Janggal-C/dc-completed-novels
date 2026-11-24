@@ -30,10 +30,13 @@
     const pk = opt.icon && dcnxPickPlatform(platform, opt.order);
     if (pk) tip.append(dcnxIcon(pk));
     tip.append(title);
+    const rating = dcnxFakeRating(el.dataset.wid);   // TODO: 소설넷 평점으로 교체
+    if (rating != null) tip.append(dcnxStar(rating), Object.assign(document.createElement("span"), {className: "dcnx-score", textContent: rating.toFixed(1)}));
     if (done) {
       const b = document.createElement("b");
-      b.textContent = "완";
-      tip.append(" · ", b);
+      b.className = "dcnx-done";
+      b.textContent = "[완]";
+      tip.append(b);
     }
     tip.style.display = "block";
     const r = el.getBoundingClientRect();
