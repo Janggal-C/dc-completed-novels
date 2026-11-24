@@ -1,0 +1,61 @@
+name: 매일 수집·집계
+
+on:
+  schedule:
+    - cron: "43 18 * * *"   # 매일 한국시간 03:43 (UTC 18:43). 몇 분~수십 분 늦게 시작될 수 있음
+  workflow_dispatch:         # Actions 탭에서 수동 실행
+    inputs:
+      step:
+        description: "실행 단계 (all=전체, judge=판정·보고서만, report=보고서만)"
+        default: all
+        type: choice
+        options: [all, judge, report]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    env:
+      WRITER_SALT: ${{ secrets.WRITER_SALT }}
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Claude Code 설치
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: 1) 크롤링
+        if: inputs.step == 'all' || inputs.step == ''
+        run: python -m src.main crawl
+
+      - name: 크롤링 결과 저장
+        if: always() && (inputs.step == 'all' || inputs.step == '')
+        run: bash scripts/commit.sh "크롤링 $(TZ=Asia/Seoul date +%F)"
+
+      - name: 2) AI 판정 + 줄임말 사전 + 보고서
+        if: always() && inputs.step != 'report'
+        run: python -m src.main judge
+
+      - name: 보고서만 다시 만들기
+        if: inputs.step == 'report'
+        run: python -m src.main report
+
+      - name: 판정·보고서 저장
+        if: always()
+        run: bash scripts/commit.sh "판정·보고서 $(TZ=Asia/Seoul date +%F)"

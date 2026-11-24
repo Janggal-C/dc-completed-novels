@@ -1,0 +1,97 @@
+"""Claude Code CLI(`claude -p`) 호출. Pro 구독 토큰(CLAUDE_CODE_OAUTH_TOKEN)으로 동작.
+
+AI_MOCK=1 이면 실제 호출 없이 규칙 기반 가짜 응답을 돌려준다(로컬 테스트용).
+"""
+import json
+import os
+import re
+import subprocess
+
+from .rules import classify, extract_work
+
+
+class AIError(Exception):
+    """사용량 한도·인증 오류 등. 이번 실행의 AI 작업을 멈추고 다음 실행 때 이어간다."""
+
+
+def _call(prompt, model, allow_search=False, max_turns=1, timeout=600):
+    cmd = ["claude", "-p", "--output-format", "json", "--model", model,
+           "--max-turns", str(max_turns)]
+    if allow_search:
+        cmd += ["--allowedTools", "WebSearch"]
+    try:
+        p = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=timeout)
+    except (OSError, subprocess.TimeoutExpired) as e:
+        raise AIError(f"claude 실행 실패: {e}")
+    try:
+        out = json.loads(p.stdout)
+    except json.JSONDecodeError:
+        raise AIError(f"응답 해석 실패 (code {p.returncode}): {p.stdout[-300:]} {p.stderr[-300:]}")
+    if out.get("is_error"):
+        raise AIError(f"claude 오류: {str(out.get('result'))[:300]}")
+    return out.get("result", "")
+
+
+def _json_from(text):
+    m = re.search(r"\[.*\]", text, re.S)
+    if not m:
+        raise AIError(f"JSON 배열을 찾지 못함: {text[:200]}")
+    return json.loads(m.group(0))
+
+
+CLASSIFY_PROMPT = """너는 디시인사이드 장르소설(웹소설) 갤러리 글 제목을 분류한다.
+각 제목이 "특정 작품이 완결되었다"는 사실을 전제하거나 알리는 글인지 판단해라.
+
+- complete: 작품이 이미 완결됨. 예) "OOO 완결되었네", "OO완결", "야 벌써 OOO완결이네", "OO 완결 후기", "OO 왜 완결임?"(이미 끝났다는 불만)
+- not: 완결이 아님. 예) "OOO 언제 완결됨?", "OO완결 예상", "완결까지 몇화 남음", "완결작 추천좀", 특정 작품이 없는 일반 이야기
+- 애매해도 둘 중 더 가능성 높은 쪽을 골라라.
+
+work: 제목에 적힌 작품명을 쓰인 그대로(줄임말이면 줄임말 그대로). 작품이 없으면 "".
+guess: 네가 확실히 아는 경우에만 정식 작품명. 모르면 "". 추측으로 지어내지 마라.
+
+아래 JSON 배열만 출력해라. 다른 말은 쓰지 마라.
+[{"no": 글번호, "label": "complete" 또는 "not", "work": "...", "guess": "..."}]
+
+제목 목록:
+"""
+
+SEARCH_PROMPT = """너는 한국 웹소설 제목을 찾는 조사원이다. 아래 이름들은 디시 장르소설 갤러리에서
+쓰인 작품명이며 줄임말일 수 있다. 각 이름마다 웹 검색으로 정식 작품명을 확인해라.
+(예: 전독시 → 전지적 독자 시점 / 화산귀환 → 화산귀환)
+예시 제목은 문맥 참고용이다. 확인되지 않으면 found=false로 둬라. 지어내지 마라.
+
+아래 JSON 배열만 출력해라.
+[{"alias": "입력 이름 그대로", "found": true/false, "title": "정식 작품명", "author": "작가", "platform": "연재처", "confidence": "high" 또는 "low", "url": "근거 링크"}]
+
+이름 목록:
+"""
+
+
+def classify_titles(items, model):
+    """items: [{"no", "title"}] → {no: {"label", "work", "guess"}}"""
+    if os.environ.get("AI_MOCK") == "1":
+        return {it["no"]: {"label": "complete" if classify(it["title"]) == "complete" or
+                           (classify(it["title"]) == "ambiguous" and "?" not in it["title"]) else "not",
+                           "work": extract_work(it["title"]), "guess": ""} for it in items}
+    lines = "\n".join(f'{it["no"]}\t{it["title"]}' for it in items)
+    res = _json_from(_call(CLASSIFY_PROMPT + lines, model))
+    out = {}
+    for r in res:
+        try:
+            no = int(r["no"])
+        except (KeyError, ValueError, TypeError):
+            continue
+        out[no] = {"label": "complete" if r.get("label") == "complete" else "not",
+                   "work": (r.get("work") or "").strip(), "guess": (r.get("guess") or "").strip()}
+    return out
+
+
+def search_aliases(names, model):
+    """names: [(alias, [예시 제목])] → {alias: {...}}"""
+    if os.environ.get("AI_MOCK") == "1":
+        return {a: {"found": True, "title": a, "author": "", "platform": "", "confidence": "low",
+                    "url": ""} for a, _ in names}
+    lines = "\n".join(f"- {a}  (예시 제목: {' / '.join(ex[:2])})" for a, ex in names)
+    res = _json_from(_call(SEARCH_PROMPT + lines, model, allow_search=True,
+                           max_turns=4 + 3 * len(names)))
+    return {r.get("alias", ""): r for r in res if r.get("alias")}
