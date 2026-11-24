@@ -69,8 +69,8 @@ td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
 .tip div { display: flex; justify-content: space-between; gap: 12px; }
 .btn { font: inherit; font-size: 12px; padding: 3px 8px; border-radius: 5px; border: 1px solid var(--border); background: var(--surface-1); color: inherit; cursor: pointer; }
 .yearsel { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; }
-.pbtns { display: flex; flex-wrap: wrap; gap: 6px; }
-.pbtn { font: inherit; font-size: 14px; min-width: 40px; height: 36px; padding: 0 8px; border-radius: 8px;
+.pbtns { display: grid; gap: 6px; grid-template-columns: repeat(var(--cols, 6), 1fr); }
+.pbtn { font: inherit; font-size: 14px; width: 100%; height: 38px; padding: 0; border-radius: 8px;
   border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary); cursor: pointer; }
 .pbtn.on { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
 .pbtn:disabled { color: var(--text-muted); opacity: .45; cursor: default; }
@@ -93,6 +93,7 @@ textarea.inp { min-height: 90px; resize: vertical; }
 .sticky { position: sticky; bottom: 0; background: var(--surface-0); padding: 10px 0; display: flex; gap: 8px; align-items: center; }
 .bar { height: 8px; border-radius: 4px; background: var(--border); overflow: hidden; margin-top: 6px; }
 .bar i { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
+.seg { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 12px; }
 .empty { padding: 30px 0; text-align: center; color: var(--text-muted); }
 code { font-size: 12px; background: var(--surface-0); padding: 1px 4px; border-radius: 4px; }
 </style>
@@ -106,7 +107,7 @@ code { font-size: 12px; background: var(--surface-0); padding: 1px 4px; border-r
 <main id="view"></main>
 
 <script>
-const TABS = [["monthly","월별"],["quarterly","분기별"],["trend","추이"],["dict","줄임말 사전"],["metrics","지표"]];
+const TABS = [["monthly","월별"],["quarterly","분기별"],["trend","추이"],["dict","줄임말 사전"],["check","검수"],["metrics","지표"]];
 const VIEW = document.getElementById("view");
 const REPO = "https://github.com/answhdtjr736-spec/dc-completed-novels";
 let R, tab = location.hash.slice(1) || "monthly", sel = {}, onlyNew = false;
@@ -128,7 +129,7 @@ function renderTabs() {
     `<button class="${k === tab ? "on" : ""}" data-k="${k}">${v}</button>`).join("");
   document.querySelectorAll("#tabs button").forEach(b => b.onclick = () => { tab = b.dataset.k; location.hash = tab; renderTabs(); render(); });
 }
-function render() { if (!TABS.some(t => t[0] === tab)) tab = "monthly"; ({monthly: () => rankView("monthly"), quarterly: () => rankView("quarterly"), trend, dict, metrics})[tab](); }
+function render() { if (!TABS.some(t => t[0] === tab)) tab = "monthly"; ({monthly: () => rankView("monthly"), quarterly: () => rankView("quarterly"), trend, dict, check, metrics})[tab](); }
 
 function rankView(kind) {
   const data = R[kind], periods = Object.keys(data).sort().reverse();
@@ -146,7 +147,7 @@ function rankView(kind) {
     ? `<div class="muted" style="margin-top:6px">※ 데이터 시작 시점이라 이전부터 언급되던 작품도 '완결'로 보일 수 있습니다.</div>` : "";
   VIEW.innerHTML = `<div class="card">
     <div class="yearsel"><select id="yr">${years.map(y => `<option value="${y}" ${y === year ? "selected" : ""}>${y}년</option>`).join("")}</select></div>
-    <div class="pbtns">${slots.map(sl => `<button class="pbtn ${sl.key === p ? "on" : ""}" data-p="${sl.key}" ${data[sl.key] ? "" : "disabled"}>${sl.label}</button>`).join("")}</div>
+    <div class="pbtns" style="--cols:${kind === "monthly" ? 6 : 4}">${slots.map(sl => `<button class="pbtn ${sl.key === p ? "on" : ""}" data-p="${sl.key}" ${data[sl.key] ? "" : "disabled"}>${sl.label}</button>`).join("")}</div>
     <div class="row" style="margin-top:10px"><label class="chk"><input type="checkbox" id="nw" ${onlyNew ? "checked" : ""}> 이 기간에 완결된 작품만</label></div>
     <div class="muted" style="margin-top:6px">완결작만, 완결일 이후 글만 셉니다 · 순위: 고유 작성자 수 → 글 수 · ▸ 월별 그래프</div>${startNote}</div>
     <div class="card"><ol class="rank">${rows.map((e, i) => `<li>
@@ -229,37 +230,59 @@ function trend() {
 }
 
 function dict() {
-  const ds = R.dict_stats || {}, U = R.unresolved || [];
-  const ranked = U.filter(u => u.n >= 2), rest = U.filter(u => u.n < 2);
-  const row = (u, i) => `<div class="ur"><div class="h"><b>${esc(u.alias)}</b><span class="muted">언급 ${u.n}회</span></div>
-    <div class="muted">${u.titles.map(esc).join(" / ")}</div>
-    <div class="row" style="flex-wrap:nowrap"><input class="inp" data-alias="${esc(u.alias)}" placeholder="정식 제목 (작가면 '작가')">
-    <a class="btn" style="white-space:nowrap;padding:7px 10px" target="_blank" rel="noopener" href="https://www.google.com/search?q=${encodeURIComponent(u.alias + " 웹소설")}">구글</a></div></div>`;
-  VIEW.innerHTML = `<div class="card"><div class="t">미확인 줄임말 직접 입력</div>
-    <div class="muted">정식 제목을 적고 맨 아래 <b>저장</b>을 누르면 GitHub 화면이 열립니다. 거기서 <b>Create</b>를 한 번 누르면 1~2분 뒤 사전과 보고서에 반영됩니다.
-    플랫폼 페이지 제목을 그대로 붙여넣어도 되고(군더더기는 자동 제거), 띄어쓰기도 알아서 맞춥니다. 작가 이름이면 '작가'라고 적으세요.</div></div>
-    <div class="card"><div class="t">순위에 영향 있는 것 (언급 2회 이상) ${ranked.length}개</div>${ranked.map(row).join("") || `<div class="empty">없습니다 🎉</div>`}</div>
-    <details class="card"><summary class="t" style="cursor:pointer">1회 언급 ${rest.length}개 (순위 영향 거의 없음)</summary>${rest.map(row).join("")}</details>
-    <div class="card"><div class="t">목록에 없는 것 직접 입력</div>
-    <div class="muted">한 줄에 하나씩 <code>줄임말 = 정식 제목</code></div>
-    <textarea class="inp" id="free" placeholder="후프 = 후회안하는 프로듀서&#10;미시회귀 = 웹소설로 꿈꾸는 세상! - 미연시 속 회귀하는 히로인이 되었다"></textarea></div>
-    <div class="sticky"><button class="btn primary" id="save">저장</button><span class="muted" id="cnt"></span></div>
-    <div class="card"><div class="t">줄임말 사전 ${ds.aliases ?? R.dictionary.length}개</div>
-    <div class="muted">잘못된 연결은 위 입력칸에 올바른 제목을 적어 저장하면 덮어씁니다.</div>
+  const ds = R.dict_stats || {};
+  VIEW.innerHTML = `<div class="card"><div class="t">줄임말 사전 ${ds.aliases ?? R.dictionary.length}개</div>
+    <div class="muted">고칠 게 있으면 <b>검수</b> 탭에서 입력하세요.</div>
     <table style="margin-top:8px"><tr><th>줄임말</th><th>정식 제목</th></tr>
     ${R.dictionary.map(d => `<tr><td>${esc(d.alias)}</td><td>${esc(d.title)}${d.author ? `<span class="au">${esc(d.author)}</span>` : ""}${d.needs_review ? `<span class="badge warn">확인 필요</span>` : ""}</td></tr>`).join("")}</table></div>`;
+}
+
+let checkMode = "review";
+function check() {
+  const U = R.unresolved || [], NR = R.dictionary.filter(d => d.needs_review);
+  const ranked = U.filter(u => u.n >= 2), rest = U.filter(u => u.n < 2);
+  const g = q => `<a class="btn" style="white-space:nowrap;padding:7px 10px" target="_blank" rel="noopener" href="https://www.google.com/search?q=${encodeURIComponent(q + " 웹소설")}">구글</a>`;
+  const urow = u => `<div class="ur"><div class="h"><b>${esc(u.alias)}</b><span class="muted">언급 ${u.n}회</span></div>
+    <div class="muted">${u.titles.map(esc).join(" / ")}</div>
+    <div class="row" style="flex-wrap:nowrap"><input class="inp" data-alias="${esc(u.alias)}" placeholder="정식 제목 (작가면 '작가')">${g(u.alias)}</div></div>`;
+  const rrow = d => `<div class="ur"><div class="h"><b>${esc(d.alias)}</b><span class="muted">${esc(d.author || "")}</span></div>
+    <div>현재: ${esc(d.title)}</div>
+    <div class="row" style="flex-wrap:nowrap"><input class="inp" data-alias="${esc(d.alias)}" placeholder="틀렸으면 정식 제목 입력">
+    <button class="btn" data-ok="${esc(d.alias)}" data-title="${esc(d.title)}" style="white-space:nowrap;padding:7px 10px">맞음</button>${g(d.alias)}</div></div>`;
+  const body = checkMode === "review"
+    ? `<div class="card"><div class="t">사전 확인 필요 ${NR.length}개</div>
+       <div class="muted">검색으로 자동 연결됐지만 확신이 낮은 것들입니다. 맞으면 <b>맞음</b>, 틀렸으면 정식 제목을 적으세요.</div>
+       ${NR.map(rrow).join("") || `<div class="empty">없습니다 🎉</div>`}</div>`
+    : `<div class="card"><div class="t">순위에 영향 있는 것 (언급 2회 이상) ${ranked.length}개</div>${ranked.map(urow).join("") || `<div class="empty">없습니다 🎉</div>`}</div>
+       <details class="card"><summary class="t" style="cursor:pointer">1회 언급 ${rest.length}개 (순위 영향 거의 없음)</summary>${rest.map(urow).join("")}</details>
+       <div class="card"><div class="t">목록에 없는 것 직접 입력</div><div class="muted">한 줄에 하나씩 <code>줄임말 = 정식 제목</code></div>
+       <textarea class="inp" id="free" placeholder="후프 = 후회안하는 프로듀서"></textarea></div>`;
+  VIEW.innerHTML = `<div class="seg">
+      <button class="pbtn ${checkMode === "review" ? "on" : ""}" data-m="review">사전 확인 필요 (${NR.length})</button>
+      <button class="pbtn ${checkMode === "unres" ? "on" : ""}" data-m="unres">미확인 줄임말 (${ranked.length})</button></div>
+    ${body}
+    <div class="sticky"><button class="btn primary" id="save">저장</button><span class="muted" id="cnt"></span></div>
+    <div class="muted" style="padding-bottom:16px">저장 → 열린 GitHub 화면에서 <b>Create</b> → 1~2분 뒤 반영. 띄어쓰기·플랫폼 군더더기는 자동 정리됩니다.</div>`;
+  VIEW.querySelectorAll("button[data-m]").forEach(b => b.onclick = () => { checkMode = b.dataset.m; check(); });
+  const oks = new Set();
+  VIEW.querySelectorAll("button[data-ok]").forEach(b => b.onclick = () => {
+    const k = b.dataset.ok;
+    if (oks.has(k)) { oks.delete(k); b.classList.remove("primary"); b.textContent = "맞음"; }
+    else { oks.add(k); b.classList.add("primary"); b.textContent = "✓ 맞음"; }
+    upd();
+  });
   const collect = () => {
     const lines = [...VIEW.querySelectorAll("input[data-alias]")].filter(x => x.value.trim()).map(x => `${x.dataset.alias} = ${x.value.trim()}`);
-    const free = document.getElementById("free").value.split("\n").map(x => x.trim()).filter(x => /=|→|\t/.test(x));
-    return lines.concat(free);
+    VIEW.querySelectorAll("button[data-ok]").forEach(b => { if (oks.has(b.dataset.ok)) lines.push(`${b.dataset.ok} = ${b.dataset.title}`); });
+    const free = document.getElementById("free");
+    return lines.concat(free ? free.value.split("\n").map(x => x.trim()).filter(x => /=|→|\t/.test(x)) : []);
   };
   const upd = () => { const n = collect().length; document.getElementById("cnt").textContent = n ? `${n}개 입력됨` : ""; };
   VIEW.addEventListener("input", upd);
   document.getElementById("save").onclick = () => {
     const lines = collect();
     if (!lines.length) { alert("입력한 내용이 없습니다."); return; }
-    const url = `https://github.com/${R.repo}/issues/new?title=${encodeURIComponent(`[줄임말] ${lines.length}개 입력`)}&body=${encodeURIComponent(lines.join("\n"))}`;
-    window.open(url, "_blank");
+    window.open(`https://github.com/${R.repo}/issues/new?title=${encodeURIComponent(`[줄임말] ${lines.length}개 입력`)}&body=${encodeURIComponent(lines.join("\n"))}`, "_blank");
   };
 }
 

@@ -104,7 +104,7 @@ def run(cfg=None, run_stats=None, partial=False):
         w = works.get(wid, {})
         return {"id": wid, "title": title_of(wid), "author": w.get("author", ""),
                 "mentions": len(plist), "writers": len(writers),
-                "new": completion[wid][:7] == period if len(period) == 7 else quarter_of(completion[wid][:7]) == period,
+                "new": (quarter_of(completion[wid][:7]) == period) if "Q" in period else (completion[wid][:7] == period),
                 "completion_date": completion[wid], "completion_month": completion[wid][:7],
                 "status": statuses[wid]["status"], "status_reason": statuses[wid]["reason"],
                 "before_start": bool(statuses[wid].get("before_start")),
