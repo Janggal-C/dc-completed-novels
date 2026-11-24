@@ -78,6 +78,12 @@ def parse_list(html, today=None):
         no = num.get_text(strip=True) if num else ""
         if not no.isdigit():
             continue  # 공지·AD·설문
+        # 공지는 번호가 숫자로 나와도 제외 (고정글이라 글번호·날짜가 엉뚱함)
+        subj = tr.select_one("td.gall_subject")
+        if (tr.get("data-type") or "").startswith("icon_notice") or \
+                (subj is not None and subj.get_text(strip=True) in ("공지", "설문", "AD", "이슈", "뉴스")) or \
+                tr.select_one("em.icon_notice") is not None:
+            continue
         a = tr.select_one("td.gall_tit a")
         if a is None:
             continue

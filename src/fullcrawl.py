@@ -64,6 +64,10 @@ class Lister:
 
     def page(self, n):
         rows, _ = self.client.fetch({"id": self.gid, "list_num": 100, "page": n})
+        if len(rows) >= 10:
+            # 고정글 등 번호가 동떨어진 글 제거 (한 페이지 글번호는 보통 수백 안쪽으로 붙어 있음)
+            mid = sorted(r["no"] for r in rows)[len(rows) // 2]
+            rows = [r for r in rows if abs(r["no"] - mid) < 20000]
         return rows
 
 
@@ -110,6 +114,7 @@ def run(max_minutes=None):
                 break
             if st["newest"] is None:
                 st["newest"] = rows[0]["no"]
+                print(f"  시작: 1페이지 #{rows[0]['no']} {rows[0]['date']} ~ #{rows[-1]['no']} {rows[-1]['date']}", flush=True)
             bottom = rows[-1]["no"]
             cur = st["cursor"]
             if cur is not None and bottom >= cur:
@@ -132,7 +137,7 @@ def run(max_minutes=None):
                 save_rows(buf)
                 buf = []
                 write_json(FULL_STATE, st)
-            if stats["pages"] % 50 == 0:
+            if stats["pages"] % 20 == 0:
                 print(f"  {n}페이지 · 현재 {st['oldest_date']} (목표 {st['cutoff']}) · 이번 실행 {stats['rows']:,}개", flush=True)
             checkpoint(f"전체 제목 수집 ~{st['oldest_date']}", report=False)
             n += 1
