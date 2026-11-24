@@ -117,6 +117,10 @@ class Client:
                   "s_keyword": self.cfg["keyword"], "page": page}
         if search_pos:
             params["search_pos"] = search_pos
+        return self.fetch(params)
+
+    def fetch(self, params):
+        """목록 요청 → (글 목록, 다음 검색 pos). 차단 신호면 Blocked"""
         lo, hi = self.cfg["crawl"]["delay_seconds"]
         for attempt in range(self.cfg["crawl"]["max_retries"] + 1):
             if self.requests:

@@ -27,6 +27,10 @@ judge:
   google_min_writers: 2         # 작성자 2명 이상이 언급한 이름만 구글 검색 (순위에 영향 있는 것)
   search_retry_days: 14         # 못 찾은 줄임말은 이 기간 동안 재검색 안 함
 
+fullcrawl:                      # 갤러리 전체 제목 수집 (src/fullcrawl.py)
+  cutoff: "2026-01-01"          # 이 날짜까지 거슬러 올라감
+  minutes_per_run: 300          # 한 번 실행당 최대 5시간 (GitHub 작업 6시간 제한)
+
 bulk:                           # 대량 검색 (Serper 무료 2,500회, src/bulk.py)
   total_limit: 2450             # 누적 상한 (무료 2,500회 중 여유 50)
   per_run: 400                  # 한 번 실행당 상한

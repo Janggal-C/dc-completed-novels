@@ -10,6 +10,8 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 POSTS_DIR = DATA / "posts"          # 월별 글 목록 (YYYY-MM.jsonl)
+TITLES_DIR = DATA / "titles"        # 갤러리 전체 제목, 날짜별 압축 (YYYY-MM-DD.jsonl.gz)
+FULL_STATE = DATA / "fullcrawl_state.json"
 AI_DIR = DATA / "ai"                # 월별 AI 판정 결과 (YYYY-MM.jsonl)
 REVIEW_DIR = DATA / "review_ai"     # 월별 AI 검수 결과 (불일치 건만)
 STATE = DATA / "state.json"
@@ -115,7 +117,7 @@ def quarter_of(month):
 _last_checkpoint = [0.0]
 
 
-def checkpoint(message, every_seconds=600, force=False):
+def checkpoint(message, every_seconds=600, force=False, report=True):
     """GitHub Actions에서 실행 중이면 10분마다 중간 결과를 보고서까지 만들어 커밋·푸시한다.
     → 실행 도중에도 보고서 페이지에서 진행 상황을 볼 수 있고, 중간에 끊겨도 거기까지는 남는다."""
     import subprocess
@@ -130,9 +132,10 @@ def checkpoint(message, every_seconds=600, force=False):
     if not force and now - _last_checkpoint[0] < every_seconds:
         return
     _last_checkpoint[0] = now
-    try:
-        from . import aggregate
-        aggregate.run(partial=True)
-    except Exception as e:  # 보고서 실패해도 데이터 커밋은 진행
-        print(f"  (중간 보고서 생성 실패: {e})", flush=True)
+    if report:
+        try:
+            from . import aggregate
+            aggregate.run(partial=True)
+        except Exception as e:  # 보고서 실패해도 데이터 커밋은 진행
+            print(f"  (중간 보고서 생성 실패: {e})", flush=True)
     subprocess.run(["bash", str(ROOT / "scripts" / "commit.sh"), message], cwd=ROOT)

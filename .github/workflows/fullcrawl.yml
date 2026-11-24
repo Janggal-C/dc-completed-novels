@@ -1,0 +1,44 @@
+name: 전체 제목 수집
+
+# 갤러리 전체 글 제목(본문 X, AI X)을 2026-01-01까지 거슬러 수집.
+# 한 번에 최대 5시간, 6시간마다 자동으로 이어서. 다 끝나면 같은 일정으로 새 글만 증분 수집.
+on:
+  schedule:
+    - cron: "23 */6 * * *"
+  push:
+    paths: [".github/run-fullcrawl"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fullcrawl
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    env:
+      WRITER_SALT: ${{ secrets.WRITER_SALT }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: 깊은 페이지 접근 확인 (초기 수집 중에만)
+        run: |
+          if [ ! -f data/fullcrawl_state.json ] || grep -q '"done": false' data/fullcrawl_state.json; then
+            python -m src.fullcrawl probe 15000
+          fi
+      - name: 수집
+        run: python -m src.fullcrawl
+      - name: 저장
+        if: always()
+        run: bash scripts/commit.sh "전체 제목 수집 $(TZ=Asia/Seoul date '+%F %H:%M')"
