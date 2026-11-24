@@ -84,7 +84,9 @@ def run(cfg=None, run_stats=None, partial=False):
                 "new": completion[wid][:7] == period if len(period) == 7 else quarter_of(completion[wid]) == period,
                 "completion_month": completion[wid],
                 "unresolved": wid.startswith("?"), "needs_review": bool(w.get("needs_review")),
-                "samples": [{"no": p["no"], "title": p["title"]} for p in best]}
+                "samples": [{"no": p["no"], "title": p["title"]} for p in best],
+                # 이 작품의 월별 언급 작성자 수 (R.months 순서) → 순위 목록에서 펼쳐 보는 그래프용
+                "series": [len({p["writer"] for p in mentions[wid].get(mo, [])}) for mo in months]}
 
     def ranking(period_of):
         groups = defaultdict(lambda: defaultdict(list))

@@ -1,0 +1,33 @@
+name: 보고서 페이지만 배포
+
+# 페이지 디자인(docs/index.html)을 고쳤을 때 수집·AI 판정 없이 페이지만 다시 올린다
+on:
+  push:
+    paths: ["docs/index.html"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-only
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.d.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
+      - run: sleep 15
+      - id: d
+        uses: actions/deploy-pages@v4
