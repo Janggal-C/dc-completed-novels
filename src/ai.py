@@ -184,7 +184,9 @@ EXTRACT_PROMPT = """아래는 디시인사이드 장르소설 갤러리에서 �
 - 이름이 작품이 아니라 작가 이름(필명)이면 found=false, is_author=true. 갤러리 예시 제목에 "OO 신작", "OO 이번 작품"처럼 쓰였다면 작가일 가능성이 높다.
 
 아래 JSON 배열만 출력해라.
-[{"alias": "입력 이름 그대로", "found": true/false, "is_author": true/false, "title": "정식 작품명", "author": "작가(보이면)", "platform": "연재처(보이면)", "confidence": "high"/"low", "url": "근거 링크"}]
+- status: 검색 결과(연재처 페이지 제목·요약)에 "완결"이 보이면 "완결", "연재중"/"연재"/"휴재"가 보이면 "연재중", 알 수 없으면 ""
+
+[{"alias": "입력 이름 그대로", "found": true/false, "is_author": true/false, "title": "정식 작품명", "author": "작가(보이면)", "platform": "연재처(보이면)", "status": "완결"/"연재중"/"", "confidence": "high"/"low", "url": "근거 링크"}]
 
 """
 

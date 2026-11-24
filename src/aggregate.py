@@ -6,6 +6,7 @@ from .common import (AI_DIR, ALIAS_DATES, ALIASES, AUTHORS, DICT, METRICS, POSTS
                      read_json, read_jsonl, write_json)
 from .resolve import decide, load_reviews, resolve_id, work_name
 from .rules import RULES_VERSION
+from .status import COUNTED, judge as judge_status
 
 
 def run(cfg=None, run_stats=None, partial=False):
@@ -18,7 +19,8 @@ def run(cfg=None, run_stats=None, partial=False):
     aliases = read_json(ALIASES, {})
     state = read_json(STATE, {})
 
-    mentions = defaultdict(lambda: defaultdict(list))   # wid → month → [post]
+    mentions = defaultdict(lambda: defaultdict(list))   # wid → month → [post]  (완결 글)
+    against = defaultdict(list)                         # wid → ['완결 아님' 글] (반대 증거)
     review, pending = [], 0
     m = {"total": len(posts), "rule_decisive": 0, "both": 0, "agree": 0,
          "gold": 0, "rule_ok": 0, "ai_ok": 0, "ai_done": 0}
@@ -44,6 +46,11 @@ def run(cfg=None, run_stats=None, partial=False):
             review.append(item)
         if d["label"] is None:
             pending += 1
+        if d["label"] == "not":
+            name, guess = work_name(p, r, ov)
+            if norm_key(name):
+                against[resolve_id(name, guess, aliases) or "?" + norm_key(name)].append(p)
+            continue
         if d["label"] != "complete":
             continue
         name, guess = work_name(p, r, ov)
@@ -66,14 +73,30 @@ def run(cfg=None, run_stats=None, partial=False):
             return unresolved[wid[1:]]["alias"] + " (미확인)"
         return works.get(wid, {}).get("title", wid)
 
-    months = sorted({mo for per in mentions.values() for mo in per})
-    first_month = min((p["date"][:7] for p in posts.values()), default=None)
+    first_day = min((p["date"][:10] for p in posts.values()), default=None)
+    first_month = first_day[:7] if first_day else None
 
-    # 완결 추정 월: 고유 작성자 수가 기준 이상인 첫 달 (없으면 첫 언급 달)
-    completion = {}
+    # 작품별 완결 상태·완결일 (status.py)
+    statuses = {}
+    for wid in set(mentions) | set(against):
+        c = [p for per in mentions.get(wid, {}).values() for p in per]
+        if not c:
+            continue
+        statuses[wid] = judge_status(c, against.get(wid, []), works.get(wid, {}).get("status"),
+                                     first_day, cfg.get("status", {}))
+    # 완결작만, 완결일 이후 글만 남긴다
+    counted = defaultdict(lambda: defaultdict(list))
     for wid, per in mentions.items():
-        cands = [mo for mo in sorted(per) if len({p["writer"] for p in per[mo]}) >= rc["min_writers_for_completion"]]
-        completion[wid] = cands[0] if cands else min(per)
+        st = statuses.get(wid)
+        if not st or st["status"] not in COUNTED:
+            continue
+        for mo, plist in per.items():
+            keep = [p for p in plist if p["date"][:10] >= st["date"]]
+            if keep:
+                counted[wid][mo] = keep
+    all_mentions, mentions = mentions, counted
+    months = sorted({mo for per in mentions.values() for mo in per})
+    completion = {wid: statuses[wid]["date"] for wid in mentions}
 
     def entry(wid, plist, period):
         writers = {p["writer"] for p in plist}
@@ -81,8 +104,10 @@ def run(cfg=None, run_stats=None, partial=False):
         w = works.get(wid, {})
         return {"id": wid, "title": title_of(wid), "author": w.get("author", ""),
                 "mentions": len(plist), "writers": len(writers),
-                "new": completion[wid][:7] == period if len(period) == 7 else quarter_of(completion[wid]) == period,
-                "completion_month": completion[wid],
+                "new": completion[wid][:7] == period if len(period) == 7 else quarter_of(completion[wid][:7]) == period,
+                "completion_date": completion[wid], "completion_month": completion[wid][:7],
+                "status": statuses[wid]["status"], "status_reason": statuses[wid]["reason"],
+                "before_start": bool(statuses[wid].get("before_start")),
                 "unresolved": wid.startswith("?"), "needs_review": bool(w.get("needs_review")),
                 "samples": [{"no": p["no"], "title": p["title"]} for p in best],
                 # 이 작품의 월별 언급 작성자 수 (R.months 순서) → 순위 목록에서 펼쳐 보는 그래프용
@@ -156,8 +181,19 @@ def run(cfg=None, run_stats=None, partial=False):
         "free_quota": 250,
         "daily": sorted([[k, v] for k, v in usage.items() if len(k) == 10])[-14:],
     }
+    # 완결 목록에서 빠진 작품 (연재중·보류) — 확인용
+    excluded = sorted(
+        [{"title": title_of(w) if not w.startswith("?") else w[1:] + " (미확인)", "status": st["status"], "reason": st["reason"],
+          "writers": st["writers"], "c": st["c"], "q": st["q"]}
+         for w, st in statuses.items() if st["status"] not in COUNTED and st["writers"] >= 2],
+        key=lambda x: (-x["writers"], x["title"]))
+    status_counts = defaultdict(int)
+    for st in statuses.values():
+        if st["writers"] >= 2:
+            status_counts[st["status"]] += 1
     report = {
         "updated": now_kst().strftime("%Y-%m-%d %H:%M"),
+        "status_counts": dict(status_counts), "excluded": excluded[:150],
         "dict_stats": dict_stats, "google": google_stats,
         "repo": "answhdtjr736-spec/dc-completed-novels",
         "gallery": cfg["gallery_id"],

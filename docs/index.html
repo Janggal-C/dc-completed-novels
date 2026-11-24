@@ -148,11 +148,12 @@ function rankView(kind) {
     <div class="yearsel"><select id="yr">${years.map(y => `<option value="${y}" ${y === year ? "selected" : ""}>${y}년</option>`).join("")}</select></div>
     <div class="pbtns">${slots.map(sl => `<button class="pbtn ${sl.key === p ? "on" : ""}" data-p="${sl.key}" ${data[sl.key] ? "" : "disabled"}>${sl.label}</button>`).join("")}</div>
     <div class="row" style="margin-top:10px"><label class="chk"><input type="checkbox" id="nw" ${onlyNew ? "checked" : ""}> 이 기간에 완결된 작품만</label></div>
-    <div class="muted" style="margin-top:6px">순위 기준: 언급한 고유 작성자 수 → 언급 글 수 · ▸ 를 누르면 월별 그래프</div>${startNote}</div>
+    <div class="muted" style="margin-top:6px">완결작만, 완결일 이후 글만 셉니다 · 순위: 고유 작성자 수 → 글 수 · ▸ 월별 그래프</div>${startNote}</div>
     <div class="card"><ol class="rank">${rows.map((e, i) => `<li>
       <div class="no">${i + 1}</div>
-      <div><div class="t">${esc(e.title)}${e.author ? `<span class="au">${esc(e.author)}</span>` : ""}${e.new ? `<span class="badge">완결</span>` : ""}${e.needs_review ? `<span class="badge warn">확인 필요</span>` : ""}</div>
-        <details class="samples"><summary>대표 글 ${e.samples.length}개 · 완결 추정 ${esc(e.completion_month)}</summary>
+      <div><div class="t">${esc(e.title)}${e.author ? `<span class="au">${esc(e.author)}</span>` : ""}${e.new ? `<span class="badge">이번에 완결</span>` : ""}${e.status === "예전 완결" ? `<span class="badge" style="background:var(--surface-0);color:var(--text-secondary)">예전 완결</span>` : ""}${e.needs_review ? `<span class="badge warn">확인 필요</span>` : ""}</div>
+        <details class="samples"><summary>대표 글 ${e.samples.length}개 · ${e.status === "예전 완결" ? "완결일 불명(데이터 이전)" : `완결 ${esc((e.completion_date || "").slice(5).replace("-", "/"))}`}${e.before_start && e.status !== "예전 완결" ? " (이전 완결 가능)" : ""}</summary>
+        <div class="muted" style="font-size:12px">${esc(e.status_reason || "")}</div>
         ${e.samples.map(s => `<a href="${postUrl(s.no)}" target="_blank" rel="noopener">${esc(s.title)}</a>`).join("")}</details></div>
       <div class="num"><b>${e.writers}</b>명<small>글 ${e.mentions}개</small></div>
       <button class="tog" data-i="${i}" aria-label="월별 그래프 열기" aria-expanded="false">▸</button>
@@ -278,6 +279,10 @@ function metrics() {
       ${tile("작가 이름", ds.authors ?? 0)}${tile("확인 필요 표시", ds.needs_review ?? 0)}</div>
     ${(ds.recent || []).length ? `<div class="t" style="margin-top:12px">최근 등록</div><table><tr><th>줄임말</th><th>정식 제목</th><th>경로</th></tr>
       ${ds.recent.map(r => `<tr><td>${esc(r.alias)}<div class="muted">${r.date}</div></td><td>${esc(r.title)}</td><td class="muted" style="white-space:nowrap">${viaLab[r.via] || esc(r.via)}</td></tr>`).join("")}</table>` : ""}</div>
+    <div class="card"><div class="t">완결 판정 (작성자 2명 이상 작품)</div><div class="tiles" style="margin-top:8px">
+      ${["완결", "예전 완결", "연재중", "보류"].map(k => tile(k, (R.status_counts || {})[k] ?? 0)).join("")}</div>
+      <details style="margin-top:10px"><summary class="muted" style="cursor:pointer">완결 목록에서 뺀 작품 ${(R.excluded || []).length}개 (연재중·보류)</summary>
+      <table style="margin-top:6px"><tr><th>작품</th><th>상태</th><th>이유</th></tr>${(R.excluded || []).map(x => `<tr><td>${esc(x.title)}</td><td style="white-space:nowrap">${x.status}</td><td class="muted">${esc(x.reason)}</td></tr>`).join("")}</table></details></div>
     <div class="card"><div class="t">판정</div><div class="tiles" style="margin-top:8px">
       ${tile("수집한 제목", m.total_posts.toLocaleString())}${tile("AI 판정 완료", m.ai_done.toLocaleString())}
       ${tile("판정 대기", m.pending.toLocaleString())}${tile("규칙·AI 일치율", f(m.agreement))}

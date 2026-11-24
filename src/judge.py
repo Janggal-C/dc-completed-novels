@@ -28,10 +28,18 @@ def save_alias_dates(via="검색"):
     NEW_ALIASES.clear()
 
 
+def set_status(works, wid, status, source="google"):
+    """연재처 표시(완결/연재중)를 작품에 기록. 완결은 되돌리지 않음"""
+    if wid and status in ("완결", "연재중") and works.get(wid, {}).get("status") != "완결":
+        works[wid]["status"] = status
+        works[wid]["status_source"] = source
+        works[wid]["status_checked"] = now_kst().strftime("%Y-%m-%d")
+
+
 def add_work(works, aliases, title, alias=None, via=None, force=False, **info):
     """작품 등록 + 줄임말 연결. force=True면 기존 연결을 덮어씀(사용자 직접 입력)"""
     wid = norm_key(title)
-    if not wid:
+    if not wid or wid in ("작가명", "작가", "작품명", "제목"):
         return None
     src = info.get("source") or ""
     if src.startswith("http") and wid not in works:
@@ -186,6 +194,7 @@ def run(cfg=None):
                     elif r.get("found") and r.get("title"):
                         wid = add_work(works, aliases, r["title"], alias=a, via="google", author=r.get("author"),
                                        platform=r.get("platform"), source=r.get("url"))
+                        set_status(works, wid, r.get("status"))
                         if r.get("confidence") != "high" and wid:
                             works[wid]["needs_review"] = True
                         stats["found"] += 1
@@ -260,6 +269,8 @@ def run(cfg=None):
             if r.get("found") and r.get("title"):
                 wid = add_work(works, aliases, r["title"], alias=u["alias"], via=kind, author=r.get("author"),
                                platform=r.get("platform"), source=r.get("url"))
+                if kind == "google":
+                    set_status(works, wid, r.get("status"))
                 if r.get("confidence") != "high" and wid:
                     works[wid]["needs_review"] = True
                 stats["found"] += 1
