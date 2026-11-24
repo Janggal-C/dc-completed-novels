@@ -797,7 +797,7 @@
    "total_posts": 5608
   }
  ],
- "in_progress": false,
+ "in_progress": true,
  "metrics": {
   "agreement": 91.5,
   "ai_accuracy": 69.6,
@@ -805,7 +805,7 @@
   "compared": 2669,
   "gold": 227,
   "mode": "verify",
-  "no_work": 162,
+  "no_work": 177,
   "pending": 0,
   "review_open": 0,
   "rule_accuracy": 30.4,
@@ -5615,56 +5615,6 @@
     "writers": 3
    },
    {
-    "author": "",
-    "completion_month": "2026-09",
-    "id": "?신노아",
-    "mentions": 3,
-    "needs_review": false,
-    "new": true,
-    "samples": [
-     {
-      "no": 12971756,
-      "title": "신노아 신작 완결 ㄱㅊ음?"
-     },
-     {
-      "no": 12957010,
-      "title": "아니 신노아 벌써 완결이네"
-     },
-     {
-      "no": 12957023,
-      "title": "신노아 완결 후기 올라왔네"
-     }
-    ],
-    "title": "신노아 (미확인)",
-    "unresolved": true,
-    "writers": 3
-   },
-   {
-    "author": "",
-    "completion_month": "2026-09",
-    "id": "?신노아신작",
-    "mentions": 3,
-    "needs_review": false,
-    "new": true,
-    "samples": [
-     {
-      "no": 12946949,
-      "title": "아 신노아 신작 역시 빨리 완결나네"
-     },
-     {
-      "no": 12947795,
-      "title": "신노아 신작 벌써 완결이라고"
-     },
-     {
-      "no": 12982000,
-      "title": "신노아 신작 완결 금방냈네"
-     }
-    ],
-    "title": "신노아 신작 (미확인)",
-    "unresolved": true,
-    "writers": 3
-   },
-   {
     "author": "사람살려",
     "completion_month": "2026-09",
     "id": "아카데미플레이어를죽였다",
@@ -6082,27 +6032,6 @@
    {
     "author": "",
     "completion_month": "2026-09",
-    "id": "?최근에",
-    "mentions": 2,
-    "needs_review": false,
-    "new": true,
-    "samples": [
-     {
-      "no": 12872222,
-      "title": "이거 최근에 완결이엮지요"
-     },
-     {
-      "no": 12848660,
-      "title": "최근에 완결나는 작품 많아진게 저거때문이엇니"
-     }
-    ],
-    "title": "최근에 (미확인)",
-    "unresolved": true,
-    "writers": 2
-   },
-   {
-    "author": "",
-    "completion_month": "2026-09",
     "id": "?컨셉방송",
     "mentions": 2,
     "needs_review": false,
@@ -6206,6 +6135,61 @@
      }
     ],
     "title": "S급 여친 탁란 (미확인)",
+    "unresolved": true,
+    "writers": 1
+   },
+   {
+    "author": "",
+    "completion_month": "2026-09",
+    "id": "?미소녀밴드물에빙의했다",
+    "mentions": 2,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12969213,
+      "title": "완결리뷰:미소녀 밴드물에 빙의했다"
+     },
+     {
+      "no": 12860249,
+      "title": "미소녀밴드물에 빙의했다 완결후기"
+     }
+    ],
+    "title": "미소녀밴드물에 빙의했다 (미확인)",
+    "unresolved": true,
+    "writers": 1
+   },
+   {
+    "author": "",
+    "completion_month": "2026-09",
+    "id": "?13악녀",
+    "mentions": 1,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12971747,
+      "title": "13악녀 250화까지 읽고 완결나면 읽을려고 묵혀놨는데"
+     }
+    ],
+    "title": "13악녀 (미확인)",
+    "unresolved": true,
+    "writers": 1
+   },
+   {
+    "author": "",
+    "completion_month": "2026-09",
+    "id": "?1933사냥꾼",
+    "mentions": 1,
+    "needs_review": false,
+    "new": true,
+    "samples": [
+     {
+      "no": 12981965,
+      "title": "1933 사냥꾼 완결 난 거 어제 다 봄"
+     }
+    ],
+    "title": "1933 사냥꾼 (미확인)",
     "unresolved": true,
     "writers": 1
    }
@@ -7553,27 +7537,6 @@
     "writers": 2
    },
    {
-    "author": "",
-    "completion_month": "2026-09",
-    "id": "?신노아",
-    "mentions": 2,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 13272146,
-      "title": "엥 신노아 신작 완결났네"
-     },
-     {
-      "no": 13263608,
-      "title": "뭐야 신노아 ㄹㅇ 공모전 수상하고 완결튀쳣내"
-     }
-    ],
-    "title": "신노아 (미확인)",
-    "unresolved": true,
-    "writers": 2
-   },
-   {
     "author": "NariaTa",
     "completion_month": "2026-07",
     "id": "엑스칼리버뽑습니다",
@@ -8202,6 +8165,23 @@
      }
     ],
     "title": "따라가던 소설 (미확인)",
+    "unresolved": true,
+    "writers": 1
+   },
+   {
+    "author": "",
+    "completion_month": "2026-08",
+    "id": "?러스트",
+    "mentions": 1,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 13254539,
+      "title": "러스트 완결 났구나?"
+     }
+    ],
+    "title": "러스트 (미확인)",
     "unresolved": true,
     "writers": 1
    }
@@ -11739,27 +11719,6 @@
     "writers": 2
    },
    {
-    "author": "",
-    "completion_month": "2026-09",
-    "id": "?신노아",
-    "mentions": 2,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 13272146,
-      "title": "엥 신노아 신작 완결났네"
-     },
-     {
-      "no": 13263608,
-      "title": "뭐야 신노아 ㄹㅇ 공모전 수상하고 완결튀쳣내"
-     }
-    ],
-    "title": "신노아 (미확인)",
-    "unresolved": true,
-    "writers": 2
-   },
-   {
     "author": "전극진(글), 양재현(그림)",
     "completion_month": "2026-06",
     "id": "열혈강호",
@@ -11904,6 +11863,27 @@
     ],
     "title": "태모마 (미확인)",
     "unresolved": true,
+    "writers": 2
+   },
+   {
+    "author": "커리우유",
+    "completion_month": "2026-09",
+    "id": "프롤로그에서죽는히로인에빙의했다",
+    "mentions": 2,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 13198662,
+      "title": "속보)) 롤로로빙 찐완결"
+     },
+     {
+      "no": 13183021,
+      "title": "니케 파쿠리지만 완결 잘 낸 롤로로빙의 승리네"
+     }
+    ],
+    "title": "프롤로그에서 죽는 히로인에 빙의했다",
+    "unresolved": false,
     "writers": 2
    }
   ]
@@ -14302,16 +14282,6 @@
    ]
   },
   {
-   "alias": "신노아",
-   "key": "신노아",
-   "n": 5,
-   "titles": [
-    "신노아 신작 완결 ㄱㅊ음?",
-    "신노아 완결 후기 올라왔네",
-    "아니 신노아 벌써 완결이네"
-   ]
-  },
-  {
    "alias": "주버지",
    "key": "주버지",
    "n": 4,
@@ -14422,16 +14392,6 @@
    ]
   },
   {
-   "alias": "최근에",
-   "key": "최근에",
-   "n": 3,
-   "titles": [
-    "최근에 완결 달린 편결 소설들 전부 ㅅㅌㅊ였음.list",
-    "이거 최근에 완결이엮지요",
-    "최근에 완결나는 작품 많아진게 저거때문이엇니"
-   ]
-  },
-  {
    "alias": "기사의납골당",
    "key": "기사의납골당",
    "n": 3,
@@ -14479,26 +14439,6 @@
     "ts)어 마법소녀가 승리한 세계 완결났네",
     "마법소녀가승리한세계 완결났네",
     "마법소녀가 승리한 세계 완결.."
-   ]
-  },
-  {
-   "alias": "이게",
-   "key": "이게",
-   "n": 3,
-   "titles": [
-    "이게 완결이 나네",
-    "와 이게 드디어 완결이 나네",
-    "이게 완결났구나"
-   ]
-  },
-  {
-   "alias": "신노아 신작",
-   "key": "신노아신작",
-   "n": 3,
-   "titles": [
-    "신노아 신작 완결 금방냈네",
-    "신노아 신작 벌써 완결이라고",
-    "아 신노아 신작 역시 빨리 완결나네"
    ]
   },
   {
@@ -16042,7 +15982,39 @@
    "titles": [
     "납치혼엘프 완결 났구나"
    ]
+  },
+  {
+   "alias": "소년만화총대장",
+   "key": "소년만화총대장",
+   "n": 1,
+   "titles": [
+    "머여 소년만화총대장 묵혀놨는데 완결났내"
+   ]
+  },
+  {
+   "alias": "양파랑 작품",
+   "key": "양파랑작품",
+   "n": 1,
+   "titles": [
+    "양파랑 작품 완결 내용 요약"
+   ]
+  },
+  {
+   "alias": "낭만인방",
+   "key": "낭만인방",
+   "n": 1,
+   "titles": [
+    "낭만인방 완결"
+   ]
+  },
+  {
+   "alias": "글근육",
+   "key": "글근육",
+   "n": 1,
+   "titles": [
+    "글근육 완결 후기"
+   ]
   }
  ],
- "updated": "2026-11-24 17:52"
+ "updated": "2026-11-24 18:00"
 }
