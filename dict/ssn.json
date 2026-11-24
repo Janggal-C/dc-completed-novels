@@ -1005,5 +1005,168 @@
    "novelpia": "https://novelpia.com/novel/110488"
   },
   "title": "망할 놈의 아카데미"
+ },
+ "매국노": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "무공뭐별거없더라": {
+  "author": "Suerte",
+  "checked": "2026-11-25",
+  "id": 288781,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/290659"
+  },
+  "r": 3.67,
+  "rc": 3,
+  "title": "무공 뭐 별거 없더라"
+ },
+ "무당파둔재의엘프환생": {
+  "author": "처량한날",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 264200,
+  "links": {
+   "munpia": "https://novel.munpia.com/463436",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=12795886"
+  },
+  "r": 2.58,
+  "rc": 26,
+  "title": "무당파 둔재의 엘프환생"
+ },
+ "무림in소드마스터": {
+  "author": "고구마슬레이어",
+  "checked": "2026-11-25",
+  "id": 288661,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/422719"
+  },
+  "title": "무림in 소드마스터"
+ },
+ "무림마조": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "무직전생이세계에갔으면최선을다한다": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "무한회귀자인데썰푼다": {
+  "author": "신노아",
+  "checked": "2026-11-25",
+  "id": 224874,
+  "links": {
+   "joara": "https://www.joara.com/book/1867748",
+   "kakao": "https://page.kakao.com/content/63997595",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13951855"
+  },
+  "r": 3.91,
+  "rc": 180,
+  "title": "무한 회귀자인데 썰 푼다"
+ },
+ "무협미연시의오랑캐글쟁이": {
+  "author": "정중선",
+  "checked": "2026-11-25",
+  "id": 289400,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/101172"
+  },
+  "title": "무협 미연시의 오랑캐 글쟁이"
+ },
+ "묵향": {
+  "author": "전동조",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 513,
+  "links": {
+   "joara": "https://www.joara.com/book/980099",
+   "kakao": "https://page.kakao.com/content/55353757",
+   "munpia": "https://novel.munpia.com/31199",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=1273622",
+   "ridi": "https://ridibooks.com/v2/Detail?id=1190001001"
+  },
+  "r": 3.33,
+  "rc": 438,
+  "title": "묵향"
+ },
+ "미궁도시의플레시골렘": {
+  "author": "쟈장가",
+  "checked": "2026-11-25",
+  "id": 289427,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/321237"
+  },
+  "title": "미궁도시의 플레시골렘"
+ },
+ "미래에서온연애편지": {
+  "author": "알콜중독",
+  "checked": "2026-11-25",
+  "id": 265998,
+  "links": {
+   "kakao": "https://page.kakao.com/content/66562972",
+   "novelpia": "https://novelpia.com/novel/52791"
+  },
+  "r": 4.14,
+  "rc": 7,
+  "title": "미래에서 온 연애편지"
+ },
+ "미연시속회귀하는히로인이되었다": {
+  "author": "사라바다",
+  "checked": "2026-11-25",
+  "id": 288967,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/404997"
+  },
+  "title": "미연시 속 회귀하는 히로인이 되었다"
+ },
+ "반지성주의마왕의세계침략": {
+  "author": "뚜근남",
+  "checked": "2026-11-25",
+  "id": 242209,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/423960",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=11593848"
+  },
+  "r": 3.65,
+  "rc": 70,
+  "title": "반지성주의 마왕의 세계침략"
+ },
+ "방랑마법사의자장가": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "배드본블러드": {
+  "author": "백수귀족",
+  "checked": "2026-11-25",
+  "id": 229095,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=12467463"
+  },
+  "r": 4.44,
+  "rc": 642,
+  "title": "배드 본 블러드"
+ },
+ "버튜버지만출근합니다": {
+  "author": "망크빵",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 289435,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/310025"
+  },
+  "title": "버튜버지만, 출근합니다"
+ },
+ "별을품은소드마스터": {
+  "author": "Q10",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 108039,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/254718",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=8807496"
+  },
+  "r": 3.67,
+  "rc": 432,
+  "title": "별을 품은 소드마스터"
  }
 }
