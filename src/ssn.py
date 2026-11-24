@@ -1,4 +1,4 @@
-"""소설넷(ssn.so) — 사전 작품의 평점·연재처 링크·완결 여부
+"""소설넷(ssn.so) — 사전 작품의 평점·연재처 링크 (완결 표시는 있을 때만 참고)
 
 - 처음: 정식 제목으로 검색(/series/?keyword=) → 제목(+작가)이 맞는 작품 → 상세 페이지
 - 이후: 소설넷 주소를 알고 있으니 상세 페이지만. 전체를 7등분해 하루 1/7씩 갱신
@@ -121,6 +121,13 @@ def detail(c, sid):
     return info
 
 
+def clean(d):
+    """저장용: 완결 표시가 없으면 done 키 자체를 남기지 않는다"""
+    if not d.get("done"):
+        d.pop("done", None)
+    return d
+
+
 def lookup(c, w):
     """사전 작품 하나 → 소설넷 정보 또는 {"miss": True}"""
     hit = pick(search(c, w["title"]), w["title"], w.get("author", ""))
@@ -129,7 +136,9 @@ def lookup(c, w):
     d = detail(c, hit["id"])
     if not d:
         return {"miss": True}
-    d["done"] = d["done"] or hit["done"]
+    # 소설넷 완결 표시는 있을 때만 참고 (없다고 연재중은 아님 — 표시 없는 완결작이 많음)
+    if d.pop("done") or hit["done"]:
+        d["done"] = True
     return d
 
 
@@ -153,6 +162,7 @@ def run(max_minutes=60):
             d = detail(c, ssn[k]["id"])
             if not d:
                 continue
+            clean(d)
             stats["refresh"] += 1
         else:
             d = lookup(c, w)
