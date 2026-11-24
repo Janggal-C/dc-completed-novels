@@ -136,20 +136,15 @@ def run(cfg=None):
     req = read_json(RESEARCH_REQ, None)
     if req and google.available():
         top = sorted(unknown.values(), key=lambda u: (-len(u["writers"]), -u["n"]))[: req.get("top", 10)]
-        budget = google.remaining(jc["google_monthly_limit"])
+        budget = google.remaining(jc["google_monthly_limit"], jc["google_daily_limit"])
         items = []
-        for u in top:
-            if budget < 2:
-                break
-            res = []
-            for q in (f'{u["alias"]} 노벨피아', f'{u["alias"]} 소설 작가'):
-                try:
-                    res += google.search(q, num=6)
-                    budget -= 1
-                    stats["google"] = stats.get("google", 0) + 1
-                except Exception as e:
-                    print(f"  구글 검색 실패 ({q}): {e}", file=sys.stderr)
-            items.append((u["alias"], u["titles"], res))
+        for u in top[:budget]:                     # 이름당 1회, 오늘 남은 한도까지만
+            q = f'{u["alias"]} 노벨피아 웹소설 작가'
+            try:
+                items.append((u["alias"], u["titles"], google.search(q, num=8)))
+                stats["google"] = stats.get("google", 0) + 1
+            except Exception as e:
+                print(f"  구글 검색 실패 ({q}): {e}", file=sys.stderr)
         try:
             for i in range(0, len(items), 5):
                 res = ai.extract_from_results(items[i:i + 5], jc.get("search_model", jc["model"]))
@@ -189,15 +184,17 @@ def run(cfg=None):
         queue.append(u)
     # 구글(SerpApi): 순위에 영향을 주는 이름(작성자 여러 명)부터, 월 무료 한도 안에서만
     google_q, rest = [], []
-    if google.available():
-        budget = google.remaining(jc["google_monthly_limit"])
+    if google.available() and not req:
+        budget = google.remaining(jc["google_monthly_limit"], jc["google_daily_limit"])
         for u in queue:
-            if len(google_q) < min(budget, jc["google_per_run"]) and len(u["writers"]) >= jc["google_min_writers"]:
+            if len(google_q) < budget and len(u["writers"]) >= jc["google_min_writers"]:
                 google_q.append(u)
             else:
                 rest.append(u)
-    else:
+    elif not google.available():
         rest = queue
+    if google.available() and not jc.get("ai_search_fallback", False):
+        rest = []   # 오늘 구글 한도에 못 든 이름은 그냥 미확인으로 두고 다음 날 다시 (토큰 절약)
     batches = []
     for i in range(0, len(google_q), 5):
         batches.append(("google", google_q[i:i + 5]))

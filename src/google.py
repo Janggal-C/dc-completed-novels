@@ -15,16 +15,24 @@ def available():
     return bool(os.environ.get("SERPAPI_KEY"))
 
 
-def remaining(monthly_limit):
-    month = now_kst().strftime("%Y-%m")
-    used = read_json(USAGE, {}).get(month, 0)
-    return max(0, monthly_limit - used)
+def remaining(monthly_limit, daily_limit):
+    """이번 달·오늘 남은 검색 횟수 중 작은 쪽"""
+    now = now_kst()
+    u = read_json(USAGE, {})
+    month_left = monthly_limit - u.get(now.strftime("%Y-%m"), 0)
+    day_left = daily_limit - u.get(now.strftime("%Y-%m-%d"), 0)
+    return max(0, min(month_left, day_left))
 
 
 def _count():
-    month = now_kst().strftime("%Y-%m")
+    now = now_kst()
     u = read_json(USAGE, {})
-    u[month] = u.get(month, 0) + 1
+    for k in (now.strftime("%Y-%m"), now.strftime("%Y-%m-%d")):
+        u[k] = u.get(k, 0) + 1
+    # 일별 기록은 최근 40일만 보관
+    days = sorted(k for k in u if len(k) == 10)
+    for k in days[:-40]:
+        u.pop(k)
     write_json(USAGE, u)
 
 
