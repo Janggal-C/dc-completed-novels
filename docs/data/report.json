@@ -322,7 +322,7 @@
    "total_posts": 5602
   }
  ],
- "in_progress": false,
+ "in_progress": true,
  "metrics": {
   "agreement": 91.7,
   "ai_accuracy": 75.0,
@@ -14057,5 +14057,5 @@
    ]
   }
  ],
- "updated": "2026-11-24 16:26"
+ "updated": "2026-11-24 16:28"
 }
