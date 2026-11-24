@@ -1,4 +1,8 @@
-"""SerpApi로 구글 검색 결과 받아오기 (월 무료 한도 안에서만).
+"""구글 검색 결과 받아오기.
+
+- SerpApi: 매일 실행용 (월 무료 250회, 일·월 한도 안에서만)
+- Serper: 대량 처리용 (가입 시 1회 무료 2,500회, dict/serper_usage.json 으로 누적 관리)
+
 
 SERPAPI_KEY 비밀값이 있을 때만 동작한다. 월 사용량은 dict/search_usage.json에 기록.
 """
@@ -52,5 +56,37 @@ def search(query, num=8):
     if kg.get("title"):
         out.append({"title": kg["title"], "snippet": kg.get("description", ""), "link": kg.get("website", "")})
     for o in data.get("organic_results", [])[:num]:
+        out.append({"title": o.get("title", ""), "snippet": o.get("snippet", ""), "link": o.get("link", "")})
+    return out
+
+
+SERPER_USAGE = DICT / "serper_usage.json"
+
+
+def serper_available():
+    return bool(os.environ.get("SERPER_API_KEY"))
+
+
+def serper_remaining(total_limit):
+    return max(0, total_limit - read_json(SERPER_USAGE, {}).get("total", 0))
+
+
+def serper_search(query, num=8):
+    """Serper(google.serper.dev)로 구글 검색 → [{"title", "snippet", "link"}]"""
+    r = requests.post("https://google.serper.dev/search", timeout=30,
+                      headers={"X-API-KEY": os.environ["SERPER_API_KEY"], "Content-Type": "application/json"},
+                      json={"q": query, "gl": "kr", "hl": "ko", "num": num})
+    u = read_json(SERPER_USAGE, {})
+    u["total"] = u.get("total", 0) + 1
+    u[now_kst().strftime("%Y-%m-%d")] = u.get(now_kst().strftime("%Y-%m-%d"), 0) + 1
+    write_json(SERPER_USAGE, u)
+    if r.status_code != 200:
+        raise RuntimeError(f"Serper HTTP {r.status_code}: {r.text[:200]}")
+    data = r.json()
+    out = []
+    kg = data.get("knowledgeGraph") or {}
+    if kg.get("title"):
+        out.append({"title": kg["title"], "snippet": kg.get("description", ""), "link": kg.get("website", "")})
+    for o in data.get("organic", [])[:num]:
         out.append({"title": o.get("title", ""), "snippet": o.get("snippet", ""), "link": o.get("link", "")})
     return out

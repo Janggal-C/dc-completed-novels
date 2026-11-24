@@ -27,6 +27,12 @@ judge:
   google_min_writers: 2         # 작성자 2명 이상이 언급한 이름만 구글 검색 (순위에 영향 있는 것)
   search_retry_days: 14         # 못 찾은 줄임말은 이 기간 동안 재검색 안 함
 
+bulk:                           # 대량 검색 (Serper 무료 2,500회, src/bulk.py)
+  total_limit: 2450             # 누적 상한 (무료 2,500회 중 여유 50)
+  per_run: 400                  # 한 번 실행당 상한
+  batch: 10                     # haiku 한 번에 읽는 이름 수
+  min_writers: 2                # 작성자 이 수 이상이 쓴 미확인 이름만 (1명짜리는 잡음이 많음)
+
 status:                         # 완결 판정 (src/status.py)
   burst_days: 3                 # 완결 버스트: 이 기간 안에
   burst_min_writers: 3          #   서로 다른 작성자 이 수 이상이 '완결' 언급
