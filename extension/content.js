@@ -4,9 +4,9 @@
     : new URLSearchParams(location.search).get("id") === "genrenovel";
   if (!isGenre) return;
 
-  const DEFAULTS = {popup: true, expand: false, list: true, body: true, comment: true};
+  const DEFAULTS = {popup: true, skin: "light", list: true, body: true, comment: true};
   const opt = Object.assign({}, DEFAULTS, await chrome.storage.sync.get(DEFAULTS));
-  if (!opt.popup && !opt.expand) return;
+  if (!opt.popup) return;
 
   let {dict} = await chrome.storage.local.get("dict");
   if (!dict) dict = await (await fetch(chrome.runtime.getURL("dict.json"))).json();
@@ -22,14 +22,15 @@
 
   // 팝업
   const tip = document.createElement("div");
-  tip.className = "dcnx-tip";
+  tip.className = "dcnx-tip dcnx-" + (opt.skin === "dark" ? "dark" : "light");
   document.documentElement.appendChild(tip);
   const show = el => {
     tip.textContent = M.label(el.dataset.wid);
     tip.style.display = "block";
     const r = el.getBoundingClientRect();
-    const top = r.top - tip.offsetHeight - 6;
-    tip.style.top = (top < 4 ? r.bottom + 6 : top) + "px";
+    // 기본은 아래쪽, 화면 밑에 안 들어가면 위쪽
+    const below = r.bottom + 6;
+    tip.style.top = (below + tip.offsetHeight > innerHeight - 4 ? r.top - tip.offsetHeight - 6 : below) + "px";
     tip.style.left = Math.max(4, Math.min(r.left, innerWidth - tip.offsetWidth - 4)) + "px";
   };
   const hide = () => { tip.style.display = "none"; };
@@ -49,11 +50,9 @@
     for (const h of hits) {
       if (h.start > last) frag.appendChild(document.createTextNode(text.slice(last, h.start)));
       const span = document.createElement("span");
-      span.className = opt.popup ? "dcnx" : "dcnx dcnx-plain";
+      span.className = "dcnx";
       span.dataset.wid = h.wid;
-      const orig = text.slice(h.start, h.end);
-      const title = (M.works[h.wid] || {}).t || orig;
-      span.textContent = opt.expand && title.replace(/\s/g, "") !== orig.replace(/\s/g, "") ? `${title}(${orig})` : orig;
+      span.textContent = text.slice(h.start, h.end);
       frag.appendChild(span);
       last = h.end;
     }

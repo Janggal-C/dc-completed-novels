@@ -1,8 +1,9 @@
-.dcnx { text-decoration: underline dotted #888; text-underline-offset: 2px; cursor: help; }
-.dcnx-plain { text-decoration: none; cursor: inherit; }
+.dcnx { text-decoration: underline dotted #3B4890; text-decoration-thickness: 1.5px; text-underline-offset: 3px; cursor: help; }
 .dcnx-tip {
   position: fixed; z-index: 2147483647; display: none; pointer-events: none;
-  max-width: 360px; padding: 5px 9px; border-radius: 6px;
-  background: #222; color: #fff; font: 13px/1.4 "Malgun Gothic", sans-serif;
-  box-shadow: 0 2px 8px rgba(0,0,0,.25); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  max-width: 360px; padding: 5px 10px; border-radius: 6px;
+  font: 13px/1.4 "Malgun Gothic", sans-serif;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
+.dcnx-light { background: #fff; color: #3B4890; border: 1px solid #3B4890; box-shadow: 0 2px 8px rgba(59,72,144,.18); }
+.dcnx-dark { background: #222; color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,.25); }

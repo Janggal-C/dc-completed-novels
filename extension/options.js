@@ -1,4 +1,4 @@
-const DEFAULTS = {popup: true, expand: false, list: true, body: true, comment: true};
+const DEFAULTS = {popup: true, skin: "light", list: true, body: true, comment: true};
 const info = async () => {
   const {dict, fetchedAt} = await chrome.storage.local.get(["dict", "fetchedAt"]);
   let d = dict;
@@ -10,8 +10,9 @@ const info = async () => {
 chrome.storage.sync.get(DEFAULTS).then(o => {
   for (const k in DEFAULTS) {
     const el = document.getElementById(k);
-    el.checked = o[k];
-    el.onchange = () => chrome.storage.sync.set({[k]: el.checked});
+    const box = el.type === "checkbox";
+    box ? (el.checked = o[k]) : (el.value = o[k]);
+    el.onchange = () => chrome.storage.sync.set({[k]: box ? el.checked : el.value});
   }
 });
 document.getElementById("refresh").onclick = async e => {
