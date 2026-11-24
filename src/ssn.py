@@ -2,7 +2,7 @@
 
 - 처음: 정식 제목으로 검색(/series/?keyword=) → 제목(+작가)이 맞는 작품 → 상세 페이지
 - 이후: 소설넷 주소를 알고 있으니 상세 페이지만. 전체를 7등분해 하루 1/7씩 갱신
-- 소설넷에서 못 찾은 작품은 miss 로 기록 (구글로 연재처만 채움, 평점 없음)
+- 소설넷에서 못 찾은 작품은 miss 로 기록, 7일마다 다시 검색 (그 사이 구글로 연재처만 채움)
 - 소설넷 규칙(robots.txt Crawl-delay: 10)대로 요청 간격 10초
 저장: dict/ssn.json {작품ID: {id, r, rc, done, links, checked} | {miss, checked}}
 """
@@ -149,7 +149,7 @@ def run(max_minutes=180):
     today = now_kst().date()
     day = today.toordinal() % 7
     # 1) 처음 보는 작품 / 못 찾은 지 14일 지난 작품  2) 오늘 차례(1/7)인 작품
-    new = [k for k in works if k not in ssn or (ssn[k].get("miss") and ssn[k].get("checked", "") <= str(today - timedelta(days=14)))]
+    new = [k for k in works if k not in ssn or (ssn[k].get("miss") and ssn[k].get("checked", "") <= str(today - timedelta(days=7)))]
     turn = [k for k in works if k in ssn and not ssn[k].get("miss") and hash_day(k) == day and ssn[k].get("checked") != str(today)]
     print(f"소설넷: 새 작품 {len(new)}개, 오늘 갱신 차례 {len(turn)}개")
     end = time.time() + max_minutes * 60
