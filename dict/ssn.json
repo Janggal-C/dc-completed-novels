@@ -1168,5 +1168,150 @@
   "r": 3.67,
   "rc": 432,
   "title": "별을 품은 소드마스터"
+ },
+ "병주일지": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "부인은밀밭에서기다렸다": {
+  "author": "papapa",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 237427,
+  "links": {
+   "kakao": "https://page.kakao.com/content/66428502",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=11846376"
+  },
+  "r": 3.55,
+  "rc": 11,
+  "title": "부인은 밀밭에서 기다렸다"
+ },
+ "불굴의엘페리온": {
+  "author": "Cadilet",
+  "checked": "2026-11-25",
+  "id": 284791,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/549749",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14349525"
+  },
+  "r": 4.0,
+  "rc": 6,
+  "title": "불굴의 엘페리온"
+ },
+ "블리치": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "빚을져서라도세상은구해야할거아니야": {
+  "author": "1_394",
+  "checked": "2026-11-25",
+  "id": 280205,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13598334"
+  },
+  "r": 3.64,
+  "rc": 11,
+  "title": "빚을 져서라도 세상은 구해야 할 거 아니야"
+ },
+ "사이버펑크게임속성녀가되었다": {
+  "author": "밤별구름",
+  "checked": "2026-11-25",
+  "id": 288583,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/347173"
+  },
+  "r": 2.5,
+  "rc": 1,
+  "title": "사이버펑크 게임 속 성녀가 되었다"
+ },
+ "사이버펑크속드래곤이되었다": {
+  "author": "짱빠른토끼",
+  "checked": "2026-11-25",
+  "id": 288790,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/375520"
+  },
+  "r": 3.0,
+  "rc": 2,
+  "title": "사이버펑크 속 드래곤이 되었다"
+ },
+ "서포터가다해먹음": {
+  "author": "주급루팡",
+  "checked": "2026-11-25",
+  "id": 139199,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=8476865"
+  },
+  "r": 2.98,
+  "rc": 50,
+  "title": "서포터가 다 해먹음"
+ },
+ "선협식수련에드래곤하트를더하면": {
+  "author": "오늘오후에",
+  "checked": "2026-11-25",
+  "id": 250265,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/433601",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=12134262"
+  },
+  "r": 3.0,
+  "rc": 33,
+  "title": "선협식 수련에 드래곤 하트를 더하면"
+ },
+ "선협에서상태창개발하기": {
+  "author": "재미혼",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 252720,
+  "links": {
+   "munpia": "https://novel.munpia.com/437622",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=12122729"
+  },
+  "r": 3.48,
+  "rc": 28,
+  "title": "선협에서 상태창 개발하기"
+ },
+ "세계수를따먹다": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "소년만화속총대장이되었다": {
+  "author": "슈로바",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 289473,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/426278"
+  },
+  "title": "소년만화 속 총대장이 되었다"
+ },
+ "소드아트온라인": {
+  "author": "REKI KAWAHARA",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 3975,
+  "links": {
+   "kakao": "https://page.kakao.com/content/52081415",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=4161211"
+  },
+  "r": 3.1,
+  "rc": 82,
+  "title": "소드 아트 온라인"
+ },
+ "소설속엑스트라": {
+  "author": "지갑송",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 3688,
+  "links": {
+   "joara": "https://www.joara.com/book/1301411",
+   "kakao": "https://page.kakao.com/content/65309593",
+   "munpia": "https://novel.munpia.com/112155",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=5751402",
+   "ridi": "https://ridibooks.com/books/2057055622?_rdt_sid=category_books&_rdt_idx=0"
+  },
+  "r": 3.47,
+  "rc": 1139,
+  "title": "소설 속 엑스트라"
  }
 }
