@@ -100,14 +100,14 @@ code { font-size: 12px; background: var(--surface-0); padding: 1px 4px; border-r
 </head>
 <body>
 <header>
-  <h1>장르소설갤 완결작 집계</h1>
+  <h1>장르소설갤 작품 집계</h1>
   <div class="sub" id="meta">불러오는 중…</div>
 </header>
 <nav><div class="in" id="tabs"></div></nav>
 <main id="view"></main>
 
 <script>
-const TABS = [["monthly","월별"],["quarterly","분기별"],["trend","추이"],["dict","줄임말 사전"],["check","검수"],["metrics","지표"]];
+const TABS = [["mentions","언급"],["monthly","완결 월별"],["quarterly","완결 분기별"],["trend","추이"],["dict","줄임말 사전"],["check","검수"],["metrics","지표"]];
 const VIEW = document.getElementById("view");
 const REPO = "https://github.com/answhdtjr736-spec/dc-completed-novels";
 let R, tab = location.hash.slice(1) || "monthly", sel = {}, onlyNew = false;
@@ -129,7 +129,7 @@ function renderTabs() {
     `<button class="${k === tab ? "on" : ""}" data-k="${k}">${v}</button>`).join("");
   document.querySelectorAll("#tabs button").forEach(b => b.onclick = () => { tab = b.dataset.k; location.hash = tab; renderTabs(); render(); });
 }
-function render() { if (!TABS.some(t => t[0] === tab)) tab = "monthly"; ({monthly: () => rankView("monthly"), quarterly: () => rankView("quarterly"), trend, dict, check, metrics})[tab](); }
+function render() { if (!TABS.some(t => t[0] === tab)) tab = "monthly"; ({mentions, monthly: () => rankView("monthly"), quarterly: () => rankView("quarterly"), trend, dict, check, metrics})[tab](); }
 
 function rankView(kind) {
   const data = R[kind], periods = Object.keys(data).sort().reverse();
@@ -172,18 +172,58 @@ function rankView(kind) {
   });
 }
 
+// 언급 탭: 완결 여부와 상관없이 언급 수 (하루 단위 작성자 수)
+let MEN = null, menKind = "monthly";
+function mentions() {
+  if (!MEN) {
+    VIEW.innerHTML = `<div class="empty">불러오는 중…</div>`;
+    fetch("data/mentions.json?" + Date.now()).then(r => r.json()).then(d => { MEN = d; if (tab === "mentions") mentions(); })
+      .catch(() => { VIEW.innerHTML = `<div class="empty">언급 데이터가 아직 없습니다.</div>`; });
+    return;
+  }
+  const kind = menKind, key = "men-" + kind;
+  const periods = Object.keys(MEN.periods).filter(x => kind === "monthly" ? !x.includes("Q") : x.includes("Q")).sort().reverse();
+  const p = sel[key] && MEN.periods[sel[key]] ? sel[key] : periods[0];
+  const year = p.slice(0, 4);
+  const years = [...new Set(periods.map(x => x.slice(0, 4)))].sort().reverse();
+  const slots = kind === "monthly"
+    ? Array.from({length: 12}, (_, i) => ({key: `${year}-${String(i + 1).padStart(2, "0")}`, label: `${i + 1}월`}))
+    : Array.from({length: 4}, (_, i) => ({key: `${year}-Q${i + 1}`, label: `${i + 1}분기`}));
+  const rows = MEN.periods[p] || [];
+  VIEW.innerHTML = `<div class="card">
+    <div class="pbtns" style="--cols:2;margin-bottom:10px">${[["monthly","월별"],["quarterly","분기별"]].map(([k, v]) =>
+      `<button class="pbtn ${k === kind ? "on" : ""}" data-kind="${k}">${v}</button>`).join("")}</div>
+    <div class="yearsel"><select id="yr">${years.map(y => `<option value="${y}" ${y === year ? "selected" : ""}>${y}년</option>`).join("")}</select></div>
+    <div class="pbtns" style="--cols:${kind === "monthly" ? 6 : 4}">${slots.map(sl => `<button class="pbtn ${sl.key === p ? "on" : ""}" data-p="${sl.key}" ${MEN.periods[sl.key] ? "" : "disabled"}>${sl.label}</button>`).join("")}</div>
+    <div class="muted" style="margin-top:8px">완결 여부와 상관없이 전체 글 제목에서 셉니다 · 언급 수 = 하루 단위 작성자 수 (같은 사람이 같은 날 여러 번 써도 1) · ▸ 월별 그래프</div></div>
+    <div class="card"><ol class="rank">${rows.map((e, i) => `<li>
+      <div class="no">${i + 1}</div>
+      <div><div class="t">${esc(e.title)}${e.status === "완결" ? `<span class="badge">완결</span>` : ""}</div></div>
+      <div class="num"><b>${e.n.toLocaleString()}</b></div>
+      <button class="tog" data-i="${i}" aria-label="월별 그래프 열기" aria-expanded="false">▸</button>
+      <div class="mchart" id="mc${i}"></div></li>`).join("") || `<div class="empty">해당하는 작품이 없습니다.</div>`}</ol></div>`;
+  VIEW.querySelectorAll("[data-kind]").forEach(b => b.onclick = () => { menKind = b.dataset.kind; render(); });
+  document.getElementById("yr").onchange = ev => { sel[key] = periods.find(x => x.startsWith(ev.target.value)); render(); };
+  VIEW.querySelectorAll(".pbtn[data-p]").forEach(b => b.onclick = () => { sel[key] = b.dataset.p; render(); });
+  VIEW.querySelectorAll(".tog").forEach(b => b.onclick = () => {
+    const box = document.getElementById("mc" + b.dataset.i), open = !box.classList.contains("open");
+    box.classList.toggle("open", open); b.classList.toggle("open", open); b.setAttribute("aria-expanded", open);
+    if (open && !box.innerHTML) box.innerHTML = monthBars(rows[+b.dataset.i], kind === "monthly" ? p : null, MEN.months, "");
+  });
+}
+
 function quarterOf(m) { return m.slice(0, 4) + "-Q" + (Math.floor((+m.slice(5, 7) - 1) / 3) + 1); }
 
 // 작품 하나의 월별 언급 작성자 수 막대그래프 (선택한 달은 진하게)
-function monthBars(e, current) {
-  const M = R.months, v = e.series || [];
+function monthBars(e, current, months, unit = "명") {
+  const M = months || R.months, v = e.series || [];
   if (!M.length) return "";
   const W = Math.max(260, Math.min(820, VIEW.clientWidth - 80)), H = 120, pb = 20, pt = 16;
   const max = Math.max(1, ...v), n = M.length, gap = 2, bw = Math.max(6, (W - gap * (n - 1)) / n);
   const bars = M.map((m, i) => {
     const h = Math.round((H - pt - pb) * (v[i] || 0) / max), x = i * (bw + gap), y = H - pb - h;
     const on = !current || m === current;
-    return `<g><title>${fmtPeriod(m)}: ${v[i] || 0}명</title>
+    return `<g><title>${fmtPeriod(m)}: ${v[i] || 0}${unit}</title>
       <rect x="${x}" y="${H - pb - Math.max(h, 1)}" width="${bw}" height="${Math.max(h, 1)}" rx="${Math.min(4, bw / 2)}" fill="var(--accent)" opacity="${on ? 1 : 0.35}"/>
       ${v[i] ? `<text x="${x + bw / 2}" y="${y - 4}" text-anchor="middle" font-size="11" fill="var(--text-secondary)">${v[i]}</text>` : ""}
       <text x="${x + bw / 2}" y="${H - 5}" text-anchor="middle" font-size="11" fill="var(--text-muted)">${+m.slice(5)}월</text></g>`;

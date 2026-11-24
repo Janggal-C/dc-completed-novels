@@ -6,7 +6,7 @@ name: 보고서 페이지 배포
 on:
   push:
     paths: ["docs/index.html", "dict/**", "review/**", "data/posts/**", "data/ai/**",
-            "src/aggregate.py", "src/export_dict.py", "src/status.py", "src/matcher.py", "config.yaml"]
+            "src/aggregate.py", "src/export_dict.py", "src/mentions.py", "src/status.py", "src/matcher.py", "config.yaml"]
   workflow_run:
     workflows: ["소설넷 평점·연재처", "단어 분류 (AI)"]
     types: [completed]
@@ -37,6 +37,7 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - run: python -m src.aggregate
+      - run: python -m src.mentions
       - uses: actions/upload-pages-artifact@v4
         with:
           path: docs

@@ -80,7 +80,7 @@ jobs:
 
       - name: 보고서만 다시 만들기
         if: inputs.step == 'report'
-        run: python -m src.main report
+        run: python -m src.main report && python -m src.mentions
 
       - name: 판정·보고서 저장
         if: always()

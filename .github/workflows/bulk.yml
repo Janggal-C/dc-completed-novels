@@ -40,7 +40,7 @@ jobs:
         run: python -m src.bulk
       - name: 보고서
         if: always()
-        run: python -m src.main report
+        run: python -m src.main report && python -m src.mentions
       - name: 저장
         if: always()
         run: bash scripts/commit.sh "대량 검색 $(TZ=Asia/Seoul date +%F)"

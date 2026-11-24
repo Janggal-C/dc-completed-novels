@@ -49,7 +49,7 @@ jobs:
             [ "$i" = 3 ] && exit 1
             git fetch -q origin main && git reset -q --hard origin/main
           done
-          python -m src.main report
+          python -m src.main report && python -m src.mentions
       - name: 결과 댓글 + 이슈 닫기
         if: always()
         run: |

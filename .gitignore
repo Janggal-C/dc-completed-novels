@@ -5,3 +5,4 @@ __pycache__/
 data/.run_stats.json
 docs/data/report.json
 docs/api/dict.json
+docs/data/mentions.json
