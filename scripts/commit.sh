@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
-# 바뀐 데이터만 커밋하고 푸시. 그 사이 사용자가 검수 파일을 고쳤어도 rebase로 합친다.
+# 바뀐 데이터만 커밋하고 푸시.
+# COMMIT_PATHS: 이 작업이 맡은 파일만 올린다 (작업끼리 같은 파일을 건드려 충돌하지 않게).
+# 보고서(docs/data/report.json)·확장 사전(docs/api/dict.json)은 저장소에 안 올리고 배포할 때 만든다.
 set -e
 git config user.name "github-actions[bot]"
 git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-git add data dict docs review 2>/dev/null || true
+git add ${COMMIT_PATHS:-data dict review} 2>/dev/null || true
 if git diff --cached --quiet; then
   echo "변경 없음"
   exit 0

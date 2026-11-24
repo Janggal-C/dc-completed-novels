@@ -11,6 +11,8 @@ permissions:
 jobs:
   fill:
     runs-on: ubuntu-latest
+    env:
+      COMMIT_PATHS: "data/titles data/fullcrawl data/fullcrawl_state.json"
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v5

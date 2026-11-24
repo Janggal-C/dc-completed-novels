@@ -23,6 +23,7 @@ jobs:
     environment:
       name: github-pages
     env:
+      COMMIT_PATHS: "dict review"
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
       MANUAL_INPUT: ${{ github.event.issue.body }}
       MANUAL_RESULT: /tmp/manual_result.txt
@@ -39,12 +40,16 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - run: npm install -g @anthropic-ai/claude-code
-      - name: 사전에 반영
+      - name: 사전에 반영 + 저장
+        # 그 사이 다른 작업이 사전을 바꿔 충돌하면, 최신 사전을 받아 입력을 다시 반영한다 (최대 3번)
         run: |
-          python -m src.manual
+          for i in 1 2 3; do
+            python -m src.manual
+            if bash scripts/commit.sh "줄임말 직접 입력 (이슈 ${ISSUE})"; then break; fi
+            [ "$i" = 3 ] && exit 1
+            git fetch -q origin main && git reset -q --hard origin/main
+          done
           python -m src.main report
-      - name: 저장
-        run: bash scripts/commit.sh "줄임말 직접 입력 (이슈 ${ISSUE})"
       - name: 결과 댓글 + 이슈 닫기
         if: always()
         run: |

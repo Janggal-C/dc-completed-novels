@@ -132,10 +132,5 @@ def checkpoint(message, every_seconds=600, force=False, report=True):
     if not force and now - _last_checkpoint[0] < every_seconds:
         return
     _last_checkpoint[0] = now
-    if report:
-        try:
-            from . import aggregate
-            aggregate.run(partial=True)
-        except Exception as e:  # 보고서 실패해도 데이터 커밋은 진행
-            print(f"  (중간 보고서 생성 실패: {e})", flush=True)
+    # report 인자는 예전 호환용 — 보고서는 이제 배포 때 만들므로 중간 저장에서는 데이터만 올린다
     subprocess.run(["bash", str(ROOT / "scripts" / "commit.sh"), message], cwd=ROOT)

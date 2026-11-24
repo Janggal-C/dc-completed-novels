@@ -3,3 +3,5 @@ __pycache__/
 .venv/
 *.tmp
 data/.run_stats.json
+docs/data/report.json
+docs/api/dict.json

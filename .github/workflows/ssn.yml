@@ -16,6 +16,8 @@ concurrency:
 jobs:
   ssn:
     runs-on: ubuntu-latest
+    env:
+      COMMIT_PATHS: "dict/ssn.json"
     timeout-minutes: 200
     steps:
       - uses: actions/checkout@v5

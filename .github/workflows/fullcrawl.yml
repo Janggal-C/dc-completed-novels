@@ -45,6 +45,7 @@ jobs:
       group: fullcrawl-${{ matrix.seg }}
       cancel-in-progress: false
     env:
+      COMMIT_PATHS: "data/titles data/fullcrawl data/fullcrawl_state.json"
       WRITER_SALT: ${{ secrets.WRITER_SALT }}
     steps:
       - uses: actions/checkout@v5
