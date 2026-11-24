@@ -125,7 +125,9 @@ class Client:
             try:
                 r = self.s.get(BASE, params=params, timeout=20)
             except requests.RequestException as e:
-                print(f"  요청 오류: {e}", file=sys.stderr)
+                wait = 30 * (attempt + 1)   # 접속 장애는 길게 쉬었다가 재시도 (30s, 60s, 90s...)
+                print(f"  요청 오류 ({type(e).__name__}), {wait}초 후 재시도", file=sys.stderr, flush=True)
+                time.sleep(wait)
                 continue
             if r.status_code in (403, 429):
                 raise Blocked(f"HTTP {r.status_code}")
@@ -134,7 +136,7 @@ class Client:
             if r.ok:
                 return parse_list(r.text)
             print(f"  HTTP {r.status_code}, 재시도", file=sys.stderr)
-        raise RuntimeError("요청 재시도 초과")
+        raise RuntimeError("디시 접속 실패 (재시도 초과). 일시 장애이거나 GitHub 서버 IP가 차단됐을 수 있음")
 
 
 def walk(client, search_pos, page):
