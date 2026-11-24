@@ -172,9 +172,9 @@ def run(max_minutes=180):
         msg = "없음" if d.get("miss") else f"{d.get('r', '-')} ({d.get('rc', 0)}) {list(d['links'])}"
         print(f"  {w['title']} → {msg}")
         write_json(SSN, ssn)
-        checkpoint("소설넷 정보 갱신")
+        checkpoint("소설넷 정보 갱신", every_seconds=300, report=False)
     print(f"소설넷 결과: {stats}")
-    checkpoint("소설넷 정보 갱신", force=True)
+    checkpoint("소설넷 정보 갱신", force=True, report=False)
 
 
 def hash_day(k):
