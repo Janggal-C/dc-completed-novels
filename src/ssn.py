@@ -142,7 +142,7 @@ def lookup(c, w):
     return d
 
 
-def run(max_minutes=60):
+def run(max_minutes=180):
     works = read_json(WORKS, {})
     ssn = read_json(SSN, {})
     c = Client()
