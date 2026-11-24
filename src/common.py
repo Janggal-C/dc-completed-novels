@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 POSTS_DIR = DATA / "posts"          # 월별 글 목록 (YYYY-MM.jsonl)
 AI_DIR = DATA / "ai"                # 월별 AI 판정 결과 (YYYY-MM.jsonl)
+REVIEW_DIR = DATA / "review_ai"     # 월별 AI 검수 결과 (불일치 건만)
 STATE = DATA / "state.json"
 METRICS = DATA / "metrics.jsonl"    # 실행별 지표 기록
 DICT = ROOT / "dict"

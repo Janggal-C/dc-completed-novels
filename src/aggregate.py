@@ -4,7 +4,7 @@ from collections import defaultdict
 from .common import (AI_DIR, ALIASES, METRICS, POSTS_DIR, SEARCH_CACHE, SITE_DATA, STATE,
                      WORKS, load_config, load_monthly, norm_key, now_kst, quarter_of,
                      read_json, read_jsonl, write_json)
-from .resolve import decide, load_overrides, resolve_id, work_name
+from .resolve import decide, load_reviews, resolve_id, work_name
 from .rules import RULES_VERSION
 
 
@@ -13,7 +13,7 @@ def run(cfg=None, run_stats=None, partial=False):
     rc = cfg["report"]
     posts = load_monthly(POSTS_DIR)
     results = load_monthly(AI_DIR)
-    overrides = load_overrides()
+    overrides = load_reviews()
     works = read_json(WORKS, {})
     aliases = read_json(ALIASES, {})
     state = read_json(STATE, {})
@@ -34,13 +34,14 @@ def run(cfg=None, run_stats=None, partial=False):
             if r:
                 m["both"] += 1
                 m["agree"] += not d["disagree"]
-        if ov and ov.get("label"):
-            m["gold"] += 1
-            m["rule_ok"] += d["rule"] == ov["label"]
-            m["ai_ok"] += bool(r) and r["label"] == ov["label"]
-        elif d["disagree"]:
-            review.append({"no": p["no"], "title": p["title"], "date": p["date"][:10],
-                           "rule": d["rule"], "ai": d["ai"]})
+        if d["disagree"]:
+            item = {"no": p["no"], "title": p["title"], "date": p["date"][:10], "rule": d["rule"], "ai": d["ai"]}
+            if ov and ov.get("label"):
+                m["gold"] += 1
+                m["rule_ok"] += d["rule"] == ov["label"]
+                m["ai_ok"] += r["label"] == ov["label"]
+                item.update(final=ov["label"], by=ov.get("by", "사람"), reason=ov.get("reason", ""))
+            review.append(item)
         if d["label"] is None:
             pending += 1
         if d["label"] != "complete":
@@ -111,7 +112,7 @@ def run(cfg=None, run_stats=None, partial=False):
         "rule_coverage": pct(m["rule_decisive"], m["total"]),
         "agreement": pct(m["agree"], m["both"]), "compared": m["both"],
         "gold": m["gold"], "rule_accuracy": pct(m["rule_ok"], m["gold"]),
-        "ai_accuracy": pct(m["ai_ok"], m["gold"]), "review_open": len(review), "no_work": m.get("no_work", 0),
+        "ai_accuracy": pct(m["ai_ok"], m["gold"]), "review_open": sum("final" not in x for x in review), "no_work": m.get("no_work", 0),
         "rules_version": RULES_VERSION, "mode": cfg["judge"]["mode"],
     }
     history = read_jsonl(METRICS)
@@ -142,7 +143,7 @@ def run(cfg=None, run_stats=None, partial=False):
         "dictionary": dictionary,
     }
     write_json(SITE_DATA / "report.json", report)
-    print(f"보고서 생성: {len(months)}개월, 작품 {len(mentions)}개, 검수 대기 {len(review)}건")
+    print(f"보고서 생성: {len(months)}개월, 작품 {len(mentions)}개, AI 검수 대기 {sum("final" not in x for x in review)}건")
     return report
 
 

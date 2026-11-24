@@ -104,3 +104,33 @@ def search_aliases(names, model):
     res = _json_from(_call(SEARCH_PROMPT + lines, model, allow_search=True,
                            max_turns=4 + 3 * len(names)))
     return {r.get("alias", ""): r for r in res if r.get("alias")}
+
+
+REVIEW_PROMPT = """너는 디시인사이드 장르소설(웹소설) 갤러리 글 제목 분류의 최종 검수자다.
+아래 제목들은 1차 판정에서 규칙과 AI의 의견이 갈렸다. 갤러리 말투(줄임말·반어·드립)를 고려해 신중히 판단해라.
+
+- complete: 제목이 특정 작품이 이미 완결되었음을 전제하거나 알린다 (후기, 감상, 급완결 불만, "왜 완결임" 등 포함)
+- not: 완결 예정·예상·질문, 완결 여부 자체를 묻는 글, 완결작 일반 추천, 특정 작품이 없는 글
+work: 제목에 쓰인 작품명 그대로(없으면 ""). reason: 판단 근거 한 줄(한국어).
+
+아래 JSON 배열만 출력해라.
+[{"no": 글번호, "label": "complete" 또는 "not", "work": "...", "reason": "..."}]
+
+제목 목록 (글번호, 제목, 규칙 판정, 1차 AI 판정):
+"""
+
+
+def review_titles(items, model):
+    """items: [{"no","title","rule","ai"}] → {no: {"label","work","reason"}}"""
+    if os.environ.get("AI_MOCK") == "1":
+        return {it["no"]: {"label": it["ai"], "work": extract_work(it["title"]), "reason": "mock"} for it in items}
+    lines = "\n".join(f'{it["no"]}\t{it["title"]}\t규칙={it["rule"]}\tAI={it["ai"]}' for it in items)
+    res = _json_from(_call(REVIEW_PROMPT + lines, model))
+    out = {}
+    for r in res:
+        try:
+            out[int(r["no"])] = {"label": "complete" if r.get("label") == "complete" else "not",
+                                 "work": (r.get("work") or "").strip(), "reason": (r.get("reason") or "").strip()}
+        except (KeyError, ValueError, TypeError):
+            continue
+    return out

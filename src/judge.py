@@ -8,9 +8,9 @@ import sys
 from datetime import datetime, timedelta
 
 from . import ai
-from .common import (AI_DIR, ALIASES, POSTS_DIR, SEARCH_CACHE, WORKS, checkpoint, load_config,
+from .common import (AI_DIR, ALIASES, POSTS_DIR, REVIEW_DIR, SEARCH_CACHE, WORKS, checkpoint, load_config,
                      load_monthly, merge_monthly, norm_key, now_kst, read_json, write_json)
-from .resolve import decide, load_overrides, needs_ai, resolve_id, work_name
+from .resolve import decide, load_overrides, load_reviews, needs_ai, resolve_id, work_name
 
 
 def add_work(works, aliases, title, alias=None, **info):
@@ -75,6 +75,31 @@ def run(cfg=None):
         checkpoint(f"AI 판정 중간 저장 {stats['ai_judged']}건")
     merge_monthly(AI_DIR, new_rows)
     results = load_monthly(AI_DIR)
+
+    # ---- 1.5) 규칙·AI 불일치 → 상위 모델로 AI 검수 ----
+    stats["reviewed"] = 0
+    if not stats["stopped"]:
+        done = load_monthly(REVIEW_DIR)
+        todo = []
+        for p in sorted(posts.values(), key=lambda p: -p["no"]):
+            if p["no"] in done or p["no"] in overrides:
+                continue
+            d = decide(p, results.get(p["no"]), None)
+            if d["disagree"]:
+                todo.append({"no": p["no"], "title": p["title"], "rule": d["rule"], "ai": d["ai"], "date": p["date"]})
+        todo = todo[: jc["review_per_run"]]
+        for i in range(0, len(todo), 30):
+            batch = todo[i:i + 30]
+            try:
+                res = ai.review_titles(batch, jc["review_model"])
+            except ai.AIError as e:
+                stats["stopped"] = str(e)
+                print(f"⚠️ AI 검수 중단: {e}", file=sys.stderr)
+                break
+            merge_monthly(REVIEW_DIR, [{**res[b["no"]], "no": b["no"], "date": b["date"]} for b in batch if b["no"] in res])
+            stats["reviewed"] += sum(b["no"] in res for b in batch)
+        print(f"  AI 검수 {stats['reviewed']}건", flush=True)
+    overrides = load_reviews()
 
     # ---- 2) 사전 갱신 ----
     for no, ov in overrides.items():          # 검수에서 적은 정식 제목은 바로 사전에

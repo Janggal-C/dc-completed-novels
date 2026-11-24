@@ -165,15 +165,17 @@ function trend() {
 }
 
 function review() {
-  const rv = R.review, lab = {complete: "완결", not: "제외"};
-  VIEW.innerHTML = `<div class="card"><div class="t">규칙과 AI 판정이 다른 제목 ${rv.length}건</div>
-    <div class="muted">버튼을 누르면 한 줄이 복사됩니다. <a href="${REPO}/edit/main/review/overrides.csv" target="_blank">overrides.csv</a> 맨 아래에 붙여넣고 저장(Commit)하면 다음 실행부터 반영됩니다.
-    작품명이 틀렸으면 세 번째 칸에 정식 제목을 적으세요.</div></div>
-    <div class="card"><table><tr><th>제목</th><th>규칙</th><th>AI</th><th></th></tr>
-    ${rv.map(r => `<tr><td><a href="${postUrl(r.no)}" target="_blank" rel="noopener">${esc(r.title)}</a><div class="muted">${r.date} · #${r.no}</div></td>
-      <td>${lab[r.rule] || r.rule}</td><td>${lab[r.ai] || r.ai}</td>
-      <td style="white-space:nowrap"><button class="btn" data-l="${r.no},complete,">완결</button> <button class="btn" data-l="${r.no},not,">제외</button></td></tr>`).join("")
-      || `<tr><td colspan="4" class="empty">검수할 제목이 없습니다.</td></tr>`}</table></div>`;
+  const lab = {complete: "완결", not: "제외"};
+  const open = R.review.filter(r => !r.final), done = R.review.filter(r => r.final);
+  const row = r => `<tr><td><a href="${postUrl(r.no)}" target="_blank" rel="noopener">${esc(r.title)}</a>
+      <div class="muted">${r.date} · 규칙 ${lab[r.rule] || r.rule} / AI ${lab[r.ai] || r.ai}${r.reason ? " · " + esc(r.reason) : ""}</div></td>
+      <td style="white-space:nowrap">${r.final ? `<b>${lab[r.final]}</b><div class="muted">${esc(r.by)} 검수</div>` : `<span class="badge warn">대기</span>`}
+      <div style="margin-top:4px"><button class="btn" data-l="${r.no},${r.final === "complete" ? "not" : "complete"},">${r.final === "complete" ? "제외로" : "완결로"}</button></div></td></tr>`;
+  VIEW.innerHTML = `<div class="card"><div class="t">규칙과 AI 판정이 갈린 제목</div>
+    <div class="muted">갈린 제목은 상위 모델(AI 검수)이 자동으로 최종 판정합니다. 결과가 틀렸으면 버튼으로 한 줄을 복사해
+    <a href="${REPO}/edit/main/review/overrides.csv" target="_blank">overrides.csv</a> 맨 아래에 붙여넣고 저장하세요. 사람 검수가 항상 우선입니다.</div></div>
+    ${open.length ? `<div class="card"><div class="t">AI 검수 대기 ${open.length}건</div><table>${open.map(row).join("")}</table></div>` : ""}
+    <div class="card"><div class="t">검수 완료 ${done.length}건</div><table>${done.map(row).join("") || `<tr><td class="empty">아직 없습니다.</td></tr>`}</table></div>`;
   VIEW.querySelectorAll("button[data-l]").forEach(b => b.onclick = () => {
     navigator.clipboard?.writeText(b.dataset.l).then(() => { b.textContent = "복사됨"; });
   });
@@ -192,8 +194,8 @@ function dict() {
 function metrics() {
   const m = R.metrics, f = v => v == null ? "-" : v + "%";
   const tiles = [["수집한 제목", m.total_posts.toLocaleString()], ["AI 판정 완료", m.ai_done.toLocaleString()], ["판정 대기", m.pending.toLocaleString()],
-    ["규칙·AI 일치율", f(m.agreement)], ["규칙이 판단한 비율", f(m.rule_coverage)], ["검수 대기", m.review_open],
-    ["규칙 정확도(검수 기준)", f(m.rule_accuracy)], ["AI 정확도(검수 기준)", f(m.ai_accuracy)]];
+    ["규칙·AI 일치율", f(m.agreement)], ["규칙이 판단한 비율", f(m.rule_coverage)], ["AI 검수 대기", m.review_open],
+    ["불일치 중 규칙이 맞은 비율", f(m.rule_accuracy)], ["불일치 중 1차 AI가 맞은 비율", f(m.ai_accuracy)]];
   VIEW.innerHTML = `<div class="tiles">${tiles.map(([k, v]) => `<div class="tile"><div class="v">${v}</div><div class="k">${k}</div></div>`).join("")}</div>
     <div class="card" style="margin-top:12px"><div class="muted">모드: <b>${m.mode === "verify" ? "검증(규칙+AI 전체)" : "절약(규칙 위주)"}</b> · 규칙 버전 ${m.rules_version} · 비교 ${m.compared}건 · 검수 ${m.gold}건<br>
     일치율이 연속 2~3회 95% 이상이면 <code>config.yaml</code>의 <code>mode</code>를 <code>economy</code>로 바꾸는 것을 권장합니다.</div></div>

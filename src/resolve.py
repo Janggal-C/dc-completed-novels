@@ -2,7 +2,7 @@
 import csv
 import hashlib
 
-from .common import OVERRIDES, norm_key
+from .common import OVERRIDES, REVIEW_DIR, load_monthly, norm_key
 from .rules import NOT_WORKS, classify, extract_work
 
 
@@ -20,7 +20,19 @@ def load_overrides():
             label = (r.get("label") or "").strip().lower()
             label = {"완결": "complete", "o": "complete", "제외": "not", "x": "not"}.get(label, label)
             out[no] = {"label": label if label in ("complete", "not") else "",
-                       "work_title": (r.get("work_title") or "").strip()}
+                       "work_title": (r.get("work_title") or "").strip(), "by": "사람"}
+    return out
+
+
+def load_reviews():
+    """AI 검수 결과 위에 사람 검수(overrides.csv)를 덮어쓴다 → {no: {"label","work_title","by",...}}"""
+    out = {}
+    for no, r in load_monthly(REVIEW_DIR).items():
+        out[no] = {"label": r["label"], "work_title": "", "work": r.get("work", ""),
+                   "reason": r.get("reason", ""), "by": "AI"}
+    for no, ov in load_overrides().items():
+        if ov["label"] or ov["work_title"]:
+            out[no] = {**out.get(no, {}), **{k: v for k, v in ov.items() if v}}
     return out
 
 
@@ -40,7 +52,7 @@ def decide(post, ai, ov):
     ai_label = ai["label"] if ai else None
     disagree = bool(ai_label and rule != "ambiguous" and rule != ai_label)
     if ov and ov.get("label"):
-        label, source = ov["label"], "검수"
+        label, source = ov["label"], "검수(" + ov.get("by", "사람") + ")"
     elif ai_label and (rule == "ambiguous" or disagree):
         label, source = ai_label, "AI"
     elif rule != "ambiguous":
@@ -54,6 +66,9 @@ def work_name(post, ai, ov):
     """→ (제목에 쓰인 작품명, AI가 아는 정식 제목). 작품명이 아니면 ('', '')"""
     if ov and ov.get("work_title"):
         return ov["work_title"], ov["work_title"]
+    if ov and ov.get("work") and ov.get("by") == "AI":
+        name = ov["work"]
+        return ("" if norm_key(name) in NOT_WORKS else name), (ai or {}).get("guess", "")
     if ai and ai.get("work"):
         name, guess = ai["work"], ai.get("guess", "")
     else:
