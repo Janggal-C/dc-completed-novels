@@ -82,6 +82,17 @@ ol.rank li { grid-template-columns: 34px 1fr auto 28px; }
 .mchart { grid-column: 1 / -1; display: none; padding: 6px 0 2px 34px; }
 .mchart.open { display: block; }
 .mchart svg { width: 100%; height: auto; display: block; }
+.inp { font: inherit; font-size: 14px; width: 100%; padding: 7px 9px; border-radius: 7px; border: 1px solid var(--border);
+  background: var(--surface-1); color: var(--text-primary); }
+.inp:focus { outline: 2px solid var(--accent); border-color: transparent; }
+textarea.inp { min-height: 90px; resize: vertical; }
+.ur { display: grid; grid-template-columns: 1fr; gap: 4px; padding: 10px 0; border-top: 1px solid var(--border); }
+.ur:first-child { border-top: 0; }
+.ur .h { display: flex; justify-content: space-between; gap: 8px; }
+.btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); font-size: 14px; padding: 8px 14px; }
+.sticky { position: sticky; bottom: 0; background: var(--surface-0); padding: 10px 0; display: flex; gap: 8px; align-items: center; }
+.bar { height: 8px; border-radius: 4px; background: var(--border); overflow: hidden; margin-top: 6px; }
+.bar i { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
 .empty { padding: 30px 0; text-align: center; color: var(--text-muted); }
 code { font-size: 12px; background: var(--surface-0); padding: 1px 4px; border-radius: 4px; }
 </style>
@@ -95,7 +106,7 @@ code { font-size: 12px; background: var(--surface-0); padding: 1px 4px; border-r
 <main id="view"></main>
 
 <script>
-const TABS = [["monthly","월별"],["quarterly","분기별"],["trend","추이"],["review","검수"],["dict","줄임말 사전"],["metrics","지표"]];
+const TABS = [["monthly","월별"],["quarterly","분기별"],["trend","추이"],["dict","줄임말 사전"],["metrics","지표"]];
 const VIEW = document.getElementById("view");
 const REPO = "https://github.com/answhdtjr736-spec/dc-completed-novels";
 let R, tab = location.hash.slice(1) || "monthly", sel = {}, onlyNew = false;
@@ -114,10 +125,10 @@ fetch("data/report.json?" + Date.now()).then(r => r.json()).then(d => {
 
 function renderTabs() {
   document.getElementById("tabs").innerHTML = TABS.map(([k, v]) =>
-    `<button class="${k === tab ? "on" : ""}" data-k="${k}">${v}${k === "review" && R.metrics.review_open ? ` <span class="badge warn">${R.metrics.review_open}</span>` : ""}</button>`).join("");
+    `<button class="${k === tab ? "on" : ""}" data-k="${k}">${v}</button>`).join("");
   document.querySelectorAll("#tabs button").forEach(b => b.onclick = () => { tab = b.dataset.k; location.hash = tab; renderTabs(); render(); });
 }
-function render() { ({monthly: () => rankView("monthly"), quarterly: () => rankView("quarterly"), trend, review, dict, metrics})[tab](); }
+function render() { if (!TABS.some(t => t[0] === tab)) tab = "monthly"; ({monthly: () => rankView("monthly"), quarterly: () => rankView("quarterly"), trend, dict, metrics})[tab](); }
 
 function rankView(kind) {
   const data = R[kind], periods = Object.keys(data).sort().reverse();
@@ -216,43 +227,63 @@ function trend() {
   svgEl.addEventListener("pointerleave", () => { tip.style.display = "none"; xh.style.display = "none"; });
 }
 
-function review() {
-  const lab = {complete: "완결", not: "제외"};
-  const open = R.review.filter(r => !r.final), done = R.review.filter(r => r.final);
-  const row = r => `<tr><td><a href="${postUrl(r.no)}" target="_blank" rel="noopener">${esc(r.title)}</a>
-      <div class="muted">${r.date} · 규칙 ${lab[r.rule] || r.rule} / AI ${lab[r.ai] || r.ai}${r.reason ? " · " + esc(r.reason) : ""}</div></td>
-      <td style="white-space:nowrap">${r.final ? `<b>${lab[r.final]}</b><div class="muted">${esc(r.by)} 검수</div>` : `<span class="badge warn">대기</span>`}
-      <div style="margin-top:4px"><button class="btn" data-l="${r.no},${r.final === "complete" ? "not" : "complete"},">${r.final === "complete" ? "제외로" : "완결로"}</button></div></td></tr>`;
-  VIEW.innerHTML = `<div class="card"><div class="t">규칙과 AI 판정이 갈린 제목</div>
-    <div class="muted">갈린 제목은 상위 모델(AI 검수)이 자동으로 최종 판정합니다. 결과가 틀렸으면 버튼으로 한 줄을 복사해
-    <a href="${REPO}/edit/main/review/overrides.csv" target="_blank">overrides.csv</a> 맨 아래에 붙여넣고 저장하세요. 사람 검수가 항상 우선입니다.</div></div>
-    ${open.length ? `<div class="card"><div class="t">AI 검수 대기 ${open.length}건</div><table>${open.map(row).join("")}</table></div>` : ""}
-    <div class="card"><div class="t">검수 완료 ${done.length}건</div><table>${done.map(row).join("") || `<tr><td class="empty">아직 없습니다.</td></tr>`}</table></div>`;
-  VIEW.querySelectorAll("button[data-l]").forEach(b => b.onclick = () => {
-    navigator.clipboard?.writeText(b.dataset.l).then(() => { b.textContent = "복사됨"; });
-  });
-}
-
 function dict() {
-  VIEW.innerHTML = `<div class="card"><div class="t">줄임말 사전 ${R.dictionary.length}개</div>
-    <div class="muted">수정은 <a href="${REPO}/edit/main/dict/aliases.json" target="_blank">aliases.json</a>, 작품 정보는 <a href="${REPO}/edit/main/dict/works.json" target="_blank">works.json</a></div>
+  const ds = R.dict_stats || {}, U = R.unresolved || [];
+  const ranked = U.filter(u => u.n >= 2), rest = U.filter(u => u.n < 2);
+  const row = (u, i) => `<div class="ur"><div class="h"><b>${esc(u.alias)}</b><span class="muted">언급 ${u.n}회</span></div>
+    <div class="muted">${u.titles.map(esc).join(" / ")}</div>
+    <div class="row" style="flex-wrap:nowrap"><input class="inp" data-alias="${esc(u.alias)}" placeholder="정식 제목 (작가면 '작가')">
+    <a class="btn" style="white-space:nowrap;padding:7px 10px" target="_blank" rel="noopener" href="https://www.google.com/search?q=${encodeURIComponent(u.alias + " 웹소설")}">구글</a></div></div>`;
+  VIEW.innerHTML = `<div class="card"><div class="t">미확인 줄임말 직접 입력</div>
+    <div class="muted">정식 제목을 적고 맨 아래 <b>저장</b>을 누르면 GitHub 화면이 열립니다. 거기서 <b>Create</b>를 한 번 누르면 1~2분 뒤 사전과 보고서에 반영됩니다.
+    플랫폼 페이지 제목을 그대로 붙여넣어도 되고(군더더기는 자동 제거), 띄어쓰기도 알아서 맞춥니다. 작가 이름이면 '작가'라고 적으세요.</div></div>
+    <div class="card"><div class="t">순위에 영향 있는 것 (언급 2회 이상) ${ranked.length}개</div>${ranked.map(row).join("") || `<div class="empty">없습니다 🎉</div>`}</div>
+    <details class="card"><summary class="t" style="cursor:pointer">1회 언급 ${rest.length}개 (순위 영향 거의 없음)</summary>${rest.map(row).join("")}</details>
+    <div class="card"><div class="t">목록에 없는 것 직접 입력</div>
+    <div class="muted">한 줄에 하나씩 <code>줄임말 = 정식 제목</code></div>
+    <textarea class="inp" id="free" placeholder="후프 = 후회안하는 프로듀서&#10;미시회귀 = 웹소설로 꿈꾸는 세상! - 미연시 속 회귀하는 히로인이 되었다"></textarea></div>
+    <div class="sticky"><button class="btn primary" id="save">저장</button><span class="muted" id="cnt"></span></div>
+    <div class="card"><div class="t">줄임말 사전 ${ds.aliases ?? R.dictionary.length}개</div>
+    <div class="muted">잘못된 연결은 위 입력칸에 올바른 제목을 적어 저장하면 덮어씁니다.</div>
     <table style="margin-top:8px"><tr><th>줄임말</th><th>정식 제목</th></tr>
-    ${R.dictionary.map(d => `<tr><td>${esc(d.alias)}</td><td>${esc(d.title)}${d.author ? `<span class="au">${esc(d.author)}</span>` : ""}${d.needs_review ? `<span class="badge warn">확인 필요</span>` : ""}</td></tr>`).join("")}</table></div>
-    <div class="card"><div class="t">사전에 없는 작품명 ${R.unresolved.length}개</div><div class="muted">검색 대기 중이거나 검색으로 못 찾은 이름</div>
-    <table style="margin-top:8px"><tr><th>이름</th><th class="n">언급</th><th>예시 제목</th></tr>
-    ${R.unresolved.map(u => `<tr><td>${esc(u.alias)}</td><td class="n">${u.n}</td><td class="muted">${u.titles.map(esc).join("<br>")}</td></tr>`).join("")}</table></div>`;
+    ${R.dictionary.map(d => `<tr><td>${esc(d.alias)}</td><td>${esc(d.title)}${d.author ? `<span class="au">${esc(d.author)}</span>` : ""}${d.needs_review ? `<span class="badge warn">확인 필요</span>` : ""}</td></tr>`).join("")}</table></div>`;
+  const collect = () => {
+    const lines = [...VIEW.querySelectorAll("input[data-alias]")].filter(x => x.value.trim()).map(x => `${x.dataset.alias} = ${x.value.trim()}`);
+    const free = document.getElementById("free").value.split("\n").map(x => x.trim()).filter(x => /=|→|\t/.test(x));
+    return lines.concat(free);
+  };
+  const upd = () => { const n = collect().length; document.getElementById("cnt").textContent = n ? `${n}개 입력됨` : ""; };
+  VIEW.addEventListener("input", upd);
+  document.getElementById("save").onclick = () => {
+    const lines = collect();
+    if (!lines.length) { alert("입력한 내용이 없습니다."); return; }
+    const url = `https://github.com/${R.repo}/issues/new?title=${encodeURIComponent(`[줄임말] ${lines.length}개 입력`)}&body=${encodeURIComponent(lines.join("\n"))}`;
+    window.open(url, "_blank");
+  };
 }
 
 function metrics() {
-  const m = R.metrics, f = v => v == null ? "-" : v + "%";
-  const tiles = [["수집한 제목", m.total_posts.toLocaleString()], ["AI 판정 완료", m.ai_done.toLocaleString()], ["판정 대기", m.pending.toLocaleString()],
-    ["규칙·AI 일치율", f(m.agreement)], ["규칙이 판단한 비율", f(m.rule_coverage)], ["AI 검수 대기", m.review_open],
-    ["불일치 중 규칙이 맞은 비율", f(m.rule_accuracy)], ["불일치 중 1차 AI가 맞은 비율", f(m.ai_accuracy)]];
-  VIEW.innerHTML = `<div class="tiles">${tiles.map(([k, v]) => `<div class="tile"><div class="v">${v}</div><div class="k">${k}</div></div>`).join("")}</div>
-    <div class="card" style="margin-top:12px"><div class="muted">모드: <b>${m.mode === "verify" ? "검증(규칙+AI 전체)" : "절약(규칙 위주)"}</b> · 규칙 버전 ${m.rules_version} · 비교 ${m.compared}건 · 검수 ${m.gold}건<br>
-    일치율이 연속 2~3회 95% 이상이면 <code>config.yaml</code>의 <code>mode</code>를 <code>economy</code>로 바꾸는 것을 권장합니다.</div></div>
-    <div class="card"><div class="t">실행 기록</div><table><tr><th>실행</th><th class="n">신규</th><th class="n">초기수집</th><th class="n">AI</th><th class="n">일치율</th></tr>
-    ${R.history.slice().reverse().map(h => `<tr><td>${esc(h.date)}${h.ai_stopped ? ` <span class="badge warn">AI 한도</span>` : ""}</td><td class="n">${h.crawled_new ?? "-"}</td><td class="n">${h.crawled_backfill ?? "-"}</td><td class="n">${h.ai_judged ?? "-"}</td><td class="n">${f(h.agreement)}</td></tr>`).join("")}</table></div>`;
+  const m = R.metrics, f = v => v == null ? "-" : v + "%", ds = R.dict_stats || {}, g = R.google || {};
+  const tile = (k, v, sub) => `<div class="tile"><div class="v">${v}</div><div class="k">${k}</div>${sub || ""}</div>`;
+  const viaLab = {google: "구글", google2: "구글", ai: "AI 검색", "직접 입력": "직접 입력", "검색": "검색"};
+  VIEW.innerHTML = `<div class="card"><div class="t">구글 검색 (SerpApi)</div><div class="tiles" style="margin-top:8px">
+      ${tile("오늘 사용", `${g.today ?? 0}<small style="font-size:14px"> / ${g.day_limit}</small>`, `<div class="bar"><i style="width:${Math.min(100, 100 * (g.today || 0) / (g.day_limit || 1))}%"></i></div>`)}
+      ${tile("이번 달 사용", `${g.month ?? 0}<small style="font-size:14px"> / ${g.month_limit}</small>`, `<div class="bar"><i style="width:${Math.min(100, 100 * (g.month || 0) / (g.month_limit || 1))}%"></i></div>`)}
+      ${tile("이번 달 무료 잔여", Math.max(0, (g.free_quota || 250) - (g.month || 0)))}</div>
+    ${(g.daily || []).length ? `<table style="margin-top:10px"><tr><th>날짜</th><th class="n">검색</th></tr>${g.daily.slice().reverse().map(([d, n]) => `<tr><td>${d}</td><td class="n">${n}</td></tr>`).join("")}</table>` : ""}</div>
+    <div class="card"><div class="t">줄임말 사전</div><div class="tiles" style="margin-top:8px">
+      ${tile("등록된 줄임말", ds.aliases ?? "-")}${tile("작품 수", ds.works ?? "-")}
+      ${tile("오늘 신규", ds.new_today ?? 0)}${tile("최근 7일 신규", ds.new_week ?? 0)}
+      ${tile("미확인 (순위권)", ds.unresolved_ranked ?? "-")}${tile("미확인 (전체)", ds.unresolved ?? "-")}
+      ${tile("작가 이름", ds.authors ?? 0)}${tile("확인 필요 표시", ds.needs_review ?? 0)}</div>
+    ${(ds.recent || []).length ? `<div class="t" style="margin-top:12px">최근 등록</div><table><tr><th>줄임말</th><th>정식 제목</th><th>경로</th></tr>
+      ${ds.recent.map(r => `<tr><td>${esc(r.alias)}<div class="muted">${r.date}</div></td><td>${esc(r.title)}</td><td class="muted" style="white-space:nowrap">${viaLab[r.via] || esc(r.via)}</td></tr>`).join("")}</table>` : ""}</div>
+    <div class="card"><div class="t">판정</div><div class="tiles" style="margin-top:8px">
+      ${tile("수집한 제목", m.total_posts.toLocaleString())}${tile("AI 판정 완료", m.ai_done.toLocaleString())}
+      ${tile("판정 대기", m.pending.toLocaleString())}${tile("규칙·AI 일치율", f(m.agreement))}
+      ${tile("AI 자동 검수", (m.gold ?? 0) + "건")}${tile("작품 특정 불가 글", m.no_work ?? 0)}</div></div>
+    <div class="card"><div class="t">실행 기록</div><table><tr><th>실행</th><th class="n">신규</th><th class="n">AI</th><th class="n">구글</th><th class="n">찾음</th></tr>
+    ${R.history.slice().reverse().map(h => `<tr><td>${esc(h.date)}${h.ai_stopped ? ` <span class="badge warn">AI 한도</span>` : ""}</td><td class="n">${h.crawled_new ?? "-"}</td><td class="n">${h.ai_judged ?? "-"}</td><td class="n">${h.google ?? "-"}</td><td class="n">${h.found ?? "-"}</td></tr>`).join("")}</table></div>`;
 }
 </script>
 </body>

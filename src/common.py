@@ -18,6 +18,7 @@ DICT = ROOT / "dict"
 WORKS = DICT / "works.json"         # 작품 ID → 정식 제목 등
 ALIASES = DICT / "aliases.json"     # 정규화 키 → 작품 ID
 SEARCH_CACHE = DICT / "search_cache.json"
+ALIAS_DATES = DICT / "alias_dates.json"   # 줄임말 등록일·경로
 AUTHORS = DICT / "authors.json"     # 작가 이름 목록 (작품으로 집계·검색하지 않음)
 RESEARCH_REQ = DICT / "research_request.json"   # 있으면 다음 실행 때 상위 미확인 집중 재검색
 OVERRIDES = ROOT / "review" / "overrides.csv"

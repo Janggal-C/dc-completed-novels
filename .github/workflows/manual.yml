@@ -1,0 +1,63 @@
+name: 줄임말 직접 입력 반영
+
+# 보고서 페이지의 '저장' → 저장소 주인이 연 "[줄임말]" 이슈를 읽어 사전에 반영하고 이슈를 닫는다
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily            # 매일 실행과 겹치지 않게 같은 대기열 사용
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    if: github.event.issue.user.login == github.repository_owner && startsWith(github.event.issue.title, '[줄임말]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+    env:
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      MANUAL_INPUT: ${{ github.event.issue.body }}
+      MANUAL_RESULT: /tmp/manual_result.txt
+      GH_TOKEN: ${{ github.token }}
+      ISSUE: ${{ github.event.issue.number }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: npm install -g @anthropic-ai/claude-code
+      - name: 사전에 반영
+        run: |
+          python -m src.manual
+          python -m src.main report
+      - name: 저장
+        run: bash scripts/commit.sh "줄임말 직접 입력 #${ISSUE}"
+      - name: 결과 댓글 + 이슈 닫기
+        if: always()
+        run: |
+          if [ -s "$MANUAL_RESULT" ]; then
+            { echo "반영했습니다 ✅"; echo; cat "$MANUAL_RESULT"; } > "$RUNNER_TEMP/c.md"
+          else
+            echo "반영하지 못했습니다 ❌ (한 줄에 하나씩 '줄임말 = 제목' 형식인지 확인해 주세요)" > "$RUNNER_TEMP/c.md"
+          fi
+          gh issue comment "$ISSUE" --repo "$GITHUB_REPOSITORY" --body-file "$RUNNER_TEMP/c.md"
+          gh issue close "$ISSUE" --repo "$GITHUB_REPOSITORY"
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
+      - run: sleep 15
+      - uses: actions/deploy-pages@v4
+        continue-on-error: true

@@ -14,7 +14,22 @@ from .resolve import (decide, load_overrides, load_reviews, needs_ai, not_a_work
                       resolve_id, work_name)
 
 
-def add_work(works, aliases, title, alias=None, **info):
+NEW_ALIASES = {}   # 이번 실행에서 새로 생긴 줄임말 → 경로(구글/AI/직접 입력)
+
+
+def save_alias_dates(via="검색"):
+    """새 줄임말의 등록일·경로를 dict/alias_dates.json 에 남긴다 (지표 탭 '신규 줄임말'용)"""
+    from .common import ALIAS_DATES
+    d = read_json(ALIAS_DATES, {})
+    today = now_kst().strftime("%Y-%m-%d")
+    for k, v in NEW_ALIASES.items():
+        d.setdefault(k, {"date": today, "via": v or via})
+    write_json(ALIAS_DATES, d)
+    NEW_ALIASES.clear()
+
+
+def add_work(works, aliases, title, alias=None, via=None, force=False, **info):
+    """작품 등록 + 줄임말 연결. force=True면 기존 연결을 덮어씀(사용자 직접 입력)"""
     wid = norm_key(title)
     if not wid:
         return None
@@ -29,7 +44,13 @@ def add_work(works, aliases, title, alias=None, **info):
             w[k] = v
     aliases.setdefault(wid, wid)
     if alias and norm_key(alias):
-        aliases.setdefault(norm_key(alias), wid)
+        k = norm_key(alias)
+        if k not in aliases or (force and aliases[k] != wid):
+            NEW_ALIASES[k] = via
+        if force:
+            aliases[k] = wid
+        else:
+            aliases.setdefault(k, wid)
     return wid
 
 
@@ -163,7 +184,7 @@ def run(cfg=None):
                         unknown.pop(key, None)
                         print(f"  작가로 분류: {a}", flush=True)
                     elif r.get("found") and r.get("title"):
-                        wid = add_work(works, aliases, r["title"], alias=a, author=r.get("author"),
+                        wid = add_work(works, aliases, r["title"], alias=a, via="google", author=r.get("author"),
                                        platform=r.get("platform"), source=r.get("url"))
                         if r.get("confidence") != "high" and wid:
                             works[wid]["needs_review"] = True
@@ -237,7 +258,7 @@ def run(cfg=None):
                 authors_list.append(u["alias"])
                 continue
             if r.get("found") and r.get("title"):
-                wid = add_work(works, aliases, r["title"], alias=u["alias"], author=r.get("author"),
+                wid = add_work(works, aliases, r["title"], alias=u["alias"], via=kind, author=r.get("author"),
                                platform=r.get("platform"), source=r.get("url"))
                 if r.get("confidence") != "high" and wid:
                     works[wid]["needs_review"] = True
@@ -255,6 +276,7 @@ def run(cfg=None):
     write_json(SEARCH_CACHE, cache)
     write_json(AUTHORS, sorted(set(authors_list)))
     reload_authors()
+    save_alias_dates()
     print(f"판정 완료: AI {stats['ai_judged']}건 (캐시 재사용 {stats['ai_cached']}건), "
           f"줄임말 검색 {stats['searched']}건 중 {stats['found']}건 찾음")
     return stats

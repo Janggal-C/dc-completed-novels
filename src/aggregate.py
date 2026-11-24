@@ -1,7 +1,7 @@
 """전체 데이터로 보고서 JSON(docs/data/report.json)을 만든다. 매번 처음부터 다시 계산."""
 from collections import defaultdict
 
-from .common import (AI_DIR, ALIASES, METRICS, POSTS_DIR, SEARCH_CACHE, SITE_DATA, STATE,
+from .common import (AI_DIR, ALIAS_DATES, ALIASES, AUTHORS, DICT, METRICS, POSTS_DIR, SEARCH_CACHE, SITE_DATA, STATE,
                      WORKS, load_config, load_monthly, norm_key, now_kst, quarter_of,
                      read_json, read_jsonl, write_json)
 from .resolve import decide, load_reviews, resolve_id, work_name
@@ -130,8 +130,36 @@ def run(cfg=None, run_stats=None, partial=False):
           "needs_review": bool(works.get(w, {}).get("needs_review"))}
          for a, w in aliases.items() if a != w],
         key=lambda d: d["alias"])
+    # 줄임말 사전·구글 검색 지표
+    from datetime import timedelta as _td
+    now = now_kst()
+    dates = read_json(ALIAS_DATES, {})
+    week_ago = (now - _td(days=7)).strftime("%Y-%m-%d")
+    recent = sorted(((k, v) for k, v in dates.items() if k in aliases), key=lambda kv: kv[1]["date"], reverse=True)
+    usage = read_json(DICT / "search_usage.json", {})
+    jc = cfg["judge"]
+    dict_stats = {
+        "aliases": sum(1 for a, w in aliases.items() if a != w),
+        "works": len(works),
+        "authors": len(read_json(AUTHORS, [])),
+        "unresolved": len(unresolved),
+        "unresolved_ranked": sum(1 for u in unresolved.values() if u["n"] >= 2),
+        "new_today": sum(1 for _, v in recent if v["date"] == now.strftime("%Y-%m-%d")),
+        "new_week": sum(1 for _, v in recent if v["date"] >= week_ago),
+        "needs_review": sum(1 for w in works.values() if w.get("needs_review")),
+        "recent": [{"alias": k, "title": works.get(aliases[k], {}).get("title", ""), "date": v["date"], "via": v["via"]}
+                   for k, v in recent[:30]],
+    }
+    google_stats = {
+        "month": usage.get(now.strftime("%Y-%m"), 0), "today": usage.get(now.strftime("%Y-%m-%d"), 0),
+        "month_limit": jc.get("google_monthly_limit", 0), "day_limit": jc.get("google_daily_limit", 0),
+        "free_quota": 250,
+        "daily": sorted([[k, v] for k, v in usage.items() if len(k) == 10])[-14:],
+    }
     report = {
         "updated": now_kst().strftime("%Y-%m-%d %H:%M"),
+        "dict_stats": dict_stats, "google": google_stats,
+        "repo": "answhdtjr736-spec/dc-completed-novels",
         "gallery": cfg["gallery_id"],
         "data_start": first_month,
         "backfill_done": state.get("backfill", {}).get("done", False),
