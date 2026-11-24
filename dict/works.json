@@ -1,10 +1,50 @@
 {
+ "21세기반로환동전": {
+  "added": "2026-11-24",
+  "author": "검미성",
+  "needs_review": true,
+  "platform": "문피아",
+  "source": "https://ssn.so/series/127825/",
+  "title": "21세기 반로환동전"
+ },
+ "s급히어로여자친구를빌려드립니다": {
+  "added": "2026-11-24",
+  "author": "왕뚜껑국물라볶이",
+  "needs_review": true,
+  "platform": "노벨피아",
+  "source": "https://novelpia.com/novel/441811",
+  "title": "S급 히어로 여자친구를 빌려드립니다"
+ },
+ "갤질하는천재의사": {
+  "added": "2026-11-24",
+  "author": "렛츠두딧스(Let's Do Its)",
+  "needs_review": true,
+  "platform": "노벨피아",
+  "source": "https://novelpia.com/novel/372180",
+  "title": "갤질하는 천재 의사"
+ },
+ "괴담동아리": {
+  "added": "2026-11-24",
+  "author": "미확인",
+  "needs_review": true,
+  "platform": "미확인",
+  "source": "https://page.kakao.com/content/64320961",
+  "title": "괴담 동아리"
+ },
  "괴담에휘말렸다": {
   "added": "2026-11-24",
   "author": "김갈비뼈",
+  "needs_review": true,
   "platform": "노벨피아",
   "source": "https://namu.wiki/w/%EA%B4%B4%EB%8B%B4%EC%97%90%20%ED%9C%98%EB%A7%90%EB%A0%B8%EB%8B%A4",
   "title": "괴담에 휘말렸다"
+ },
+ "내고향엔무림인이산다": {
+  "added": "2026-11-24",
+  "author": "데이우",
+  "platform": "문피아",
+  "source": "https://www.munpia.com/novel/detail/493263",
+  "title": "내 고향엔 무림인이 산다"
  },
  "댓글보는천재의사": {
   "added": "2026-11-24",
@@ -21,6 +61,29 @@
   "source": "https://namu.wiki/w/%EB%8C%93%EA%B8%80%EC%B0%BD%EC%9D%98%20%EC%B2%9C%EC%9E%AC%20%EB%A7%88%EB%B2%95%EC%82%AC",
   "title": "댓글창의 천재 마법사"
  },
+ "던전갤러리의무시무시한뉴비": {
+  "added": "2026-11-24",
+  "author": "박연진",
+  "platform": "노벨피아",
+  "source": "https://novelpia.com/novel/385221",
+  "title": "던전 갤러리의 무시무시한 뉴비"
+ },
+ "로나좋": {
+  "added": "2026-11-24",
+  "author": "버베나",
+  "needs_review": true,
+  "platform": "노벨피아",
+  "source": "https://gall.dcinside.com/mgallery/board/view/?id=genrenovel&no=12061494",
+  "title": "로나좋"
+ },
+ "로판속호구황태자는이제없다": {
+  "added": "2026-11-24",
+  "author": "민트초코주먹밥",
+  "needs_review": true,
+  "platform": "노벨피아",
+  "source": "https://novelpia.com/novel/419050",
+  "title": "로판 속 호구 황태자는 이제 없다"
+ },
  "마나살돈없어서인방함": {
   "added": "2026-11-24",
   "author": "시엘클레",
@@ -28,6 +91,37 @@
   "platform": "노벨피아",
   "source": "https://novelpia.com/novel/156911",
   "title": "마나 살 돈 없어서 인방함"
+ },
+ "무한회귀자인데썰푼다": {
+  "added": "2026-11-24",
+  "author": "신노아",
+  "needs_review": true,
+  "platform": "카카오페이지·네이버 시리즈",
+  "source": "https://namu.wiki/w/%EB%AC%B4%ED%95%9C%20%ED%9A%8C%EA%B7%80%EC%9E%90%EC%9D%B8%EB%8D%B0%20%EC%8D%B0%20%ED%91%BC%EB%8B%A4",
+  "title": "무한 회귀자인데 썰 푼다"
+ },
+ "반지성주의마왕의세계침략": {
+  "added": "2026-11-24",
+  "author": "뚜근남",
+  "needs_review": true,
+  "platform": "문피아 (네이버 시리즈 공동 연재)",
+  "source": "https://www.munpia.com/novel/detail/423960",
+  "title": "반지성주의 마왕의 세계침략"
+ },
+ "시간을달리는소설가": {
+  "added": "2026-11-24",
+  "author": "피아조아 (미확인)",
+  "needs_review": true,
+  "platform": "미확인",
+  "source": "https://namu.wiki/w/%EC%8B%9C%EA%B0%84%EC%9D%84%20%EB%8B%AC%EB%A6%AC%EB%8A%94%20%EC%86%8C%EC%84%A4%EA%B0%80",
+  "title": "시간을 달리는 소설가"
+ },
+ "아이돌이군필을숨김": {
+  "added": "2026-11-24",
+  "author": "자몽펀치",
+  "platform": "문피아",
+  "source": "https://namu.wiki/w/%EC%95%84%EC%9D%B4%EB%8F%8C%EC%9D%B4%20%EA%B5%B0%ED%95%84%EC%9D%84%20%EC%88%A8%EA%B9%80",
+  "title": "아이돌이 군필을 숨김"
  },
  "아카데미생존갤러리": {
   "added": "2026-11-24",
@@ -37,9 +131,31 @@
   "source": "https://novelpia.com/novel/380218",
   "title": "아카데미 생존 갤러리"
  },
+ "아카데미흑막의딸이되었다": {
+  "added": "2026-11-24",
+  "author": "희귀한테디베어",
+  "platform": "카카오페이지",
+  "source": "https://page.kakao.com/content/67955727",
+  "title": "아카데미 흑막의 딸이 되었다"
+ },
+ "아포칼립스에집을숨김": {
+  "added": "2026-11-24",
+  "author": "로드워리어",
+  "platform": "문피아",
+  "source": "https://novel.munpia.com/342817",
+  "title": "아포칼립스에 집을 숨김"
+ },
+ "악수를두다": {
+  "added": "2026-11-24",
+  "author": "어두운글",
+  "platform": "문피아(원연재), 리디, 카카오페이지",
+  "source": "https://ridibooks.com/books/425318430",
+  "title": "악수를 두다"
+ },
  "약먹는천재마법사": {
   "added": "2026-11-24",
   "author": "글근육",
+  "needs_review": true,
   "platform": "MRBLUE",
   "source": "https://namu.wiki/w/%EC%95%BD%EB%A8%B9%EB%8A%94%20%EC%B2%9C%EC%9E%AC%EB%A7%88%EB%B2%95%EC%82%AC",
   "title": "약먹는 천재마법사"
@@ -57,6 +173,21 @@
   "platform": "노벨피아",
   "source": "https://novelpia.com/novel/275975",
   "title": "전 버튜버가 하고 싶은데요"
+ },
+ "전쟁영웅의비밀을나만알아": {
+  "added": "2026-11-24",
+  "author": "망고킴",
+  "needs_review": true,
+  "platform": "카카오페이지",
+  "source": "https://www.newswell.co.kr/news/articleView.html?idxno=22953",
+  "title": "전쟁영웅의 비밀을 나만 알아"
+ },
+ "죽었다깨어도수선": {
+  "added": "2026-11-24",
+  "author": "돌마늘",
+  "platform": "노벨피아",
+  "source": "https://namu.wiki/w/%EC%A3%BD%EC%97%88%EB%8B%A4%20%EA%B9%A8%EC%96%B4%EB%8F%84%20%EC%88%98%EC%84%A0",
+  "title": "죽었다 깨어도 수선"
  },
  "프롤로그에서죽는히로인에빙의했다": {
   "added": "2026-11-24",
@@ -80,5 +211,12 @@
   "platform": "노벨피아",
   "source": "https://novelpia.com/novel/403536",
   "title": "해방노예인데 주인이 집착한다"
+ },
+ "히어로가집착하는악당이되었다": {
+  "added": "2026-11-24",
+  "author": "서은하",
+  "platform": "노벨피아(원작) / 카카오페이지·카카오웹툰(웹툰)",
+  "source": "https://namu.wiki/w/%ED%9E%88%EC%96%B4%EB%A1%9C%EA%B0%80%20%EC%A7%91%EC%B0%A9%ED%95%98%EB%8A%94%20%EC%95%85%EB%8B%B9%EC%9D%B4%20%EB%90%98%EC%97%88%EB%8B%A4",
+  "title": "히어로가 집착하는 악당이 되었다"
  }
 }
