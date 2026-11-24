@@ -8,7 +8,7 @@ import sys
 from datetime import datetime, timedelta
 
 from . import ai
-from .common import (AI_DIR, ALIASES, POSTS_DIR, SEARCH_CACHE, WORKS, load_config,
+from .common import (AI_DIR, ALIASES, POSTS_DIR, SEARCH_CACHE, WORKS, checkpoint, load_config,
                      load_monthly, merge_monthly, norm_key, now_kst, read_json, write_json)
 from .resolve import decide, load_overrides, needs_ai, resolve_id, work_name
 
@@ -71,6 +71,8 @@ def run(cfg=None):
                 stats["ai_judged"] += 1
         merge_monthly(AI_DIR, new_rows)   # 묶음마다 저장 → 중간에 멈춰도 손실 없음
         new_rows = []
+        print(f"  AI 판정 {stats['ai_judged']}/{len(todo)}건", flush=True)
+        checkpoint(f"AI 판정 중간 저장 {stats['ai_judged']}건")
     merge_monthly(AI_DIR, new_rows)
     results = load_monthly(AI_DIR)
 

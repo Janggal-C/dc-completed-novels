@@ -93,7 +93,8 @@ fetch("data/report.json?" + Date.now()).then(r => r.json()).then(d => {
   R = d;
   document.getElementById("meta").innerHTML =
     `마지막 갱신 ${esc(d.updated)} · 데이터 시작 ${esc(d.data_start || "-")}` +
-    (d.backfill_done ? "" : ` · <span class="badge warn">초기 수집 진행 중</span>`);
+    (d.backfill_done ? "" : ` · <span class="badge warn">초기 수집 진행 중 (${esc(d.data_start)} → 목표 ${esc((d.backfill_cutoff || "").slice(0, 7))})</span>`) +
+    (d.in_progress ? ` · <span class="badge">실행 중 · 중간 결과</span>` : "");
   renderTabs(); render();
 }).catch(() => { VIEW.innerHTML = `<div class="empty">아직 데이터가 없습니다. 첫 실행 후 표시됩니다.</div>`; });
 

@@ -106,3 +106,29 @@ def norm_key(name):
 def quarter_of(month):
     y, m = month.split("-")
     return f"{y}-Q{(int(m) - 1) // 3 + 1}"
+
+
+_last_checkpoint = [0.0]
+
+
+def checkpoint(message, every_seconds=600, force=False):
+    """GitHub Actions에서 실행 중이면 10분마다 중간 결과를 보고서까지 만들어 커밋·푸시한다.
+    → 실행 도중에도 보고서 페이지에서 진행 상황을 볼 수 있고, 중간에 끊겨도 거기까지는 남는다."""
+    import subprocess
+    import time
+    if not os.environ.get("GITHUB_ACTIONS"):
+        return
+    now = time.time()
+    if not _last_checkpoint[0]:
+        _last_checkpoint[0] = now
+        if not force:
+            return
+    if not force and now - _last_checkpoint[0] < every_seconds:
+        return
+    _last_checkpoint[0] = now
+    try:
+        from . import aggregate
+        aggregate.run(partial=True)
+    except Exception as e:  # 보고서 실패해도 데이터 커밋은 진행
+        print(f"  (중간 보고서 생성 실패: {e})", flush=True)
+    subprocess.run(["bash", str(ROOT / "scripts" / "commit.sh"), message], cwd=ROOT)

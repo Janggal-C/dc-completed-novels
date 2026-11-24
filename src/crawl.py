@@ -18,7 +18,7 @@ from datetime import timedelta
 import requests
 from bs4 import BeautifulSoup
 
-from .common import (POSTS_DIR, STATE, load_config, merge_monthly, now_kst,
+from .common import (POSTS_DIR, STATE, checkpoint, load_config, merge_monthly, now_kst,
                      read_json, write_json)
 
 BASE = "https://gall.dcinside.com/mgallery/board/lists/"
@@ -201,11 +201,13 @@ def run(cfg=None):
             bf["search_pos"], bf["page"] = pos, p + 1
             if len(keep) < len(rows):
                 break  # 기준일 도달
-            if len(buf) >= 200:
+            print(f"  초기수집 {stats['backfill']}건 · 현재 {rows[-1]['date'][:10]} (목표 {bf['cutoff']})", flush=True)
+            if len(buf) >= 100:
                 merge_monthly(POSTS_DIR, buf)
                 buf = []
                 state["newest_no"] = state["newest_no"] or top
                 write_json(STATE, state)
+                checkpoint(f"초기수집 중간 저장 ~{rows[-1]['date'][:10]}")
             if time.time() > deadline:
                 finished = False
                 break

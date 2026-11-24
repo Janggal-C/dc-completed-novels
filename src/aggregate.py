@@ -8,7 +8,7 @@ from .resolve import decide, load_overrides, resolve_id, work_name
 from .rules import RULES_VERSION
 
 
-def run(cfg=None, run_stats=None):
+def run(cfg=None, run_stats=None, partial=False):
     cfg = cfg or load_config()
     rc = cfg["report"]
     posts = load_monthly(POSTS_DIR)
@@ -129,6 +129,8 @@ def run(cfg=None, run_stats=None):
         "gallery": cfg["gallery_id"],
         "data_start": first_month,
         "backfill_done": state.get("backfill", {}).get("done", False),
+        "backfill_cutoff": state.get("backfill", {}).get("cutoff"),
+        "in_progress": partial,
         "months": months, "monthly": monthly, "quarterly": quarterly, "trend": trend,
         "metrics": metrics, "history": history[-60:],
         "review": sorted(review, key=lambda r: -r["no"])[:300],
