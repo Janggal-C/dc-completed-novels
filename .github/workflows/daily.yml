@@ -63,6 +63,9 @@ jobs:
         with:
           path: docs
           name: pages-crawl
+      - name: 업로드 반영 대기
+        if: always() && (inputs.step == 'all' || inputs.step == '')
+        run: sleep 15
       - uses: actions/deploy-pages@v4
         if: always() && (inputs.step == 'all' || inputs.step == '')
         continue-on-error: true

@@ -48,10 +48,20 @@ def _call(prompt, model, allow_search=False, max_turns=3, timeout=600):
 
 
 def _json_from(text):
-    m = re.search(r"\[.*\]", text, re.S)
-    if not m:
-        raise AIError(f"JSON 배열을 찾지 못함: {text[:200]}")
-    return json.loads(m.group(0))
+    """응답에서 JSON 배열을 찾아 파싱. 앞뒤 설명문·코드블록·여러 배열이 섞여 있어도 처리."""
+    dec = json.JSONDecoder()
+    best = None
+    for m in re.finditer(r"\[", text or ""):
+        try:
+            obj, _ = dec.raw_decode(text[m.start():])
+        except json.JSONDecodeError:
+            continue
+        if isinstance(obj, list) and obj and all(isinstance(x, dict) for x in obj):
+            if best is None or len(obj) > len(best):
+                best = obj
+    if best is None:
+        raise AIError(f"JSON 배열을 찾지 못함: {(text or '')[:200]}")
+    return best
 
 
 CLASSIFY_PROMPT = """너는 디시인사이드 장르소설(웹소설) 갤러리 글 제목을 분류한다.

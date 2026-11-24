@@ -160,6 +160,9 @@ def run(cfg=None):
             else:
                 cache[key] = {"alias": u["alias"], "checked": today.strftime("%Y-%m-%d"),
                               "examples": u["titles"]}
+        write_json(WORKS, works)            # 검색 묶음마다 저장 → 중간에 오류가 나도 찾은 건 남음
+        write_json(ALIASES, aliases)
+        write_json(SEARCH_CACHE, cache)
 
     write_json(WORKS, works)
     write_json(ALIASES, aliases)
