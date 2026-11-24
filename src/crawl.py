@@ -39,6 +39,7 @@ class Blocked(Exception):
 # ---------- 파싱 ----------
 
 def _writer_hash(key):
+    # 작성자 식별값(고닉 ID 또는 유동 IP 앞자리)은 디시에 공개된 값이라 원문 대신 해시만 저장
     salt = os.environ.get("WRITER_SALT", "dc-completed-novels-default-salt")
     return hashlib.sha256((salt + "|" + key).encode()).hexdigest()[:10] if key else ""
 
