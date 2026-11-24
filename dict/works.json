@@ -1136,14 +1136,6 @@
   "status_source": "google-bulk",
   "title": "빚을 져서라도 세상은 구해야 할 거 아니야"
  },
- "사이버펑크10년차드래곤이찾아왔다": {
-  "added": "2026-11-24",
-  "needs_review": true,
-  "platform": "노벨피아",
-  "source": "https://novelpia.com/novel/311813",
-  "status_checked": "2026-11-24",
-  "title": "사이버 펑크 10년 차, 드래곤이 찾아왔다"
- },
  "사이버펑크게임속성녀가되었다": {
   "added": "2026-11-24",
   "platform": "노벨피아",
@@ -1153,6 +1145,7 @@
  "사이버펑크속드래곤이되었다": {
   "added": "2026-11-24",
   "author": "짱빠른토끼",
+  "needs_review": false,
   "platform": "노벨피아",
   "source": "https://namu.wiki/w/%EC%82%AC%EC%9D%B4%EB%B2%84%ED%8E%91%ED%81%AC%20%EC%86%8D%20%EB%93%9C%EB%9E%98%EA%B3%A4%EC%9D%B4%20%EB%90%98%EC%97%88%EB%8B%A4",
   "status_checked": "2026-11-24",

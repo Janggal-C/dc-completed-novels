@@ -5,7 +5,7 @@
  "dict_stats": {
   "aliases": 288,
   "authors": 30,
-  "needs_review": 85,
+  "needs_review": 84,
   "new_today": 288,
   "new_week": 288,
   "recent": [
@@ -192,7 +192,7 @@
   ],
   "unresolved": 937,
   "unresolved_ranked": 22,
-  "works": 265
+  "works": 264
  },
  "dictionary": [
   {
@@ -1007,9 +1007,9 @@
   },
   {
    "alias": "사펑드래곤",
-   "author": "",
-   "needs_review": true,
-   "title": "사이버 펑크 10년 차, 드래곤이 찾아왔다"
+   "author": "짱빠른토끼",
+   "needs_review": false,
+   "title": "사이버펑크 속 드래곤이 되었다"
   },
   {
    "alias": "사펑성녀",
@@ -5436,13 +5436,13 @@
      0,
      0,
      3,
-     4,
+     7,
      0,
      0,
      0
     ],
     "status": "완결",
-    "status_reason": "07/31부터 3일간 7명이 완결 언급",
+    "status_reason": "07/31부터 3일간 8명이 완결 언급",
     "title": "사이버펑크 속 드래곤이 되었다",
     "unresolved": false,
     "writers": 3
@@ -6654,6 +6654,44 @@
     "writers": 76
    },
    {
+    "author": "짱빠른토끼",
+    "before_start": false,
+    "completion_date": "2026-07-31",
+    "completion_month": "2026-07",
+    "id": "사이버펑크속드래곤이되었다",
+    "mentions": 7,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 12664878,
+      "title": "ts) 사펑드 완결까지 본사람있나?"
+     },
+     {
+      "no": 12665352,
+      "title": "사펑드 완결 무난하게 났는지요?"
+     },
+     {
+      "no": 12676236,
+      "title": "사펑드래곤 완결났네"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     3,
+     7,
+     0,
+     0,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "07/31부터 3일간 8명이 완결 언급",
+    "title": "사이버펑크 속 드래곤이 되었다",
+    "unresolved": false,
+    "writers": 7
+   },
+   {
     "author": "글근육",
     "before_start": false,
     "completion_date": "2026-06-26",
@@ -6958,44 +6996,6 @@
     "writers": 4
    },
    {
-    "author": "짱빠른토끼",
-    "before_start": false,
-    "completion_date": "2026-07-31",
-    "completion_month": "2026-07",
-    "id": "사이버펑크속드래곤이되었다",
-    "mentions": 4,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 12664878,
-      "title": "ts) 사펑드 완결까지 본사람있나?"
-     },
-     {
-      "no": 12665352,
-      "title": "사펑드 완결 무난하게 났는지요?"
-     },
-     {
-      "no": 12668201,
-      "title": "ts)사펑드 완결났네"
-     }
-    ],
-    "series": [
-     0,
-     0,
-     3,
-     4,
-     0,
-     0,
-     0
-    ],
-    "status": "완결",
-    "status_reason": "07/31부터 3일간 7명이 완결 언급",
-    "title": "사이버펑크 속 드래곤이 되었다",
-    "unresolved": false,
-    "writers": 4
-   },
-   {
     "author": "합스힙스",
     "before_start": false,
     "completion_date": "2026-08-06",
@@ -7106,44 +7106,6 @@
     "status": "완결",
     "status_reason": "08/05부터 3일간 3명이 완결 언급",
     "title": "마법소녀가 승리한 세계",
-    "unresolved": false,
-    "writers": 3
-   },
-   {
-    "author": "",
-    "before_start": false,
-    "completion_date": "2026-08-01",
-    "completion_month": "2026-08",
-    "id": "사이버펑크10년차드래곤이찾아왔다",
-    "mentions": 3,
-    "needs_review": true,
-    "new": true,
-    "samples": [
-     {
-      "no": 12676236,
-      "title": "사펑드래곤 완결났네"
-     },
-     {
-      "no": 12826916,
-      "title": "사펑드래곤 완결 잘났음?"
-     },
-     {
-      "no": 12664457,
-      "title": "뭐야 사펑드래곤 완결났내?"
-     }
-    ],
-    "series": [
-     0,
-     0,
-     0,
-     3,
-     0,
-     0,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "완결 글 비율 100%, 몰린 시점 없음",
-    "title": "사이버 펑크 10년 차, 드래곤이 찾아왔다",
     "unresolved": false,
     "writers": 3
    },
@@ -8308,6 +8270,36 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
     "title": "이세계 TRPG 게임마스터",
+    "unresolved": false,
+    "writers": 1
+   },
+   {
+    "author": "피아조아",
+    "before_start": false,
+    "completion_date": "2026-06-24",
+    "completion_month": "2026-06",
+    "id": "임기첫날에게이트가열렸다",
+    "mentions": 1,
+    "needs_review": true,
+    "new": false,
+    "samples": [
+     {
+      "no": 12778265,
+      "title": "시발 임기첫날 완결볼때 느낌딱이거였음"
+     }
+    ],
+    "series": [
+     0,
+     6,
+     0,
+     1,
+     3,
+     0,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "06/24부터 3일간 6명이 완결 언급",
+    "title": "임기 첫날에 게이트가 열렸다",
     "unresolved": false,
     "writers": 1
    }
@@ -12656,16 +12648,6 @@
    "via": "serper"
   },
   {
-   "alias": "사펑드래곤",
-   "checked": "2026-11-24",
-   "examples": [
-    "사펑드래곤 완결 잘났음?",
-    "사펑드래곤 완결났네",
-    "뭐야 사펑드래곤 완결났내?"
-   ],
-   "via": "ai"
-  },
-  {
    "alias": "성적 안나와서 급",
    "checked": "2026-11-24",
    "examples": [
@@ -14969,6 +14951,44 @@
     "writers": 11
    },
    {
+    "author": "짱빠른토끼",
+    "before_start": false,
+    "completion_date": "2026-07-31",
+    "completion_month": "2026-07",
+    "id": "사이버펑크속드래곤이되었다",
+    "mentions": 10,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 12660672,
+      "title": "ts)사펑드 완결!!!!!!!!!!"
+     },
+     {
+      "no": 12660707,
+      "title": "사펑드가 완결이 났구나"
+     },
+     {
+      "no": 12664878,
+      "title": "ts) 사펑드 완결까지 본사람있나?"
+     }
+    ],
+    "series": [
+     0,
+     0,
+     3,
+     7,
+     0,
+     0,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "07/31부터 3일간 8명이 완결 언급",
+    "title": "사이버펑크 속 드래곤이 되었다",
+    "unresolved": false,
+    "writers": 10
+   },
+   {
     "author": "데이우",
     "before_start": false,
     "completion_date": "2026-09-21",
@@ -15155,44 +15175,6 @@
     "status": "완결",
     "status_reason": "05/28부터 3일간 26명이 완결 언급",
     "title": "대마법사였던것은 다시 대마법사를 꿈꾼다",
-    "unresolved": false,
-    "writers": 7
-   },
-   {
-    "author": "짱빠른토끼",
-    "before_start": false,
-    "completion_date": "2026-07-31",
-    "completion_month": "2026-07",
-    "id": "사이버펑크속드래곤이되었다",
-    "mentions": 7,
-    "needs_review": false,
-    "new": false,
-    "samples": [
-     {
-      "no": 12660672,
-      "title": "ts)사펑드 완결!!!!!!!!!!"
-     },
-     {
-      "no": 12660707,
-      "title": "사펑드가 완결이 났구나"
-     },
-     {
-      "no": 12664878,
-      "title": "ts) 사펑드 완결까지 본사람있나?"
-     }
-    ],
-    "series": [
-     0,
-     0,
-     3,
-     4,
-     0,
-     0,
-     0
-    ],
-    "status": "완결",
-    "status_reason": "07/31부터 3일간 7명이 완결 언급",
-    "title": "사이버펑크 속 드래곤이 되었다",
     "unresolved": false,
     "writers": 7
    },
@@ -16451,44 +16433,6 @@
     "writers": 3
    },
    {
-    "author": "",
-    "before_start": false,
-    "completion_date": "2026-08-01",
-    "completion_month": "2026-08",
-    "id": "사이버펑크10년차드래곤이찾아왔다",
-    "mentions": 3,
-    "needs_review": true,
-    "new": false,
-    "samples": [
-     {
-      "no": 12676236,
-      "title": "사펑드래곤 완결났네"
-     },
-     {
-      "no": 12826916,
-      "title": "사펑드래곤 완결 잘났음?"
-     },
-     {
-      "no": 12664457,
-      "title": "뭐야 사펑드래곤 완결났내?"
-     }
-    ],
-    "series": [
-     0,
-     0,
-     0,
-     3,
-     0,
-     0,
-     0
-    ],
-    "status": "예전 완결",
-    "status_reason": "완결 글 비율 100%, 몰린 시점 없음",
-    "title": "사이버 펑크 10년 차, 드래곤이 찾아왔다",
-    "unresolved": false,
-    "writers": 3
-   },
-   {
     "author": "커피는카누",
     "before_start": false,
     "completion_date": "2026-08-25",
@@ -16637,6 +16581,44 @@
     "status": "예전 완결",
     "status_reason": "완결 글 비율 86%, 몰린 시점 없음",
     "title": "아포칼립스에 집을 숨김",
+    "unresolved": false,
+    "writers": 3
+   },
+   {
+    "author": "어두운글",
+    "before_start": false,
+    "completion_date": "2026-06-18",
+    "completion_month": "2026-06",
+    "id": "악수를두다",
+    "mentions": 3,
+    "needs_review": false,
+    "new": false,
+    "samples": [
+     {
+      "no": 12891532,
+      "title": "완결 홍보) 악수를 두다 완결 홍보입니다."
+     },
+     {
+      "no": 12513430,
+      "title": "와 악수를 두다 완결 났었네"
+     },
+     {
+      "no": 12583130,
+      "title": "그러고보니 악수를 두다 완결났었지"
+     }
+    ],
+    "series": [
+     0,
+     5,
+     2,
+     0,
+     1,
+     0,
+     0
+    ],
+    "status": "완결",
+    "status_reason": "06/18부터 3일간 4명이 완결 언급",
+    "title": "악수를 두다",
     "unresolved": false,
     "writers": 3
    }
@@ -20632,7 +20614,7 @@
  "status_counts": {
   "보류": 26,
   "연재중": 36,
-  "예전 완결": 82,
+  "예전 완결": 81,
   "완결": 46
  },
  "trend": [
@@ -22341,5 +22323,5 @@
    ]
   }
  ],
- "updated": "2026-11-24 19:32"
+ "updated": "2026-11-24 21:36"
 }
