@@ -73,11 +73,10 @@ def run(cfg=None, run_stats=None):
 
     def entry(wid, plist, period):
         writers = {p["writer"] for p in plist}
-        best = sorted(plist, key=lambda p: -(p["recs"] * 3 + p["replies"]))[:3]
+        best = sorted(plist, key=lambda p: -p.get("replies", 0))[:3]
         w = works.get(wid, {})
         return {"id": wid, "title": title_of(wid), "author": w.get("author", ""),
                 "mentions": len(plist), "writers": len(writers),
-                "views": sum(p["views"] for p in plist),
                 "new": completion[wid][:7] == period if len(period) == 7 else quarter_of(completion[wid]) == period,
                 "completion_month": completion[wid],
                 "unresolved": wid.startswith("?"), "needs_review": bool(w.get("needs_review")),
@@ -91,7 +90,7 @@ def run(cfg=None, run_stats=None):
         out = {}
         for period, by_work in groups.items():
             rows = [entry(wid, pl, period) for wid, pl in by_work.items()]
-            rows.sort(key=lambda e: (-e["writers"], -e["mentions"], -e["views"]))
+            rows.sort(key=lambda e: (-e["writers"], -e["mentions"], e["title"]))
             out[period] = rows[: rc["top_n"]]
         return dict(sorted(out.items(), reverse=True))
 

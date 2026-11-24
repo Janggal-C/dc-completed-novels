@@ -50,7 +50,7 @@ AI 판정도 하루 상한(`max_titles_per_run`)씩 나눠 처리합니다.
 ## 폴더 구조
 
 ```
-data/posts/YYYY-MM.jsonl  월별 수집 글 (글번호·제목·날짜·작성자 해시·조회·추천·댓글)
+data/posts/YYYY-MM.jsonl  월별 수집 글 (글번호·제목·날짜·작성자 해시·댓글 수)
 data/ai/YYYY-MM.jsonl     월별 AI 판정 결과
 data/state.json           마지막 글번호, 초기 수집 진행 위치
 data/metrics.jsonl        실행별 지표

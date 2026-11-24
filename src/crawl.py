@@ -95,8 +95,6 @@ def parse_list(html, today=None):
             "title": a.get_text(" ", strip=True),
             "date": date,
             "writer": _writer_hash(wkey),
-            "views": _int(tr.select_one("td.gall_count").get_text() if tr.select_one("td.gall_count") else ""),
-            "recs": _int(tr.select_one("td.gall_recommend").get_text() if tr.select_one("td.gall_recommend") else ""),
             "replies": _int(reply.get_text() if reply else ""),
         })
     nxt = soup.select_one("a.search_next")
