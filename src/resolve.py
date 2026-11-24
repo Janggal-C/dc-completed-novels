@@ -3,7 +3,7 @@ import csv
 import hashlib
 
 from .common import OVERRIDES, norm_key
-from .rules import classify, extract_work
+from .rules import NOT_WORKS, classify, extract_work
 
 
 def load_overrides():
@@ -51,11 +51,16 @@ def decide(post, ai, ov):
 
 
 def work_name(post, ai, ov):
+    """→ (제목에 쓰인 작품명, AI가 아는 정식 제목). 작품명이 아니면 ('', '')"""
     if ov and ov.get("work_title"):
         return ov["work_title"], ov["work_title"]
     if ai and ai.get("work"):
-        return ai["work"], ai.get("guess", "")
-    return extract_work(post["title"]), ""
+        name, guess = ai["work"], ai.get("guess", "")
+    else:
+        name, guess = extract_work(post["title"]), ""
+    if norm_key(name) in NOT_WORKS:
+        name = ""
+    return name, guess
 
 
 def resolve_id(name, guess, aliases):

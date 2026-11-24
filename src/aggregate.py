@@ -46,12 +46,15 @@ def run(cfg=None, run_stats=None, partial=False):
         if d["label"] != "complete":
             continue
         name, guess = work_name(p, r, ov)
+        if not norm_key(name):
+            m["no_work"] = m.get("no_work", 0) + 1   # 작품을 특정할 수 없는 완결 글 → 순위에서 제외
+            continue
         wid = resolve_id(name, guess, aliases)
         if not wid:
-            key = norm_key(name) or "(작품명 없음)"
+            key = norm_key(name)
             wid = "?" + key
             u = unresolved[key]
-            u["alias"] = name or "(작품명 없음)"
+            u["alias"] = name
             u["n"] += 1
             if len(u["titles"]) < 3:
                 u["titles"].append(p["title"])
@@ -108,7 +111,7 @@ def run(cfg=None, run_stats=None, partial=False):
         "rule_coverage": pct(m["rule_decisive"], m["total"]),
         "agreement": pct(m["agree"], m["both"]), "compared": m["both"],
         "gold": m["gold"], "rule_accuracy": pct(m["rule_ok"], m["gold"]),
-        "ai_accuracy": pct(m["ai_ok"], m["gold"]), "review_open": len(review),
+        "ai_accuracy": pct(m["ai_ok"], m["gold"]), "review_open": len(review), "no_work": m.get("no_work", 0),
         "rules_version": RULES_VERSION, "mode": cfg["judge"]["mode"],
     }
     history = read_jsonl(METRICS)

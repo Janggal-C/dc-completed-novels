@@ -15,8 +15,8 @@ judge:
   economy_sample_rate: 0.07     # 절약 모드에서 규칙 판정분 중 AI로 재검수할 비율
   model: haiku                  # haiku(가장 저렴) / sonnet
   batch_size: 60                # AI 한 번에 보낼 제목 수
-  max_titles_per_run: 600       # 하루 AI 판정 상한 (Pro 사용량 보호, 남으면 다음 날)
-  search_per_run: 15            # 하루 줄임말 검색 상한
+  max_titles_per_run: 1500      # 한 번 실행당 AI 판정 상한 (Pro 사용량 보호, 남으면 다음 실행)
+  search_per_run: 30            # 한 번 실행당 줄임말 검색 상한
   search_batch_size: 5
   search_retry_days: 14         # 못 찾은 줄임말은 이 기간 동안 재검색 안 함
 
