@@ -111,10 +111,14 @@ code { font-size: 12px; background: var(--surface-0); padding: 1px 4px; border-r
 <main id="view"></main>
 
 <script>
-const TABS = [["mentions","언급"],["monthly","완결 월별"],["quarterly","완결 분기별"],["trend","추이"],["dict","줄임말 사전"],["check","검수"],["metrics","지표"]];
+const TABS = [["mentions","언급"],["complete","완결"],["trend","추이"],["dict","줄임말 사전"],["check","검수"],["metrics","지표"]];
 const VIEW = document.getElementById("view");
 const REPO = "https://github.com/answhdtjr736-spec/dc-completed-novels";
-let R, tab = location.hash.slice(1) || "monthly", sel = {}, onlyNew = false, MEN = null, menKind = "monthly";
+let R, tab = location.hash.slice(1) || "mentions", sel = {}, onlyNew = false, MEN = null, menKind = "monthly", compKind = "monthly", trendKind = "mentions";
+if (tab === "monthly" || tab === "quarterly") { compKind = tab; tab = "complete"; }   // 예전 주소 호환
+// 탭 안의 하위 탭 (월별/분기별, 언급/완결)
+const subTabs = (items, cur, attr) => `<div class="pbtns" style="--cols:${items.length};margin-bottom:10px">${items.map(([k, v]) =>
+  `<button class="pbtn ${k === cur ? "on" : ""}" data-${attr}="${k}">${v}</button>`).join("")}</div>`;
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const postUrl = no => `https://gall.dcinside.com/mgallery/board/view/?id=${R.gallery}&no=${no}`;
 const fmtPeriod = p => p.includes("Q") ? p.replace("-Q", "년 ") + "분기" : p.replace("-", "년 ") + "월";
@@ -133,7 +137,7 @@ function renderTabs() {
     `<button class="${k === tab ? "on" : ""}" data-k="${k}">${v}</button>`).join("");
   document.querySelectorAll("#tabs button").forEach(b => b.onclick = () => { tab = b.dataset.k; location.hash = tab; renderTabs(); render(); });
 }
-function render() { if (!TABS.some(t => t[0] === tab)) tab = "monthly"; ({mentions, monthly: () => rankView("monthly"), quarterly: () => rankView("quarterly"), trend, dict, check, metrics})[tab](); }
+function render() { if (!TABS.some(t => t[0] === tab)) tab = "mentions"; ({mentions, complete: () => rankView(compKind), trend, dict, check, metrics})[tab](); }
 
 function rankView(kind) {
   const data = R[kind], periods = Object.keys(data).sort().reverse();
@@ -149,7 +153,7 @@ function rankView(kind) {
   if (onlyNew) rows = rows.filter(e => e.new);
   const startNote = R.data_start && (p === R.data_start || p === quarterOf(R.data_start))
     ? `<div class="muted" style="margin-top:6px">※ 데이터 시작 시점이라 이전부터 언급되던 작품도 '완결'로 보일 수 있습니다.</div>` : "";
-  VIEW.innerHTML = `<div class="card">
+  VIEW.innerHTML = `<div class="card">${subTabs([["monthly","월별"],["quarterly","분기별"]], kind, "ck")}
     <div class="yearsel"><select id="yr">${years.map(y => `<option value="${y}" ${y === year ? "selected" : ""}>${y}년</option>`).join("")}</select></div>
     <div class="pbtns" style="--cols:${kind === "monthly" ? 6 : 4}">${slots.map(sl => `<button class="pbtn ${sl.key === p ? "on" : ""}" data-p="${sl.key}" ${data[sl.key] ? "" : "disabled"}>${sl.label}</button>`).join("")}</div>
     <div class="row" style="margin-top:10px"><label class="chk"><input type="checkbox" id="nw" ${onlyNew ? "checked" : ""}> 이 기간에 완결된 작품만</label></div>
@@ -169,6 +173,7 @@ function rankView(kind) {
   };
   VIEW.querySelectorAll(".pbtn[data-p]").forEach(b => b.onclick = () => { sel[kind] = b.dataset.p; render(); });
   document.getElementById("nw").onchange = ev => { onlyNew = ev.target.checked; render(); };
+  VIEW.querySelectorAll("[data-ck]").forEach(b => b.onclick = () => { compKind = b.dataset.ck; render(); });
   VIEW.querySelectorAll(".tog").forEach(b => b.onclick = () => {
     const box = document.getElementById("mc" + b.dataset.i), open = !box.classList.contains("open");
     box.classList.toggle("open", open); b.classList.toggle("open", open); b.setAttribute("aria-expanded", open);
@@ -193,9 +198,7 @@ function mentions() {
     ? Array.from({length: 12}, (_, i) => ({key: `${year}-${String(i + 1).padStart(2, "0")}`, label: `${i + 1}월`}))
     : Array.from({length: 4}, (_, i) => ({key: `${year}-Q${i + 1}`, label: `${i + 1}분기`}));
   const rows = MEN.periods[p] || [];
-  VIEW.innerHTML = `<div class="card">
-    <div class="pbtns" style="--cols:2;margin-bottom:10px">${[["monthly","월별"],["quarterly","분기별"]].map(([k, v]) =>
-      `<button class="pbtn ${k === kind ? "on" : ""}" data-kind="${k}">${v}</button>`).join("")}</div>
+  VIEW.innerHTML = `<div class="card">${subTabs([["monthly","월별"],["quarterly","분기별"]], kind, "kind")}
     <div class="yearsel"><select id="yr">${years.map(y => `<option value="${y}" ${y === year ? "selected" : ""}>${y}년</option>`).join("")}</select></div>
     <div class="pbtns" style="--cols:${kind === "monthly" ? 6 : 4}">${slots.map(sl => `<button class="pbtn ${sl.key === p ? "on" : ""}" data-p="${sl.key}" ${MEN.periods[sl.key] ? "" : "disabled"}>${sl.label}</button>`).join("")}</div>
     <div class="muted" style="margin-top:8px">완결 여부와 상관없이 전체 글 제목에서 셉니다 · 언급 수 = 하루 단위 작성자 수 (같은 사람이 같은 날 여러 번 써도 1) · ▸ 월별 그래프</div></div>
@@ -242,9 +245,10 @@ function trend() {
       .catch(() => { MEN = {trend: [], months: []}; if (tab === "trend") trend(); });
     return;
   }
-  VIEW.innerHTML = `<div id="tr1"></div><div id="tr2"></div>`;
-  lineChart(document.getElementById("tr1"), MEN.trend || [], MEN.months || [], "언급 추이", "언급 수 상위", "");
-  lineChart(document.getElementById("tr2"), R.trend, R.months, "완결 추이", "완결작 중 월별 언급 작성자 수 상위", "명");
+  VIEW.innerHTML = `<div class="card" style="padding-bottom:4px">${subTabs([["mentions","언급"],["complete","완결"]], trendKind, "tk")}</div><div id="tr1"></div>`;
+  VIEW.querySelectorAll("[data-tk]").forEach(b => b.onclick = () => { trendKind = b.dataset.tk; render(); });
+  if (trendKind === "mentions") lineChart(document.getElementById("tr1"), MEN.trend || [], MEN.months || [], "언급 추이", "언급 수 상위", "");
+  else lineChart(document.getElementById("tr1"), R.trend, R.months, "완결 추이", "완결작 중 월별 언급 작성자 수 상위", "명");
 }
 
 function lineChart(box, T, M, heading, desc, unit) {
