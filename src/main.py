@@ -29,7 +29,7 @@ def main(step="all"):
     if step in ("judge", "all"):
         stats = json.loads(STATS_FILE.read_text()) if STATS_FILE.exists() else {}
         s = judge.run(cfg)
-        stats.update(ai_judged=s["ai_judged"], searched=s["searched"], ai_stopped=bool(s["stopped"]),
+        stats.update(ai_judged=s["ai_judged"], searched=s["searched"], google=s.get("google", 0), ai_stopped=bool(s["stopped"]),
                      ai_usage={k: round(v, 4) for k, v in judge.ai.USAGE.items()})
         print(f"AI 사용량: {stats['ai_usage']}")
         aggregate.run(cfg, run_stats=stats)

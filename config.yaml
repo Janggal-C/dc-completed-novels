@@ -21,6 +21,9 @@ judge:
   search_model: sonnet          # 줄임말 검색용 (haiku는 못 찾는 경우가 많음)
   search_per_run: 40            # 한 번 실행당 줄임말 검색 상한
   search_batch_size: 5
+  google_monthly_limit: 240     # SerpApi 무료 월 250회 중 여유 두고 240회
+  google_per_run: 30            # 한 번 실행당 구글 검색 상한
+  google_min_writers: 2         # 작성자 2명 이상이 언급한 이름만 구글 검색 (순위에 영향 있는 것)
   search_retry_days: 14         # 못 찾은 줄임말은 이 기간 동안 재검색 안 함
 
 report:

@@ -7,7 +7,7 @@
 import sys
 from datetime import datetime, timedelta
 
-from . import ai
+from . import ai, google
 from .common import (AI_DIR, ALIASES, POSTS_DIR, REVIEW_DIR, SEARCH_CACHE, WORKS, checkpoint, load_config,
                      load_monthly, merge_monthly, norm_key, now_kst, read_json, write_json)
 from .resolve import decide, load_overrides, load_reviews, needs_ai, resolve_id, work_name
@@ -121,8 +121,9 @@ def run(cfg=None):
         if guess and norm_key(guess) in aliases:
             aliases[norm_key(name)] = aliases[norm_key(guess)]
             continue
-        u = unknown.setdefault(norm_key(name), {"alias": name, "titles": [], "n": 0})
+        u = unknown.setdefault(norm_key(name), {"alias": name, "titles": [], "n": 0, "writers": set()})
         u["n"] += 1
+        u["writers"].add(p.get("writer"))
         if len(u["titles"]) < 3:
             u["titles"].append(p["title"])
 
@@ -131,15 +132,45 @@ def run(cfg=None):
     queue = []
     for key, u in sorted(unknown.items(), key=lambda kv: -kv[1]["n"]):
         c = cache.get(key)
-        if c and today - datetime.fromisoformat(c["checked"]).replace(tzinfo=today.tzinfo) < retry:
+        recent = c and today - datetime.fromisoformat(c["checked"]).replace(tzinfo=today.tzinfo) < retry
+        # AI 검색으로 못 찾은 이름도 구글이 생기면 다시 시도
+        if recent and (c.get("via") == "google" or not google.available() or len(u["writers"]) < jc["google_min_writers"]):
             continue
         queue.append(u)
-    queue = queue[: jc["search_per_run"]]
+    # 구글(SerpApi): 순위에 영향을 주는 이름(작성자 여러 명)부터, 월 무료 한도 안에서만
+    google_q, rest = [], []
+    if google.available():
+        budget = google.remaining(jc["google_monthly_limit"])
+        for u in queue:
+            if len(google_q) < min(budget, jc["google_per_run"]) and len(u["writers"]) >= jc["google_min_writers"]:
+                google_q.append(u)
+            else:
+                rest.append(u)
+    else:
+        rest = queue
+    batches = []
+    for i in range(0, len(google_q), 5):
+        batches.append(("google", google_q[i:i + 5]))
+    rest = rest[: max(0, jc["search_per_run"] - len(google_q))]
     sb = jc["search_batch_size"]
-    for i in range(0, len(queue), sb):
-        batch = queue[i:i + sb]
+    for i in range(0, len(rest), sb):
+        batches.append(("ai", rest[i:i + sb]))
+    stats["google"] = 0
+    for kind, batch in batches:
         try:
-            res = ai.search_aliases([(u["alias"], u["titles"]) for u in batch], jc.get("search_model", jc["model"]))
+            if kind == "google":
+                items = []
+                for u in batch:
+                    try:
+                        items.append((u["alias"], u["titles"], google.search(f'{u["alias"]} 웹소설')))
+                        stats["google"] += 1
+                    except Exception as e:   # 구글 검색 실패 → 결과 없이 넘김
+                        print(f"  구글 검색 실패 ({u['alias']}): {e}", file=sys.stderr)
+                        items.append((u["alias"], u["titles"], []))
+                res = ai.extract_from_results(items, jc["model"])
+                print(f"  구글 검색 {len(batch)}개 → 찾음 {sum(bool(r.get('found')) for r in res.values())}개", flush=True)
+            else:
+                res = ai.search_aliases([(u["alias"], u["titles"]) for u in batch], jc.get("search_model", jc["model"]))
         except ai.AIError as e:
             print(f"⚠️ 줄임말 검색 오류: {e}", file=sys.stderr)
             if e.fatal:
@@ -159,7 +190,7 @@ def run(cfg=None):
                 cache.pop(key, None)
             else:
                 cache[key] = {"alias": u["alias"], "checked": today.strftime("%Y-%m-%d"),
-                              "examples": u["titles"]}
+                              "examples": u["titles"], "via": kind}
         write_json(WORKS, works)            # 검색 묶음마다 저장 → 중간에 오류가 나도 찾은 건 남음
         write_json(ALIASES, aliases)
         write_json(SEARCH_CACHE, cache)

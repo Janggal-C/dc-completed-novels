@@ -32,6 +32,7 @@ jobs:
     env:
       WRITER_SALT: ${{ secrets.WRITER_SALT }}
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
     steps:
       - uses: actions/checkout@v5
         with:

@@ -173,3 +173,39 @@ def review_titles(items, model):
         except (KeyError, ValueError, TypeError):
             continue
     return out
+
+
+EXTRACT_PROMPT = """아래는 디시인사이드 장르소설 갤러리에서 쓰인 웹소설 이름(대부분 줄임말)과,
+그 이름으로 구글에서 검색한 상위 결과다. 검색 결과에 근거해 정식 작품명을 찾아라.
+
+- 검색 결과 제목/요약에 정식 작품명이 분명히 보이면 found=true, confidence="high"
+- 결과가 애매하거나 여러 작품이 섞여 확정이 어려우면 confidence="low" (그래도 가장 유력한 것)
+- 결과에 근거가 없으면 found=false. 검색 결과에 없는 제목을 지어내지 마라.
+- 작가 이름이면 found=false, title="작가명"
+
+아래 JSON 배열만 출력해라.
+[{"alias": "입력 이름 그대로", "found": true/false, "title": "정식 작품명", "author": "작가(보이면)", "platform": "연재처(보이면)", "confidence": "high"/"low", "url": "근거 링크"}]
+
+"""
+
+
+def extract_from_results(items, model):
+    """items: [(alias, examples, results)] → {alias: {...}}"""
+    if os.environ.get("AI_MOCK") == "1":
+        return {a: {"found": bool(res), "title": res[0]["title"] if res else "", "confidence": "high",
+                    "url": res[0]["link"] if res else ""} for a, _, res in items}
+    blocks = []
+    for i, (a, ex, res) in enumerate(items):
+        lines = "\n".join(f"  - {r['title']} | {r['snippet'][:150]} | {r['link']}" for r in res[:8])
+        blocks.append(f"[{i + 1}] 이름: {a}\n  갤러리 예시 제목: {' / '.join(ex[:2])}\n  구글 결과:\n{lines or '  (결과 없음)'}")
+    res = _json_from(_call(EXTRACT_PROMPT + "\n\n".join(blocks), model))
+    from .common import norm_key
+    want = {norm_key(a): a for a, _, _ in items}
+    out = {}
+    for i, r in enumerate(res):
+        a = want.get(norm_key(r.get("alias", "")))
+        if a is None and len(res) == len(items):
+            a = items[i][0]
+        if a:
+            out[a] = r
+    return out
