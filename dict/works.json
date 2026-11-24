@@ -67,6 +67,12 @@
   "status_source": "google-bulk",
   "title": "Ex급 도끼로 조선 재벌"
  },
+ "ntr게임속전쟁영웅은죽고싶다": {
+  "added": "2026-11-24",
+  "needs_review": false,
+  "source": "직접 입력",
+  "title": "NTR게임 속 전쟁영웅은 죽고 싶다"
+ },
  "skt2": {
   "added": "2026-11-24",
   "author": "김철곤",
@@ -1882,17 +1888,6 @@
   "status_checked": "2026-11-24",
   "status_source": "google-bulk",
   "title": "전생하고 보니 크툴루"
- },
- "전쟁영웅의비밀을나만알아": {
-  "added": "2026-11-24",
-  "author": "망고킴",
-  "needs_review": true,
-  "platform": "카카오페이지",
-  "source": "https://www.newswell.co.kr/news/articleView.html?idxno=22953",
-  "status": "연재중",
-  "status_checked": "2026-11-24",
-  "status_source": "google-bulk",
-  "title": "전쟁영웅의 비밀을 나만 알아"
  },
  "전쟁이끝난뒤에야대장장이가되었다": {
   "added": "2026-11-24",

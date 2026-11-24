@@ -5,7 +5,7 @@
  "dict_stats": {
   "aliases": 288,
   "authors": 30,
-  "needs_review": 86,
+  "needs_review": 85,
   "new_today": 288,
   "new_week": 288,
   "recent": [
@@ -1547,9 +1547,9 @@
   },
   {
    "alias": "전쟁영웅",
-   "author": "망고킴",
-   "needs_review": true,
-   "title": "전쟁영웅의 비밀을 나만 알아"
+   "author": "",
+   "needs_review": false,
+   "title": "NTR게임 속 전쟁영웅은 죽고 싶다"
   },
   {
    "alias": "전툴루",
@@ -1998,19 +1998,19 @@
    "writers": 11
   },
   {
+   "c": 10,
+   "q": 19,
+   "reason": "완결 언급이 몰렸지만 이후에도 '언제 완결' 글 12개",
+   "status": "보류",
+   "title": "NTR게임 속 전쟁영웅은 죽고 싶다",
+   "writers": 10
+  },
+  {
    "c": 15,
    "q": 16,
    "reason": "연재처 표시: 연재중",
    "status": "연재중",
    "title": "시간을 달리는 소설가",
-   "writers": 10
-  },
-  {
-   "c": 10,
-   "q": 19,
-   "reason": "연재처 표시: 연재중",
-   "status": "연재중",
-   "title": "전쟁영웅의 비밀을 나만 알아",
    "writers": 10
   },
   {
@@ -20630,8 +20630,8 @@
   }
  ],
  "status_counts": {
-  "보류": 25,
-  "연재중": 37,
+  "보류": 26,
+  "연재중": 36,
   "예전 완결": 82,
   "완결": 46
  },
@@ -22341,5 +22341,5 @@
    ]
   }
  ],
- "updated": "2026-11-24 19:29"
+ "updated": "2026-11-24 19:32"
 }
