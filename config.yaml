@@ -18,7 +18,8 @@ judge:
   max_titles_per_run: 1500      # 한 번 실행당 AI 판정 상한 (Pro 사용량 보호, 남으면 다음 실행)
   review_model: sonnet          # 불일치 검수용 (더 신중한 모델)
   review_per_run: 150           # 한 번 실행당 AI 검수 상한
-  search_per_run: 30            # 한 번 실행당 줄임말 검색 상한
+  search_model: sonnet          # 줄임말 검색용 (haiku는 못 찾는 경우가 많음)
+  search_per_run: 40            # 한 번 실행당 줄임말 검색 상한
   search_batch_size: 5
   search_retry_days: 14         # 못 찾은 줄임말은 이 기간 동안 재검색 안 함
 

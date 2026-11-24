@@ -139,7 +139,7 @@ def run(cfg=None):
     for i in range(0, len(queue), sb):
         batch = queue[i:i + sb]
         try:
-            res = ai.search_aliases([(u["alias"], u["titles"]) for u in batch], jc["model"])
+            res = ai.search_aliases([(u["alias"], u["titles"]) for u in batch], jc.get("search_model", jc["model"]))
         except ai.AIError as e:
             print(f"⚠️ 줄임말 검색 오류: {e}", file=sys.stderr)
             if e.fatal:
