@@ -71,7 +71,7 @@ class Lister:
         return rows
 
 
-def run(max_minutes=None):
+def run(max_minutes=None, verbose=False):
     cfg = load_config()
     fc = cfg["fullcrawl"]
     max_minutes = max_minutes or fc["minutes_per_run"]
@@ -117,6 +117,8 @@ def run(max_minutes=None):
                 print(f"  시작: 1페이지 #{rows[0]['no']} {rows[0]['date']} ~ #{rows[-1]['no']} {rows[-1]['date']}", flush=True)
             bottom = rows[-1]["no"]
             cur = st["cursor"]
+            if verbose:
+                print(f"  p{n}: {len(rows)}개 #{rows[0]['no']}~#{bottom} {rows[-1]['date']} cursor={st['cursor']}", flush=True)
             if cur is not None and bottom >= cur:
                 # 새 글 때문에 밀려서 이미 본 구간 → 다음 페이지로 (밀린 만큼 건너뛰기)
                 n += max(1, (sum(1 for r in rows if r["no"] >= cur)) // 100)
@@ -139,6 +141,11 @@ def run(max_minutes=None):
                 write_json(FULL_STATE, st)
             if stats["pages"] % 20 == 0:
                 print(f"  {n}페이지 · 현재 {st['oldest_date']} (목표 {st['cutoff']}) · 이번 실행 {stats['rows']:,}개", flush=True)
+            if stats["pages"] == 20 and buf:
+                save_rows(buf)
+                buf = []
+                write_json(FULL_STATE, st)
+                checkpoint(f"전체 제목 수집 ~{st['oldest_date']} (첫 저장)", force=True, report=False)
             checkpoint(f"전체 제목 수집 ~{st['oldest_date']}", report=False)
             n += 1
     except Blocked as e:
@@ -178,6 +185,12 @@ def quick_test():
         print(f"[{n}페이지] {len(rows)}개, {time.time() - t:.1f}초")
         for r in rows[:3] + rows[-2:]:
             print(f"   #{r['no']} {r['date']} {r['title'][:30]}")
+    import os
+    os.environ.pop("GITHUB_ACTIONS", None)   # 커밋 안 함
+    print("--- 수집 로직 1분 ---")
+    run(max_minutes=1, verbose=True)
+    print("상태:", read_json(FULL_STATE, {}))
+    print("날짜 파일:", sorted(p.name for p in Path(TITLES_DIR).glob("*.gz")))
 
 
 if __name__ == "__main__":
