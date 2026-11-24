@@ -10,7 +10,11 @@ if git diff --cached --quiet; then
 fi
 git commit -q -m "$1"
 for i in 1 2 3; do
-  git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0
+  if git pull --rebase -q origin main; then
+    git push -q origin HEAD:main && exit 0
+  else
+    git rebase --abort 2>/dev/null || true   # 충돌 시 원격 데이터를 덮어쓰지 않고 중단
+  fi
   sleep 5
 done
 echo "푸시 실패" >&2

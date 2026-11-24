@@ -30,6 +30,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
+          ref: main          # 실행을 건 시점이 아니라 '지금' 최신 데이터에서 이어서 시작
           fetch-depth: 1
 
       - uses: actions/setup-python@v6
