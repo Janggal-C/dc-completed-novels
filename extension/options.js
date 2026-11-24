@@ -5,7 +5,7 @@ const info = async () => {
   if (!d) d = await (await fetch(chrome.runtime.getURL("dict.json"))).json();
   document.getElementById("info").textContent =
     `작품 ${Object.keys(d.works).length}개 · 줄임말 ${Object.keys(d.aliases).length}개 · 사전 ${d.version}` +
-    (fetchedAt ? "" : " (내장)");
+    (fetchedAt ? "" : " (내장)") + " · 하루 한 번 자동 갱신";
 };
 chrome.storage.sync.get(DEFAULTS).then(o => {
   for (const k in DEFAULTS) {
@@ -15,10 +15,4 @@ chrome.storage.sync.get(DEFAULTS).then(o => {
     el.onchange = () => chrome.storage.sync.set({[k]: box ? el.checked : el.value});
   }
 });
-document.getElementById("refresh").onclick = async e => {
-  e.target.disabled = true;
-  await chrome.runtime.sendMessage("refresh");
-  await info();
-  e.target.disabled = false;
-};
 info();

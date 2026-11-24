@@ -19,6 +19,3 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 chrome.runtime.onStartup.addListener(refresh);
 chrome.alarms.onAlarm.addListener(a => { if (a.name === "refresh") refresh(); });
-chrome.runtime.onMessage.addListener((msg, _s, reply) => {
-  if (msg === "refresh") { refresh().then(() => reply(true)); return true; }
-});
