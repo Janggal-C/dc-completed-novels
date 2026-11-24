@@ -10,6 +10,9 @@ import subprocess
 from .rules import classify, extract_work
 
 
+USAGE = {"calls": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_tokens": 0, "cost_usd": 0.0}
+
+
 class AIError(Exception):
     """사용량 한도·인증 오류 등. 이번 실행의 AI 작업을 멈추고 다음 실행 때 이어간다."""
 
@@ -27,6 +30,12 @@ def _call(prompt, model, allow_search=False, max_turns=1, timeout=600):
         out = json.loads(p.stdout)
     except json.JSONDecodeError:
         raise AIError(f"응답 해석 실패 (code {p.returncode}): {p.stdout[-300:]} {p.stderr[-300:]}")
+    u = out.get("usage") or {}
+    USAGE["calls"] += 1
+    USAGE["input_tokens"] += u.get("input_tokens", 0) + u.get("cache_creation_input_tokens", 0)
+    USAGE["cache_read_tokens"] += u.get("cache_read_input_tokens", 0)
+    USAGE["output_tokens"] += u.get("output_tokens", 0)
+    USAGE["cost_usd"] += out.get("total_cost_usd") or 0
     if out.get("is_error"):
         raise AIError(f"claude 오류: {str(out.get('result'))[:300]}")
     return out.get("result", "")
