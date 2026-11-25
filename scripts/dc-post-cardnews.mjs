@@ -19,7 +19,8 @@ const title = isTest ? Array.from({ length: 8 }, () => pick(CHOSUNG)).join('') :
 
 const SITE = 'https://janggal-c.github.io/dc-completed-novels/';
 const RELEASE = 'https://github.com/Janggal-C/dc-completed-novels/releases/latest';
-const img = (f) => ({ type: 'image', file: new Blob([readFileSync(`${CARD_DIR}/${f}`)], { type: 'image/png' }) });
+// 파일 이름이 없으면(blob) 디시가 "업로드 금지파일"로 거절함 → File로 이름·확장자를 붙여 보냄
+const img = (f) => ({ type: 'image', file: new File([readFileSync(`${CARD_DIR}/${f}`)], f, { type: 'image/png' }) });
 const link = (label, url) => ({ type: 'html', html: `<div>${label}</div><div><a href="${url}" target="_blank">${url}</a></div>` });
 const content = [
   ...[1, 2, 3, 4, 5].map((i) => img(`card-${i}.png`)),
