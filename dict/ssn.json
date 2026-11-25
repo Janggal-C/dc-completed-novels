@@ -1143,6 +1143,63 @@
   "rc": 217,
   "title": "괴력 난신(怪力 亂神)"
  },
+ "괴물마법사": {
+  "author": "양승훈",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 1601,
+  "links": {
+   "joara": "https://www.joara.com/book/1293967",
+   "kakao": "https://page.kakao.com/content/51522753",
+   "munpia": "https://novel.munpia.com/93659",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=3280597",
+   "ridi": "https://ridibooks.com/v2/Detail?id=425067737"
+  },
+  "r": 0.5,
+  "rc": 2,
+  "title": "괴물 마법사"
+ },
+ "괴물서커스단의단장이되었다": {
+  "author": "고사리동",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 289762,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/27940"
+  },
+  "title": "괴물서커스단의 단장이 되었다"
+ },
+ "괴물아니고마법사입니다": {
+  "author": "입스위치",
+  "checked": "2026-11-25",
+  "id": 288720,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/412564"
+  },
+  "title": "괴물 아니고 마법사입니다"
+ },
+ "괴이관리국의사무직으로살아남기": {
+  "author": "무빵죽",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 289436,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/274451"
+  },
+  "r": 4.5,
+  "rc": 2,
+  "title": "괴이관리국의 사무직으로 살아남기"
+ },
+ "괴이들이귀여움을숨김": {
+  "author": "으므므",
+  "checked": "2026-11-25",
+  "id": 324768,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/587193",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14920696"
+  },
+  "title": "괴이들이 귀여움을 숨김"
+ },
  "괴이왕국의패왕군주": {
   "author": "릿테",
   "checked": "2026-11-25",
@@ -1151,6 +1208,31 @@
    "novelpia": "https://novelpia.com/novel/455340"
   },
   "title": "괴이왕국의 패왕군주"
+ },
+ "구라안치고진짜엑스트라": {
+  "author": "김갈비뼈",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 289477,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/96051"
+  },
+  "r": 3.75,
+  "rc": 2,
+  "title": "구라 안치고 진짜 엑스트라"
+ },
+ "구성성인천계의마구간지기가힘을숨김": {
+  "author": "임아소",
+  "checked": "2026-11-25",
+  "id": 327954,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14717817"
+  },
+  "title": "구성성인:천계의 마구간지기가 힘을 숨김"
+ },
+ "구조선도착까지앞으로93년": {
+  "checked": "2026-11-25",
+  "miss": true
  },
  "국가권력급개척촌": {
   "author": "고인의생전 매드무비",
@@ -1176,9 +1258,102 @@
   "rc": 298,
   "title": "군림천하"
  },
+ "군필여배우가전투력을숨김": {
+  "author": "필드스틱",
+  "checked": "2026-11-25",
+  "id": 278672,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/514517",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13590240"
+  },
+  "r": 2.5,
+  "rc": 7,
+  "title": "군필 여배우가 전투력을 숨김"
+ },
+ "굴러다니는미친놈이되었다": {
+  "author": "싸이킥",
+  "checked": "2026-11-25",
+  "id": 289505,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/383811"
+  },
+  "title": "굴러다니는 미친놈이 되었다"
+ },
+ "권왕전생": {
+  "author": "임경배",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 3582,
+  "links": {
+   "kakao": "https://page.kakao.com/content/56554317",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=1647483",
+   "ridi": "https://ridibooks.com/v2/Detail?id=1811005414"
+  },
+  "r": 3.84,
+  "rc": 415,
+  "title": "권왕전생"
+ },
+ "귀령": {
+  "author": "월하야담",
+  "checked": "2026-11-25",
+  "id": 133074,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=12701306"
+  },
+  "r": 3.85,
+  "rc": 62,
+  "title": "귀령"
+ },
+ "귀쟁이투기장의역배기사님": {
+  "author": "맥주포션",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 289809,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/41002"
+  },
+  "title": "귀쟁이 투기장의 역배 기사님"
+ },
+ "귀족영애아카데미의여장남자로살아남기": {
+  "author": "섬마을김씨",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 201841,
+  "links": {
+   "joara": "https://www.joara.com/book/1736952",
+   "kakao": "https://page.kakao.com/content/66467655",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=12590791",
+   "ridi": "https://ridibooks.com/books/3885030083"
+  },
+  "title": "귀족영애 아카데미의 여장남자로 살아남기"
+ },
  "귀축교사": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "귀환당한용사파티짐꾼은집착당한다": {
+  "author": "병나팔",
+  "checked": "2026-11-25",
+  "id": 332081,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/457420"
+  },
+  "title": "귀환당한 용사파티짐꾼은 집착당한다"
+ },
+ "귀환자의마법은특별해야합니다": {
+  "author": "유소난",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 3365,
+  "links": {
+   "joara": "https://www.joara.com/book/1590984",
+   "kakao": "https://page.kakao.com/content/67904334",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=11784111",
+   "ridi": "https://ridibooks.com/books/777141377"
+  },
+  "r": 2.99,
+  "rc": 215,
+  "title": "귀환자의 마법은 특별해야 합니다"
  },
  "그래도살아간다": {
   "author": "AngelTear",
