@@ -74,3 +74,11 @@
 ### 하지 말 것
 - 사전 이름을 한 번에 50개 넘게 지우기 (보고만), 구글 한도 넘는 검색, 매일 실행 끄기, 비밀값 출력
 - 사용자에게 질문하고 멈추기 — 판단해서 처리하고 보고에 적는다
+
+## 디시 글쓰기 (앱 API, 테스트 단계)
+- `scripts/dc-write-test-app.mjs` + `.github/workflows/dc-write-test-app.yml` (수동 실행): `@green-1052/dcinside.js`(디시 앱 API)로 기기 등록 → 로그인(Secrets `DC_ID`/`DC_PW`) → 테스트 갤(`trifoliumdubiumsibth`)에 글 1건.
+  - 마이너갤은 id 그대로 쓴다(`mi$`는 미니갤 접두어).
+  - 새 기기 등록 직후 바로 쓰면 "잠시후 다시 이용해주세요"가 나온다 → 30초 기다린 뒤 쓰면 성공 (2026-11-26 확인, 글 71545).
+  - 사람 확인(`CaptchaRequiredError`)이 나오면 그 자리에서 멈춘다. 우회하지 않는다.
+- `scripts/dc-verify.mjs` + `.github/workflows/dc-verify.yml` (수동, 글번호 입력): 올라간 글을 앱 API로 읽어 확인.
+- 막힌 방법(다시 시도하지 않음): 모바일 웹 요청(`@gurumnyang/dcinside.js`)·실제 크롬(Playwright) 모두 글쓰기 화면의 "사람인지 확인" 단계에서 막힘. 구글 검색도 GitHub IP에서는 로봇 확인으로 막힘.
