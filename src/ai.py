@@ -23,11 +23,11 @@ class AIError(Exception):
         return any(k in m for k in ("limit", "rate", "auth", "login", "credit", "quota", "실행 실패"))
 
 
-def _call(prompt, model, allow_search=False, max_turns=3, timeout=600):
+def _call(prompt, model, allow_search=False, max_turns=3, timeout=600, tools="WebSearch"):
     cmd = ["claude", "-p", "--output-format", "json", "--model", model,
            "--max-turns", str(max_turns)]
     if allow_search:
-        cmd += ["--allowedTools", "WebSearch"]
+        cmd += ["--allowedTools", tools]
     try:
         p = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=timeout)
     except (OSError, subprocess.TimeoutExpired) as e:

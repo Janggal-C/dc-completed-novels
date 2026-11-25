@@ -24,7 +24,9 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
 PROMPT = """아래 한국 웹소설들의 연재처 작품 페이지 주소를 웹검색으로 찾아라.
 연재처: 노벨피아(novelpia.com/novel/숫자), 문피아(novel.munpia.com/숫자), 카카오페이지(page.kakao.com/content/숫자),
 네이버 시리즈(series.naver.com/novel/detail.series?productNo=숫자), 리디(ridibooks.com/books/숫자).
-- 검색 결과에서 실제로 본 주소만 적어라. 추측하거나 만들어내지 마라. 못 찾으면 빈 객체.
+- 작품마다 "<제목> 노벨피아", "<제목> 문피아", "<제목> 카카오페이지", "<제목> 네이버 시리즈", "<제목> 리디" 처럼 연재처 이름을 붙여 여러 번 검색해라.
+  필요하면 WebFetch 로 검색 결과 페이지나 연재처 페이지를 열어 확인해도 된다.
+- 검색 결과·열어본 페이지에서 실제로 본 주소만 적어라. 추측하거나 만들어내지 마라. 못 찾으면 빈 객체.
 - 같은 제목의 다른 작품(작가가 다름)과 헷갈리지 마라.
 아래 JSON 배열만 출력: [{"id": 번호, "links": {"novelpia": "주소", "munpia": "주소", ...}}]
 
@@ -87,7 +89,7 @@ def targets(limit):
     return out[:limit]
 
 
-def find(wids, model, save=True, batch=5):
+def find(wids, model, save=True, batch=2):
     works = read_json(WORKS, {})
     links = read_json(LINKS, {})
     today = str(now_kst().date())
@@ -97,7 +99,8 @@ def find(wids, model, save=True, batch=5):
         lines = "\n".join(f"[{n}] {works[w]['title']}" + (f" (작가 {works[w]['author']})" if works[w].get("author") else "")
                           for n, w in enumerate(part))
         try:
-            res = ai._json_from(ai._call(PROMPT + lines, model, allow_search=True, max_turns=4 + 3 * len(part)))
+            res = ai._json_from(ai._call(PROMPT + lines, model, allow_search=True,
+                                            max_turns=6 + 6 * len(part), tools="WebSearch,WebFetch"))
         except ai.AIError as e:
             print(f"⚠️ {e}", file=sys.stderr)
             if e.fatal:
