@@ -1760,6 +1760,10 @@
   },
   "title": "납치혼 당했다 유목엘프들의 칸에게"
  },
+ "내가바로그식칼든아가헌터지요": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "내가키운s급들": {
   "author": "근서",
   "checked": "2026-11-25",
@@ -1843,6 +1847,20 @@
    "novelpia": "https://novelpia.com/novel/424446"
   },
   "title": "누나가 쓴 로판 속에 빙의했다"
+ },
+ "눈물을마시는새": {
+  "author": "이영도",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 30711,
+  "links": {
+   "kakao": "https://page.kakao.com/content/55169813",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=8670449",
+   "ridi": "https://ridibooks.com/books/682000457?_rdt_sid=category_books&_rdt_idx=3"
+  },
+  "r": 4.61,
+  "rc": 1509,
+  "title": "눈물을 마시는 새"
  },
  "늬들이날수호룡이라부르든말든난잘거야": {
   "author": "아스타르테스",
@@ -2434,6 +2452,18 @@
   },
   "title": "미연시 속 회귀하는 히로인이 되었다"
  },
+ "반강제적제국주의자": {
+  "author": "지갑송",
+  "checked": "2026-11-25",
+  "id": 276120,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/503857",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13649629"
+  },
+  "r": 3.8,
+  "rc": 67,
+  "title": "반강제적 제국주의자"
+ },
  "반지성주의마왕의세계침략": {
   "author": "뚜근남",
   "checked": "2026-11-25",
@@ -2653,6 +2683,19 @@
   "rc": 728,
   "title": "시간을 달리는 소설가"
  },
+ "시한부천재가살아남는법": {
+  "author": "청시소",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 102611,
+  "links": {
+   "munpia": "https://novel.munpia.com/229405",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=5896155"
+  },
+  "r": 3.72,
+  "rc": 637,
+  "title": "시한부 천재가 살아남는 법"
+ },
  "심해엠생스트리머": {
   "author": "부들리",
   "checked": "2026-11-25",
@@ -2668,6 +2711,18 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "아카데미악당영애교정하기": {
+  "author": "울캐시",
+  "checked": "2026-11-25",
+  "id": 282899,
+  "links": {
+   "kakao": "https://page.kakao.com/content/69334290",
+   "novelpia": "https://novelpia.com/novel/264382"
+  },
+  "r": 1.25,
+  "rc": 2,
+  "title": "아카데미 악당영애 교정하기"
+ },
  "아카데미에서살아남기": {
   "author": "코리타",
   "checked": "2026-11-25",
@@ -2679,6 +2734,19 @@
   "r": 3.9,
   "rc": 626,
   "title": "아카데미에서 살아남기."
+ },
+ "아포칼립스에집을숨김": {
+  "author": "로드워리어",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 203616,
+  "links": {
+   "munpia": "https://novel.munpia.com/342817",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=9599215"
+  },
+  "r": 3.99,
+  "rc": 881,
+  "title": "아포칼립스에 집을 숨김"
  },
  "악역영애말포이": {
   "checked": "2026-11-25",
@@ -2720,6 +2788,43 @@
   "r": 3.85,
   "rc": 1010,
   "title": "약먹는 천재마법사"
+ },
+ "엑스칼리버뽑습니다": {
+  "author": "NariaTa",
+  "checked": "2026-11-25",
+  "id": 288617,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/229672"
+  },
+  "r": 3.75,
+  "rc": 8,
+  "title": "엑스칼리버 뽑습니다"
+ },
+ "예언의아이가살아남는법": {
+  "author": "Cadilet",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 257063,
+  "links": {
+   "kakao": "https://page.kakao.com/content/68713419",
+   "munpia": "https://novel.munpia.com/444633",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14011313",
+   "ridi": "https://ridibooks.com/books/3586113932"
+  },
+  "r": 4.28,
+  "rc": 191,
+  "title": "예언의 아이가 살아남는 법"
+ },
+ "오지가체질입니다": {
+  "author": "띵땅뚱땅",
+  "checked": "2026-11-25",
+  "id": 288553,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/427211"
+  },
+  "r": 3.0,
+  "rc": 1,
+  "title": "오지가 체질입니다"
  },
  "을위한세계는없다": {
   "author": "샤이닝",
@@ -2768,6 +2873,10 @@
   "rc": 10,
   "title": "이세계 TRPG 게임마스터"
  },
+ "이세계검은머리외국인": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "임프줍고대마법사": {
   "author": "미츄리",
   "checked": "2026-11-25",
@@ -2776,6 +2885,26 @@
    "novelpia": "https://novelpia.com/novel/441569"
   },
   "title": "임프 줍고 대마법사"
+ },
+ "재앙급진조는방구석에서꿀빱니다": {
+  "author": "레잇나잇",
+  "checked": "2026-11-25",
+  "id": 288550,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/419368"
+  },
+  "r": 1.5,
+  "rc": 4,
+  "title": "재앙급 진조는 방구석에서 꿀 빱니다"
+ },
+ "저그런악녀아닌데요": {
+  "author": "루루챠",
+  "checked": "2026-11-25",
+  "id": 324774,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/441795"
+  },
+  "title": "저 그런 악녀 아닌데요"
  },
  "저능아하꼬버튜버가나데나데받는다": {
   "author": "개커피",
@@ -2787,6 +2916,18 @@
   "r": 4.5,
   "rc": 2,
   "title": "저능아 하꼬 버튜버가 나데나데 받는다"
+ },
+ "전능의뇌를얻었다": {
+  "author": "몽쉐르",
+  "checked": "2026-11-25",
+  "id": 274560,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/499327",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13421289"
+  },
+  "r": 3.52,
+  "rc": 92,
+  "title": "전능의 뇌를 얻었다"
  },
  "전버튜버가하고싶은데요": {
   "author": "플라나리아햄버거",
@@ -2836,6 +2977,17 @@
   "r": 3.67,
   "rc": 3000,
   "title": "전지적 독자 시점"
+ },
+ "제국사냥꾼": {
+  "author": "퉁구스카",
+  "checked": "2026-11-25",
+  "id": 107695,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=6029701"
+  },
+  "r": 3.97,
+  "rc": 383,
+  "title": "제국사냥꾼"
  },
  "죽었다깨어도수선": {
   "author": "돌마늘",
@@ -2914,6 +3066,15 @@
   "rc": 1,
   "title": "헌터 때려치고 인방함"
  },
+ "헤픈소꿉친구에게나만안된다고차였다": {
+  "author": "나쁜벗",
+  "checked": "2026-11-25",
+  "id": 332316,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/457086"
+  },
+  "title": "헤픈 소꿉친구에게 나만 안된다고 차였다"
+ },
  "화산귀환": {
   "author": "비가",
   "checked": "2026-11-25",
@@ -2924,6 +3085,10 @@
   "r": 3.33,
   "rc": 1621,
   "title": "화산귀환"
+ },
+ "화약시대의소드마스터": {
+  "checked": "2026-11-25",
+  "miss": true
  },
  "회귀수선전": {
   "checked": "2026-11-25",
@@ -2939,6 +3104,17 @@
   "r": 3.58,
   "rc": 6,
   "title": "회귀 안 한 헌터만 세상을 구함"
+ },
+ "회귀한용병은다계획이있다": {
+  "author": "골드행",
+  "checked": "2026-11-25",
+  "id": 206782,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=9060714"
+  },
+  "r": 2.96,
+  "rc": 45,
+  "title": "회귀한 용병은 다 계획이 있다"
  },
  "후회안하는프로듀서": {
   "author": "하나호",
