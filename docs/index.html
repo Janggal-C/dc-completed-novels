@@ -324,7 +324,12 @@ function check() {
     document.getElementById("pw").focus();
     return;
   }
-  const U = R.unresolved || [], NR = R.dictionary.filter(d => d.needs_review);
+  // 방금 저장(이슈 제출)한 것은 반영될 때까지(최대 30분) 목록에서 숨김
+  let pend = {};
+  try { pend = JSON.parse(localStorage.getItem("pendingFix") || "{}"); } catch (e) {}
+  const now = Date.now();
+  for (const k in pend) if (now - pend[k] > 30 * 60 * 1000) delete pend[k];
+  const U = (R.unresolved || []).filter(u => !pend[u.alias]), NR = R.dictionary.filter(d => d.needs_review && !pend[d.alias]);
   const ranked = U.filter(u => u.n >= 2), rest = U.filter(u => u.n < 2);
   const g = q => `<a class="btn" style="white-space:nowrap;padding:7px 10px" target="_blank" rel="noopener" href="https://www.google.com/search?q=${encodeURIComponent(q + " 웹소설")}">구글</a>`;
   const rm = a => `<button class="btn" data-rm="${esc(a)}" style="white-space:nowrap;padding:7px 10px">제거</button>`;
@@ -377,6 +382,11 @@ function check() {
   document.getElementById("save").onclick = () => {
     const lines = collect();
     if (!lines.length) { alert("입력한 내용이 없습니다."); return; }
+    try {
+      collect().forEach(l => { pend[l.split(/\s*(?:=>|=|→|->|\t|:)\s*/)[0].trim()] = Date.now(); });
+      localStorage.setItem("pendingFix", JSON.stringify(pend));
+    } catch (e) {}
+    setTimeout(check, 500);
     window.open(`https://github.com/${R.repo}/issues/new?title=${encodeURIComponent(`[줄임말] ${lines.length}개 입력`)}&body=${encodeURIComponent(lines.join("\n"))}`, "_blank");
   };
 }

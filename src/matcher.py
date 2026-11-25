@@ -28,6 +28,7 @@ class Matcher:
         skip = excluded()
         self.long = sorted((k for k in aliases if len(k) >= min_len and k not in skip), key=len, reverse=True)
         self.short = {k for k in aliases if len(k) < min_len and k not in skip}
+        self._rank = {a: i for i, a in enumerate(self.long)}   # 같은 길이면 예전 순서대로
         self.aliases = aliases
 
     @staticmethod
@@ -43,21 +44,34 @@ class Matcher:
             prev_word = is_word
         return "".join(chars), starts
 
+    def _index(self):
+        """3글자 이상 이름을 앞 2글자로 묶어 둔다 (제목마다 전체 이름을 훑지 않게)"""
+        if not hasattr(self, "_by2"):
+            self._by2 = {}
+            for a in self.long:
+                self._by2.setdefault(a[:2], []).append(a)
+        return self._by2
+
     def find(self, title):
         """제목 → {작품 ID: 찾은 이름}
-        6글자 미만 이름은 단어 첫머리에서 시작할 때만 인정 ("일러스트" 안의 "러스트" 제외)"""
+        6글자 미만 이름은 단어 첫머리에서 시작할 때만 인정 ("일러스트" 안의 "러스트" 제외)
+        겹치면 긴 이름 우선 (전체 이름 목록을 긴 순서로 훑던 예전 방식과 결과 같음)"""
         key, starts = self._key_with_starts(title)
+        by2 = self._index()
+        cands = []
+        for i in range(len(key) - 2):
+            for a in by2.get(key[i:i + 2], ()):
+                if key.startswith(a, i) and (len(a) >= 6 or starts[i]):
+                    cands.append((-len(a), self._rank[a], i, a))
+        cands.sort()
         used = [False] * len(key)
         found = {}
-        for a in self.long:
-            start = key.find(a)
-            while start != -1:
-                end = start + len(a)
-                if (len(a) >= 6 or starts[start]) and not any(used[start:end]):
-                    for i in range(start, end):
-                        used[i] = True
-                    found.setdefault(self.aliases[a], a)
-                start = key.find(a, start + 1)
+        for _, _, start, a in cands:
+            end = start + len(a)
+            if not any(used[start:end]):
+                for j in range(start, end):
+                    used[j] = True
+                found.setdefault(self.aliases[a], a)
         for tok in _TOKEN.findall(title.lower()):
             for t in (tok, _PARTICLES.sub("", tok)):
                 if t in self.short:
