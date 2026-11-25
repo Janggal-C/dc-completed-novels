@@ -107,7 +107,17 @@ def run(limit=None):
     print(f"완료: 바로 연결 {linked}, {st}")
 
 
+def only(names):
+    """지정한 단어만 다시 처리 (word_resolve 에서 지워둔 것)"""
+    global todo
+    base = todo
+    todo = lambda: [(k, v) for k, v in base() if k in names]
+    run()
+
+
 if __name__ == "__main__":
+    if len(sys.argv) > 2 and sys.argv[1] == "only":
+        only(set(sys.argv[2:])); sys.exit()
     if len(sys.argv) > 1 and sys.argv[1] == "dry":
         works = read_json(WORKS, {}); aliases = read_json(ALIASES, {}); done = {}
         items = todo(); rest = prefix_pass(items, works, aliases, done, "dry")

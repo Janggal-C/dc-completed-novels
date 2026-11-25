@@ -11,7 +11,7 @@ import json
 import re
 
 from .common import ALIASES, DICT, ROOT, WORKS, now_kst, read_json
-from .matcher import AMBIGUOUS
+from .matcher import excluded
 
 
 # 구글에서 얻은 링크는 연재처 작품 페이지 형식일 때만 쓴다 (리뷰·블로그·검색 결과 등은 버림)
@@ -59,7 +59,7 @@ def run():
         out_works[wid] = {k: v for k, v in e.items() if v}
     data = {
         "version": now_kst().strftime("%Y-%m-%dT%H:%M"),
-        "rules": {"min_len": 3, "full_from": 6, "ambiguous": sorted(AMBIGUOUS)},
+        "rules": {"min_len": 3, "full_from": 6, "ambiguous": sorted(excluded())},
         "works": out_works,
         "aliases": {k: v for k, v in aliases.items() if v in out_works},
     }

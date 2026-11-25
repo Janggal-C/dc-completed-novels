@@ -8,7 +8,13 @@
 """
 import re
 
-from .common import norm_key
+from .common import DICT, norm_key, read_json
+
+WEAK = DICT / "weak_aliases.json"   # AI 판정: 갤에서 주로 일반 단어로 쓰이는 짧은 이름 (사전엔 두고 대조에서만 제외)
+
+
+def excluded():
+    return AMBIGUOUS | set(read_json(WEAK, {}).keys())
 
 # 일반 단어와 겹쳐서 제목 대조에 쓰면 오탐이 나는 이름
 AMBIGUOUS = {"s급", "스급", "나만", "대영", "임기", "코메", "아생", "생갤", "니생", "그살",
@@ -19,8 +25,9 @@ _TOKEN = re.compile(r"[^\W_]+", re.UNICODE)
 
 class Matcher:
     def __init__(self, aliases, min_len=3):
-        self.long = sorted((k for k in aliases if len(k) >= min_len and k not in AMBIGUOUS), key=len, reverse=True)
-        self.short = {k for k in aliases if len(k) < min_len and k not in AMBIGUOUS}
+        skip = excluded()
+        self.long = sorted((k for k in aliases if len(k) >= min_len and k not in skip), key=len, reverse=True)
+        self.short = {k for k in aliases if len(k) < min_len and k not in skip}
         self.aliases = aliases
 
     @staticmethod
