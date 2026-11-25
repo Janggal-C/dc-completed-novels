@@ -37,17 +37,19 @@ def build_candidates(titles, min_writers=10):
     aliases = read_json(ALIASES, {})
     authors = {norm_key(a) for a in read_json(AUTHORS, [])}
     labels = read_json(LABELS, {})
-    wr, cnt, ex, mon = defaultdict(set), Counter(), defaultdict(list), defaultdict(Counter)
+    wr, cnt, ex, mon, days = defaultdict(set), Counter(), defaultdict(list), defaultdict(Counter), defaultdict(set)
     for r in titles.values():
         for k in set(tokens(r["title"])):
             wr[k].add(r["writer"])
             cnt[k] += 1
             mon[k][r["date"][:7]] += 1
+            days[k].add(r["date"][:10])
             if len(ex[k]) < 3:
                 ex[k].append(r["title"])
     out = {}
     for k, ws in wr.items():
-        if len(ws) < min_writers or k in aliases or k in authors or k in NOT_WORKS or k in labels:
+        # 자동 후보 기준: 작성자 10명 이상 + 3일 이상에 걸쳐 쓰임 (하루 도배 제외)
+        if len(ws) < min_writers or len(days[k]) < 3 or k in aliases or k in authors or k in NOT_WORKS or k in labels:
             continue
         if END.search(k) or VERB.search(k) or not re.search("[가-힣a-z]", k):
             continue
@@ -84,7 +86,7 @@ def classify(words, cands, model):
     return out
 
 
-def run(batch=150, max_minutes=300):
+def run(batch=150, max_minutes=300, limit=None):
     """후보 단어 전체를 AI로 분류 (이미 분류한 단어는 건너뜀). 많이 쓰인 단어부터, 묶음마다 저장"""
     import time
     from .common import checkpoint
@@ -93,7 +95,9 @@ def run(batch=150, max_minutes=300):
     deadline = time.time() + max_minutes * 60
     cands = build_candidates(load_titles(), cfg.get("discover", {}).get("min_writers", 10))
     labels = read_json(LABELS, {})
-    todo = [w for w in sorted(cands, key=lambda w: -cands[w]["w"]) if w not in labels]
+    from .resolve import removed
+    gone = removed()
+    todo = [w for w in sorted(cands, key=lambda w: -cands[w]["w"]) if w not in labels and w not in gone][:limit]
     print(f"후보 {len(cands):,}개 중 분류할 것 {len(todo):,}개", flush=True)
     done = 0
     for i in range(0, len(todo), batch):

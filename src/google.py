@@ -90,3 +90,22 @@ def serper_search(query, num=8):
     for o in data.get("organic", [])[:num]:
         out.append({"title": o.get("title", ""), "snippet": o.get("snippet", ""), "link": o.get("link", "")})
     return out
+
+
+def web_left(cfg):
+    """오늘 쓸 수 있는 구글 검색 횟수 (Serper 남은 무료분 + SerpApi 하루 한도)"""
+    jc, bc = cfg["judge"], cfg["bulk"]
+    n = serper_remaining(bc["total_limit"]) if serper_available() else 0
+    if available():
+        n += remaining(jc.get("google_monthly_limit", 240), jc.get("google_daily_limit", 30))
+    return n
+
+
+def web_search(query, cfg):
+    """Serper 무료분이 남았으면 Serper, 아니면 SerpApi(하루 한도 안에서). 둘 다 없으면 RuntimeError"""
+    if serper_available() and serper_remaining(cfg["bulk"]["total_limit"]) > 0:
+        return serper_search(query)
+    jc = cfg["judge"]
+    if available() and remaining(jc.get("google_monthly_limit", 240), jc.get("google_daily_limit", 30)) > 0:
+        return search(query)
+    raise RuntimeError("오늘 검색 한도 소진")

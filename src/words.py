@@ -58,13 +58,13 @@ def run(limit=None):
     linked = 0
     print(f"작품 단어 {n0}개 검색 대상", flush=True)
 
-    if not google.serper_available():
-        print("SERPER_API_KEY 없음 → 검색 건너뜀"); return
-    budget = google.serper_remaining(bc["total_limit"])
+    budget = google.web_left(cfg)
+    if not budget:
+        print("오늘 검색 한도 없음 → 검색 건너뜀"); return
     if limit:
         budget = min(budget, limit)
     items = items[:budget]
-    print(f"이번 검색 {len(items)}개 (Serper 남은 {google.serper_remaining(bc['total_limit'])}회)", flush=True)
+    print(f"이번 검색 {len(items)}개 (오늘 검색 가능 {google.web_left(cfg)}회)", flush=True)
 
     st = {"found": 0, "low": 0, "author": 0, "none": 0}
     for i in range(0, len(items), bc["batch"]):
@@ -72,7 +72,7 @@ def run(limit=None):
         q = []
         for word, v in batch:
             try:
-                q.append((word, v.get("ex", []), google.serper_search(f"{word} 웹소설")))
+                q.append((word, v.get("ex", []), google.web_search(f"{word} 웹소설", cfg)))
             except Exception as e:
                 print(f"  검색 실패 {word}: {e}", file=sys.stderr)
                 q.append((word, v.get("ex", []), []))

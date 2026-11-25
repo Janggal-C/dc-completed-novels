@@ -1,112 +1,44 @@
 name: 매일 수집·집계
 
+# 사람 개입 없이 매일 새벽 자동 실행 (src/daily.py 참고)
+#   수집 → 완결 판정(haiku→sonnet) → 새 단어 → 사전 등록(구글) → AI 검수(sonnet) → 오류 신고 처리 → 소설넷
+# 끝나면 '보고서 페이지 배포'가 보고서·확장 사전을 만들어 올린다. 이후 Claude 예약 점검(약 04:40)이 결과를 검사.
 on:
-  # ⏸ 전체 제목 수집 중이라 매일 자동 실행 일시 중지 (다시 켜려면 아래 두 줄 주석 해제)
-  # schedule:
-  #   - cron: "43 18 * * *"   # 매일 한국시간 03:43 (UTC 18:43)
-  push:                      # .github/run-now 파일이 바뀌면 바로 실행 (원격으로 실행 요청할 때 사용)
+  schedule:
+    - cron: "7 17 * * *"     # 매일 한국시간 02:07
+  push:
     paths: [".github/run-now"]
-  workflow_dispatch:         # Actions 탭에서 수동 실행
-    inputs:
-      step:
-        description: "실행 단계 (all=전체, judge=판정·보고서만, report=보고서만)"
-        default: all
-        type: choice
-        options: [all, judge, report]
+  workflow_dispatch:
 
 permissions:
   contents: write
-  pages: write       # 보고서 페이지 배포
-  id-token: write
 
 concurrency:
-  group: daily
+  group: fullcrawl-0         # 6시간마다 도는 제목 수집과 겹치지 않게 같은 줄에 세움
   cancel-in-progress: false
 
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 150
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy2.outputs.page_url }}
+    timeout-minutes: 180
     env:
       WRITER_SALT: ${{ secrets.WRITER_SALT }}
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
       SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+      SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
     steps:
       - uses: actions/checkout@v5
         with:
-          ref: main          # 실행을 건 시점이 아니라 '지금' 최신 데이터에서 이어서 시작
+          ref: main
           fetch-depth: 1
-
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
-
       - run: pip install -r requirements.txt
-
-      - name: Claude Code 설치
-        run: npm install -g @anthropic-ai/claude-code
-
-      - name: 1) 크롤링
-        if: inputs.step == 'all' || inputs.step == ''
-        run: python -m src.main crawl
-
-      - name: 크롤링 결과 저장
-        if: always() && (inputs.step == 'all' || inputs.step == '')
-        run: bash scripts/commit.sh "크롤링 $(TZ=Asia/Seoul date +%F)"
-
-      # 보고서 페이지 배포 (크롤링 직후 1회) — Pages 설정이 'GitHub Actions'일 때만 동작
-      - uses: actions/upload-pages-artifact@v4
-        if: always() && (inputs.step == 'all' || inputs.step == '')
-        continue-on-error: true
-        with:
-          path: docs
-          name: pages-crawl
-      - name: 업로드 반영 대기
-        if: always() && (inputs.step == 'all' || inputs.step == '')
-        run: sleep 15
-      - uses: actions/deploy-pages@v4
-        if: always() && (inputs.step == 'all' || inputs.step == '')
-        continue-on-error: true
-        with:
-          artifact_name: pages-crawl
-
-      - name: 2) AI 판정 + 줄임말 사전 + 보고서
-        if: always() && inputs.step != 'report'
-        run: python -m src.main judge
-
-      - name: 보고서만 다시 만들기
-        if: inputs.step == 'report'
-        run: python -m src.main report && python -m src.mentions
-
-      - name: 판정·보고서 저장
+      - run: npm install -g @anthropic-ai/claude-code
+      - name: 매일 실행
+        run: python -u -m src.daily
+      - name: 저장
         if: always()
-        run: bash scripts/commit.sh "판정·보고서 $(TZ=Asia/Seoul date +%F)"
-
-      # 보고서 페이지 배포 (최종)
-      - uses: actions/upload-pages-artifact@v4
-        if: always()
-        continue-on-error: true
-        with:
-          path: docs
-          name: pages-final
-      - name: 업로드 반영 대기
-        if: always()
-        run: sleep 15
-      - id: deploy2
-        uses: actions/deploy-pages@v4
-        if: always()
-        continue-on-error: true
-        with:
-          artifact_name: pages-final
-      - name: 배포 재시도 대기
-        if: always() && steps.deploy2.outcome == 'failure'
-        run: sleep 60
-      - uses: actions/deploy-pages@v4     # GitHub 쪽 일시 오류 대비 1회 재시도
-        if: always() && steps.deploy2.outcome == 'failure'
-        continue-on-error: true
-        with:
-          artifact_name: pages-final
+        run: bash scripts/commit.sh "매일 실행 $(TZ=Asia/Seoul date '+%F %H:%M')"
