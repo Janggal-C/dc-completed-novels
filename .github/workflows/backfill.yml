@@ -1,0 +1,36 @@
+name: 완결 1~5월 AI 판정
+
+on:
+  push:
+    paths: [".github/run-backfill"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  judge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      COMMIT_PATHS: "data/ai data/posts"
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: npm install -g @anthropic-ai/claude-code
+      - run: python -u -m src.backfill judge
+      - name: 저장
+        if: always()
+        run: bash scripts/commit.sh "완결 1~5월 AI 판정 $(TZ=Asia/Seoul date '+%F %H:%M')"
