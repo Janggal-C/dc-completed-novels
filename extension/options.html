@@ -12,7 +12,18 @@ small{color:#777}
 #order li .name{flex:1}
 #order button{border:1px solid #ccc;background:#fff;border-radius:4px;width:24px;height:22px;cursor:pointer;padding:0}
 #order button:disabled{opacity:.3;cursor:default}
+textarea{width:100%;box-sizing:border-box;font:13px/1.5 "Malgun Gothic",sans-serif;padding:6px;border:1px solid #ccc;border-radius:6px;margin:4px 0}
+#rs,#fs{padding:5px 16px;border:0;border-radius:6px;background:#3B4890;color:#fff;cursor:pointer}
+#rs:disabled,#fs:disabled{opacity:.5;cursor:default}
+.rw{margin:6px 0}
 </style>
+<div id="reportOnly" hidden>
+  <h1>오류 신고</h1>
+  <div class="rw">줄임말: <b id="rw"></b></div>
+  <textarea id="rc" rows="4" placeholder="예) 이거 괴담동아리임"></textarea>
+  <button id="rs">보내기</button> <small id="rm"></small>
+</div>
+<div id="settings">
 <h1>장르소설갤 줄임말 사전</h1>
 <label><input type="checkbox" id="popup"> 마우스 올리면 원제목 팝업</label>
 <label>팝업 스킨 <select id="skin"><option value="light">밝게 (흰 바탕)</option><option value="dark">어둡게 (검은 바탕)</option></select></label>
@@ -26,8 +37,15 @@ small{color:#777}
 <label><input type="checkbox" id="body"> 글 제목·본문</label>
 <label><input type="checkbox" id="comment"> 댓글</label>
 </fieldset>
+<fieldset><legend>오류 신고</legend>
+<small>한 줄에 하나씩: 줄임말 + 코멘트</small>
+<textarea id="fr" rows="4" placeholder="괴담동 이거 괴담동아리임&#10;괴담출 괴담호텔탈출기"></textarea>
+<button id="fs">보내기</button> <small id="fm"></small>
+</fieldset>
 <div><small id="info"></small></div>
 <div><small>설정은 페이지를 새로고침하면 적용됩니다.</small></div>
+</div>
 <script src="platform.js"></script>
+<script src="report.js"></script>
 <script src="options.js"></script>
 </html>

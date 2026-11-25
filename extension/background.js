@@ -19,3 +19,11 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 chrome.runtime.onStartup.addListener(refresh);
 chrome.alarms.onAlarm.addListener(a => { if (a.name === "refresh") refresh(); });
+
+// 팝업의 ⚑ → 작은 신고 창 (확장 설정 페이지의 신고 화면)
+chrome.runtime.onMessage.addListener(msg => {
+  if (msg && msg.type === "report") {
+    const q = new URLSearchParams({w: msg.alias || "", t: msg.title || "", u: msg.url || ""});
+    chrome.windows.create({url: chrome.runtime.getURL("options.html?" + q), type: "popup", width: 380, height: 360});
+  }
+});

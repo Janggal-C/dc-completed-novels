@@ -41,3 +41,29 @@ chrome.storage.sync.get(DEFAULTS).then(o => {
   }
 });
 info();
+
+// 오류 신고
+const sendWith = async (btn, msgEl, data, after) => {
+  btn.disabled = true; msgEl.textContent = "보내는 중…";
+  try { await dcnxSendReport(data); msgEl.textContent = "신고했어요. 고마워요!"; after && after(); }
+  catch (e) { msgEl.textContent = "보내지 못했어요. 인터넷 연결을 확인해 주세요."; btn.disabled = false; return; }
+  setTimeout(() => { btn.disabled = false; }, 5000);   // 연달아 보내기 방지
+};
+const qp = new URLSearchParams(location.search);
+if (qp.has("w")) {   // 팝업 ⚑ 로 열린 작은 신고 창
+  document.getElementById("settings").hidden = true;
+  document.getElementById("reportOnly").hidden = false;
+  document.getElementById("rw").textContent = qp.get("w");
+  document.getElementById("rc").focus();
+  document.getElementById("rs").onclick = e => {
+    const c = document.getElementById("rc").value.trim();
+    if (!c) { document.getElementById("rm").textContent = "코멘트를 적어 주세요."; return; }
+    sendWith(e.target, document.getElementById("rm"), {alias: qp.get("w"), title: qp.get("t"), url: qp.get("u"), comment: c},
+      () => setTimeout(() => window.close(), 1200));
+  };
+}
+document.getElementById("fs").onclick = e => {
+  const t = document.getElementById("fr").value.trim();
+  if (!t) { document.getElementById("fm").textContent = "내용을 적어 주세요."; return; }
+  sendWith(e.target, document.getElementById("fm"), {comment: t}, () => { document.getElementById("fr").value = ""; });
+};

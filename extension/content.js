@@ -56,6 +56,15 @@
       b.textContent = "[완]";
       tip.append(b);
     }
+    const flag = document.createElement("span");
+    flag.className = "dcnx-flag";
+    flag.title = "오류 신고";
+    flag.textContent = "⚑";
+    flag.onclick = ev => {
+      ev.preventDefault(); ev.stopPropagation();
+      chrome.runtime.sendMessage({type: "report", alias: el.textContent, title: w.t || "", url: location.href});
+    };
+    tip.append(flag);
     tip.style.display = "block";
     const r = el.getBoundingClientRect();
     // 기본은 아래쪽, 화면 밑에 안 들어가면 위쪽

@@ -22,3 +22,5 @@
 .dcnx-tip a:hover { text-decoration: underline; }
 .dcnx-rate { margin-left: 7px; }
 .dcnx-rate .dcnx-star { margin-left: 0; }
+.dcnx-flag { margin-left: 8px; cursor: pointer; opacity: .45; font-size: 12px; }
+.dcnx-flag:hover { opacity: 1; }
