@@ -80,16 +80,19 @@ def extract(html):
 
 def main():
     res = {"checked": now_kst().strftime("%Y-%m-%d %H:%M")}
-    url = os.environ.get("RANKING_URL", "").strip()
+    url = os.environ.get("RANKING_URL", "").strip().strip("\"'").strip()
+    if url and not re.match(r"^[a-z][a-z0-9+.-]*://", url, re.I):
+        url = "https://" + url.lstrip("/")          # https:// 를 빼고 등록한 경우
     if not url:
         res["stage"] = "no_url"
         write_json(OUT, res)
         print("Secrets에 RANKING_URL이 없습니다. 저장소 Settings → Secrets → Actions에 등록하세요.")
         return
-    if urlparse(url).scheme not in ("http", "https"):
+    if urlparse(url).scheme not in ("http", "https") or not urlparse(url).netloc:
         res["stage"] = "bad_url"
+        res["hint"] = "주소가 비었거나 형식이 이상함 (값 자체는 기록하지 않음)"
         write_json(OUT, res)
-        print("RANKING_URL은 http(s) 주소여야 합니다.")
+        print("주소 형식이 올바르지 않습니다. 값 앞뒤 공백·따옴표·여러 줄 여부를 확인하세요.")
         return
     ok, why = robots_allows(url)
     res["robots"] = why
