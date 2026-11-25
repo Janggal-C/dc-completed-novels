@@ -70,7 +70,7 @@ def targets(limit):
         w = works.get(wid)
         if not w or w.get("excluded"):
             continue
-        if ssn.get(wid, {}).get("links"):            # 소설넷에서 링크를 이미 얻음
+        if wid not in ssn or ssn[wid].get("links"):  # 소설넷 조회 전이거나 소설넷에서 링크를 이미 얻음
             continue
         if google_link(w.get("source", "")):         # 예전 구글 링크가 형식 검사 통과
             continue
