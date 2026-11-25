@@ -37,8 +37,14 @@ const subject = makeTitle();
 const content = makeBody();
 console.log('제목:', subject, '/ 본문:', content);
 
-const res = await dc.createPost({ galleryId: GALLERY_ID, subject, content, jar: login.jar });
-console.log('write result:', JSON.stringify({ ...res, jar: undefined }));
+let res;
+for (let i = 1; i <= 6; i++) {
+  res = await dc.createPost({ galleryId: GALLERY_ID, subject, content, jar: login.jar });
+  if (res?.success || !/보안 확인/.test(res?.message ?? '')) break;
+  console.log(`보안 확인 대기 중, 재시도 ${i}/6`);
+  await new Promise((r) => setTimeout(r, 3000));
+}
+console.log('write result:', JSON.stringify({ ...res, jar: undefined, finalHtml: undefined }));
 if (!res?.success) {
   console.error('글쓰기 실패:', res?.message ?? '(사유 없음)', '— 캡차/IP 제한 가능성');
   process.exit(3);
