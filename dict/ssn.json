@@ -1832,6 +1832,10 @@
   },
   "title": "냥이가 모험을 잘함"
  },
+ "너랑은절대안사귈거니까": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "네크로맨서학교의소환천재": {
   "author": "일제사격",
   "checked": "2026-11-25",
@@ -2489,6 +2493,20 @@
   },
   "title": "말랑한 길드장님"
  },
+ "망겜의힐러": {
+  "author": "검미성",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 149481,
+  "links": {
+   "kakao": "https://page.kakao.com/content/61763847",
+   "munpia": "https://novel.munpia.com/328421",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=9951104"
+  },
+  "r": 3.79,
+  "rc": 121,
+  "title": "망겜의 힐러"
+ },
  "망나니용사를너무잘키웠다": {
   "author": "리틀빅",
   "checked": "2026-11-25",
@@ -2564,9 +2582,36 @@
   "rc": 18,
   "title": "메인 히로인들이 나를 죽이려 한다"
  },
+ "멸망중인세상마지막신이되었다": {
+  "author": "하드폭발",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 128951,
+  "links": {
+   "kakao": "https://page.kakao.com/content/59701105",
+   "munpia": "https://novel.munpia.com/288969",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=8212463",
+   "ridi": "https://ridibooks.com/books/425284341?_rdt_sid=category_books&_rdt_idx=14"
+  },
+  "r": 3.65,
+  "rc": 34,
+  "title": "멸망 중인 세상 마지막 신이 되었다"
+ },
  "모유탓": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "몰락민족의천재기사": {
+  "author": "수박복숭아",
+  "checked": "2026-11-25",
+  "id": 278360,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/510190",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13683859"
+  },
+  "r": 2.73,
+  "rc": 13,
+  "title": "몰락민족의 천재 기사"
  },
  "무공뭐별거없더라": {
   "author": "Suerte",
@@ -2744,6 +2789,10 @@
   },
   "title": "미궁도시의 플레시골렘"
  },
+ "미래수선전": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "미래에서온연애편지": {
   "author": "알콜중독",
   "checked": "2026-11-25",
@@ -2851,6 +2900,21 @@
   "rc": 70,
   "title": "반지성주의 마왕의 세계침략"
  },
+ "방랑기사로살아가는법": {
+  "author": "글쓰는기계",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 93609,
+  "links": {
+   "kakao": "https://page.kakao.com/content/54960767",
+   "munpia": "https://novel.munpia.com/188910",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=5815140",
+   "ridi": "https://ridibooks.com/books/1561007538?_rdt_sid=category-books&_rdt_idx=1"
+  },
+  "r": 3.72,
+  "rc": 417,
+  "title": "방랑기사로 살아가는 법"
+ },
  "방랑마법사의자장가": {
   "checked": "2026-11-25",
   "miss": true
@@ -2874,6 +2938,10 @@
    "novelpia": "https://novelpia.com/novel/455628"
   },
   "title": "백만을 사랑하는 황제가 됐다"
+ },
+ "뱀파이어소서리스": {
+  "checked": "2026-11-25",
+  "miss": true
  },
  "버튜버지만출근합니다": {
   "author": "망크빵",
@@ -3121,6 +3189,21 @@
   "rc": 39,
   "title": "세상에 나쁜 영애는 없다"
  },
+ "세상의끝에서클리어를외치다": {
+  "author": "첨G",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 116190,
+  "links": {
+   "kakao": "https://page.kakao.com/content/58350864",
+   "munpia": "https://novel.munpia.com/265551",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=6630751",
+   "ridi": "https://ridibooks.com/books/425254118?_rdt_sid=category_books&_rdt_idx=6"
+  },
+  "r": 4.03,
+  "rc": 559,
+  "title": "세상의 끝에서 클리어를 외치다"
+ },
  "세종의종신재상이되었다": {
   "author": "연재약장수",
   "checked": "2026-11-25",
@@ -3361,6 +3444,17 @@
   "rc": 626,
   "title": "아카데미에서 살아남기."
  },
+ "아카데미의피해자": {
+  "author": "양파랑",
+  "checked": "2026-11-25",
+  "id": 266214,
+  "links": {
+   "kakao": "https://page.kakao.com/content/66611775"
+  },
+  "r": 3.9,
+  "rc": 5,
+  "title": "아카데미의 피해자"
+ },
  "아카데미의핑챙이되었다": {
   "checked": "2026-11-25",
   "miss": true
@@ -3413,6 +3507,15 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "아포칼립스속기관사가되었다": {
+  "author": "크라임씬",
+  "checked": "2026-11-25",
+  "id": 289511,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/408409"
+  },
+  "title": "아포칼립스 속 기관사가 되었다."
+ },
  "아포칼립스속인간혐오수기": {
   "author": "이미글",
   "checked": "2026-11-25",
@@ -3454,6 +3557,17 @@
    "novelpia": "https://novelpia.com/novel/383474"
   },
   "title": "아포칼립스의 살인 남매"
+ },
+ "악당들의후원자가되었다": {
+  "author": "봄한방울",
+  "checked": "2026-11-25",
+  "id": 235220,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=11266694"
+  },
+  "r": 3.11,
+  "rc": 95,
+  "title": "악당들의 후원자가 되었다"
  },
  "악당영애길들이기": {
   "checked": "2026-11-25",
@@ -3943,6 +4057,10 @@
   "rc": 18,
   "title": "인류보호회사"
  },
+ "일진들이우리집을점거했다": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "일편독심": {
   "author": "천사같은",
   "checked": "2026-11-25",
@@ -4145,6 +4263,15 @@
   "rc": 3000,
   "title": "전지적 독자 시점"
  },
+ "절대암타안하는마녀군": {
+  "author": "쿠폰노예카쿠로",
+  "checked": "2026-11-25",
+  "id": 288692,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/405002"
+  },
+  "title": "절대 암타 안하는 마녀군"
+ },
  "절대육수를우리지않는스트리머": {
   "checked": "2026-11-25",
   "miss": true
@@ -4159,6 +4286,15 @@
   "r": 3.7,
   "rc": 277,
   "title": "절대회귀"
+ },
+ "정령분양합니다": {
+  "author": "수정주의",
+  "checked": "2026-11-25",
+  "id": 320171,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/440343"
+  },
+  "title": "정령 분양합니다"
  },
  "정령왕엘퀴네스": {
   "author": "이환",
@@ -4206,6 +4342,18 @@
   "rc": 383,
   "title": "제국사냥꾼"
  },
+ "제발제발회귀좀": {
+  "author": "소원다미",
+  "checked": "2026-11-25",
+  "id": 282267,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/527619",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13979019"
+  },
+  "r": 2.75,
+  "rc": 2,
+  "title": "제발 제발 회귀 좀"
+ },
  "종말의뱀이되었다": {
   "author": "비도™",
   "checked": "2026-11-25",
@@ -4239,6 +4387,17 @@
    "novelpia": "https://novelpia.com/novel/26536"
   },
   "title": "주술사는 초월을 원한다"
+ },
+ "주인공일행이지나치게성실하다": {
+  "author": "십삼중수소",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 258641,
+  "links": {
+   "kakao": "https://page.kakao.com/content/67334478",
+   "novelpia": "https://novelpia.com/novel/146019"
+  },
+  "title": "주인공 일행이 지나치게 성실하다"
  },
  "죽었다깨어도수선": {
   "author": "돌마늘",
@@ -4305,6 +4464,10 @@
   "title": "지옥에서 돌아온 게임 디렉터"
  },
  "지잡아카데미와폐급히로인들": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "차원생존전략": {
   "checked": "2026-11-25",
   "miss": true
  },
@@ -4378,6 +4541,17 @@
  "최강의연인기사들을ntr당합니다": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "최약체마왕의스승이되었다": {
+  "author": "글쓰는이브",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 287137,
+  "links": {
+   "kakao": "https://page.kakao.com/content/68342250",
+   "novelpia": "https://novelpia.com/novel/141671"
+  },
+  "title": "최약체 마왕의 스승이 되었다"
  },
  "취미방송입니다": {
   "author": "쌍포메타",
