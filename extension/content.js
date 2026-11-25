@@ -59,7 +59,7 @@
     const flag = document.createElement("span");
     flag.className = "dcnx-flag";
     flag.title = "오류 신고";
-    flag.textContent = "⚑";
+    flag.textContent = "⚠️";
     flag.onclick = ev => {
       ev.preventDefault(); ev.stopPropagation();
       chrome.runtime.sendMessage({type: "report", alias: el.textContent, title: w.t || "", url: location.href});

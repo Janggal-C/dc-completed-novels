@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "장르소설갤 줄임말 사전",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "디시 장르소설 갤러리에서 작품 줄임말에 마우스를 올리면 원제목을 보여줍니다.",
   "permissions": [
     "storage",
