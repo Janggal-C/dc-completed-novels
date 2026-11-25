@@ -2545,6 +2545,18 @@
   "rc": 24,
   "title": "마도서를 줍다 마법사가 되다"
  },
+ "마도아카데미의물리학자": {
+  "author": "AiBi",
+  "checked": "2026-11-26",
+  "id": 267645,
+  "links": {
+   "kakao": "https://page.kakao.com/content/67701133",
+   "novelpia": "https://novelpia.com/novel/123895"
+  },
+  "r": 2.75,
+  "rc": 4,
+  "title": "마도 아카데미의 물리학자"
+ },
  "마도유화": {
   "author": "흙마법사",
   "checked": "2026-11-25",
@@ -2636,6 +2648,20 @@
   "r": 3.74,
   "rc": 511,
   "title": "마법학교 마법사로 살아가는 법"
+ },
+ "마법학교앞점멸천재가되었다": {
+  "author": "은밀히",
+  "checked": "2026-11-26",
+  "done": true,
+  "id": 105402,
+  "links": {
+   "joara": "https://www.joara.com/book/1739990",
+   "kakao": "https://page.kakao.com/content/68118483",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=10686505"
+  },
+  "r": 3.32,
+  "rc": 88,
+  "title": "마법학교 앞점멸 천재가 되었다"
  },
  "마약소꿉친구가되었다": {
   "checked": "2026-11-25",
@@ -2904,6 +2930,10 @@
   "r": 3.0,
   "rc": 2,
   "title": "목숨 무한 주술사는 저승이 쉽다"
+ },
+ "몰락기사의뢰시작했습니다": {
+  "checked": "2026-11-26",
+  "miss": true
  },
  "몰락민족의천재기사": {
   "author": "수박복숭아",
@@ -4171,6 +4201,18 @@
   "rc": 22,
   "title": "아포칼립스의 유일한 건물주"
  },
+ "악녀를갱생시켜라": {
+  "author": "오당티",
+  "checked": "2026-11-26",
+  "id": 287357,
+  "links": {
+   "kakao": "https://page.kakao.com/content/68972265",
+   "novelpia": "https://novelpia.com/novel/73524"
+  },
+  "r": 3.25,
+  "rc": 2,
+  "title": "악녀를 갱생시켜라"
+ },
  "악당들의후원자가되었다": {
   "author": "봄한방울",
   "checked": "2026-11-25",
@@ -4364,6 +4406,21 @@
   "r": 3.77,
   "rc": 147,
   "title": "양치기 마법사"
+ },
+ "어두운바다의등불이되어": {
+  "author": "연산호",
+  "checked": "2026-11-26",
+  "done": true,
+  "id": 127604,
+  "links": {
+   "joara": "https://www.joara.com/book/1612425",
+   "kakao": "https://page.kakao.com/content/59217118",
+   "munpia": "https://www.munpia.com/novel/detail/269793",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=8063866"
+  },
+  "r": 3.75,
+  "rc": 261,
+  "title": "어두운 바다의 등불이 되어"
  },
  "어떤과학의소년망상": {
   "checked": "2026-11-25",
@@ -4957,6 +5014,25 @@
   "rc": 23,
   "title": "자본주의 스트라이커"
  },
+ "자신을남자라고주장하는약혼녀관찰일기": {
+  "author": "연습용더미",
+  "checked": "2026-11-26",
+  "done": true,
+  "id": 289732,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/383799"
+  },
+  "title": "자신을 남자라고 주장하는 약혼녀 관찰일기"
+ },
+ "자학방송아니에요": {
+  "author": "드로미",
+  "checked": "2026-11-26",
+  "id": 288968,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/330607"
+  },
+  "title": "자학 방송 아니에요"
+ },
  "잘생기면편해지는인방생활": {
   "author": "민트초코주먹밥",
   "checked": "2026-11-25",
@@ -5034,6 +5110,10 @@
   "r": 4.5,
   "rc": 2,
   "title": "저능아 하꼬 버튜버가 나데나데 받는다"
+ },
+ "전과4범공녀님이되었다": {
+  "checked": "2026-11-26",
+  "miss": true
  },
  "전능의뇌를얻었다": {
   "author": "몽쉐르",
@@ -5146,6 +5226,10 @@
   "r": 3.67,
   "rc": 3000,
   "title": "전지적 독자 시점"
+ },
+ "절대꺾이지않을거야": {
+  "checked": "2026-11-26",
+  "miss": true
  },
  "절대암타안하는마녀군": {
   "author": "쿠폰노예카쿠로",
@@ -5310,6 +5394,17 @@
   },
   "title": "주술사는 초월을 원한다"
  },
+ "주인공이공략당함": {
+  "author": "낙비1",
+  "checked": "2026-11-26",
+  "id": 298729,
+  "links": {
+   "joara": "https://www.joara.com/book/1368170"
+  },
+  "r": 4.0,
+  "rc": 1,
+  "title": "주인공이 공략 당함"
+ },
  "주인공이빌런임": {
   "checked": "2026-11-25",
   "miss": true
@@ -5335,6 +5430,19 @@
   "r": 3.69,
   "rc": 8,
   "title": "죽었다 깨어도 수선"
+ },
+ "죽인만큼낳는마왕이되었다": {
+  "checked": "2026-11-26",
+  "miss": true
+ },
+ "중세시대검희가되었다": {
+  "author": "루루챠",
+  "checked": "2026-11-26",
+  "id": 316257,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/326517"
+  },
+  "title": "중세시대 검희가 되었다"
  },
  "중세판타지속망나니경비조장": {
   "author": "곰돌이는",
@@ -5394,6 +5502,18 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "지옥과인간의대결manvshell": {
+  "author": "백수귀족.",
+  "checked": "2026-11-26",
+  "done": true,
+  "id": 5576,
+  "links": {
+   "munpia": "https://novel.munpia.com/123363"
+  },
+  "r": 3.73,
+  "rc": 359,
+  "title": "지옥과 인간의 대결(Man vs. Hell)"
+ },
  "지옥에서돌아온게임디렉터": {
   "author": "papapa.",
   "checked": "2026-11-25",
@@ -5410,6 +5530,33 @@
  "지잡아카데미와폐급히로인들": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "진화하는우주괴물이되었다": {
+  "author": "공포의거북이",
+  "checked": "2026-11-26",
+  "done": true,
+  "id": 280765,
+  "links": {
+   "kakao": "https://page.kakao.com/content/68991441",
+   "novelpia": "https://novelpia.com/novel/46706"
+  },
+  "r": 4.2,
+  "rc": 5,
+  "title": "진화하는 우주괴물이 되었다"
+ },
+ "짜장한그릇에제갈세가데릴사위": {
+  "author": "에르훗",
+  "checked": "2026-11-26",
+  "done": true,
+  "id": 146618,
+  "links": {
+   "kakao": "https://page.kakao.com/content/61951926",
+   "munpia": "https://novel.munpia.com/325334",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=8988061"
+  },
+  "r": 2.6,
+  "rc": 76,
+  "title": "짜장 한 그릇에 제갈세가 데릴사위"
  },
  "차원생존전략": {
   "checked": "2026-11-25",
@@ -5682,6 +5829,10 @@
   "r": 3.92,
   "rc": 996,
   "title": "탑 매니지먼트"
+ },
+ "태양의탑": {
+  "checked": "2026-11-26",
+  "miss": true
  },
  "태엽과모래의마녀": {
   "checked": "2026-11-25",
@@ -6077,6 +6228,15 @@
   "rc": 6,
   "title": "회귀 안 한 헌터만 세상을 구함"
  },
+ "회귀용사의하녀가되었다": {
+  "author": "커스타드론",
+  "checked": "2026-11-26",
+  "id": 288833,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/415165"
+  },
+  "title": "회귀 용사의 하녀가 되었다"
+ },
  "회귀자사용설명서": {
   "author": "흙수저",
   "checked": "2026-11-25",
@@ -6208,6 +6368,15 @@
   "r": 3.33,
   "rc": 27,
   "title": "히어로가 집착하는 악당이 되었다"
+ },
+ "히어로만화속시장님이되었다": {
+  "author": "도룡농",
+  "checked": "2026-11-26",
+  "id": 288658,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/369615"
+  },
+  "title": "히어로 만화 속 시장님이 되었다"
  },
  "힐러는도구가아니에요": {
   "author": "악흑련",
