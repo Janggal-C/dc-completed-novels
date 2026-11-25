@@ -1882,6 +1882,20 @@
   "rc": 1,
   "title": "니들 생각 다 들린다"
  },
+ "다크엘프는주사위사기꾼": {
+  "author": "병장개미",
+  "checked": "2026-11-25",
+  "id": 284385,
+  "links": {
+   "joara": "https://www.joara.com/book/1884867",
+   "kakao": "https://page.kakao.com/content/69865164",
+   "munpia": "https://www.munpia.com/novel/detail/539992",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14241999"
+  },
+  "r": 4.06,
+  "rc": 8,
+  "title": "다크엘프는 주사위 사기꾼"
+ },
  "다크판타지에서도쌀은먹고살아야지": {
   "author": "미츄리",
   "checked": "2026-11-25",
@@ -2357,6 +2371,20 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "메모라이즈": {
+  "author": "로유진",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 31166,
+  "links": {
+   "kakao": "https://page.kakao.com/content/54846551",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=4242788",
+   "ridi": "https://ridibooks.com/books/102076357?_rdt_sid=category_books&_rdt_idx=19"
+  },
+  "r": 3.63,
+  "rc": 1026,
+  "title": "메모라이즈"
+ },
  "메인히로인들이나를죽이려한다": {
   "author": "김마모",
   "checked": "2026-11-25",
@@ -2500,6 +2528,17 @@
   "rc": 67,
   "title": "반강제적 제국주의자"
  },
+ "반로환동한천마의마경방송": {
+  "author": "찰하리",
+  "checked": "2026-11-25",
+  "id": 273421,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13019051"
+  },
+  "r": 3.25,
+  "rc": 6,
+  "title": "반로환동한 천마의 마경방송"
+ },
  "반지성주의마왕의세계침략": {
   "author": "뚜근남",
   "checked": "2026-11-25",
@@ -2626,6 +2665,10 @@
   "r": 2.98,
   "rc": 50,
   "title": "서포터가 다 해먹음"
+ },
+ "선녀로착각당했다": {
+  "checked": "2026-11-25",
+  "miss": true
  },
  "선협식수련에드래곤하트를더하면": {
   "author": "오늘오후에",
@@ -2767,6 +2810,18 @@
   "rc": 2,
   "title": "심해 엠생 스트리머"
  },
+ "심해의마법사": {
+  "author": "상한김밥",
+  "checked": "2026-11-25",
+  "id": 271623,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/483667",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13147053"
+  },
+  "r": 3.44,
+  "rc": 67,
+  "title": "심해의 마법사"
+ },
  "아이돌이군필을숨김": {
   "author": "자몽펀치",
   "checked": "2026-11-25",
@@ -2819,6 +2874,21 @@
   "r": 3.99,
   "rc": 881,
   "title": "아포칼립스에 집을 숨김"
+ },
+ "악당은살고싶다": {
+  "author": "지갑송",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 103818,
+  "links": {
+   "kakao": "https://page.kakao.com/content/56807841",
+   "munpia": "https://novel.munpia.com/236702",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=6276367",
+   "ridi": "https://ridibooks.com/books/2057151411?_rdt_sid=category_books&_rdt_idx=19"
+  },
+  "r": 3.81,
+  "rc": 1238,
+  "title": "악당은 살고 싶다"
  },
  "악역영애말포이": {
   "checked": "2026-11-25",
@@ -2876,6 +2946,18 @@
   "rc": 8,
   "title": "엑스칼리버 뽑습니다"
  },
+ "여혐소설가의ts수기": {
+  "author": "알레미카",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 289729,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/217647"
+  },
+  "r": 5.0,
+  "rc": 2,
+  "title": "여혐 소설가의 TS 수기"
+ },
  "예언의아이가살아남는법": {
   "author": "Cadilet",
   "checked": "2026-11-25",
@@ -2917,6 +2999,10 @@
   "r": 4.0,
   "rc": 4,
   "title": "월야환담"
+ },
+ "유희생활": {
+  "checked": "2026-11-25",
+  "miss": true
  },
  "을위한세계는없다": {
   "author": "샤이닝",
@@ -2968,6 +3054,33 @@
  "이세계검은머리외국인": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "이세계멸망갤러리": {
+  "author": "안녕검",
+  "checked": "2026-11-25",
+  "id": 288588,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/300623"
+  },
+  "r": 3.5,
+  "rc": 2,
+  "title": "이세계 멸망 갤러리"
+ },
+ "임기첫날에게이트가열렸다": {
+  "author": "피아조아",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 397,
+  "links": {
+   "joara": "https://www.joara.com/book/1378258",
+   "kakao": "https://page.kakao.com/content/53193197",
+   "munpia": "https://novel.munpia.com/140695",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=9294400",
+   "ridi": "https://ridibooks.com/books/2057075568?_rdt_sid=category_books&_rdt_idx=10"
+  },
+  "r": 3.98,
+  "rc": 996,
+  "title": "임기 첫날에 게이트가 열렸다"
  },
  "임프줍고대마법사": {
   "author": "미츄리",
@@ -3081,6 +3194,15 @@
   "rc": 383,
   "title": "제국사냥꾼"
  },
+ "주술사는초월을원한다": {
+  "author": "노백곰",
+  "checked": "2026-11-25",
+  "id": 289433,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/26536"
+  },
+  "title": "주술사는 초월을 원한다"
+ },
  "죽었다깨어도수선": {
   "author": "돌마늘",
   "checked": "2026-11-25",
@@ -3104,6 +3226,14 @@
   "rc": 65,
   "title": "즉사기 들고 무림에 떨어지다"
  },
+ "지잡아카데미와폐급히로인들": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "창작물속으로": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "초성마문선협속마교에서인간재료로살아남기": {
   "author": "학수월만지",
   "checked": "2026-11-25",
@@ -3112,6 +3242,15 @@
    "naver": "https://series.naver.com/novel/detail.series?productNo=14756302"
   },
   "title": "초성마문:선협 속 마교에서 인간재료로 살아남기"
+ },
+ "최강길드에납치당했다": {
+  "author": "먼데용",
+  "checked": "2026-11-25",
+  "id": 288711,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/221711"
+  },
+  "title": "최강 길드에 납치당했다"
  },
  "취미방송입니다": {
   "author": "쌍포메타",
@@ -3144,6 +3283,15 @@
   "r": 4.21,
   "rc": 148,
   "title": "판초우의의 마법사"
+ },
+ "폭군을너무잘꼬셔버렸다": {
+  "author": "겨울맑음",
+  "checked": "2026-11-25",
+  "id": 288754,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/422630"
+  },
+  "title": "폭군을 너무 잘 꼬셔버렸다"
  },
  "프롤로그에서30년이흘렀다": {
   "author": "맠엘라하",
@@ -3241,6 +3389,22 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "회귀도13번이면지랄맞다": {
+  "author": "사자혼",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 473,
+  "links": {
+   "joara": "https://www.joara.com/book/1364647",
+   "kakao": "https://page.kakao.com/content/58710251",
+   "munpia": "https://novel.munpia.com/52404",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=8132444",
+   "ridi": "https://ridibooks.com/books/777093744?_rdt_sid=category_books&_rdt_idx=5"
+  },
+  "r": 3.52,
+  "rc": 302,
+  "title": "회귀도 13번이면 지랄 맞다"
+ },
  "회귀수선전": {
   "checked": "2026-11-25",
   "miss": true
@@ -3333,5 +3497,14 @@
   "r": 3.33,
   "rc": 27,
   "title": "히어로가 집착하는 악당이 되었다"
+ },
+ "힐러는도구가아니에요": {
+  "author": "악흑련",
+  "checked": "2026-11-25",
+  "id": 288577,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/419915"
+  },
+  "title": "힐러는 도구가 아니에요"
  }
 }
