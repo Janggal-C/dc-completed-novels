@@ -1,0 +1,19 @@
+name: 신고 시트 읽기 확인
+
+on:
+  push:
+    paths: [".github/run-reportprobe"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - run: |
+          curl -sSL -D /tmp/h "https://docs.google.com/spreadsheets/d/e/2PACX-1vSyW7rYfg2yrT2Klr9AAejlybfYOTIC7wo6DBeeejuTZ02O_xvKP334uCcG2gOH6_qhZWsUrWedJfii/pub?gid=1104843892&single=true&output=csv" -o /tmp/c.csv
+          grep -i "access-control\|content-type\|^HTTP" /tmp/h
+          echo "----"; cat /tmp/c.csv
