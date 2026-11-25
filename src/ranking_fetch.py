@@ -1,11 +1,10 @@
-"""순위 페이지 한 장에서 작품 제목 목록 가져오기 (Secrets의 RANKING_URL 한 주소만).
+"""순위 페이지 한 장에서 작품 제목만 가져오기 (Secrets의 SITE_URL 한 주소만).
 
-원칙
-- 주소는 저장소 Secrets `RANKING_URL`에서만 읽는다 (코드·결과 파일에 주소·도메인을 남기지 않는다).
-- 실행할 때마다 그 사이트의 robots.txt를 먼저 읽는다. 허용되지 않거나 확인할 수 없으면 가져오지 않고 멈춘다.
-- 요청은 그 한 페이지 1번뿐. 재시도·우회·로그인·차단 화면 통과 시도를 하지 않는다.
-- 브라우저인 척하지 않고 정체와 연락처가 보이는 User-Agent를 쓴다.
-- 결과 파일에는 제목 목록(최대 100개)과 구조 정보만 남긴다. 원본 HTML은 저장하지 않는다.
+- 제목 = 페이지 안의 <b class="cut_line_one"> 글자. 다른 판정은 하지 않는다.
+- 주소는 Secrets에서만 읽고, 코드·결과 파일에 주소·도메인을 남기지 않는다.
+- 요청 전에 robots.txt를 확인한다 (파이썬 표준 robotparser가 기계적으로 판정, AI 개입 없음).
+  허용되지 않거나 읽을 수 없으면 가져오지 않고 멈춘다.
+- 그 한 페이지를 1번만 요청한다. 재시도·우회·차단 화면 통과 시도 없음. 원본 HTML은 저장하지 않는다.
 
 python -m src.ranking_fetch
 결과: data/ranking_titles.json
@@ -14,7 +13,6 @@ import json
 import os
 import re
 import urllib.robotparser
-from collections import Counter
 from urllib.parse import urlparse
 
 import requests
@@ -45,37 +43,25 @@ def robots_allows(url):
     return False, "robots.txt가 이 경로를 허용하지 않음"
 
 
-def _sig(a):
-    """링크 주변 구조 서명: 부모·조부모의 태그와 클래스 (같은 목록 항목끼리 같은 값이 된다)"""
-    parts = []
-    for p in list(a.parents)[:3]:
-        if p.name in ("[document]", "html", "body"):
-            break
-        parts.append(p.name + ("." + ".".join(p.get("class", [])) if p.get("class") else ""))
-    return " < ".join(parts)
-
-
 def extract(html):
-    """반복되는 링크 묶음 중 목록처럼 보이는 가장 큰 묶음의 링크 글자를 제목으로 본다."""
+    """<b class="cut_line_one"> 안의 글자를 순서대로 (중복 제거)"""
     soup = BeautifulSoup(html, "html.parser")
-    groups = {}
-    for a in soup.find_all("a"):
-        text = re.sub(r"\s+", " ", a.get_text(" ", strip=True))
-        if not (2 <= len(text) <= 60) or re.fullmatch(r"[\d,.\s]+", text):
-            continue
-        groups.setdefault(_sig(a), []).append(text)
-    cands = [(sig, items) for sig, items in groups.items() if 10 <= len(items) <= 400]
-    cands.sort(key=lambda x: -len(x[1]))
-    hints = [{"signature": s, "count": len(i), "sample": i[:3]} for s, i in cands[:4]]
-    if not cands:
-        return [], "", hints
-    sig, items = cands[0]
     seen, titles = set(), []
-    for t in items:
-        if t not in seen:
+    for b in soup.select("b.cut_line_one"):
+        t = re.sub(r"\s+", " ", b.get_text(" ", strip=True))
+        if t and t not in seen:
             seen.add(t)
             titles.append(t)
-    return titles[:MAX_TITLES], sig, hints
+    return titles[:MAX_TITLES]
+
+
+def redact(msg, url):
+    """오류 문구에서 주소·도메인을 지운다 (결과 파일은 공개 저장소에 올라간다)"""
+    host = urlparse(url).netloc
+    for x in (url, host, host.split(":")[0]):
+        if x:
+            msg = msg.replace(x, "[주소]")
+    return msg[:300]
 
 
 def main():
@@ -95,6 +81,11 @@ def main():
         print("주소 형식이 올바르지 않습니다. 값 앞뒤 공백·따옴표·여러 줄 여부를 확인하세요.")
         return
     ok, why = robots_allows(url)
+    if "확인 실패" in why:
+        try:
+            requests.get(f"{urlparse(url).scheme}://{urlparse(url).netloc}/robots.txt", headers={"User-Agent": UA}, timeout=20)
+        except Exception as e:
+            res["error_detail"] = redact(f"{type(e).__name__}: {e}", url)
     res["robots"] = why
     if not ok:
         res["stage"] = "stopped_by_robots"
@@ -108,12 +99,13 @@ def main():
         write_json(OUT, res)
         print(f"차단·확인 화면으로 보여 멈춥니다 (응답 {r.status_code}).")
         return
-    titles, sig, hints = extract(r.text)
-    res.update(stage="ok", count=len(titles), signature=sig, titles=titles, hints=hints)
+    titles = extract(r.text)
+    res.update(stage="ok" if titles else "no_titles", count=len(titles), titles=titles,
+               cut_line_one=len(re.findall(r"cut_line_one", r.text)))
     write_json(OUT, res)
-    print(f"제목 {len(titles)}개 추출 (구조: {sig or '없음'}) / robots: {why}")
+    print(f"제목 {len(titles)}개 추출 / robots: {why}")
     if not titles:
-        print("목록 구조를 못 찾았습니다. hints를 보고 파서를 맞춰야 합니다.")
+        print("cut_line_one을 못 찾았습니다 (자바스크립트로 나중에 채워지는 페이지일 수 있음).")
 
 
 if __name__ == "__main__":
