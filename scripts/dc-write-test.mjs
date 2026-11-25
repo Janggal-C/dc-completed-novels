@@ -26,26 +26,18 @@ const makeBody = () => Array.from({ length: 10 }, () => pick(ALNUM)).join('');
 const names = Object.keys(dc).filter((k) => typeof dc[k] === 'function');
 console.log('exports:', names.join(', '));
 
-const find = (re) => names.find((n) => re.test(n));
-const loginFn = dc.loginMobile ?? dc[find(/login/i)];
-const writeFn = dc.writeMobilePost ?? dc[find(/write.*(post|article)|(post|article).*write/i)];
-if (!loginFn || !writeFn) {
-  console.error('로그인/글쓰기 함수를 찾지 못했습니다. 위 exports 목록을 확인하세요.');
-  process.exit(1);
-}
-
-const login = await loginFn({ id: DC_ID, password: DC_PW, userId: DC_ID, pw: DC_PW });
-console.log('login result keys:', Object.keys(login ?? {}));
-if (login?.success === false) {
-  console.error('로그인 실패:', login.message ?? '(사유 없음)', '— 캡차 가능성');
+const login = await dc.mobileLogin({ code: DC_ID, password: DC_PW });
+if (!login?.success) {
+  console.error('로그인 실패:', login?.reason ?? '(사유 없음)', '— 캡차 가능성');
   process.exit(2);
 }
+console.log('로그인 성공');
 
 const subject = makeTitle();
 const content = makeBody();
 console.log('제목:', subject, '/ 본문:', content);
 
-const res = await writeFn({ galleryId: GALLERY_ID, subject, content, jar: login.jar });
+const res = await dc.createPost({ galleryId: GALLERY_ID, subject, content, jar: login.jar });
 console.log('write result:', JSON.stringify({ ...res, jar: undefined }));
 if (!res?.success) {
   console.error('글쓰기 실패:', res?.message ?? '(사유 없음)', '— 캡차/IP 제한 가능성');
