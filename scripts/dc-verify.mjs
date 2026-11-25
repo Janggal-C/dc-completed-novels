@@ -4,4 +4,4 @@ const gallery = process.env.GALLERY || 'trifoliumdubiumsibth';
 const no = Number(process.env.POST_NO);
 const dc = new DCInside();
 const v = await dc.articles.read(gallery, no);
-console.log('읽기 결과:', JSON.stringify(v).slice(0, 6000));
+console.log('읽기 결과:', JSON.stringify(v).slice(0, 30000));
