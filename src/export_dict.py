@@ -39,6 +39,7 @@ def run():
     works = read_json(WORKS, {})
     aliases = read_json(ALIASES, {})
     ssn = read_json(DICT / "ssn.json", {})
+    ai_links = read_json(DICT / "links.json", {})
     used = set(aliases.values())
     out_works = {}
     for wid in used:
@@ -48,6 +49,8 @@ def run():
         sn = ssn.get(wid, {})
         # 연재처 링크: 소설넷 것은 그대로, 구글 것은 작품 페이지 형식만
         links = dict(sn.get("links", {}))
+        for k2, u2 in (ai_links.get(wid, {}).get("links") or {}).items():   # AI 웹검색으로 찾고 페이지까지 확인한 링크
+            links.setdefault(k2, u2)
         g = google_link(w.get("source", ""))
         if g and g[0] not in links:
             links[g[0]] = g[1]

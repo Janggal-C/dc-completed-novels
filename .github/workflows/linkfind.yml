@@ -1,0 +1,37 @@
+name: 연재처 링크 찾기 (AI 웹검색)
+
+on:
+  push:
+    paths: [".github/run-linkfind"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: linkfind
+  cancel-in-progress: false
+
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      COMMIT_PATHS: "dict/links.json"
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: npm install -g @anthropic-ai/claude-code
+      # .github/run-linkfind 첫 줄: "test 5" (저장 안 함) 또는 "run 30"
+      - run: python -u -m src.linkfind $(head -1 .github/run-linkfind)
+      - name: 저장
+        if: always()
+        run: bash scripts/commit.sh "연재처 링크 찾기 $(TZ=Asia/Seoul date '+%F %H:%M')"
