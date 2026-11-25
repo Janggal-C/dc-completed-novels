@@ -53,6 +53,10 @@
   },
   "via": "google"
  },
+ "다크판타지속첩보요원": {
+  "checked": "2026-11-26",
+  "miss": true
+ },
  "독을마시는새": {
   "checked": "2026-11-25",
   "links": {
@@ -64,10 +68,28 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "미궁기담": {
+  "checked": "2026-11-26",
+  "links": {
+   "novelpia": "https://novelpia.com/novel/16378"
+  },
+  "via": "google"
+ },
+ "미소녀동물원": {
+  "checked": "2026-11-26",
+  "miss": true
+ },
  "선녀로착각당했다": {
   "checked": "2026-11-25",
   "links": {
    "novelpia": "https://novelpia.com/novel/363891"
+  },
+  "via": "google"
+ },
+ "성애교단의씨받이성녀가되었다": {
+  "checked": "2026-11-26",
+  "links": {
+   "novelpia": "https://novelpia.com/novel/55167"
   },
   "via": "google"
  },
@@ -89,6 +111,17 @@
   "checked": "2026-11-25",
   "links": {
    "novelpia": "https://novelpia.com/novel/1149"
+  },
+  "via": "google"
+ },
+ "양손의꽃": {
+  "checked": "2026-11-26",
+  "miss": true
+ },
+ "어스탐경의임사전언": {
+  "checked": "2026-11-26",
+  "links": {
+   "ridi": "https://ridibooks.com/books/682001776?srsltid=AYCX9vIetSr5BrldvgKpVMoiC0tC0x9U-hq_L9Uajn8-xs1NO97frBSX"
   },
   "via": "google"
  },
@@ -114,6 +147,13 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "이세계밀프헌터": {
+  "checked": "2026-11-26",
+  "links": {
+   "novelpia": "https://novelpia.com/novel/2758"
+  },
+  "via": "google"
+ },
  "이세계불법체류사이비": {
   "checked": "2026-11-25",
   "links": {
@@ -121,8 +161,47 @@
   },
   "via": "google"
  },
+ "차원생존전략": {
+  "checked": "2026-11-26",
+  "links": {
+   "novelpia": "https://novelpia.com/novel/49386"
+  },
+  "via": "google"
+ },
+ "창염의피닉스": {
+  "checked": "2026-11-26",
+  "links": {
+   "novelpia": "https://novelpia.com/novel/208"
+  },
+  "via": "google"
+ },
+ "태엽과모래의마녀": {
+  "checked": "2026-11-26",
+  "links": {
+   "novelpia": "https://novelpia.com/novel/232746"
+  },
+  "via": "google"
+ },
+ "투명드래곤": {
+  "checked": "2026-11-26",
+  "links": {
+   "novelpia": "https://novelpia.com/novel/33078"
+  },
+  "via": "google"
+ },
+ "파테르분파의2인자라니무리무리무리역시무리였다": {
+  "checked": "2026-11-26",
+  "links": {
+   "novelpia": "https://novelpia.com/novel/229496"
+  },
+  "via": "google"
+ },
  "판타지수학대전": {
   "checked": "2026-11-25",
+  "miss": true
+ },
+ "할케기니아씰브레이커": {
+  "checked": "2026-11-26",
   "miss": true
  },
  "회귀수선전": {
