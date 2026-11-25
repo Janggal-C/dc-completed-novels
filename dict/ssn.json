@@ -2263,6 +2263,10 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "동탄헌터": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "뒤로걷는자캔슬러": {
   "checked": "2026-11-25",
   "miss": true
@@ -2725,6 +2729,21 @@
   "rc": 1026,
   "title": "메모라이즈"
  },
+ "메이지슬레이어": {
+  "author": "학인생",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 98463,
+  "links": {
+   "kakao": "https://page.kakao.com/content/56042462",
+   "munpia": "https://novel.munpia.com/209657",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=5574062",
+   "ridi": "https://ridibooks.com/books/425187747?_rdt_sid=category_books&_rdt_idx=15"
+  },
+  "r": 3.59,
+  "rc": 129,
+  "title": "메이지 슬레이어"
+ },
  "메인히로인들이나를죽이려한다": {
   "author": "김마모",
   "checked": "2026-11-25",
@@ -2763,6 +2782,22 @@
   "r": 3.65,
   "rc": 34,
   "title": "멸망 중인 세상 마지막 신이 되었다"
+ },
+ "멸망한세계의사냥꾼": {
+  "author": "글쟁이S",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 1438,
+  "links": {
+   "joara": "https://www.joara.com/book/1294015",
+   "kakao": "https://page.kakao.com/content/50585976",
+   "munpia": "https://novel.munpia.com/85207",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=3477016",
+   "ridi": "https://ridibooks.com/v2/Detail?id=425069983"
+  },
+  "r": 3.98,
+  "rc": 968,
+  "title": "멸망한 세계의 사냥꾼"
  },
  "모리어티교수의개연성이되었다": {
   "author": "김마모",
@@ -2842,6 +2877,20 @@
  "무림마조": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "무림사계": {
+  "author": "한상운",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 9092,
+  "links": {
+   "kakao": "https://page.kakao.com/content/52013820",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=1902218",
+   "ridi": "https://ridibooks.com/books/1811000232?_rdt_sid=category_books&_rdt_idx=17"
+  },
+  "r": 4.2,
+  "rc": 560,
+  "title": "무림사계"
  },
  "무림서부": {
   "author": "컵라면.",
@@ -3046,6 +3095,10 @@
   "rc": 199,
   "title": "미연시인데 연애를 할 수 없는 건에 대하여"
  },
+ "미친놈의하녀로살아남기": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "바람과별무리": {
   "author": "whitebean",
   "checked": "2026-11-25",
@@ -3116,6 +3169,26 @@
   "r": 3.65,
   "rc": 70,
   "title": "반지성주의 마왕의 세계침략"
+ },
+ "방구석겁쟁이발도술사": {
+  "author": "정담연",
+  "checked": "2026-11-25",
+  "id": 288786,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/416764"
+  },
+  "title": "방구석 겁쟁이 발도술사"
+ },
+ "방구석타로점스트리머": {
+  "author": "토마토연근볶음",
+  "checked": "2026-11-25",
+  "id": 288601,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/399642"
+  },
+  "r": 4.0,
+  "rc": 1,
+  "title": "방구석 타로점 스트리머"
  },
  "방랑기사로살아가는법": {
   "author": "글쓰는기계",
@@ -3484,6 +3557,10 @@
   "rc": 1,
   "title": "성녀님, 천박하세요!"
  },
+ "성녀데스빔쿠와아아": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "성애교단의씨받이성녀가되었다": {
   "checked": "2026-11-25",
   "miss": true
@@ -3789,6 +3866,19 @@
   "rc": 2,
   "title": "아카데미 악당영애 교정하기"
  },
+ "아카데미얼굴천재가되었다": {
+  "author": "4cachips",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 123856,
+  "links": {
+   "kakao": "https://page.kakao.com/content/57998689",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=10973776"
+  },
+  "r": 2.61,
+  "rc": 61,
+  "title": "아카데미 얼굴천재가 되었다"
+ },
  "아카데미에서살아남기": {
   "author": "코리타",
   "checked": "2026-11-25",
@@ -3997,6 +4087,19 @@
   "rc": 2,
   "title": "악신에게서 살아남기"
  },
+ "악신의성녀와소꿉친구가되었다": {
+  "author": "묘지기",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 266665,
+  "links": {
+   "kakao": "https://page.kakao.com/content/67955140",
+   "novelpia": "https://novelpia.com/novel/224343"
+  },
+  "r": 4.0,
+  "rc": 1,
+  "title": "악신의 성녀와 소꿉친구가 되었다"
+ },
  "악신이총애하는모험가": {
   "author": "SirLogan",
   "checked": "2026-11-25",
@@ -4035,6 +4138,20 @@
   "r": 3.97,
   "rc": 500,
   "title": "악역의 엔딩은 죽음뿐"
+ },
+ "암흑가보스가너무강함": {
+  "author": "포더엠",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 273162,
+  "links": {
+   "kakao": "https://page.kakao.com/content/68262675",
+   "munpia": "https://novel.munpia.com/488557",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13152443"
+  },
+  "r": 2.0,
+  "rc": 2,
+  "title": "암흑가 보스가 너무 강함"
  },
  "암흑전사탑등반물": {
   "author": "김갈비뼈",
@@ -4109,6 +4226,10 @@
   "title": "양치기 마법사"
  },
  "어떤과학의소년망상": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "어스탐경의임사전언": {
   "checked": "2026-11-25",
   "miss": true
  },
@@ -4815,9 +4936,31 @@
   },
   "title": "절대 암타 안하는 마녀군"
  },
+ "절대엘드미아에가를건드리지마라": {
+  "author": "Muinarbiv",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 289410,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/51066"
+  },
+  "title": "절대 엘드미아 에가를 건드리지 마라"
+ },
  "절대육수를우리지않는스트리머": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "절대은신으로신화급탑공략": {
+  "author": "차용",
+  "checked": "2026-11-25",
+  "id": 284881,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/553552",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14555052"
+  },
+  "r": 2.75,
+  "rc": 2,
+  "title": "절대은신으로 신화급 탑 공략"
  },
  "절대회귀": {
   "author": "장영훈",
@@ -4956,6 +5099,20 @@
   "r": 3.69,
   "rc": 8,
   "title": "죽었다 깨어도 수선"
+ },
+ "중세판타지속망나니경비조장": {
+  "author": "곰돌이는",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 141704,
+  "links": {
+   "kakao": "https://page.kakao.com/content/61849057",
+   "munpia": "https://novel.munpia.com/315038",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=10046773"
+  },
+  "r": 3.87,
+  "rc": 354,
+  "title": "중세 판타지 속 망나니 경비조장"
  },
  "중세판타지의마법사가되었다": {
   "author": "mayve",
@@ -5174,6 +5331,17 @@
   "rc": 5,
   "title": "취미 방송입니다"
  },
+ "침대위의대마법사": {
+  "author": "TEKTAK",
+  "checked": "2026-11-25",
+  "id": 288589,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/383538"
+  },
+  "r": 5.0,
+  "rc": 1,
+  "title": "침대 위의 대마법사"
+ },
  "클래스이세계전이물의쓰레기갸루녀가되었다": {
   "checked": "2026-11-25",
   "miss": true
@@ -5237,6 +5405,24 @@
   "r": 3.92,
   "rc": 996,
   "title": "탑 매니지먼트"
+ },
+ "태엽과모래의마녀": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "턴제의마법사": {
+  "author": "정따블",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 227607,
+  "links": {
+   "kakao": "https://page.kakao.com/content/64393352",
+   "munpia": "https://novel.munpia.com/397458",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=12326124"
+  },
+  "r": 3.58,
+  "rc": 79,
+  "title": "턴제의 마법사"
  },
  "톱스타들이나를소유하려한다": {
   "author": "아기소금",
@@ -5438,6 +5624,10 @@
   "r": 3.86,
   "rc": 741,
   "title": "학사신공"
+ },
+ "한남충은살아남고싶다": {
+  "checked": "2026-11-25",
+  "miss": true
  },
  "한자학습만화에빙의했다": {
   "author": "초비환",
