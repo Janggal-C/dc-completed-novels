@@ -4,6 +4,7 @@
 2) 완결로 판정된 글의 작품명 중 사전에 없는 것을 모아 웹 검색 → 사전에 추가
 한도(사용량)에 걸리면 그 자리에서 멈추고, 남은 건 다음 실행 때 처리한다.
 """
+import re
 import sys
 from datetime import datetime, timedelta
 
@@ -40,6 +41,11 @@ def add_work(works, aliases, title, alias=None, via=None, force=False, **info):
     """작품 등록 + 줄임말 연결. force=True면 기존 연결을 덮어씀(사용자 직접 입력)"""
     wid = norm_key(title)
     if not wid or wid in ("작가명", "작가", "작품명", "제목"):
+        return None
+    # 웹소설만: 연재처가 웹툰·만화·애니·라이트노벨·게임 등이면 자동 등록하지 않음 (사용자 결정 2026-11-25)
+    plat = str(info.get("platform") or "")
+    if not force and re.search(r"웹툰|만화|애니|라이트노벨|라노벨|점프|게임|영화|드라마|출판", plat) \
+            and not re.search(r"노벨피아|문피아|카카오|시리즈|리디|조아라|블라이스|웹소설", plat):
         return None
     if alias and not force:
         from .resolve import removed
