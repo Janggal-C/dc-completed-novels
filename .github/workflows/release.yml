@@ -1,0 +1,52 @@
+name: 확장 릴리스
+
+# 확장 코드(extension/)가 바뀌어 올라오면 배포용 zip을 만들어 GitHub 릴리스에 올린다.
+# - 버전(manifest.json)이 새로우면 새 릴리스(v0.x.y)를 만들고 '최신'으로 표시
+# - 같은 버전이면 그 릴리스의 zip만 새 빌드로 교체
+# 고정 다운로드 주소: https://github.com/answhdtjr736-spec/dc-completed-novels/releases/latest/download/dc-dict-extension.zip
+# (사전은 확장이 설치 후 스스로 받아가므로 매일 새로 올릴 필요 없음)
+on:
+  push:
+    paths: ["extension/**", "scripts/build_ext.sh", "src/export_dict.py", ".github/workflows/release.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: 빌드
+        run: |
+          mkdir -p /tmp/out
+          bash scripts/build_ext.sh /tmp/out
+          VER=$(python3 -c "import json;print(json.load(open('extension/manifest.json'))['version'])")
+          cp /tmp/out/*.zip /tmp/out/dc-dict-extension.zip
+          echo "VER=$VER" >> "$GITHUB_ENV"
+      - name: 릴리스
+        run: |
+          TAG="v$VER"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" /tmp/out/dc-dict-extension.zip --clobber
+          else
+            gh release create "$TAG" /tmp/out/dc-dict-extension.zip \
+              --title "장르소설갤 줄임말 사전 $TAG" \
+              --notes "$(git log -1 --format=%s)" --latest
+          fi
