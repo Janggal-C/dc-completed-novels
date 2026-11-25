@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 
 from .common import DATA, now_kst, read_json, write_json
 
-UA = "dc-completed-novels-research (personal, low-volume; +https://github.com/answhdtjr736-spec/dc-completed-novels)"
+UA = "dc-completed-novels-research (personal, low-volume; +https://github.com/Janggal-C/dc-completed-novels)"
 OUT = DATA / "ranking_titles.json"
 HISTORY = DATA / "ranking_history.json"   # {제목: {first, last, best, days}} — 날마다 누적
 MAX_TITLES = 100

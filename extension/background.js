@@ -1,7 +1,7 @@
 // 사전: 설치 파일에 내장(dict.json). 빌드 다음 날부터 하루 한 번 GitHub Pages에서 새 사전을 받는다.
 // - 빌드 당일(아래 시각 전)에는 받지 않음 → 처음 배포한 날 한꺼번에 몰리지 않게
 // - 매일 확인 시각은 사람마다 최대 1시간 랜덤하게 늦춤
-const DICT_URL = "https://answhdtjr736-spec.github.io/dc-completed-novels/api/dict.json";
+const DICT_URL = "https://janggal-c.github.io/dc-completed-novels/api/dict.json";
 const NO_CHECK_UNTIL = Date.parse("__NO_CHECK_UNTIL__") || 0;   // 빌드 다음 날 0시(한국시간)
 
 async function refresh() {

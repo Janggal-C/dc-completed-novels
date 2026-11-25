@@ -212,7 +212,7 @@ def run(cfg=None, run_stats=None, partial=False):
         "updated": now_kst().strftime("%Y-%m-%d %H:%M"),
         "status_counts": dict(status_counts), "excluded": excluded[:150],
         "dict_stats": dict_stats, "google": google_stats,
-        "repo": "answhdtjr736-spec/dc-completed-novels",
+        "repo": "Janggal-C/dc-completed-novels",
         "gallery": cfg["gallery_id"],
         "data_start": first_month,
         "reports_done": read_json(DICT / "reports_done.json", []),

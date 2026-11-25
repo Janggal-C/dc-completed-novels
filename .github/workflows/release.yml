@@ -3,7 +3,7 @@ name: 확장 릴리스
 # 확장 코드(extension/)가 바뀌어 올라오면 배포용 zip을 만들어 GitHub 릴리스에 올린다.
 # - 버전(manifest.json)이 새로우면 새 릴리스(v0.x.y)를 만들고 '최신'으로 표시
 # - 같은 버전이면 그 릴리스의 zip만 새 빌드로 교체
-# 고정 다운로드 주소: https://github.com/answhdtjr736-spec/dc-completed-novels/releases/latest/download/dc-dict-extension.zip
+# 고정 다운로드 주소: https://github.com/Janggal-C/dc-completed-novels/releases/latest/download/dc-dict-extension.zip
 # (사전은 확장이 설치 후 스스로 받아가므로 매일 새로 올릴 필요 없음)
 on:
   push:

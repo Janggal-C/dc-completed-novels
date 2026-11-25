@@ -117,7 +117,7 @@ code { font-size: 12px; background: var(--surface-0); padding: 1px 4px; border-r
 <script>
 const TABS = [["mentions","언급"],["complete","완결"],["trend","추이"],["dict","줄임말 사전"],["check","검수"],["metrics","지표"]];
 const VIEW = document.getElementById("view");
-const REPO = "https://github.com/answhdtjr736-spec/dc-completed-novels";
+const REPO = "https://github.com/Janggal-C/dc-completed-novels";
 let R, tab = location.hash.slice(1) || "mentions", sel = {}, onlyNew = false, MEN = null, menKind = "monthly", compKind = "monthly", trendKind = "mentions";
 if (tab === "monthly" || tab === "quarterly") { compKind = tab; tab = "complete"; }   // 예전 주소 호환
 // 탭 안의 하위 탭 (월별/분기별, 언급/완결)

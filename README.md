@@ -3,7 +3,7 @@
 디시인사이드 장르소설 마이너 갤러리에서 제목에 '완결'이 들어간 글을 매일 수집해,
 실제로 완결된 작품을 언급한 글만 골라 **월별·분기별로 많이 언급된 완결작**을 집계합니다.
 
-### 📊 [보고서 보기 →](https://answhdtjr736-spec.github.io/dc-completed-novels/)
+### 📊 [보고서 보기 →](https://janggal-c.github.io/dc-completed-novels/)
 
 - 매일 한국시간 새벽 4시 전후 자동 실행 (GitHub Actions)
 
