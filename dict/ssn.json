@@ -1750,6 +1750,21 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "남자가게임을잘함": {
+  "author": "치킨먹으려고돈범",
+  "checked": "2026-11-26",
+  "done": true,
+  "id": 117172,
+  "links": {
+   "joara": "https://www.joara.com/book/1426199",
+   "kakao": "https://page.kakao.com/content/57401071",
+   "munpia": "https://novel.munpia.com/294818",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=11352525"
+  },
+  "r": 3.38,
+  "rc": 48,
+  "title": "남자가 게임을 잘함"
+ },
  "남초딩헌터가되었다": {
   "author": "김마모",
   "checked": "2026-11-26",
@@ -2548,6 +2563,21 @@
   "rc": 13,
   "title": "룬의 아이들 - 블러디드"
  },
+ "르피너스의장난감": {
+  "author": "A사과",
+  "checked": "2026-11-26",
+  "done": true,
+  "id": 4006,
+  "links": {
+   "joara": "https://www.joara.com/book/1249440",
+   "kakao": "https://page.kakao.com/content/58309037",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=3121702",
+   "ridi": "https://ridibooks.com/v2/Detail?id=2107021544"
+  },
+  "r": 3.62,
+  "rc": 48,
+  "title": "르피너스의 장난감"
+ },
  "리턴투플레이어": {
   "author": "인덱스",
   "checked": "2026-11-25",
@@ -2676,6 +2706,10 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "마법소녀최면물": {
+  "checked": "2026-11-26",
+  "miss": true
+ },
  "마법소년": {
   "checked": "2026-11-25",
   "miss": true
@@ -2769,6 +2803,22 @@
   "r": 2.03,
   "rc": 16,
   "title": "막장드라마의 엔딩에 빙의했다"
+ },
+ "막장드라마의제왕": {
+  "author": "고별",
+  "checked": "2026-11-26",
+  "done": true,
+  "id": 4,
+  "links": {
+   "joara": "https://www.joara.com/book/1428978",
+   "kakao": "https://page.kakao.com/content/54210664",
+   "munpia": "https://novel.munpia.com/165603",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=5851961",
+   "ridi": "https://ridibooks.com/books/2057137688"
+  },
+  "r": 3.27,
+  "rc": 292,
+  "title": "막장드라마의 제왕"
  },
  "말랑한길드장님": {
   "author": "saya",
@@ -3397,6 +3447,17 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "방접은죽어서하세요": {
+  "author": "대체로맑음",
+  "checked": "2026-11-26",
+  "id": 288727,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/308439"
+  },
+  "r": 4.0,
+  "rc": 1,
+  "title": "방접은 죽어서 하세요"
+ },
  "배드본블러드": {
   "author": "백수귀족",
   "checked": "2026-11-25",
@@ -3646,6 +3707,17 @@
   "r": 2.8,
   "rc": 263,
   "title": "샤이닝로드"
+ },
+ "섀도우슬레이브": {
+  "author": "길티쓰리",
+  "checked": "2026-11-26",
+  "id": 258049,
+  "links": {
+   "kakao": "https://page.kakao.com/content/65909249"
+  },
+  "r": 4.03,
+  "rc": 17,
+  "title": "섀도우 슬레이브"
  },
  "서울드래곤": {
   "checked": "2026-11-25",
@@ -4023,6 +4095,21 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "신을만나면신을죽이고": {
+  "author": "Thursday",
+  "checked": "2026-11-26",
+  "done": true,
+  "id": 394,
+  "links": {
+   "kakao": "https://page.kakao.com/content/52020796",
+   "munpia": "https://novel.munpia.com/113958",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=3688205",
+   "ridi": "https://ridibooks.com/v2/Detail?id=372003792"
+  },
+  "r": 3.45,
+  "rc": 31,
+  "title": "신을 만나면 신을 죽이고"
+ },
  "심각한강화중독입니다": {
   "author": "고장난기계",
   "checked": "2026-11-26",
@@ -4314,6 +4401,20 @@
   "rc": 22,
   "title": "아포칼립스의 유일한 건물주"
  },
+ "악녀는두번산다": {
+  "author": "한민트",
+  "checked": "2026-11-26",
+  "done": true,
+  "id": 7860,
+  "links": {
+   "kakao": "https://page.kakao.com/content/65113432",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=5186188",
+   "ridi": "https://ridibooks.com/books/111025041"
+  },
+  "r": 4.12,
+  "rc": 385,
+  "title": "악녀는 두 번 산다"
+ },
  "악녀를갱생시켜라": {
   "author": "오당티",
   "checked": "2026-11-26",
@@ -4555,6 +4656,10 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "언데드의복수는20년이걸려도늦지않는다": {
+  "checked": "2026-11-26",
+  "miss": true
+ },
  "언어의주인이란": {
   "author": "정보석(가을bee)",
   "checked": "2026-11-25",
@@ -4626,6 +4731,19 @@
   "r": 5.0,
   "rc": 1,
   "title": "여신이 나만 애호함"
+ },
+ "여자친구님이너무잘해줌": {
+  "author": "AloEN",
+  "checked": "2026-11-26",
+  "done": true,
+  "id": 268544,
+  "links": {
+   "kakao": "https://page.kakao.com/content/63544206",
+   "novelpia": "https://novelpia.com/novel/82409"
+  },
+  "r": 4.17,
+  "rc": 3,
+  "title": "여자친구님이 너무 잘해줌"
  },
  "여초딩교수가되었다": {
   "author": "탄탄포",
@@ -4970,6 +5088,24 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "육아물악녀가인성을안숨김": {
+  "author": "샤무아",
+  "checked": "2026-11-26",
+  "id": 286297,
+  "links": {
+   "kakao": "https://page.kakao.com/content/69148826"
+  },
+  "title": "육아물 악녀가 인성을 안 숨김"
+ },
+ "육아천재가악녀를너무잘키움": {
+  "author": "이불짱",
+  "checked": "2026-11-26",
+  "id": 288725,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/434202"
+  },
+  "title": "육아 천재가 악녀를 너무 잘 키움"
+ },
  "은하천마전설": {
   "author": "아메리카노더블샷",
   "checked": "2026-11-25",
@@ -5171,6 +5307,15 @@
    "novelpia": "https://novelpia.com/novel/383799"
   },
   "title": "자신을 남자라고 주장하는 약혼녀 관찰일기"
+ },
+ "자폭실험체가됐다": {
+  "author": "곧게뻗은주먹",
+  "checked": "2026-11-26",
+  "id": 288748,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/423998"
+  },
+  "title": "자폭실험체가 됐다"
  },
  "자학방송아니에요": {
   "author": "드로미",
@@ -5558,6 +5703,17 @@
   },
   "title": "주술사는 초월을 원한다"
  },
+ "주술사들이집착하는천재대장장이가되었다": {
+  "author": "고죠고",
+  "checked": "2026-11-26",
+  "id": 288558,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/427921"
+  },
+  "r": 2.25,
+  "rc": 2,
+  "title": "주술사들이 집착하는 천재 대장장이가 되었다"
+ },
  "주인공이공략당함": {
   "author": "낙비1",
   "checked": "2026-11-26",
@@ -5607,6 +5763,18 @@
    "novelpia": "https://novelpia.com/novel/326517"
   },
   "title": "중세시대 검희가 되었다"
+ },
+ "중세이단왕이발전을너무잘함": {
+  "author": "서자아",
+  "checked": "2026-11-26",
+  "id": 279614,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/519484",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13739637"
+  },
+  "r": 1.83,
+  "rc": 12,
+  "title": "중세 이단왕이 발전을 너무 잘함"
  },
  "중세판타지속망나니경비조장": {
   "author": "곰돌이는",
@@ -6118,6 +6286,10 @@
   "rc": 1,
   "title": "폭군이 날 너무 좋아한다"
  },
+ "폴라리스랩소디": {
+  "checked": "2026-11-26",
+  "miss": true
+ },
  "폴란드여왕키우기": {
   "author": "마늘맛스낵",
   "checked": "2026-11-26",
@@ -6229,6 +6401,10 @@
  },
  "하루전으로돌아가는남매": {
   "checked": "2026-11-25",
+  "miss": true
+ },
+ "하오문전": {
+  "checked": "2026-11-26",
   "miss": true
  },
  "학사신공": {
