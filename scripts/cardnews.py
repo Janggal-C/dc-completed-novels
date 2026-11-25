@@ -1,4 +1,5 @@
-"""월초 카드뉴스 생성: docs/data/mentions.json → 결산 카드 5장 HTML (사이트.md "월초 카드뉴스" 규칙)
+"""월말 결산 카드뉴스 생성 (하단 닉네임 없음 — 2026-11-26 사용자 지시)
+: docs/data/mentions.json → 결산 카드 5장 HTML (사이트.md "월초 카드뉴스" 규칙)
 
 사용: python scripts/cardnews.py 2026-09 out_dir
   out_dir/card-1.html … card-5.html (카드마다 한 장, PNG 캡처용)
@@ -57,7 +58,7 @@ def head(pill, desc, title):
 
 def foot(left):
     return ('<div style="margin-top:auto;padding-top:18px;font-size:32px;color:#7D85AB;display:flex;justify-content:space-between">'
-            f'<span>{left}</span><span>장갤수집가</span></div>')
+            f'<span>{left}</span></div>')
 
 
 def build(month, data):
@@ -78,7 +79,7 @@ def build(month, data):
              '<div style="font-size:46px;font-weight:700;color:#C7CDF0;margin-top:30px">장르소설 갤러리</div>'
              f'<div style="font-size:210px;line-height:1.05;font-weight:900;letter-spacing:-0.03em;white-space:nowrap;margin-top:6px">{mi}월 <span style="color:#F5B301">결산</span></div>'
              f'<div style="font-size:50px;line-height:1.5;font-weight:600;color:#DDE1F7;margin-top:34px">가장 많이 언급된 작품 TOP 10<br>{mi}월 · {q}분기 완결작 TOP 5</div></div>'
-             '<div style="position:absolute;right:80px;bottom:52px;font-size:32px;color:#AAB2E6">장갤수집가</div></div>')
+             '</div>')
 
     topn = top10[0]["n"] if top10 else 0
     c2 = (f'<div style="{CARD}height:1080px;background:#F1F2FF;padding:52px 60px 52px">'
