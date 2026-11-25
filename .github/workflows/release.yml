@@ -7,7 +7,7 @@ name: 확장 릴리스
 # (사전은 확장이 설치 후 스스로 받아가므로 매일 새로 올릴 필요 없음)
 on:
   push:
-    paths: ["extension/**", "scripts/build_ext.sh", "src/export_dict.py", ".github/workflows/release.yml"]
+    paths: ["extension/**", "extension-docs/**", "scripts/build_ext.sh", "src/export_dict.py", ".github/workflows/release.yml"]
   workflow_dispatch:
 
 permissions:
@@ -43,10 +43,13 @@ jobs:
       - name: 릴리스
         run: |
           TAG="v$VER"
+          # 설명 = 설치 가이드(extension-docs/INSTALL.md) + 마지막 변경 한 줄
+          { cat extension-docs/INSTALL.md; echo "- $(git log -1 --format=%s)"; } > /tmp/notes.md
           if gh release view "$TAG" >/dev/null 2>&1; then
             gh release upload "$TAG" /tmp/out/dc-dict-extension.zip --clobber
+            gh release edit "$TAG" --notes-file /tmp/notes.md
           else
             gh release create "$TAG" /tmp/out/dc-dict-extension.zip \
               --title "장르소설갤 줄임말 사전 $TAG" \
-              --notes "$(git log -1 --format=%s)" --latest
+              --notes-file /tmp/notes.md --latest
           fi
