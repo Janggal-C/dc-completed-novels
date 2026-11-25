@@ -1906,6 +1906,20 @@
   "rc": 14,
   "title": "단종 구하러 4군6진"
  },
+ "달빛조각사": {
+  "author": "남희성",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 3340,
+  "links": {
+   "kakao": "https://page.kakao.com/content/55791238",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=5778772",
+   "ridi": "https://ridibooks.com/books/1377001400?_rdt_sid=category_books&_rdt_idx=12"
+  },
+  "r": 3.09,
+  "rc": 1212,
+  "title": "달빛조각사"
+ },
  "당문전": {
   "author": "제이허빈",
   "checked": "2026-11-25",
@@ -2343,6 +2357,19 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "메인히로인들이나를죽이려한다": {
+  "author": "김마모",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 244910,
+  "links": {
+   "kakao": "https://page.kakao.com/content/66441386",
+   "novelpia": "https://novelpia.com/novel/29912"
+  },
+  "r": 3.56,
+  "rc": 18,
+  "title": "메인 히로인들이 나를 죽이려 한다"
+ },
  "무공뭐별거없더라": {
   "author": "Suerte",
   "checked": "2026-11-25",
@@ -2421,6 +2448,15 @@
   "r": 3.33,
   "rc": 438,
   "title": "묵향"
+ },
+ "미궁도시의고인물은돌아가고싶다": {
+  "author": "김취미",
+  "checked": "2026-11-25",
+  "id": 288634,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/413430"
+  },
+  "title": "미궁도시의 고인물은 돌아가고 싶다"
  },
  "미궁도시의플레시골렘": {
   "author": "쟈장가",
@@ -2671,6 +2707,18 @@
   "rc": 1139,
   "title": "소설 속 엑스트라"
  },
+ "스마트폰in무림학관": {
+  "author": "대롱닥",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 289537,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/346687"
+  },
+  "r": 3.67,
+  "rc": 3,
+  "title": "스마트폰 IN 무림학관"
+ },
  "시간을달리는소설가": {
   "author": "피아조아",
   "checked": "2026-11-25",
@@ -2682,6 +2730,18 @@
   "r": 4.15,
   "rc": 728,
   "title": "시간을 달리는 소설가"
+ },
+ "시간정지능력으로탑등반": {
+  "author": "봡바봡",
+  "checked": "2026-11-25",
+  "id": 283653,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/540228",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14256868"
+  },
+  "r": 2.95,
+  "rc": 11,
+  "title": "시간 정지 능력으로 탑 등반"
  },
  "시한부천재가살아남는법": {
   "author": "청시소",
@@ -2706,6 +2766,18 @@
   "r": 5.0,
   "rc": 2,
   "title": "심해 엠생 스트리머"
+ },
+ "아이돌이군필을숨김": {
+  "author": "자몽펀치",
+  "checked": "2026-11-25",
+  "id": 273703,
+  "links": {
+   "munpia": "https://novel.munpia.com/492978",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13308130"
+  },
+  "r": 2.62,
+  "rc": 32,
+  "title": "아이돌이 군필을 숨김"
  },
  "아카데미생존갤러리": {
   "checked": "2026-11-25",
@@ -2775,6 +2847,10 @@
   },
   "title": "암흑전사 탑등반물"
  },
+ "야겜속튜토리얼보스가되었다": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "약먹는천재마법사": {
   "author": "글근육",
   "checked": "2026-11-25",
@@ -2815,6 +2891,10 @@
   "rc": 191,
   "title": "예언의 아이가 살아남는 법"
  },
+ "오늘의맘마": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "오지가체질입니다": {
   "author": "띵땅뚱땅",
   "checked": "2026-11-25",
@@ -2825,6 +2905,18 @@
   "r": 3.0,
   "rc": 1,
   "title": "오지가 체질입니다"
+ },
+ "월야환담": {
+  "author": "홍정훈",
+  "checked": "2026-11-25",
+  "id": 105854,
+  "links": {
+   "joara": "https://www.joara.com/book/1439206",
+   "ridi": "https://ridibooks.com/books/111024669"
+  },
+  "r": 4.0,
+  "rc": 4,
+  "title": "월야환담"
  },
  "을위한세계는없다": {
   "author": "샤이닝",
@@ -3012,6 +3104,15 @@
   "rc": 65,
   "title": "즉사기 들고 무림에 떨어지다"
  },
+ "초성마문선협속마교에서인간재료로살아남기": {
+  "author": "학수월만지",
+  "checked": "2026-11-25",
+  "id": 330221,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14756302"
+  },
+  "title": "초성마문:선협 속 마교에서 인간재료로 살아남기"
+ },
  "취미방송입니다": {
   "author": "쌍포메타",
   "checked": "2026-11-25",
@@ -3022,6 +3123,15 @@
   "r": 2.7,
   "rc": 5,
   "title": "취미 방송입니다"
+ },
+ "톱스타들이나를소유하려한다": {
+  "author": "아기소금",
+  "checked": "2026-11-25",
+  "id": 288697,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/401934"
+  },
+  "title": "톱스타들이 나를 소유하려 한다"
  },
  "판초우의의마법사": {
   "author": "하드폭발",
@@ -3035,6 +3145,17 @@
   "rc": 148,
   "title": "판초우의의 마법사"
  },
+ "프롤로그에서30년이흘렀다": {
+  "author": "맠엘라하",
+  "checked": "2026-11-25",
+  "id": 318779,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14360304"
+  },
+  "r": 2.86,
+  "rc": 11,
+  "title": "프롤로그에서 30년이 흘렀다"
+ },
  "프롤로그에서죽는히로인에빙의했다": {
   "author": "커리우유",
   "checked": "2026-11-25",
@@ -3043,6 +3164,21 @@
    "novelpia": "https://novelpia.com/novel/414676"
   },
   "title": "프롤로그에서 죽는 히로인에 빙의했다"
+ },
+ "프린스레이지": {
+  "author": "도동파",
+  "checked": "2026-11-25",
+  "id": 284761,
+  "links": {
+   "munpia": "https://novel.munpia.com/546362"
+  },
+  "r": 4.14,
+  "rc": 21,
+  "title": "프린스 레이지"
+ },
+ "하루전으로돌아가는남매": {
+  "checked": "2026-11-25",
+  "miss": true
  },
  "헌터갤러리의국가권력급기계공주": {
   "author": "쟈장가",
@@ -3075,6 +3211,21 @@
   },
   "title": "헤픈 소꿉친구에게 나만 안된다고 차였다"
  },
+ "홍등가의소드마스터": {
+  "author": "망신창이",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 129998,
+  "links": {
+   "joara": "https://www.joara.com/book/1670132",
+   "kakao": "https://page.kakao.com/content/61353162",
+   "munpia": "https://novel.munpia.com/297172",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=8365155"
+  },
+  "r": 3.05,
+  "rc": 272,
+  "title": "홍등가의 소드마스터"
+ },
  "화산귀환": {
   "author": "비가",
   "checked": "2026-11-25",
@@ -3104,6 +3255,33 @@
   "r": 3.58,
   "rc": 6,
   "title": "회귀 안 한 헌터만 세상을 구함"
+ },
+ "회귀자사용설명서": {
+  "author": "흙수저",
+  "checked": "2026-11-25",
+  "id": 3381,
+  "links": {
+   "joara": "https://www.joara.com/book/1203701",
+   "kakao": "https://page.kakao.com/content/50553638",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=3256478",
+   "ridi": "https://ridibooks.com/books/2057045154?_rdt_sid=category_books&_rdt_idx=16"
+  },
+  "r": 3.11,
+  "rc": 489,
+  "title": "회귀자 사용설명서"
+ },
+ "회귀자와맹인성녀": {
+  "author": "papapa",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 225088,
+  "links": {
+   "kakao": "https://page.kakao.com/content/66200947",
+   "novelpia": "https://novelpia.com/novel/49917"
+  },
+  "r": 3.93,
+  "rc": 29,
+  "title": "회귀자와 맹인 성녀"
  },
  "회귀한용병은다계획이있다": {
   "author": "골드행",
