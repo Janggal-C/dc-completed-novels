@@ -7,7 +7,7 @@
 import time
 from collections import defaultdict
 
-from .common import ALIASES, WORKS, quarter_of, read_json, write_json, SITE_DATA, now_kst
+from .common import ALIASES, WORKS, DATA, quarter_of, read_json, write_json, SITE_DATA, now_kst
 from .fullcrawl import load_titles
 from .matcher import Matcher
 
@@ -52,11 +52,32 @@ def run(top_n=100, trend_n=6):
     months = sorted({p for p in periods if "Q" not in p})
     out = {"generated": now_kst().strftime("%Y-%m-%d %H:%M"), "titles": n_titles, "months": months,
            "periods": {}}
+    # 완결 여부·완결일은 완결 탭 판정(data/statuses.json, aggregate가 먼저 만듦)을 그대로 쓴다.
+    # 완결 = 판정이 완결·예전 완결이거나 작품 정보가 완결. 이 기간 완결 = 판정 '완결'이고 완결일이 그 기간 안.
+    statuses = read_json(DATA / "statuses.json", {})
+
+    def done(wid):
+        return statuses.get(wid, {}).get("status") in ("완결", "예전 완결") or works.get(wid, {}).get("status") == "완결"
+
+    def cdate(wid):
+        st = statuses.get(wid, {})
+        return st.get("date") if st.get("status") == "완결" else None
+
+    def in_period(wid, p):
+        d = cdate(wid)
+        return bool(d) and (quarter_of(d[:7]) == p if "Q" in p else d[:7] == p)
+
     for p, counts in periods.items():
-        top = sorted(counts.items(), key=lambda x: -x[1])[:top_n]
+        ranked = sorted(counts.items(), key=lambda x: -x[1])
+        # 전체 상위 N + 완결작 상위 N + 이 기간 완결작 전부 (언급 탭 필터용)
+        keep = {wid for wid, _ in ranked[:top_n]}
+        keep |= {wid for wid, _ in [x for x in ranked if done(x[0])][:top_n]}
+        keep |= {wid for wid, _ in ranked if in_period(wid, p)}
         out["periods"][p] = [{"id": wid, "title": works.get(wid, {}).get("title", wid), "n": n,
-                              "status": works.get(wid, {}).get("status", ""),
-                              "series": [series[wid].get(mm, 0) for mm in months]} for wid, n in top]
+                              "status": "완결" if done(wid) else works.get(wid, {}).get("status", ""),
+                              "done": done(wid), "cdate": cdate(wid), "new": in_period(wid, p),
+                              "series": [series[wid].get(mm, 0) for mm in months]}
+                             for wid, n in ranked if wid in keep]
     # 추이: 전체 기간 언급 수 상위 작품의 월별 언급 수
     total = sorted(series.items(), key=lambda x: -sum(x[1].values()))[:trend_n]
     out["trend"] = [{"id": wid, "title": works.get(wid, {}).get("title", wid),

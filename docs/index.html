@@ -118,7 +118,7 @@ code { font-size: 12px; background: var(--surface-0); padding: 1px 4px; border-r
 const TABS = [["mentions","언급"],["complete","완결"],["trend","추이"],["dict","줄임말 사전"],["check","검수"],["metrics","지표"]];
 const VIEW = document.getElementById("view");
 const REPO = "https://github.com/Janggal-C/dc-completed-novels";
-let R, tab = location.hash.slice(1) || "mentions", sel = {}, onlyNew = false, MEN = null, menKind = "monthly", compKind = "monthly", trendKind = "mentions";
+let R, tab = location.hash.slice(1) || "mentions", sel = {}, onlyNew = false, MEN = null, menKind = "monthly", compKind = "monthly", trendKind = "mentions", menFilter = "all";
 if (tab === "monthly" || tab === "quarterly") { compKind = tab; tab = "complete"; }   // 예전 주소 호환
 // 탭 안의 하위 탭 (월별/분기별, 언급/완결)
 const subTabs = (items, cur, attr) => `<div class="pbtns" style="--cols:${items.length};margin-bottom:10px">${items.map(([k, v]) =>
@@ -201,18 +201,24 @@ function mentions() {
   const slots = kind === "monthly"
     ? Array.from({length: 12}, (_, i) => ({key: `${year}-${String(i + 1).padStart(2, "0")}`, label: `${i + 1}월`}))
     : Array.from({length: 4}, (_, i) => ({key: `${year}-Q${i + 1}`, label: `${i + 1}분기`}));
-  const rows = MEN.periods[p] || [];
+  const unit = kind === "monthly" ? "이 달" : "이 분기";
+  let rows = MEN.periods[p] || [];
+  if (menFilter === "done") rows = rows.filter(e => e.done ?? e.status === "완결");
+  if (menFilter === "new") rows = rows.filter(e => e.new);
+  rows = rows.slice(0, 100);
   VIEW.innerHTML = `<div class="card">${subTabs([["monthly","월별"],["quarterly","분기별"]], kind, "kind")}
     <div class="yearsel"><select id="yr">${years.map(y => `<option value="${y}" ${y === year ? "selected" : ""}>${y}년</option>`).join("")}</select></div>
     <div class="pbtns" style="--cols:${kind === "monthly" ? 6 : 4}">${slots.map(sl => `<button class="pbtn ${sl.key === p ? "on" : ""}" data-p="${sl.key}" ${MEN.periods[sl.key] ? "" : "disabled"}>${sl.label}</button>`).join("")}</div>
-    <div class="muted" style="margin-top:8px">완결 여부와 상관없이 전체 글 제목에서 셉니다 · 언급 수 = 하루 단위 작성자 수 (같은 사람이 같은 날 여러 번 써도 1) · ▸ 월별 그래프</div></div>
+    <div style="margin-top:10px">${subTabs([["all","전체"],["done","완결작만"],["new",unit + " 완결작만"]], menFilter, "mf")}</div>
+    <div class="muted" style="margin-top:0">완결 여부와 상관없이 전체 글 제목에서 셉니다 (완결 전 연재 중 언급도 포함) · 언급 수 = 하루 단위 작성자 수 (같은 사람이 같은 날 여러 번 써도 1) · ▸ 월별 그래프</div></div>
     <div class="card"><ol class="rank">${rows.map((e, i) => `<li>
       <div class="no">${i + 1}</div>
-      <div><div class="t">${esc(e.title)}${e.status === "완결" ? `<span class="badge">완결</span>` : ""}</div></div>
+      <div><div class="t">${esc(e.title)}${e.status === "완결" ? `<span class="badge">완결${e.cdate ? " " + esc(e.cdate.slice(5).replace("-", "/")) : ""}</span>` : ""}</div></div>
       <div class="num"><b>${e.n.toLocaleString()}</b></div>
       <button class="tog" data-i="${i}" aria-label="월별 그래프 열기" aria-expanded="false">▸</button>
       <div class="mchart" id="mc${i}"></div></li>`).join("") || `<div class="empty">해당하는 작품이 없습니다.</div>`}</ol></div>`;
   VIEW.querySelectorAll("[data-kind]").forEach(b => b.onclick = () => { menKind = b.dataset.kind; render(); });
+  VIEW.querySelectorAll("[data-mf]").forEach(b => b.onclick = () => { menFilter = b.dataset.mf; render(); });
   document.getElementById("yr").onchange = ev => { sel[key] = periods.find(x => x.startsWith(ev.target.value)); render(); };
   VIEW.querySelectorAll(".pbtn[data-p]").forEach(b => b.onclick = () => { sel[key] = b.dataset.p; render(); });
   VIEW.querySelectorAll(".tog").forEach(b => b.onclick = () => {
