@@ -17,6 +17,12 @@ from .matcher import _PARTICLES, excluded
 TOKEN = re.compile(r"[^\W_]+", re.UNICODE)
 
 
+def _in_order(tok, title_key):
+    """tok 글자가 정식 제목(띄어쓰기 없앤 키)에 순서대로 다 들어 있나: 외신마도서 ⊂ 외신이쓴마도서를주웠다"""
+    it = iter(title_key)
+    return all(ch in it for ch in tok)
+
+
 def run():
     aliases = read_json(ALIASES, {})
     works = read_json(WORKS, {})
@@ -52,6 +58,8 @@ def run():
         for tok, cnt in c.items():
             base = _PARTICLES.sub("", tok)
             if base == k or tok == k or any(o != k and tok.startswith(o) for o in own):
+                continue
+            if _in_order(base, aliases[k]):    # 정식 제목을 덜 줄인 꼴(외신마도서 ← 외신이 쓴 마도서)도 같은 작품
                 continue
             foreign += cnt
         out[k] = {"title": works.get(aliases[k], {}).get("title", ""), "n": n,
