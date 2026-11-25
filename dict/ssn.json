@@ -2085,6 +2085,10 @@
   },
   "title": "독왕 티르"
  },
+ "독을마시는새": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "돌아와서말하기": {
   "checked": "2026-11-25",
   "miss": true
@@ -2106,6 +2110,18 @@
  "동방고려개": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "뒷골목님프의도시": {
+  "author": "미츄리",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 289652,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/176928"
+  },
+  "r": 5.0,
+  "rc": 2,
+  "title": "뒷골목 님프의 도시"
  },
  "들키지않는사제사칭범이되었다": {
   "author": "아리알",
@@ -2406,6 +2422,15 @@
   "rc": 317,
   "title": "마왕은 학원에 간다"
  },
+ "마종의성녀가됐다": {
+  "author": "얽히고설킨",
+  "checked": "2026-11-25",
+  "id": 331979,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/455541"
+  },
+  "title": "마종의 성녀가 됐다"
+ },
  "막장드라마의엔딩에빙의했다": {
   "author": "핏콩",
   "checked": "2026-11-25",
@@ -2448,6 +2473,15 @@
   "r": 3.81,
   "rc": 69,
   "title": "망한 교단의 성기사"
+ },
+ "망한영지의여기사가됐다": {
+  "author": "O동글군O",
+  "checked": "2026-11-25",
+  "id": 288828,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/348150"
+  },
+  "title": "망한 영지의 여기사가 됐다"
  },
  "망할놈의아카데미": {
   "author": "암흑고라니",
@@ -2492,6 +2526,10 @@
   "r": 3.56,
   "rc": 18,
   "title": "메인 히로인들이 나를 죽이려 한다"
+ },
+ "모유탓": {
+  "checked": "2026-11-25",
+  "miss": true
  },
  "무공뭐별거없더라": {
   "author": "Suerte",
@@ -3074,6 +3112,10 @@
   "rc": 7,
   "title": "소요수선전(逍遙修仙傳)"
  },
+ "수상할정도로사이가좋은남매": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "스마트폰in무림학관": {
   "author": "대롱닥",
   "checked": "2026-11-25",
@@ -3085,6 +3127,10 @@
   "r": 3.67,
   "rc": 3,
   "title": "스마트폰 IN 무림학관"
+ },
+ "스탯350점을받았습니다": {
+  "checked": "2026-11-25",
+  "miss": true
  },
  "시간을달리는소설가": {
   "author": "피아조아",
@@ -3169,6 +3215,17 @@
   "r": 3.44,
   "rc": 67,
   "title": "심해의 마법사"
+ },
+ "쌀먹러가너무예쁨": {
+  "author": "암지오",
+  "checked": "2026-11-25",
+  "id": 316774,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/435144"
+  },
+  "r": 2.75,
+  "rc": 2,
+  "title": "쌀먹러가 너무 예쁨"
  },
  "아역배우를키잡하는미친매니저가되었다": {
   "checked": "2026-11-25",
@@ -3302,6 +3359,18 @@
   "rc": 1238,
   "title": "악당은 살고 싶다"
  },
+ "악신에게서살아남기": {
+  "author": "SirLogan",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 289775,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/25178"
+  },
+  "r": 4.5,
+  "rc": 2,
+  "title": "악신에게서 살아남기"
+ },
  "악신이총애하는모험가": {
   "author": "SirLogan",
   "checked": "2026-11-25",
@@ -3371,6 +3440,20 @@
   "rc": 18,
   "title": "약혼녀가 소천마였다"
  },
+ "언어의주인이란": {
+  "author": "정보석(가을bee)",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 104788,
+  "links": {
+   "joara": "https://www.joara.com/book/1785712",
+   "kakao": "https://page.kakao.com/content/56306513",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=9195243"
+  },
+  "r": 3.82,
+  "rc": 158,
+  "title": "언어의 주인이란"
+ },
  "엑스칼리버뽑습니다": {
   "author": "NariaTa",
   "checked": "2026-11-25",
@@ -3381,6 +3464,21 @@
   "r": 3.75,
   "rc": 8,
   "title": "엑스칼리버 뽑습니다"
+ },
+ "엔딩메이커": {
+  "author": "취룡",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 4539,
+  "links": {
+   "kakao": "https://page.kakao.com/content/54309515",
+   "munpia": "https://novel.munpia.com/172034",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=4746740",
+   "ridi": "https://ridibooks.com/books/2057104917"
+  },
+  "r": 3.57,
+  "rc": 229,
+  "title": "엔딩메이커"
  },
  "여신이나만애호함": {
   "author": "미츄리",
@@ -3468,6 +3566,21 @@
   "rc": 1,
   "title": "오지가 체질입니다"
  },
+ "왕도사전": {
+  "author": "검미성",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 1626,
+  "links": {
+   "kakao": "https://page.kakao.com/content/55480012",
+   "munpia": "https://novel.munpia.com/103911",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=1722953",
+   "ridi": "https://ridibooks.com/books/777001826?_rdt_sid=category_books&_rdt_idx=7"
+  },
+  "r": 3.63,
+  "rc": 58,
+  "title": "왕도사전"
+ },
  "외신이쓴마도서를주웠다": {
   "author": "유성우성유",
   "checked": "2026-11-25",
@@ -3492,6 +3605,20 @@
   "rc": 140,
   "title": "용사의 발라드"
  },
+ "용사의옆집에산다는것": {
+  "author": "세트앙크",
+  "checked": "2026-11-25",
+  "id": 3463,
+  "links": {
+   "joara": "https://www.joara.com/book/1599434",
+   "kakao": "https://page.kakao.com/content/48510682",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=6646076",
+   "ridi": "https://ridibooks.com/books/2065047213?_rdt_sid=category_books&_rdt_idx=3"
+  },
+  "r": 2.76,
+  "rc": 58,
+  "title": "용사의 옆집에 산다는 것"
+ },
  "원수를지키는망나니기사": {
   "author": "이만두",
   "checked": "2026-11-25",
@@ -3503,6 +3630,17 @@
   "r": 3.5,
   "rc": 1,
   "title": "원수를 지키는 망나니 기사"
+ },
+ "월스트리트천재의시한부투자법": {
+  "author": "글망쟁이",
+  "checked": "2026-11-25",
+  "id": 232137,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=11181715"
+  },
+  "r": 3.95,
+  "rc": 141,
+  "title": "월스트리트 천재의 시한부 투자법"
  },
  "월야환담": {
   "author": "홍정훈",
@@ -3710,6 +3848,10 @@
   },
   "title": "장르를 일본 러브코미디로 착각했다"
  },
+ "장모님을임신시켰다": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "재벌집막내아들": {
   "author": "산경(山景)",
   "checked": "2026-11-25",
@@ -3871,6 +4013,18 @@
   },
   "title": "정조역전과 TS의 궁합은 최악입니다."
  },
+ "정치인이정치를너무잘함": {
+  "author": "정따블",
+  "checked": "2026-11-25",
+  "id": 265842,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/469259",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13017538"
+  },
+  "r": 4.23,
+  "rc": 66,
+  "title": "정치인이 정치를 너무 잘함"
+ },
  "제국사냥꾼": {
   "author": "퉁구스카",
   "checked": "2026-11-25",
@@ -3881,6 +4035,10 @@
   "r": 3.97,
   "rc": 383,
   "title": "제국사냥꾼"
+ },
+ "종말후외톨이갤러리": {
+  "checked": "2026-11-25",
+  "miss": true
  },
  "주딱이지만버튜버지망생입니다": {
   "author": "일어나라코무기",
@@ -3923,6 +4081,19 @@
   "rc": 65,
   "title": "즉사기 들고 무림에 떨어지다"
  },
+ "지옥에서돌아온게임디렉터": {
+  "author": "papapa.",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 205323,
+  "links": {
+   "munpia": "https://novel.munpia.com/361855",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=10092872"
+  },
+  "r": 3.52,
+  "rc": 94,
+  "title": "지옥에서 돌아온 게임 디렉터"
+ },
  "지잡아카데미와폐급히로인들": {
   "checked": "2026-11-25",
   "miss": true
@@ -3951,6 +4122,17 @@
   "r": 3.41,
   "rc": 28,
   "title": "천하제일인의 소꿉친구"
+ },
+ "천화일로": {
+  "author": "목마",
+  "checked": "2026-11-25",
+  "id": 4527,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=4156751"
+  },
+  "r": 3.06,
+  "rc": 126,
+  "title": "천화일로"
  },
  "초성마문선협속마교에서인간재료로살아남기": {
   "author": "학수월만지",
