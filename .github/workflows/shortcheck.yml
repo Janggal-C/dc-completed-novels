@@ -1,8 +1,8 @@
-name: 2글자 줄임말 검수 (AI)
+name: 사전 일반 단어 정리 (AI)
 
 on:
   push:
-    paths: [".github/run-shortcheck"]
+    paths: [".github/run-shortcheck", ".github/run-commonword"]
   workflow_dispatch:
 
 permissions:
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
-      COMMIT_PATHS: "dict data/short_checked.json data/short_samples.json data/word_resolve.json"
+      COMMIT_PATHS: "dict data/commonword.json"
       SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
     steps:
@@ -31,8 +31,7 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - run: npm install -g @anthropic-ai/claude-code
-      - run: python -u -m src.shortcheck run
-      - run: python -u -m src.words only 아재가키
+      - run: python -u -m src.commonword run
       - name: 저장
         if: always()
-        run: bash scripts/commit.sh "2글자 줄임말 검수 $(TZ=Asia/Seoul date '+%F %H:%M')"
+        run: bash scripts/commit.sh "사전 일반 단어 정리 $(TZ=Asia/Seoul date '+%F %H:%M')"
