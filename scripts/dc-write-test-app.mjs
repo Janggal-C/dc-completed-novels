@@ -36,15 +36,22 @@ catch (e) {
   process.exit(3);
 }
 
-// 3) 글쓰기
+// 3) 글쓰기 ("잠시후 다시" 응답이면 간격을 두고 최대 3번)
 console.log('제목:', title, '/ 본문:', body);
-try {
-  const res = await dc.articles.write({ gallery: GALLERY, subject: title, content: [body] });
-  console.log('응답:', JSON.stringify(res));
-  console.log(res?.result === false ? '결과: 글쓰기 거부됨' : '결과: 글쓰기 성공');
-  process.exit(res?.result === false ? 4 : 0);
-} catch (e) {
-  console.error(`결과: 글쓰기 실패 - ${errName(e)} - ${e?.message}`);
-  if (e instanceof CaptchaRequiredError) console.error('→ 앱 경로도 사람 확인 요구 (여기서 중단)');
-  process.exit(4);
+for (const [i, wait] of [30000, 90000, 180000].entries()) {
+  console.log(`글쓰기 전 대기 ${wait / 1000}초`);
+  await sleep(wait);
+  try {
+    const res = await dc.articles.write({ gallery: GALLERY, subject: title, content: [body] });
+    console.log('응답:', JSON.stringify(res));
+    console.log('결과: 글쓰기 성공');
+    process.exit(0);
+  } catch (e) {
+    console.error(`글쓰기 실패 (시도 ${i + 1}) - ${errName(e)} - ${e?.message}`);
+    console.error('원본 응답:', JSON.stringify(e?.response ?? null));
+    if (e instanceof CaptchaRequiredError) { console.error('결과: 앱 경로도 사람 확인 요구 (여기서 중단)'); process.exit(5); }
+    if (!/잠시/.test(e?.message ?? '')) { console.error('결과: 글쓰기 거부됨'); process.exit(4); }
+  }
 }
+console.error('결과: 계속 "잠시후 다시" 응답');
+process.exit(4);
