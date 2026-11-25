@@ -4,7 +4,7 @@
 2) 완결 판정 : 새 '완결' 제목 → 규칙 + haiku, 엇갈리면 sonnet
    순위      : 노벨피아 24시간 순위 제목을 누적 (줄임말 후보·충돌 확인용, data/ranking_history.json)
 3) 새 단어   : 작성자 10명·3일 이상 쓰인 새 단어 → haiku 분류 (하루 최대 300개)
-4) 사전 등록 : 작품으로 분류된 단어 → 구글(오늘 한도 안) → haiku로 정식 제목 추출
+4) 구글 검색 : 하루 한도를 우선순위로 — 새 작품 단어(정식 제목) / 연재처 링크 없는 작품, 최근 언급 많은 순
 5) AI 검수   : 새 줄임말·확인 필요 → 중구난방 검사 + sonnet 판정
 6) 오류 신고 : 확장 신고 → sonnet 판단 → 자동 반영
 7) 소설넷    : 새 작품 평점·연재처 + 기존 1/7 갱신 (최대 40분)
@@ -55,10 +55,11 @@ def s_discover():
     discover.run(max_minutes=20, limit=300)
 
 
-@step("사전 등록")
-def s_words():
-    from . import words
-    words.run()
+@step("구글 검색")
+def s_google():
+    # 하루 검색 한도를 새 작품 단어(정식 제목)·연재처 링크 중 언급 많은 순으로 나눠 씀
+    from . import googleplan
+    googleplan.run()
 
 
 @step("AI 검수")
