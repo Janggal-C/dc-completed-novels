@@ -13,9 +13,7 @@ CARD = f"box-sizing:border-box;width:1080px;position:relative;overflow:hidden;di
 MEDAL = {1: ("#F5B301", "#B98700", "#FFE08A"), 2: ("#9AA3B8", "#737C93", "#D3D8E8"), 3: ("#C98A5B", "#9C6A41", "#EDCFB3")}
 
 
-def circle(right, top, size, bg, border=""):
-    return (f'<div style="position:absolute;right:{right}px;top:{top}px;width:{size}px;height:{size}px;'
-            f'border-radius:50%;background:{bg};{border}"></div>')
+# 배경 장식(원·금색 점)은 넣지 않음 (2026-11-26 사용자: 정신없음)
 
 
 def row(rank, item, top_n, fixed=True, done_card=False):
@@ -75,8 +73,6 @@ def build(month, data):
     qdone = sorted([x for x in qtr if (x.get("cdate") or "")[:7] in qm], key=lambda x: (-x["n"], [-ord(c) for c in x["cdate"]]))[:5]
 
     cover = (f'<div style="{CARD}height:864px;background:#3B4890;color:#ffffff;padding:40px 80px 96px;justify-content:center">'
-             + circle(-170, -190, 560, "transparent", "border:16px solid #F5B301;")
-             + circle(110, 560, 380, "rgba(255,255,255,0.07)") + circle(230, 70, 90, "#F5B301")
              + '<div style="position:relative">'
              f'<div style="display:inline-block;background:#F5B301;color:#1B1F4B;border-radius:999px;padding:8px 30px;font-size:38px;font-weight:800">{y}.{mi} 월간 결산</div>'
              '<div style="font-size:46px;font-weight:700;color:#C7CDF0;margin-top:30px">장르소설 갤러리</div>'
@@ -86,12 +82,10 @@ def build(month, data):
 
     topn = top10[0]["n"] if top10 else 0
     c2 = (f'<div style="{CARD}height:1080px;background:#F1F2FF;padding:52px 60px 52px">'
-          + circle(-120, -170, 420, "rgba(59,72,144,0.08)") + circle(150, 60, 70, "#F5B301")
           + head("언급 TOP 10", "완결 여부 무관", f"{mi}월 언급수 TOP10")
           + '<div style="margin-top:26px;display:flex;flex-direction:column;gap:14px;position:relative">'
           + "".join(row(i + 1, x, topn) for i, x in enumerate(top10[:5])) + '</div></div>')
     c3 = (f'<div style="{CARD}height:1080px;background:#F1F2FF;padding:52px 60px 44px">'
-          + circle(-90, 720, 300, "rgba(59,72,144,0.07)") + circle(120, 610, 54, "#F5B301")
           + '<div style="display:flex;flex-direction:column;gap:14px;position:relative">'
           + "".join(row(i + 6, x, topn) for i, x in enumerate(top10[5:10])) + '</div>'
           + foot(f"장르소설 갤러리 · {y}년 {mi}월 결산") + '</div>')
@@ -99,8 +93,6 @@ def build(month, data):
     def done_card(items, desc, title, left):
         tn = items[0]["n"] if items else 0
         return (f'<div style="{CARD}height:1080px;background:#E3E6F8;padding:52px 60px 44px">'
-                + circle(-130, -170, 440, "rgba(59,72,144,0.09)") + circle(150, 66, 70, "#F5B301")
-                + circle(-70, 780, 240, "rgba(59,72,144,0.07)")
                 + head("완결 TOP 5", desc, title)
                 + '<div style="margin-top:26px;display:flex;flex-direction:column;gap:14px;flex:1;min-height:0;position:relative">'
                 + "".join(row(i + 1, x, tn, fixed=len(items) < 5, done_card=True) for i, x in enumerate(items)) + '</div>'
