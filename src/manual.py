@@ -45,6 +45,8 @@ def parse(text):
         is_author = bool(re.match(r"^(작가|작가명|author)\s*$", title, re.I))
         if re.match(r"^(제거|삭제|아님|x)\s*$", title, re.I):
             is_author = "remove"
+        if alias == "신고처리":          # 검수 탭: 확장 오류 신고 처리 완료 (구글폼 타임스탬프)
+            is_author = "report_done"
         out.append((alias, title, is_author))
     return out
 
@@ -100,11 +102,16 @@ def run(text):
     # 이미 있는 작품(띄어쓰기 무시 일치)은 기존 정식 표기 사용, 없는 것만 AI로 다듬기
     unknown_titles = [t for a, t, is_auth in cleaned if not is_auth and norm_key(t) not in works]
     removed = read_json(DICT / "removed.json", [])
+    reports_done = read_json(DICT / "reports_done.json", [])
     fixed = normalize(unknown_titles, cfg["judge"]["model"])
 
     report = []
     for alias, title, is_auth in cleaned:
         k = norm_key(alias)
+        if is_auth == "report_done":
+            if title not in reports_done:
+                reports_done.append(title)
+            continue
         if is_auth == "remove":
             # 작품이 아닌 단어: 줄임말 연결을 끊고, 그 단어 때문에 생긴 작품(다른 이름 없음)이면 작품도 지움
             wid = aliases.pop(k, None)
@@ -139,6 +146,7 @@ def run(text):
     write_json(SEARCH_CACHE, cache)
     write_json(AUTHORS, sorted(set(authors)))
     write_json(DICT / "removed.json", sorted(set(removed)))
+    write_json(DICT / "reports_done.json", reports_done)
     save_alias_dates("직접 입력")
     msg = "\n".join(report)
     print(msg)

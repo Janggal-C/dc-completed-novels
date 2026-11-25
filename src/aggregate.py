@@ -205,6 +205,7 @@ def run(cfg=None, run_stats=None, partial=False):
         "repo": "answhdtjr736-spec/dc-completed-novels",
         "gallery": cfg["gallery_id"],
         "data_start": first_month,
+        "reports_done": read_json(DICT / "reports_done.json", []),
         "backfill_done": state.get("backfill", {}).get("done", False),
         "backfill_cutoff": state.get("backfill", {}).get("cutoff"),
         "in_progress": partial,

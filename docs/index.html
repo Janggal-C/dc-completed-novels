@@ -93,7 +93,7 @@ textarea.inp { min-height: 90px; resize: vertical; }
 .sticky { position: sticky; bottom: 0; background: var(--surface-0); padding: 10px 0; display: flex; gap: 8px; align-items: center; }
 .bar { height: 8px; border-radius: 4px; background: var(--border); overflow: hidden; margin-top: 6px; }
 .bar i { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
-.seg { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 12px; }
+.seg { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-bottom: 12px; }
 .empty { padding: 30px 0; text-align: center; color: var(--text-muted); }
 code { font-size: 12px; background: var(--surface-0); padding: 1px 4px; border-radius: 4px; }
 .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
@@ -322,6 +322,32 @@ async function sha256(t) {
   const b = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t));
   return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2, "0")).join("");
 }
+// 확장 오류 신고 (구글폼 응답 시트, 웹에 게시된 CSV를 바로 읽음)
+const REPORT_CSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSyW7rYfg2yrT2Klr9AAejlybfYOTIC7wo6DBeeejuTZ02O_xvKP334uCcG2gOH6_qhZWsUrWedJfii/pub?gid=1104843892&single=true&output=csv";
+let REPORTS = null;
+function parseCSV(t) {
+  const rows = []; let row = [], cur = "", q = false;
+  for (let i = 0; i < t.length; i++) {
+    const c = t[i];
+    if (q) { if (c === '"') { if (t[i + 1] === '"') { cur += '"'; i++; } else q = false; } else cur += c; }
+    else if (c === '"') q = true;
+    else if (c === ",") { row.push(cur); cur = ""; }
+    else if (c === "\n" || c === "\r") { if (c === "\r" && t[i + 1] === "\n") i++; row.push(cur); rows.push(row); row = []; cur = ""; }
+    else cur += c;
+  }
+  if (cur || row.length) { row.push(cur); rows.push(row); }
+  return rows;
+}
+function loadReports() {
+  REPORTS = "loading";
+  fetch(REPORT_CSV + "&t=" + Date.now()).then(r => r.text()).then(t => {
+    const done = new Set(R.reports_done || []);
+    REPORTS = parseCSV(t).slice(1).filter(r => r[0] && !done.has(r[0]))
+      .map(r => ({ts: r[0], alias: (r[1] || "").trim(), title: (r[2] || "").trim(), url: (r[3] || "").trim(), comment: (r[4] || "").trim()}))
+      .reverse();
+  }).catch(() => { REPORTS = []; REPORTS.error = true; }).finally(() => { if (tab === "check") check(); });
+}
+
 function check() {
   if (!checkOpen) {
     VIEW.innerHTML = `<div class="card" style="max-width:320px;margin:40px auto;text-align:center">
@@ -347,6 +373,8 @@ function check() {
   const now = Date.now();
   for (const k in pend) if (now - pend[k] > 30 * 60 * 1000) delete pend[k];
   const U = (R.unresolved || []).filter(u => !pend[u.alias]), NR = R.dictionary.filter(d => d.needs_review && !pend[d.alias]);
+  if (REPORTS === null) loadReports();
+  const RP = Array.isArray(REPORTS) ? REPORTS.filter(r => !pend["신고:" + r.ts]) : [];
   const ranked = U.filter(u => u.n >= 2), rest = U.filter(u => u.n < 2);
   const g = q => `<a class="btn" style="white-space:nowrap;padding:7px 10px" target="_blank" rel="noopener" href="https://www.google.com/search?q=${encodeURIComponent(q + " 웹소설")}">구글</a>`;
   const rm = a => `<button class="btn" data-rm="${esc(a)}" style="white-space:nowrap;padding:7px 10px">제거</button>`;
@@ -357,7 +385,19 @@ function check() {
     <div>현재: ${esc(d.title)}</div>
     <div class="row" style="flex-wrap:nowrap"><input class="inp" data-alias="${esc(d.alias)}" placeholder="틀렸으면 정식 제목 입력">
     <button class="btn" data-ok="${esc(d.alias)}" data-title="${esc(d.title)}" style="white-space:nowrap;padding:7px 10px">맞음</button>${rm(d.alias)}${g(d.alias)}</div></div>`;
-  const body = checkMode === "review"
+  const prow = r => `<div class="ur"><div class="h"><b>${esc(r.alias || "(직접 신고)")}</b><span class="muted">${esc(r.ts)}</span></div>
+    <div style="white-space:pre-line">💬 ${esc(r.comment)}</div>
+    ${r.title ? `<div class="muted">현재 연결: ${esc(r.title)}</div>` : ""}
+    ${r.url && r.url.startsWith("http") ? `<div class="muted"><a href="${esc(r.url)}" target="_blank" rel="noopener">신고한 글 보기</a></div>` : ""}
+    ${r.alias ? `<div class="row" style="flex-wrap:nowrap"><input class="inp" data-alias="${esc(r.alias)}" placeholder="올바른 정식 제목">${rm(r.alias)}${g(r.alias)}</div>` : ""}
+    <label class="muted" style="display:block;margin-top:4px"><input type="checkbox" data-done="${esc(r.ts)}"> 처리 완료 (목록에서 지움)</label></div>`;
+  const body = checkMode === "reports"
+    ? `<div class="card"><div class="t">확장 오류 신고 ${RP.length}개</div>
+       <div class="muted">고칠 건 제목 입력·제거로 처리하고, 처리한 신고는 <b>처리 완료</b>를 체크하세요. 직접 신고(여러 줄)는 아래 '직접 입력' 칸에 옮겨 적으면 돼요.</div>
+       ${REPORTS === "loading" ? `<div class="empty">불러오는 중…</div>` : REPORTS && REPORTS.error ? `<div class="empty">신고 목록을 불러오지 못했습니다.</div>` : (RP.map(prow).join("") || `<div class="empty">새 신고 없음 🎉</div>`)}</div>
+       <div class="card"><div class="t">직접 입력</div><div class="muted">한 줄에 하나씩 <code>줄임말 = 정식 제목</code> 또는 <code>줄임말 = 제거</code></div>
+       <textarea class="inp" id="free" placeholder="괴담동 = 괴담 동아리"></textarea></div>`
+    : checkMode === "review"
     ? `<div class="card"><div class="t">사전 확인 필요 ${NR.length}개</div>
        <div class="muted">검색으로 자동 연결됐지만 확신이 낮은 것들입니다. 맞으면 <b>맞음</b>, 틀렸으면 정식 제목을 적고, 작품이 아닌 단어면 <b>제거</b>.</div>
        ${NR.map(rrow).join("") || `<div class="empty">없습니다 🎉</div>`}</div>`
@@ -367,7 +407,8 @@ function check() {
        <textarea class="inp" id="free" placeholder="후프 = 후회안하는 프로듀서"></textarea></div>`;
   VIEW.innerHTML = `<div class="seg">
       <button class="pbtn ${checkMode === "review" ? "on" : ""}" data-m="review">사전 확인 필요 (${NR.length})</button>
-      <button class="pbtn ${checkMode === "unres" ? "on" : ""}" data-m="unres">미확인 줄임말 (${ranked.length})</button></div>
+      <button class="pbtn ${checkMode === "unres" ? "on" : ""}" data-m="unres">미확인 줄임말 (${ranked.length})</button>
+      <button class="pbtn ${checkMode === "reports" ? "on" : ""}" data-m="reports">신고 (${RP.length})</button></div>
     ${body}
     <div class="sticky"><button class="btn primary" id="save">저장</button><span class="muted" id="cnt"></span></div>
     <div class="muted" style="padding-bottom:16px">저장 → 열린 GitHub 화면에서 <b>Create</b> → 1~2분 뒤 반영. 띄어쓰기·플랫폼 군더더기는 자동 정리됩니다.</div>`;
@@ -391,16 +432,21 @@ function check() {
     const lines = [...VIEW.querySelectorAll("input[data-alias]")].filter(x => x.value.trim()).map(x => `${x.dataset.alias} = ${x.value.trim()}`);
     VIEW.querySelectorAll("button[data-ok]").forEach(b => { if (oks.has(b.dataset.ok)) lines.push(`${b.dataset.ok} = ${b.dataset.title}`); });
     rms.forEach(k => lines.push(`${k} = 제거`));
+    VIEW.querySelectorAll("input[data-done]:checked").forEach(x => lines.push(`신고처리 = ${x.dataset.done}`));
     const free = document.getElementById("free");
     return lines.concat(free ? free.value.split("\n").map(x => x.trim()).filter(x => /=|→|\t/.test(x)) : []);
   };
   const upd = () => { const n = collect().length; document.getElementById("cnt").textContent = n ? `${n}개 입력됨` : ""; };
   VIEW.addEventListener("input", upd);
+  VIEW.addEventListener("change", upd);
   document.getElementById("save").onclick = () => {
     const lines = collect();
     if (!lines.length) { alert("입력한 내용이 없습니다."); return; }
     try {
-      collect().forEach(l => { pend[l.split(/\s*(?:=>|=|→|->|\t|:)\s*/)[0].trim()] = Date.now(); });
+      collect().forEach(l => {
+        const [k, ...v] = l.split(/\s*(?:=>|=|→|->|\t)\s*/);
+        pend[k.trim() === "신고처리" ? "신고:" + v.join("=").trim() : k.trim()] = Date.now();
+      });
       localStorage.setItem("pendingFix", JSON.stringify(pend));
     } catch (e) {}
     setTimeout(check, 500);
