@@ -2103,6 +2103,10 @@
   "rc": 10,
   "title": "동로마 황녀가 내 아이를 임신하셨다"
  },
+ "동방고려개": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "들키지않는사제사칭범이되었다": {
   "author": "아리알",
   "checked": "2026-11-25",
@@ -2402,6 +2406,18 @@
   "rc": 317,
   "title": "마왕은 학원에 간다"
  },
+ "막장드라마의엔딩에빙의했다": {
+  "author": "핏콩",
+  "checked": "2026-11-25",
+  "id": 288409,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/568983",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14655307"
+  },
+  "r": 2.03,
+  "rc": 16,
+  "title": "막장드라마의 엔딩에 빙의했다"
+ },
  "말랑한길드장님": {
   "author": "saya",
   "checked": "2026-11-25",
@@ -2443,6 +2459,10 @@
   "title": "망할 놈의 아카데미"
  },
  "매국노": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "매도당하고싶은엘프님": {
   "checked": "2026-11-25",
   "miss": true
  },
@@ -2657,6 +2677,23 @@
   },
   "title": "미연시 속 회귀하는 히로인이 되었다"
  },
+ "바람과별무리": {
+  "author": "whitebean",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 189,
+  "links": {
+   "joara": "https://www.joara.com/book/738760",
+   "kakao": "https://page.kakao.com/content/53201728",
+   "munpia": "https://www.munpia.com/novel/detail/9694",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=1836048",
+   "novelpia": "https://novelpia.com/novel/25974",
+   "ridi": "https://ridibooks.com/books/945005936?_rdt_sid=category_books&_rdt_idx=9"
+  },
+  "r": 3.95,
+  "rc": 259,
+  "title": "바람과 별무리"
+ },
  "바바리안퀘스트": {
   "author": "백수귀족.",
   "checked": "2026-11-25",
@@ -2789,6 +2826,19 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "비뢰도": {
+  "author": "검류혼",
+  "checked": "2026-11-25",
+  "id": 3780,
+  "links": {
+   "kakao": "https://page.kakao.com/content/46287936",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=581494",
+   "ridi": "https://ridibooks.com/books/875001015?_rdt_sid=category_books&_rdt_idx=17"
+  },
+  "r": 3.11,
+  "rc": 368,
+  "title": "비뢰도"
+ },
  "빌런옆자리의마법소녀": {
   "author": "이불짱",
   "checked": "2026-11-25",
@@ -2831,6 +2881,10 @@
   "r": 3.0,
   "rc": 2,
   "title": "사이버펑크 속 드래곤이 되었다"
+ },
+ "서울드래곤": {
+  "checked": "2026-11-25",
+  "miss": true
  },
  "서울오브젝트이야기": {
   "author": "논리곰",
@@ -2993,6 +3047,21 @@
   "rc": 1139,
   "title": "소설 속 엑스트라"
  },
+ "소설속흑막이되련다": {
+  "author": "유래향",
+  "checked": "2026-11-25",
+  "id": 105871,
+  "links": {
+   "joara": "https://www.joara.com/book/1555454",
+   "kakao": "https://page.kakao.com/content/57429506",
+   "munpia": "https://novel.munpia.com/220257",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=6218944",
+   "ridi": "https://ridibooks.com/books/425218380?_rdt_sid=category_books&_rdt_idx=0"
+  },
+  "r": 3.37,
+  "rc": 30,
+  "title": "소설 속 흑막이 되련다"
+ },
  "소요수선전逍遙修仙傳": {
   "author": "아이라울",
   "checked": "2026-11-25",
@@ -3040,6 +3109,15 @@
   "r": 2.95,
   "rc": 11,
   "title": "시간 정지 능력으로 탑 등반"
+ },
+ "시한부누나와결혼합니다": {
+  "author": "왕뚜껑국물라볶이",
+  "checked": "2026-11-25",
+  "id": 289046,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/433993"
+  },
+  "title": "시한부 누나와 결혼합니다"
  },
  "시한부천재가살아남는법": {
   "author": "청시소",
@@ -3264,6 +3342,10 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "약관동의는신중히": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "약먹는천재마법사": {
   "author": "글근육",
   "checked": "2026-11-25",
@@ -3474,6 +3556,15 @@
   "rc": 3,
   "title": "■■을 위한 세계는 없다"
  },
+ "음악천재가불륜을못숨김": {
+  "author": "페도부이",
+  "checked": "2026-11-25",
+  "id": 325740,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/402592"
+  },
+  "title": "음악 천재가 불륜을 못 숨김"
+ },
  "이거럽코빙의물인가요": {
   "author": "두유하이볼",
   "checked": "2026-11-25",
@@ -3590,6 +3681,15 @@
    "novelpia": "https://novelpia.com/novel/441569"
   },
   "title": "임프 줍고 대마법사"
+ },
+ "입대일주일전천사가되었다": {
+  "author": "댖지",
+  "checked": "2026-11-25",
+  "id": 289545,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/408013"
+  },
+  "title": "입대 일주일 전 천사가 되었다"
  },
  "잘생기면편해지는인방생활": {
   "author": "민트초코주먹밥",
@@ -3762,6 +3862,15 @@
   "rc": 421,
   "title": "정령왕 엘퀴네스"
  },
+ "정조역전과ts의궁합은최악입니다": {
+  "author": "븩토네스크",
+  "checked": "2026-11-25",
+  "id": 288804,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/408923"
+  },
+  "title": "정조역전과 TS의 궁합은 최악입니다."
+ },
  "제국사냥꾼": {
   "author": "퉁구스카",
   "checked": "2026-11-25",
@@ -3861,6 +3970,10 @@
   },
   "title": "최강 길드에 납치당했다"
  },
+ "최강의연인기사들을ntr당합니다": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "취미방송입니다": {
   "author": "쌍포메타",
   "checked": "2026-11-25",
@@ -3871,6 +3984,20 @@
   "r": 2.7,
   "rc": 5,
   "title": "취미 방송입니다"
+ },
+ "탐관오리가상태창을숨김": {
+  "author": "코락스",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 206559,
+  "links": {
+   "kakao": "https://page.kakao.com/content/66605015",
+   "munpia": "https://novel.munpia.com/372931",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=12511722"
+  },
+  "r": 4.01,
+  "rc": 347,
+  "title": "탐관오리가 상태창을 숨김"
  },
  "탐식의재림": {
   "author": "로유진",
@@ -3936,6 +4063,10 @@
   "r": 4.21,
   "rc": 148,
   "title": "판초우의의 마법사"
+ },
+ "판타지수학대전": {
+  "checked": "2026-11-25",
+  "miss": true
  },
  "폭군을너무잘꼬셔버렸다": {
   "author": "겨울맑음",
@@ -4017,6 +4148,19 @@
   "r": 3.85,
   "rc": 1117,
   "title": "픽 미 업!"
+ },
+ "하남자의탑공략법": {
+  "author": "꾸찌꾸찌",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 227572,
+  "links": {
+   "munpia": "https://novel.munpia.com/400210",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=11227324"
+  },
+  "r": 2.79,
+  "rc": 160,
+  "title": "하남자의 탑 공략법"
  },
  "하루전으로돌아가는남매": {
   "checked": "2026-11-25",
@@ -4165,6 +4309,19 @@
   "rc": 29,
   "title": "회귀자와 맹인 성녀"
  },
+ "회귀자의메모장": {
+  "author": "지갑송",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 205662,
+  "links": {
+   "kakao": "https://page.kakao.com/content/62328259",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=12903795"
+  },
+  "r": 3.07,
+  "rc": 67,
+  "title": "회귀자의 메모장"
+ },
  "회귀한용병은다계획이있다": {
   "author": "골드행",
   "checked": "2026-11-25",
@@ -4203,7 +4360,21 @@
   "rc": 15,
   "title": "흉성의 화신"
  },
+ "흑막가문에게입양당했다": {
+  "author": "아기소금",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 289486,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/348778"
+  },
+  "title": "흑막 가문에게 입양당했다"
+ },
  "히어로in히로인": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "히어로가집착하는수트제작자가되었다": {
   "checked": "2026-11-25",
   "miss": true
  },
