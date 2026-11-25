@@ -34,5 +34,5 @@ jobs:
       - name: 저장
         if: always()
         env:
-          COMMIT_PATHS: data/ranking_titles.json
+          COMMIT_PATHS: data/ranking_titles.json data/ranking_history.json
         run: bash scripts/commit.sh "순위 페이지 제목 갱신 $(TZ=Asia/Seoul date '+%F %H:%M')"

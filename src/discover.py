@@ -76,7 +76,10 @@ CLASSIFY_PROMPT = """디시인사이드 장르소설(웹소설) 갤러리 글 �
 def classify(words, cands, model):
     if os.environ.get("AI_MOCK") == "1":
         return {w: "work" if cands[w]["burst"] > 0.3 else "common" for w in words}
-    lines = "\n".join(f"- {w}  (예: {' / '.join(x[:40] for x in cands[w]['ex'][:3])})" for w in words)
+    def line(w):
+        hint = f"  [노벨피아 순위 제목과 조합 일치: {' / '.join(cands[w]['rk'][:3])}]" if cands[w].get("rk") else ""
+        return f"- {w}  (예: {' / '.join(x[:40] for x in cands[w]['ex'][:3])}){hint}"
+    lines = "\n".join(line(w) for w in words)
     res = ai._json_from(ai._call(CLASSIFY_PROMPT + lines, model))
     out = {}
     for r in res:
@@ -98,6 +101,10 @@ def run(batch=150, max_minutes=300, limit=None):
     from .resolve import removed
     gone = removed()
     todo = [w for w in sorted(cands, key=lambda w: -cands[w]["w"]) if w not in labels and w not in gone][:limit]
+    from . import abbrev
+    rk = abbrev.ranking_titles()
+    for w in todo:
+        cands[w]["rk"] = abbrev.find(w, rk)[:3]
     print(f"후보 {len(cands):,}개 중 분류할 것 {len(todo):,}개", flush=True)
     done = 0
     for i in range(0, len(todo), batch):
@@ -116,7 +123,7 @@ def run(batch=150, max_minutes=300, limit=None):
         for w in chunk:
             if w in res:
                 c = cands[w]
-                labels[w] = {"t": res[w], "w": c["w"], "burst": c["burst"], "ex": c["ex"][:2], "date": today}
+                labels[w] = {"t": res[w], "w": c["w"], "burst": c["burst"], "ex": c["ex"][:2], "date": today, **({"rk": c["rk"]} if c.get("rk") else {})}
         done += len(res)
         write_json(LABELS, labels)
         cnt = Counter(v["t"] for v in labels.values())

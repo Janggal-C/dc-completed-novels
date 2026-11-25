@@ -26,6 +26,7 @@ jobs:
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
       SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
       SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
+      RANKING_URL: ${{ secrets.SITE_URL }}
     steps:
       - uses: actions/checkout@v5
         with:

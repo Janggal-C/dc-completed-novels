@@ -16,11 +16,13 @@ from urllib.parse import urlparse
 import requests
 from bs4 import BeautifulSoup
 
-from .common import DATA, now_kst, write_json
+from .common import DATA, now_kst, read_json, write_json
 
 UA = "dc-completed-novels-research (personal, low-volume; +https://github.com/answhdtjr736-spec/dc-completed-novels)"
 OUT = DATA / "ranking_titles.json"
+HISTORY = DATA / "ranking_history.json"   # {제목: {first, last, best, days}} — 날마다 누적
 MAX_TITLES = 100
+BADGE = re.compile(r"^(?:12|15|19)\s+")   # 연령 배지가 제목 앞에 붙어 나온다 ('15 회귀한 용병이 되었다')
 
 
 def extract(html):
@@ -28,11 +30,24 @@ def extract(html):
     soup = BeautifulSoup(html, "html.parser")
     seen, titles = set(), []
     for b in soup.select("b.cut_line_one"):
-        t = re.sub(r"\s+", " ", b.get_text(" ", strip=True))
+        t = BADGE.sub("", re.sub(r"\s+", " ", b.get_text(" ", strip=True)))
         if t and t not in seen:
             seen.add(t)
             titles.append(t)
     return titles[:MAX_TITLES]
+
+
+def accumulate(titles, today):
+    """오늘 순위를 누적 기록에 반영 (하루치만 보면 24시간 순위라 금방 바뀐다)"""
+    hist = read_json(HISTORY, {})
+    for rank, t in enumerate(titles, 1):
+        h = hist.setdefault(t, {"first": today, "best": rank, "days": 0})
+        if h.get("last") != today:
+            h["days"] += 1
+        h["last"] = today
+        h["best"] = min(h["best"], rank)
+    write_json(HISTORY, hist)
+    return len(hist)
 
 
 def redact(msg, url):
@@ -83,6 +98,8 @@ def main():
     write_json(OUT, res)
 
     print(f"제목 {len(titles)}개 추출")
+    if titles:
+        print(f"누적 기록 {accumulate(titles, res['checked'][:10]):,}개")
 
     if not titles:
         print("cut_line_one을 못 찾았습니다 (자바스크립트로 나중에 채워지는 페이지일 수 있음).")
@@ -90,3 +107,13 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+def run():
+    """매일 실행용: 주소가 없으면 건너뜀 (어제 결과를 덮어쓰지 않게)"""
+    if not os.environ.get("RANKING_URL", "").strip():
+        print("RANKING_URL 없음 → 순위 수집 건너뜀")
+        return
+    main()
+    from . import abbrev
+    abbrev.write_conflicts()

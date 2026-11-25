@@ -2,6 +2,7 @@
 
 1) 수집      : 새 글 제목 이어서 수집 + 빈 구간 메우기
 2) 완결 판정 : 새 '완결' 제목 → 규칙 + haiku, 엇갈리면 sonnet
+   순위      : 노벨피아 24시간 순위 제목을 누적 (줄임말 후보·충돌 확인용, data/ranking_history.json)
 3) 새 단어   : 작성자 10명·3일 이상 쓰인 새 단어 → haiku 분류 (하루 최대 300개)
 4) 사전 등록 : 작품으로 분류된 단어 → 구글(오늘 한도 안) → haiku로 정식 제목 추출
 5) AI 검수   : 새 줄임말·확인 필요 → 중구난방 검사 + sonnet 판정
@@ -40,6 +41,12 @@ def s_complete():
     backfill.do_import()
     backfill.judge()
     backfill.review()
+
+
+@step("순위")
+def s_ranking():
+    from . import ranking_fetch
+    ranking_fetch.run()
 
 
 @step("새 단어")
