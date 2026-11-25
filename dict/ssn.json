@@ -1815,6 +1815,10 @@
   "rc": 3,
   "title": "내 마법도서관이 살아있다"
  },
+ "내여동생은내가죽은줄안다": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "내청춘러브코메디는잘못됐다": {
   "checked": "2026-11-25",
   "miss": true
@@ -1838,6 +1842,10 @@
   "r": 3.59,
   "rc": 250,
   "title": "네크로맨서 학교의 소환천재"
+ },
+ "네크로폴리스": {
+  "checked": "2026-11-25",
+  "miss": true
  },
  "누나가쓴로판속에빙의했다": {
   "author": "니모네모",
@@ -1881,6 +1889,20 @@
   "r": 2.0,
   "rc": 1,
   "title": "니들 생각 다 들린다"
+ },
+ "다크게이머": {
+  "author": "최예균",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 36522,
+  "links": {
+   "kakao": "https://page.kakao.com/content/50694624",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=3179199",
+   "ridi": "https://ridibooks.com/books/2498001321?_rdt_sid=category_books&_rdt_idx=2"
+  },
+  "r": 1.5,
+  "rc": 1,
+  "title": "다크 게이머"
  },
  "다크엘프는주사위사기꾼": {
   "author": "병장개미",
@@ -2488,6 +2510,21 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "무림서부": {
+  "author": "컵라면.",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 104262,
+  "links": {
+   "kakao": "https://page.kakao.com/home?seriesId=58248640",
+   "munpia": "https://novel.munpia.com/236337",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=6049555",
+   "ridi": "https://ridibooks.com/books/425250775?_rdt_sid=category-books&_rdt_idx=2"
+  },
+  "r": 4.17,
+  "rc": 1514,
+  "title": "무림서부"
+ },
  "무림에서외과의로살아가는법": {
   "author": "저택성",
   "checked": "2026-11-25",
@@ -2516,6 +2553,20 @@
  "무직전생이세계에갔으면최선을다한다": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "무한의마법사": {
+  "author": "김치우",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 3356,
+  "links": {
+   "kakao": "https://page.kakao.com/content/65109887",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=1632047",
+   "ridi": "https://ridibooks.com/books/111032225?_rdt_sid=category-books&_rdt_idx=3"
+  },
+  "r": 3.02,
+  "rc": 384,
+  "title": "무한의 마법사"
  },
  "무한회귀자인데썰푼다": {
   "author": "신노아",
@@ -2606,6 +2657,21 @@
   },
   "title": "미연시 속 회귀하는 히로인이 되었다"
  },
+ "바바리안퀘스트": {
+  "author": "백수귀족.",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 1429,
+  "links": {
+   "kakao": "https://page.kakao.com/content/50825396",
+   "munpia": "https://novel.munpia.com/82021",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=2913475",
+   "ridi": "https://ridibooks.com/books/2057010704?_rdt_sid=category_books&_rdt_idx=14"
+  },
+  "r": 4.27,
+  "rc": 1702,
+  "title": "바바리안 퀘스트"
+ },
  "반강제적제국주의자": {
   "author": "지갑송",
   "checked": "2026-11-25",
@@ -2665,6 +2731,17 @@
    "novelpia": "https://novelpia.com/novel/310025"
   },
   "title": "버튜버지만, 출근합니다"
+ },
+ "별그리는그림천재": {
+  "author": "가화만사성™",
+  "checked": "2026-11-25",
+  "id": 285072,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/548415"
+  },
+  "r": 3.82,
+  "rc": 11,
+  "title": "별 그리는 그림 천재"
  },
  "별을품은소드마스터": {
   "author": "Q10",
@@ -2833,6 +2910,18 @@
   "rc": 28,
   "title": "선협에서 상태창 개발하기"
  },
+ "선협의뱀이되었다": {
+  "author": "판다공자",
+  "checked": "2026-11-25",
+  "id": 264633,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/463152",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=12751824"
+  },
+  "r": 2.69,
+  "rc": 13,
+  "title": "선협의 뱀이 되었다"
+ },
  "세계수를따먹다": {
   "checked": "2026-11-25",
   "miss": true
@@ -2903,6 +2992,18 @@
   "r": 3.47,
   "rc": 1139,
   "title": "소설 속 엑스트라"
+ },
+ "소요수선전逍遙修仙傳": {
+  "author": "아이라울",
+  "checked": "2026-11-25",
+  "id": 254977,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/439231",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=12242558"
+  },
+  "r": 3.07,
+  "rc": 7,
+  "title": "소요수선전(逍遙修仙傳)"
  },
  "스마트폰in무림학관": {
   "author": "대롱닥",
@@ -2990,6 +3091,10 @@
   "r": 3.44,
   "rc": 67,
   "title": "심해의 마법사"
+ },
+ "아역배우를키잡하는미친매니저가되었다": {
+  "checked": "2026-11-25",
+  "miss": true
  },
  "아이돌이군필을숨김": {
   "author": "자몽펀치",
@@ -3119,6 +3224,15 @@
   "rc": 1238,
   "title": "악당은 살고 싶다"
  },
+ "악신이총애하는모험가": {
+  "author": "SirLogan",
+  "checked": "2026-11-25",
+  "id": 289526,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/357967"
+  },
+  "title": "악신이 총애하는 모험가"
+ },
  "악역영애말포이": {
   "checked": "2026-11-25",
   "miss": true
@@ -3198,6 +3312,15 @@
   "rc": 1,
   "title": "여신이 나만 애호함"
  },
+ "여초딩교수가되었다": {
+  "author": "탄탄포",
+  "checked": "2026-11-25",
+  "id": 288596,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/419875"
+  },
+  "title": "여초딩 교수가 되었다"
+ },
  "여혐소설가의ts수기": {
   "author": "알레미카",
   "checked": "2026-11-25",
@@ -3209,6 +3332,18 @@
   "r": 5.0,
   "rc": 2,
   "title": "여혐 소설가의 TS 수기"
+ },
+ "예수천국불신지옥": {
+  "author": "막쓰는계정",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 289490,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/32846"
+  },
+  "r": 3.5,
+  "rc": 3,
+  "title": "예수천국 불신지옥"
  },
  "예언의아이가살아남는법": {
   "author": "Cadilet",
@@ -3224,6 +3359,17 @@
   "r": 4.28,
   "rc": 191,
   "title": "예언의 아이가 살아남는 법"
+ },
+ "오늘만사는기사": {
+  "author": "소울풍",
+  "checked": "2026-11-25",
+  "id": 206773,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=9378942"
+  },
+  "r": 3.52,
+  "rc": 146,
+  "title": "오늘만 사는 기사"
  },
  "오늘의맘마": {
   "checked": "2026-11-25",
@@ -3288,6 +3434,22 @@
   "rc": 4,
   "title": "월야환담"
  },
+ "위저드스톤": {
+  "author": "이경훈",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 362,
+  "links": {
+   "joara": "https://www.joara.com/book/1242679",
+   "kakao": "https://page.kakao.com/content/57554653",
+   "munpia": "https://www.munpia.com/novel/detail/50888",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=2291626",
+   "ridi": "https://ridibooks.com/books/1534002127?_rdt_sid=category_books&_rdt_idx=7"
+  },
+  "r": 3.87,
+  "rc": 340,
+  "title": "위저드 스톤"
+ },
  "유희생활": {
   "checked": "2026-11-25",
   "miss": true
@@ -3348,6 +3510,10 @@
   "rc": 10,
   "title": "이세계 TRPG 게임마스터"
  },
+ "이세계검은머리바르바로이가미궁에서살아남는법": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "이세계검은머리외국인": {
   "checked": "2026-11-25",
   "miss": true
@@ -3363,6 +3529,10 @@
   "rc": 2,
   "title": "이세계 멸망 갤러리"
  },
+ "이세계불법체류사이비": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "이세계에뒷담갤러리를풀었다": {
   "author": "김마모",
   "checked": "2026-11-25",
@@ -3373,6 +3543,19 @@
   "r": 0.5,
   "rc": 1,
   "title": "이세계에 뒷담 갤러리를 풀었다"
+ },
+ "인류보호회사": {
+  "author": "짤짤이",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 225987,
+  "links": {
+   "kakao": "https://page.kakao.com/content/65961369",
+   "novelpia": "https://novelpia.com/novel/113374"
+  },
+  "r": 4.03,
+  "rc": 18,
+  "title": "인류보호회사"
  },
  "일편독심": {
   "author": "천사같은",
