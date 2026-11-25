@@ -1,6 +1,6 @@
 name: 순위 페이지 제목 가져오기
 
-# Secrets RANKING_URL 한 페이지의 작품 제목 목록을 가져온다 (src/ranking_fetch.py).
+# Secrets SITE_URL 한 페이지의 작품 제목 목록을 가져온다 (src/ranking_fetch.py).
 # robots.txt가 허용할 때만 가져오고, 아니면 멈춘다. 결과: data/ranking_titles.json
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
-      RANKING_URL: ${{ secrets.RANKING_URL }}
+      RANKING_URL: ${{ secrets.SITE_URL }}
     steps:
       - uses: actions/checkout@v5
         with:
