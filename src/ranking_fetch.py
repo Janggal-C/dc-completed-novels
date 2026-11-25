@@ -39,7 +39,7 @@ def redact(msg, url):
     """오류 문구에서 주소·도메인을 지운다 (결과 파일은 공개 저장소에 올라간다)"""
     host = urlparse(url).netloc
     for x in (url, host, host.split(":")[0]):
-        if x:
+        if len(x) >= 4:          # 너무 짧은 값은 일반 글자까지 지워져 문구가 깨진다
             msg = msg.replace(x, "[주소]")
     return msg[:300]
 
