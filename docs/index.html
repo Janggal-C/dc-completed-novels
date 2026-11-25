@@ -101,6 +101,7 @@ code { font-size: 12px; background: var(--surface-0); padding: 1px 4px; border-r
 .tblwrap td:first-child,.tblwrap th:first-child{white-space:nowrap;position:sticky;left:0;background:var(--surface-1);z-index:1;padding-right:10px}
 .tblwrap td.n,.tblwrap th.n{white-space:nowrap}
 .btn.danger{background:#D64545;border-color:#D64545;color:#fff}
+.chip{display:inline-block;padding:1px 7px;margin:2px 2px 0 0;border:1px solid var(--border);border-radius:10px;font-size:12px;color:var(--text)}
 </style>
 </head>
 <body>
@@ -178,7 +179,7 @@ function rankView(kind) {
   VIEW.querySelectorAll(".tog").forEach(b => b.onclick = () => {
     const box = document.getElementById("mc" + b.dataset.i), open = !box.classList.contains("open");
     box.classList.toggle("open", open); b.classList.toggle("open", open); b.setAttribute("aria-expanded", open);
-    if (open && !box.innerHTML) box.innerHTML = monthBars(rows[+b.dataset.i], kind === "monthly" ? p : null);
+    if (open && !box.innerHTML) box.innerHTML = expandBox(rows[+b.dataset.i], kind === "monthly" ? p : null);
   });
 }
 
@@ -215,13 +216,29 @@ function mentions() {
   VIEW.querySelectorAll(".tog").forEach(b => b.onclick = () => {
     const box = document.getElementById("mc" + b.dataset.i), open = !box.classList.contains("open");
     box.classList.toggle("open", open); b.classList.toggle("open", open); b.setAttribute("aria-expanded", open);
-    if (open && !box.innerHTML) box.innerHTML = monthBars(rows[+b.dataset.i], kind === "monthly" ? p : null, MEN.months, "");
+    if (open && !box.innerHTML) box.innerHTML = expandBox(rows[+b.dataset.i], kind === "monthly" ? p : null, MEN.months, "");
   });
 }
 
 function quarterOf(m) { return m.slice(0, 4) + "-Q" + (Math.floor((+m.slice(5, 7) - 1) / 3) + 1); }
 
 // 작품 하나의 월별 언급 작성자 수 막대그래프 (선택한 달은 진하게)
+// 작품 → 사전에 있는 줄임말 (정식 제목 자체는 뺌)
+let ALI = null;
+function aliasesOf(title) {
+  if (!ALI) {
+    ALI = {};
+    for (const d of R.dictionary || []) (ALI[d.title] = ALI[d.title] || []).push(d.alias);
+  }
+  const key = t => t.replace(/[^\p{L}\p{N}]/gu, "").toLowerCase();
+  return (ALI[title] || []).filter(a => key(a) !== key(title));
+}
+function expandBox(e, current, months, unit) {
+  const al = aliasesOf(e.title);
+  return monthBars(e, current, months, unit) +
+    `<div class="muted" style="margin-top:6px">줄임말: ${al.length ? al.map(a => `<span class="chip">${esc(a)}</span>`).join(" ") : "없음 (정식 제목으로만 셈)"}</div>`;
+}
+
 function monthBars(e, current, months, unit = "명") {
   const M = months || R.months, v = e.series || [];
   if (!M.length) return "";
