@@ -1,7 +1,7 @@
 """소설넷(ssn.so) — 사전 작품의 평점·연재처 링크 (완결 표시는 있을 때만 참고)
 
 - 처음: 정식 제목으로 검색(/series/?keyword=) → 제목(+작가)이 맞는 작품 → 상세 페이지
-- 이후: 소설넷 주소를 알고 있으니 상세 페이지만. 평가 100개 이상은 30일, 그 밖은 7일마다 갱신 (오래된 것부터)
+- 이후: 소설넷 주소를 알고 있으니 상세 페이지만. 완결 후 60일 지나고 평가 100개 이상이면 30일, 그 밖은 7일마다 갱신
 - 소설넷에서 못 찾은 작품은 miss 로 기록, 7일마다 다시 검색 (그 사이 구글로 연재처만 채움)
 - 소설넷 규칙(robots.txt Crawl-delay: 10)대로 요청 간격 10초
 
@@ -27,7 +27,7 @@ from urllib.parse import quote
 import requests
 from bs4 import BeautifulSoup
 
-from .common import DICT, WORKS, checkpoint, norm_key, now_kst, read_json, write_json
+from .common import DATA, DICT, WORKS, checkpoint, norm_key, now_kst, read_json, write_json
 
 SSN = DICT / "ssn.json"
 BASE = "https://ssn.so"
@@ -155,6 +155,7 @@ def lookup(c, w):
 
 BIG_RATINGS = 100        # 평가가 이만큼 이상이면 평점이 거의 안 바뀜
 REFRESH_DAYS_BIG = 30
+SETTLED_DAYS = 60        # 완결 후 이만큼 지나야 '안정'으로 봄
 REFRESH_DAYS = 7
 
 
@@ -166,9 +167,14 @@ def run(max_minutes=180):
     # 1) 처음 보는 작품 / 못 찾은 지 7일 지난 작품
     # 2) 평점 갱신: 평가 100개 이상은 30일마다(거의 안 바뀜), 그 밖은 7일마다. 오래된 것부터
     new = [k for k in works if k not in ssn or (ssn[k].get("miss") and ssn[k].get("checked", "") <= str(today - timedelta(days=7)))]
+    statuses = read_json(DATA / "statuses.json", {})
+    settled_before = str(today - timedelta(days=SETTLED_DAYS))
+
     def due(k):
-        v = ssn[k]
-        days = REFRESH_DAYS_BIG if v.get("rc", 0) >= BIG_RATINGS else REFRESH_DAYS
+        # 완결된 지 60일 넘고 평가가 많으면 평점이 거의 안 바뀜 → 30일마다. 연재중·막 완결·평가 적음 → 7일마다
+        v, st = ssn[k], statuses.get(k, {})
+        settled = st.get("status") in ("완결", "예전 완결") and (st.get("date") or "9") <= settled_before
+        days = REFRESH_DAYS_BIG if settled and v.get("rc", 0) >= BIG_RATINGS else REFRESH_DAYS
         return v.get("checked", "") <= str(today - timedelta(days=days))
     turn = sorted((k for k in works if k in ssn and not ssn[k].get("miss") and due(k)),
                   key=lambda k: ssn[k].get("checked", ""))

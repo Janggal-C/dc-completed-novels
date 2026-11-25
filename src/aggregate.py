@@ -1,7 +1,7 @@
 """전체 데이터로 보고서 JSON(docs/data/report.json)을 만든다. 매번 처음부터 다시 계산."""
 from collections import defaultdict
 
-from .common import (AI_DIR, ALIAS_DATES, ALIASES, AUTHORS, DICT, METRICS, POSTS_DIR, SEARCH_CACHE, SITE_DATA, STATE,
+from .common import (DATA, AI_DIR, ALIAS_DATES, ALIASES, AUTHORS, DICT, METRICS, POSTS_DIR, SEARCH_CACHE, SITE_DATA, STATE,
                      WORKS, load_config, load_monthly, norm_key, now_kst, quarter_of,
                      read_json, read_jsonl, write_json)
 from .resolve import decide, load_reviews, resolve_id, work_name
@@ -94,6 +94,9 @@ def run(cfg=None, run_stats=None, partial=False):
     # 완결작만, 완결일 이후의 언급만 센다.
     # 언급 = 전체 글 제목에서 사전 대조로 찾은 하루 단위 작성자 수 (언급 탭과 같은 기준).
     # 완결 글(C)은 완결 여부·완결일 판정에만 쓴다.
+    # 작품별 완결 상태·완결일 저장 (소설넷 갱신 주기 등 다른 단계가 씀)
+    write_json(DATA / "statuses.json", {w: {"status": st["status"], "date": st["date"]}
+                                         for w, st in statuses.items() if not w.startswith("?")})
     from .mentions import compute as mention_daily
     daily, _ = mention_daily()
     counted = defaultdict(lambda: defaultdict(int))     # wid → month → 언급 수

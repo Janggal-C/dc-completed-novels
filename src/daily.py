@@ -68,7 +68,8 @@ def s_reports():
 
 @step("소설넷")
 def s_ssn():
-    from . import ssn
+    from . import aggregate, ssn
+    aggregate.run()          # 작품별 완결 상태(data/statuses.json) 최신화 → 갱신 주기 판단에 씀
     ssn.run(max_minutes=40)
 
 
