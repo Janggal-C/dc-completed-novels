@@ -117,7 +117,9 @@ def run(cfg=None, run_stats=None, partial=False):
         best = sorted(c_after, key=lambda p: -p.get("replies", 0))[:3]
         return {"id": wid, "title": title_of(wid), "author": w.get("author", ""),
                 "mentions": n, "writers": n,
-                "new": (quarter_of(completion[wid][:7]) == period) if "Q" in period else (completion[wid][:7] == period),
+                # 이 기간에 새로 완결 (데이터 이전에 완결된 '예전 완결'은 해당 없음)
+                "new": statuses[wid]["status"] != "예전 완결" and (
+                    (quarter_of(completion[wid][:7]) == period) if "Q" in period else (completion[wid][:7] == period)),
                 "completion_date": completion[wid], "completion_month": completion[wid][:7],
                 "status": statuses[wid]["status"], "status_reason": statuses[wid]["reason"],
                 "before_start": bool(statuses[wid].get("before_start")),
@@ -134,7 +136,8 @@ def run(cfg=None, run_stats=None, partial=False):
         for period, by_work in groups.items():
             rows = [entry(wid, n, period) for wid, n in by_work.items()]
             rows.sort(key=lambda e: (-e["mentions"], e["title"]))
-            out[period] = rows[: rc["top_n"]]
+            # 상위 N개 + 그 기간에 새로 완결된 작품은 순위 밖이어도 전부 (필터용)
+            out[period] = rows[: rc["top_n"]] + [e for e in rows[rc["top_n"]:] if e["new"]]
         return dict(sorted(out.items(), reverse=True))
 
     monthly = ranking(lambda mo: mo)
