@@ -2573,6 +2573,18 @@
   "rc": 33,
   "title": "선협식 수련에 드래곤 하트를 더하면"
  },
+ "선협에서땅굴을숨김": {
+  "author": "불로수선전",
+  "checked": "2026-11-25",
+  "id": 323815,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/585412",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14943043"
+  },
+  "r": 3.22,
+  "rc": 9,
+  "title": "선협에서 땅굴을 숨김"
+ },
  "선협에서상태창개발하기": {
   "author": "재미혼",
   "checked": "2026-11-25",
@@ -2629,6 +2641,18 @@
   "rc": 1139,
   "title": "소설 속 엑스트라"
  },
+ "시간을달리는소설가": {
+  "author": "피아조아",
+  "checked": "2026-11-25",
+  "id": 204390,
+  "links": {
+   "munpia": "https://novel.munpia.com/357213",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=10109980"
+  },
+  "r": 4.15,
+  "rc": 728,
+  "title": "시간을 달리는 소설가"
+ },
  "심해엠생스트리머": {
   "author": "부들리",
   "checked": "2026-11-25",
@@ -2644,6 +2668,45 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "아카데미에서살아남기": {
+  "author": "코리타",
+  "checked": "2026-11-25",
+  "id": 105277,
+  "links": {
+   "munpia": "https://novel.munpia.com/240910",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=6484753"
+  },
+  "r": 3.9,
+  "rc": 626,
+  "title": "아카데미에서 살아남기."
+ },
+ "악역영애말포이": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "악역의엔딩은죽음뿐": {
+  "author": "권겨을",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 7824,
+  "links": {
+   "kakao": "https://page.kakao.com/content/66197097",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=5638038",
+   "ridi": "https://ridibooks.com/books/777154555"
+  },
+  "r": 3.97,
+  "rc": 500,
+  "title": "악역의 엔딩은 죽음뿐"
+ },
+ "암흑전사탑등반물": {
+  "author": "김갈비뼈",
+  "checked": "2026-11-25",
+  "id": 331961,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/455377"
+  },
+  "title": "암흑전사 탑등반물"
+ },
  "약먹는천재마법사": {
   "author": "글근육",
   "checked": "2026-11-25",
@@ -2657,6 +2720,17 @@
   "r": 3.85,
   "rc": 1010,
   "title": "약먹는 천재마법사"
+ },
+ "을위한세계는없다": {
+  "author": "샤이닝",
+  "checked": "2026-11-25",
+  "id": 289424,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/51457"
+  },
+  "r": 4.5,
+  "rc": 3,
+  "title": "■■을 위한 세계는 없다"
  },
  "이거럽코빙의물인가요": {
   "author": "두유하이볼",
@@ -2681,6 +2755,28 @@
   "rc": 20,
   "title": "이 무림의 미친년은 나야"
  },
+ "이세계trpg게임마스터": {
+  "author": "1_394",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 281738,
+  "links": {
+   "kakao": "https://page.kakao.com/content/68971700",
+   "novelpia": "https://novelpia.com/novel/242412"
+  },
+  "r": 3.75,
+  "rc": 10,
+  "title": "이세계 TRPG 게임마스터"
+ },
+ "임프줍고대마법사": {
+  "author": "미츄리",
+  "checked": "2026-11-25",
+  "id": 319388,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/441569"
+  },
+  "title": "임프 줍고 대마법사"
+ },
  "저능아하꼬버튜버가나데나데받는다": {
   "author": "개커피",
   "checked": "2026-11-25",
@@ -2703,6 +2799,19 @@
   "rc": 3,
   "title": "전 버튜버가 하고 싶은데요"
  },
+ "전생검신": {
+  "author": "구로수번",
+  "checked": "2026-11-25",
+  "id": 4745,
+  "links": {
+   "kakao": "https://page.kakao.com/content/48633037",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=2296868",
+   "ridi": "https://ridibooks.com/books/1007048980?_rdt_sid=category_books&_rdt_idx=13"
+  },
+  "r": 3.24,
+  "rc": 581,
+  "title": "전생검신"
+ },
  "전지적1인칭시점": {
   "author": "고속도루",
   "checked": "2026-11-25",
@@ -2713,6 +2822,20 @@
   "r": 3.17,
   "rc": 6,
   "title": "전지적 1인칭 시점"
+ },
+ "전지적독자시점": {
+  "author": "싱숑",
+  "checked": "2026-11-25",
+  "id": 190,
+  "links": {
+   "kakao": "https://page.kakao.com/home?seriesId=52001198",
+   "munpia": "https://www.munpia.com/novel/detail/104753",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=6020546",
+   "ridi": "https://ridibooks.com/v2/Detail?id=425075229"
+  },
+  "r": 3.67,
+  "rc": 3000,
+  "title": "전지적 독자 시점"
  },
  "죽었다깨어도수선": {
   "author": "돌마늘",
@@ -2736,6 +2859,17 @@
   "r": 3.84,
   "rc": 65,
   "title": "즉사기 들고 무림에 떨어지다"
+ },
+ "취미방송입니다": {
+  "author": "쌍포메타",
+  "checked": "2026-11-25",
+  "id": 288547,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/432136"
+  },
+  "r": 2.7,
+  "rc": 5,
+  "title": "취미 방송입니다"
  },
  "판초우의의마법사": {
   "author": "하드폭발",
@@ -2769,6 +2903,28 @@
   "rc": 4,
   "title": "헌터갤러리의 국가권력급 기계공주"
  },
+ "헌터때려치고인방함": {
+  "author": "에타리타",
+  "checked": "2026-11-25",
+  "id": 331974,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/459741"
+  },
+  "r": 4.0,
+  "rc": 1,
+  "title": "헌터 때려치고 인방함"
+ },
+ "화산귀환": {
+  "author": "비가",
+  "checked": "2026-11-25",
+  "id": 4422,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13826541"
+  },
+  "r": 3.33,
+  "rc": 1621,
+  "title": "화산귀환"
+ },
  "회귀수선전": {
   "checked": "2026-11-25",
   "miss": true
@@ -2783,6 +2939,33 @@
   "r": 3.58,
   "rc": 6,
   "title": "회귀 안 한 헌터만 세상을 구함"
+ },
+ "후회안하는프로듀서": {
+  "author": "하나호",
+  "checked": "2026-11-25",
+  "id": 108468,
+  "links": {
+   "joara": "https://www.joara.com/book/1832668",
+   "kakao": "https://page.kakao.com/content/67857288",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13272193"
+  },
+  "r": 3.52,
+  "rc": 221,
+  "title": "후회 안 하는 프로듀서"
+ },
+ "흉성의화신": {
+  "author": "퉁구스카",
+  "checked": "2026-11-25",
+  "id": 316475,
+  "links": {
+   "joara": "https://www.joara.com/book/1894636",
+   "kakao": "https://page.kakao.com/content/70788885",
+   "munpia": "https://www.munpia.com/novel/detail/564882",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14568204"
+  },
+  "r": 3.89,
+  "rc": 15,
+  "title": "흉성의 화신"
  },
  "히어로가집착하는악당이되었다": {
   "author": "서은하",
