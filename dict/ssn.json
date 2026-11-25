@@ -666,6 +666,17 @@
   "rc": 2,
   "title": "갤질하는 관리국의 말단 직원"
  },
+ "갤질하는천재수선자": {
+  "author": "글신선",
+  "checked": "2026-11-25",
+  "id": 288564,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/416423"
+  },
+  "r": 3.42,
+  "rc": 6,
+  "title": "갤질하는 천재 수선자"
+ },
  "갤질하는천재의사": {
   "checked": "2026-11-25",
   "miss": true
@@ -682,6 +693,107 @@
   "rc": 8,
   "title": "거물들이 집착하는 일제시대 바둑천재"
  },
+ "걸그룹소설아닌데요": {
+  "author": "행운요정",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 105225,
+  "links": {
+   "kakao": "https://page.kakao.com/content/57328437",
+   "munpia": "https://novel.munpia.com/240560",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=6174862",
+   "ridi": "https://ridibooks.com/books/425265361?_rdt_sid=category_books&_rdt_idx=0"
+  },
+  "r": 3.38,
+  "rc": 46,
+  "title": "걸그룹 소설 아닌데요?"
+ },
+ "걸그룹인데악마와계약했습니다": {
+  "author": "임프로",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 127400,
+  "links": {
+   "joara": "https://www.joara.com/book/1615506",
+   "kakao": "https://page.kakao.com/content/59100436",
+   "munpia": "https://novel.munpia.com/281845",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=8035643"
+  },
+  "r": 3.97,
+  "rc": 16,
+  "title": "걸그룹인데 악마와 계약했습니다"
+ },
+ "검귀가환생함": {
+  "author": "목마",
+  "checked": "2026-11-25",
+  "id": 281363,
+  "links": {
+   "munpia": "https://novel.munpia.com/524526",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14029996"
+  },
+  "r": 2.62,
+  "rc": 4,
+  "title": "검귀가 환생함"
+ },
+ "검술갤러리의천재뉴비": {
+  "author": "미카만세",
+  "checked": "2026-11-25",
+  "id": 317557,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/436431"
+  },
+  "title": "검술 갤러리의 천재 뉴비"
+ },
+ "검술명가막내아들": {
+  "author": "황제펭귄",
+  "checked": "2026-11-25",
+  "id": 3335,
+  "links": {
+   "kakao": "https://page.kakao.com/content/52347864"
+  },
+  "r": 3.05,
+  "rc": 597,
+  "title": "검술명가 막내아들"
+ },
+ "검은머리미군대원수": {
+  "author": "명원(命元)",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 99069,
+  "links": {
+   "joara": "https://www.joara.com/book/1849285",
+   "kakao": "https://page.kakao.com/content/61043122",
+   "munpia": "https://novel.munpia.com/216129",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=5564929"
+  },
+  "r": 4.16,
+  "rc": 1591,
+  "title": "검은머리 미군 대원수"
+ },
+ "검투수선劍鬪修仙": {
+  "author": "쿠우울",
+  "checked": "2026-11-25",
+  "id": 329655,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/592123"
+  },
+  "title": "검투수선劍鬪修仙"
+ },
+ "게임4판타지": {
+  "author": "검미성",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 96896,
+  "links": {
+   "kakao": "https://page.kakao.com/content/57327979",
+   "munpia": "https://novel.munpia.com/201654",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=5386002",
+   "ridi": "https://ridibooks.com/books/425222951?_rdt_sid=category_books&_rdt_idx=11"
+  },
+  "r": 3.9,
+  "rc": 335,
+  "title": "게임4판타지"
+ },
  "게임속바바리안으로살아남기": {
   "author": "정윤강",
   "checked": "2026-11-25",
@@ -693,6 +805,38 @@
   "rc": 1745,
   "title": "게임 속 바바리안으로 살아남기"
  },
+ "게임속재해병이야기": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "게임속전사가되었다": {
+  "author": "컵라면.",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 329,
+  "links": {
+   "joara": "https://www.joara.com/book/1414754",
+   "kakao": "https://page.kakao.com/content/58226491",
+   "munpia": "https://novel.munpia.com/156968",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=5801971",
+   "ridi": "https://ridibooks.com/books/425193873?_rdt_sid=category_books&_rdt_idx=15"
+  },
+  "r": 3.92,
+  "rc": 787,
+  "title": "게임 속 전사가 되었다"
+ },
+ "게임속지휘관이되었다": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "겨울의이명": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "격기3반": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "격리구역의완장이되었다": {
   "author": "시민 보호 기동대.",
   "checked": "2026-11-25",
@@ -701,6 +845,19 @@
    "novelpia": "https://novelpia.com/novel/425917"
   },
   "title": "격리 구역의 완장이 되었다."
+ },
+ "격투천재여고생이되었다": {
+  "author": "소설술사",
+  "checked": "2026-11-25",
+  "id": 289430,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/395775"
+  },
+  "title": "격투 천재 여고생이 되었다"
+ },
+ "견습마녀갱생지원부": {
+  "checked": "2026-11-25",
+  "miss": true
  },
  "겸허견실을모토로살고있습니다": {
   "checked": "2026-11-25",
@@ -715,6 +872,10 @@
   },
   "title": "경성의 헌터 아카데미"
  },
+ "경신대기근생존기": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "경제왕연산군": {
   "author": "라구.B.P",
   "checked": "2026-11-25",
@@ -727,6 +888,26 @@
   "r": 3.47,
   "rc": 75,
   "title": "경제왕 연산군"
+ },
+ "경험치2048배노가다아재가되었다": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "계모가키운백설공주": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "고독한에이스": {
+  "author": "황금왼팔",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 204176,
+  "links": {
+   "kakao": "https://page.kakao.com/content/62186977",
+   "munpia": "https://novel.munpia.com/348120",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=10774787"
+  },
+  "title": "고독한 에이스"
  },
  "고아파는고아원장현제목착한고아원장아닙니다": {
   "checked": "2026-11-25",
