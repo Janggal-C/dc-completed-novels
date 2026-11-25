@@ -1,5 +1,6 @@
 {
- "checked": "2026-11-25 17:06",
+ "checked": "2026-11-25 17:12",
+ "error_detail": "ConnectionError: HTTPSConnectionPool(host='[주소]', port=443): M[주소]x retries exceeded with url: /robots.txt (C[주소]used by N[주소]meResolutionError(\"HTTPSConnection(host='[주소]', port=443): F[주소]iled to resolve '[주소]' ([Errno -3] Tempor[주소]ry f[주소]ilure in n[주소]me resolution)\"))",
  "robots": "robots.txt 확인 실패: ConnectionError",
  "stage": "stopped_by_robots"
 }
