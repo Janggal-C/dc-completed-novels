@@ -3,6 +3,8 @@
 A. 다른 작품 이름의 일부인 이름: 수선전 ⊂ 회귀수선전·탐식수선전·땅굴수선전 → 한 작품을 못 가리킴
 B. 대부분 더 긴 다른 낱말 속에서 쓰이는 이름: 마법소 → 거의 '마법소녀'(일반어)로 쓰임
    제목에서 이름이 들어간 어절을 모아, 그 어절이 같은 작품의 다른 이름도 아니고 이름 그대로(+조사)도 아닌 비율
+C. 같은 작품의 다른 이름과 한 제목에 자주 같이 쓰이는 이름 (cooccur): "저능버 짱햄", "괴담텔 호텔파티"
+   → 작품 이름 뒤에 붙는 등장인물·작품 속 용어일 가능성이 높다 (AI 검수에 힌트로 줌, 바로 지우진 않음)
 결과: data/spread.json {이름: {n, foreign, top, other_works}}
 """
 import re
@@ -59,6 +61,36 @@ def run():
     bad_a = [k for k in out if out[k]["other_works"]]
     bad_b = [k for k in out if out[k]["n"] >= 10 and out[k]["foreign"] >= 0.5]
     print(f"검사 {len(out)}개 · A(다른 작품 이름의 일부) {len(bad_a)} · B(주로 다른 낱말 속) {len(bad_b)}")
+    return out
+
+
+def cooccur(keys, aliases=None, titles=None):
+    """이름들 → {이름: {"n": 잡힌 제목 수, "co": 같은 작품 다른 이름과 같이 쓰인 비율}}
+    작품 제목 자체의 일부(예: 괴이왕국 + 패왕군주)는 띄어 쓴 제목 조각이라 같이 나와도 자연스러우므로 비율 0"""
+    from .matcher import Matcher
+    aliases = aliases if aliases is not None else read_json(ALIASES, {})
+    wids = {aliases[k] for k in keys if k in aliases}
+    sub = {k: k for k, w in aliases.items() if w in wids}
+    if not sub:
+        return {}
+    m = Matcher(sub)
+    m.long = sorted((k for k in sub if len(k) >= 3), key=len, reverse=True)
+    m.short = {k for k in sub if len(k) < 3}
+    m._rank = {a: i for i, a in enumerate(m.long)}
+    hits, co = Counter(), Counter()
+    rows = titles.values() if titles is not None else load_titles().values()
+    for r in rows:
+        found = list(m.find(r["title"]))
+        for a in found:
+            hits[a] += 1
+            if any(b != a and aliases[b] == aliases[a] and a not in b and b not in a for b in found):
+                co[a] += 1
+    out = {}
+    for k in keys:
+        if k not in aliases or not hits[k]:
+            continue
+        part_of_title = k in aliases[k]
+        out[k] = {"n": hits[k], "co": 0 if part_of_title else round(co[k] / hits[k], 2)}
     return out
 
 

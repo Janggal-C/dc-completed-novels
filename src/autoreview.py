@@ -103,9 +103,17 @@ def audit(days=2, batch=25):
             checked[k] = "remove"
             todo.remove(k)
     ex = _samples(todo)
+    from .spread import cooccur
+    co = cooccur(todo, aliases)
+
+    def hint(k):
+        c = co.get(k)
+        if c and c["n"] >= 10 and c["co"] >= 0.2:
+            return f"  (주의: 갤 제목의 {int(c['co'] * 100)}%에서 같은 작품의 다른 이름과 함께 쓰임 → 등장인물·작품 속 용어 의심)\n"
+        return ""
     for i in range(0, len(todo), batch):
         part = todo[i:i + batch]
-        blocks = [f"[{k}] → {works.get(aliases[k], {}).get('title', '')}\n" +
+        blocks = [f"[{k}] → {works.get(aliases[k], {}).get('title', '')}\n" + hint(k) +
                   "\n".join(f"  - {t}" for t in ex.get(k, [])) for k in part if k in aliases]
         try:
             res = ai._json_from(ai._call(AUDIT_PROMPT + "\n\n".join(blocks), model))
