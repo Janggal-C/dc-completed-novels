@@ -41,6 +41,10 @@ def add_work(works, aliases, title, alias=None, via=None, force=False, **info):
     wid = norm_key(title)
     if not wid or wid in ("작가명", "작가", "작품명", "제목"):
         return None
+    if alias and not force:
+        from .resolve import removed
+        if norm_key(alias) in removed():     # 검수 탭에서 '제거'한 단어
+            return None
     src = info.get("source") or ""
     if src.startswith("http") and wid not in works:
         same = next((k for k, w in works.items() if w.get("source") == src), None)

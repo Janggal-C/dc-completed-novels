@@ -21,8 +21,11 @@ def todo():
     aliases = read_json(ALIASES, {})
     authors = {norm_key(a) for a in read_json(AUTHORS, [])}
     done = read_json(DONE, {})
+    from .resolve import removed
+    gone = removed()
     out = [(k, v) for k, v in labels.items()
-           if v.get("t") == "work" and k not in done and norm_key(k) not in aliases and norm_key(k) not in authors]
+           if v.get("t") == "work" and k not in done and norm_key(k) not in aliases and norm_key(k) not in authors
+           and norm_key(k) not in gone]
     return sorted(out, key=lambda kv: -kv[1].get("w", 0))
 
 

@@ -18,7 +18,7 @@ import re
 import sys
 
 from . import ai
-from .common import ALIASES, AUTHORS, SEARCH_CACHE, WORKS, load_config, norm_key, read_json, write_json
+from .common import ALIASES, AUTHORS, DICT, SEARCH_CACHE, WORKS, load_config, norm_key, read_json, write_json
 from .judge import add_work, save_alias_dates
 
 # 플랫폼 페이지 제목에 붙는 군더더기
@@ -43,6 +43,8 @@ def parse(text):
             continue
         alias, title = m.group(1).strip(), m.group(2).strip()
         is_author = bool(re.match(r"^(작가|작가명|author)\s*$", title, re.I))
+        if re.match(r"^(제거|삭제|아님|x)\s*$", title, re.I):
+            is_author = "remove"
         out.append((alias, title, is_author))
     return out
 
@@ -97,11 +99,23 @@ def run(text):
     cleaned = [(a, clean(t), is_auth) for a, t, is_auth in items]
     # 이미 있는 작품(띄어쓰기 무시 일치)은 기존 정식 표기 사용, 없는 것만 AI로 다듬기
     unknown_titles = [t for a, t, is_auth in cleaned if not is_auth and norm_key(t) not in works]
+    removed = read_json(DICT / "removed.json", [])
     fixed = normalize(unknown_titles, cfg["judge"]["model"])
 
     report = []
     for alias, title, is_auth in cleaned:
         k = norm_key(alias)
+        if is_auth == "remove":
+            # 작품이 아닌 단어: 줄임말 연결을 끊고, 그 단어 때문에 생긴 작품(다른 이름 없음)이면 작품도 지움
+            wid = aliases.pop(k, None)
+            if k not in removed:
+                removed.append(k)
+            note = "작품 아님 → 사전에서 제거"
+            # 남은 이름(정식 제목 포함)이 하나도 없으면 그 단어 때문에 생긴 가짜 작품 → 삭제
+            if wid and wid in works and wid not in aliases.values() and works[wid].get("source") != "직접 입력":
+                note += f", 작품 '{works.pop(wid)['title']}'도 삭제"
+            report.append(f"- {alias} → {note}")
+            continue
         if is_auth:
             if alias not in authors:
                 authors.append(alias)
@@ -124,6 +138,7 @@ def run(text):
     write_json(ALIASES, aliases)
     write_json(SEARCH_CACHE, cache)
     write_json(AUTHORS, sorted(set(authors)))
+    write_json(DICT / "removed.json", sorted(set(removed)))
     save_alias_dates("직접 입력")
     msg = "\n".join(report)
     print(msg)

@@ -77,10 +77,16 @@ def reload_authors():
     _AUTHORS = None
 
 
+def removed():
+    """검수 탭에서 '제거'한 단어 (작품 아님) — 다시 검색·등록하지 않음"""
+    from .common import DICT
+    return set(read_json(DICT / "removed.json", []))
+
+
 def not_a_work(name):
     """연재처·일반 단어·작가 이름·'OO 신작' 은 특정 작품이 아님"""
     k = norm_key(name)
-    if not k or k in NOT_WORKS or k in authors():
+    if not k or k in NOT_WORKS or k in removed() or k in authors():
         return True
     for suf in ("신작", "작가", "전작", "작품"):
         if k.endswith(suf) and k[: -len(suf)] in authors():
