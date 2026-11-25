@@ -1,34 +1,69 @@
 name: dc-post-cardnews
 
-# 카드뉴스 글쓰기 (수동). 카드 PNG는 cardnews 브랜치의 <month>/ 폴더에서 가져온다.
-# test=1: 테스트 갤에 초성 난수 제목 / test=0: 장르소설갤 (자동 게시 확정 전에는 쓰지 않음)
+# 월말 결산 카드뉴스 글쓰기 (수동 실행 — 매달 말일 저녁 Claude 예약 작업이 실행함)
+# 1) mentions.json을 새로 만들고 2) 결산 카드 5장을 크롬으로 찍고 3) cardnews 브랜치의 홍보 카드(promo/promo.png)를 붙여
+# 4) 디시 앱 API로 글쓰기 5) 올라간 글을 다시 읽어 이미지 6장·링크 2개 확인. 카드 PNG는 cardnews 브랜치 <month>/에 남김.
+# test=1: 테스트 갤(trifoliumdubiumsibth)에 초성 난수 제목 / test=0: 장르소설갤(genrenovel), 말머리 "일반"
 on:
   workflow_dispatch:
     inputs:
       month:
-        description: 카드 폴더(YYYY-MM)
-        required: true
-        default: 2026-09
+        description: 결산 월(YYYY-MM). 비우면 한국 시간 기준 이번 달
+        required: false
+        default: ""
       test:
-        description: 1=테스트 갤
+        description: 1=테스트 갤, 0=장르소설갤
         required: true
         default: "1"
+      dry:
+        description: 1=글은 안 쓰고 카드 생성·로그인·말머리 확인까지만
+        required: false
+        default: "0"
+
+permissions:
+  contents: write
 
 jobs:
   post:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - id: m
+        run: |
+          M="${{ inputs.month }}"; [ -z "$M" ] && M=$(TZ=Asia/Seoul date +%Y-%m)
+          echo "month=$M" >> "$GITHUB_OUTPUT"; echo "결산 월: $M"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       - run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk >/dev/null
+          pip install -q -r requirements.txt playwright
+          python -m src.aggregate && python -m src.mentions
+      - name: 카드 만들기
+        run: |
+          OUT=out/${{ steps.m.outputs.month }}
+          python scripts/cardnews.py ${{ steps.m.outputs.month }} $OUT
+          python scripts/cardnews_render.py $OUT /usr/bin/google-chrome
           git fetch --depth 1 origin cardnews
-          mkdir -p cardnews && git --work-tree=cardnews checkout origin/cardnews -- "${{ inputs.month }}"
-          ls -l "cardnews/${{ inputs.month }}"
+          git show origin/cardnews:promo/promo.png > $OUT/promo.png
+          ls -l $OUT/*.png
       - uses: oven-sh/setup-bun@v2
       - run: bun add @green-1052/dcinside.js
-      - run: bun scripts/dc-post-cardnews.mjs
+      - id: post
+        run: bun scripts/dc-post-cardnews.mjs
         env:
           DC_ID: ${{ secrets.DC_ID }}
           DC_PW: ${{ secrets.DC_PW }}
-          CARD_DIR: cardnews/${{ inputs.month }}
-          MONTH: ${{ inputs.month }}
+          CARD_DIR: out/${{ steps.m.outputs.month }}
+          MONTH: ${{ steps.m.outputs.month }}
           TEST: ${{ inputs.test }}
+          DRY: ${{ inputs.dry }}
+      - name: 카드 PNG를 cardnews 브랜치에 남김
+        if: always()
+        run: |
+          M=${{ steps.m.outputs.month }}
+          [ -d out/$M ] || exit 0
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git worktree add -q /tmp/cn origin/cardnews
+          mkdir -p /tmp/cn/$M && cp out/$M/*.png /tmp/cn/$M/
+          cd /tmp/cn && git add -A && (git commit -qm "카드뉴스 $M PNG" && git push -q origin HEAD:cardnews) || echo "변경 없음"

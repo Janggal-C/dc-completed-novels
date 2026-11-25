@@ -51,18 +51,44 @@ catch (e) {
   process.exit(3);
 }
 
+// 2-1) 실게시: 말머리 "일반" 번호를 갤러리 정보에서 찾고, 같은 제목 글이 이미 있으면 다시 올리지 않음
+let headText;
+if (!isTest) {
+  try {
+    const list = await dc.articles.list({ gallery: GALLERY });
+    const heads = [];
+    const walk = (o) => { if (!o || typeof o !== 'object') return; if (Array.isArray(o.head_text)) heads.push(...o.head_text); for (const v of Object.values(o)) walk(v); };
+    walk(list);
+    const h = heads.find((x) => x?.name === '일반');
+    if (h) { headText = { no: Number(h.no), name: h.name }; console.log('말머리:', JSON.stringify(headText)); }
+    else console.log('말머리 "일반"을 못 찾음 → 말머리 없이 씀. 목록:', JSON.stringify(heads.map((x) => [x?.no, x?.name])));
+  } catch (e) { console.log(`말머리 조회 실패 → 말머리 없이 씀: ${errName(e)} - ${e?.message}`); }
+  try {
+    const found = await dc.articles.list({ gallery: GALLERY, search: { type: 'subject_m', keyword: title } });
+    const dup = (found?.gall_list ?? []).find((x) => (x?.subject ?? '').trim() === title);
+    if (dup) { console.log(`결과: 이미 올라간 글 있음 ${dup.no} → 다시 올리지 않음`); if (process.env.GITHUB_OUTPUT) appendFileSync(process.env.GITHUB_OUTPUT, `post_no=${dup.no}\ngallery=${GALLERY}\n`); process.exit(0); }
+  } catch (e) { console.log(`중복 확인 실패(계속 진행): ${errName(e)} - ${e?.message}`); }
+}
+if (process.env.DRY === '1') { console.log(`결과: 미리 보기만(DRY) — 갤러리 ${GALLERY}, 제목 ${title}, 말머리 ${JSON.stringify(headText ?? null)}`); process.exit(0); }
+
 // 3) 글쓰기 (새 기기 직후는 "잠시후 다시"가 나오므로 기다렸다가, 최대 3번)
 console.log(`갤러리: ${GALLERY} / 제목: ${title} / 블록 ${content.length}개`);
 for (const [i, wait] of [30000, 90000, 180000].entries()) {
   console.log(`글쓰기 전 대기 ${wait / 1000}초`);
   await sleep(wait);
   try {
-    const res = await dc.articles.write({ gallery: GALLERY, subject: title, content });
+    const res = await dc.articles.write({ gallery: GALLERY, subject: title, content, headText });
     console.log('응답:', JSON.stringify(res));
     const no = res?.cause ?? res?.no ?? '';
     console.log(`결과: 글쓰기 성공 ${no}`);
     if (process.env.GITHUB_OUTPUT) appendFileSync(process.env.GITHUB_OUTPUT, `post_no=${no}\ngallery=${GALLERY}\n`);
-    process.exit(0);
+    // 4) 올라간 글을 다시 읽어 이미지 6장·링크 2개 확인
+    await sleep(10000);
+    const v = JSON.stringify(await dc.articles.read(GALLERY, Number(no)));
+    const imgs = (v.match(/viewimage\.php/g) ?? []).length;
+    const okLinks = v.includes('janggal-c.github.io/dc-completed-novels') && v.includes('releases/latest');
+    console.log(`확인: 이미지 주소 ${imgs}개(원본·표시용 합쳐 12개 정상), 링크 ${okLinks ? '정상' : '없음'}`);
+    process.exit(imgs >= 6 && okLinks ? 0 : 6);
   } catch (e) {
     console.error(`글쓰기 실패 (시도 ${i + 1}) - ${errName(e)} - ${e?.message}`);
     console.error('원본 응답:', JSON.stringify(e?.response ?? null));
