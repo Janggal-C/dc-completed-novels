@@ -390,7 +390,7 @@ function check() {
   const prow = r => `<div class="ur"><div class="h"><b>${esc(r.alias || "(직접 신고)")}</b><span class="muted">${esc(r.ts)}</span></div>
     <div style="white-space:pre-line">💬 ${esc(r.comment)}</div>
     ${r.title ? `<div class="muted">현재 연결: ${esc(r.title)}</div>` : ""}
-    ${r.url && r.url.startsWith("http") ? `<div class="muted"><a href="${esc(r.url)}" target="_blank" rel="noopener">신고한 글 보기</a></div>` : ""}
+    ${r.url && /^https?:\/\//i.test(r.url) ? `<div class="muted"><a href="${esc(r.url)}" target="_blank" rel="noopener">신고한 글 보기</a></div>` : ""}
     ${r.alias ? `<div class="row" style="flex-wrap:nowrap"><input class="inp" data-alias="${esc(r.alias)}" placeholder="올바른 정식 제목">${rm(r.alias)}${g(r.alias)}</div>` : ""}
     <label class="muted" style="display:block;margin-top:4px"><input type="checkbox" data-done="${esc(r.ts)}"> 처리 완료 (목록에서 지움)</label></div>`;
   const body = checkMode === "reports"

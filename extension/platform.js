@@ -69,3 +69,15 @@ function dcnxFakeRating(wid) {
   h = Math.imul(h ^ (h >>> 15), 2246822507) >>> 0;
   return 1 + (h % 41) / 10;
 }
+
+// 사전 링크는 https + 아래 사이트만 허용 (사전이 오염돼도 javascript: 등 실행 불가)
+const DCNX_LINK_HOSTS = ["novelpia.com", "munpia.com", "page.kakao.com", "series.naver.com", "ridibooks.com", "ssn.so"];
+function dcnxSafeUrl(u) {
+  if (typeof u !== "string" || !u) return "";
+  try {
+    const x = new URL(u);
+    if (x.protocol !== "https:") return "";
+    const h = x.hostname;
+    return DCNX_LINK_HOSTS.some(d => h === d || h.endsWith("." + d)) ? x.href : "";
+  } catch (e) { return ""; }
+}

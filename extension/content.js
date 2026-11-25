@@ -32,6 +32,7 @@
     const link = (href, cls) => {
       const a = document.createElement(href ? "a" : "span");
       a.className = cls;
+      href = dcnxSafeUrl(href);
       if (href) { a.href = href; a.target = "_blank"; a.rel = "noopener noreferrer"; }
       return a;
     };
@@ -45,7 +46,7 @@
     work.append(w.t || "");
     tip.append(work);
     // 별 + 평점 → 소설넷 (평점 없으면 표시 안 함)
-    const rating = w.r != null ? w.r : (DCNX_DEMO_RATING ? dcnxFakeRating(el.dataset.wid) : null);
+    const rating = (typeof w.r === "number" && isFinite(w.r)) ? w.r : (DCNX_DEMO_RATING ? dcnxFakeRating(el.dataset.wid) : null);
     if (rating != null) {
       const rate = link(w.n || "", "dcnx-rate");
       rate.append(dcnxStar(rating), Object.assign(document.createElement("span"), {className: "dcnx-score", textContent: rating.toFixed(1)}));
