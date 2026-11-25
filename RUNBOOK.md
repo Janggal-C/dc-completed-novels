@@ -80,9 +80,14 @@
   - 마이너갤은 id 그대로 쓴다(`mi$`는 미니갤 접두어).
   - 새 기기 등록 직후 바로 쓰면 "잠시후 다시 이용해주세요"가 나온다 → 30초 기다린 뒤 쓰면 성공 (2026-11-26 확인, 글 71545).
   - 사람 확인(`CaptchaRequiredError`)이 나오면 그 자리에서 멈춘다. 우회하지 않는다.
-- `scripts/dc-post-cardnews.mjs` + `.github/workflows/dc-post-cardnews.yml` (수동, month·test 입력): 카드 PNG 6장(`cardnews` 브랜치 `<YYYY-MM>/card-1~5.png, promo.png`) + 결산 사이트·확장 릴리즈 링크로 글 1건. test=1이면 테스트 갤에 초성 난수 제목. 2026-11-26 9월분으로 성공(글 71549, 이미지 6·링크 2 확인).
-  - 이미지는 `File`로 파일 이름(`card-1.png` 등)을 붙여야 한다. 이름 없는 Blob은 라이브러리가 `blob`으로 보내 "업로드 금지파일입니다"로 거절됨.
-  - 링크는 `html` 블록(`<div>라벨</div><div><a href>…</a></div>`). 이모지는 디시가 HTML 엔티티로 바꿔 저장하지만 화면에는 그대로 보임.
-- `scripts/cardnews.py <YYYY-MM> <out>`: `docs/data/mentions.json`으로 결산 카드 5장 HTML 생성(사이트.md 규칙). PNG는 크롬(Playwright)으로 요소 캡처. 홍보 카드는 아직 저장소에 생성 코드 없음(디자인 아티팩트 + `shots` 브랜치 캡처를 위로 16px부터 136px 높이로 잘라 사용).
+- **월말 결산 게시** `.github/workflows/dc-post-cardnews.yml` (수동 실행. 매달 말일 19:45 KST Claude 예약 작업 "장르소설갤 월말 결산 게시"가 test=0으로 실행)
+  - 입력: month(비우면 한국 시간 이번 달), test(1=테스트 갤 `trifoliumdubiumsibth` 초성 난수 제목 / 0=장르소설갤 `genrenovel` 제목 "장갤 N월 결산) 언급 TOP 10"), dry(1=글은 안 쓰고 카드 생성·로그인·말머리 확인까지)
+  - 순서: `src.aggregate`·`src.mentions`로 mentions.json 생성 → `scripts/cardnews.py`로 결산 카드 5장 HTML → `scripts/cardnews_render.py`로 크롬 캡처(러너에 `fonts-noto-cjk` 설치) → 홍보 카드는 `cardnews` 브랜치 `promo/promo.png` 고정본 → `scripts/dc-post-cardnews.mjs` 글쓰기 → 같은 스크립트가 글을 다시 읽어 이미지 6장·링크 2개 확인(실패 시 종료 코드 6) → 카드 PNG를 `cardnews` 브랜치 `<YYYY-MM>/`에 남김
+  - 실게시(test=0): 말머리 "일반"은 갤러리 목록 응답의 `head_text`에서 이름으로 찾음(2026-11-26 확인: no=0). 같은 제목 글이 이미 있으면 다시 올리지 않음
+  - 데이터는 판단하지 않고 그대로 씀(사용자 지시 2026-11-26)
+  - 이미지는 `File`로 파일 이름(`card-1.png` 등)을 붙여야 한다. 이름 없는 Blob은 라이브러리가 `blob`으로 보내 "업로드 금지파일입니다"로 거절됨
+  - 링크는 `html` 블록(`<div>라벨</div><div><a href>…</a></div>`). 이모지는 디시가 HTML 엔티티로 바꿔 저장하지만 화면에는 그대로 보임
+  - 테스트 기록: 2026-11-26 9월분 테스트 갤 글 71549 성공, 11월분 장르소설갤 dry 성공
+- `scripts/cardnews.py <YYYY-MM> <폴더>`: 결산 카드 5장 HTML(사이트.md 규칙, 배경 장식 없음). 홍보 카드는 디자인 아티팩트를 고정 PNG로 둠(바뀌면 `cardnews` 브랜치 `promo/promo.png` 교체)
 - `scripts/dc-verify.mjs` + `.github/workflows/dc-verify.yml` (수동, 글번호 입력): 올라간 글을 앱 API로 읽어 확인.
 - 막힌 방법(다시 시도하지 않음): 모바일 웹 요청(`@gurumnyang/dcinside.js`)·실제 크롬(Playwright) 모두 글쓰기 화면의 "사람인지 확인" 단계에서 막힘. 구글 검색도 GitHub IP에서는 로봇 확인으로 막힘.
