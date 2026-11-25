@@ -2,6 +2,11 @@ name: ext-shot
 
 on:
   workflow_dispatch:
+    inputs:
+      targets:
+        description: "지정 글 제목들 ( | 로 구분, 비우면 목록 1쪽 자동)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -15,7 +20,10 @@ jobs:
         with:
           node-version: 22
       - run: npm init -y >/dev/null && npm i playwright && npx playwright install --with-deps chromium && sudo apt-get install -y fonts-noto-cjk >/dev/null
-      - run: xvfb-run -a node scripts/ext-shot.mjs
+      - run: |
+          if [ -n "$TARGETS" ]; then xvfb-run -a node scripts/ext-shot-target.mjs; else xvfb-run -a node scripts/ext-shot.mjs; fi
+        env:
+          TARGETS: ${{ inputs.targets }}
       - name: 캡처를 shots 브랜치에 올림
         run: |
           cd shots && git init -q && git checkout -q -b shots
