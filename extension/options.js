@@ -4,9 +4,10 @@ const info = async () => {
   const {dict, fetchedAt} = await chrome.storage.local.get(["dict", "fetchedAt"]);
   const bundled = await (await fetch(chrome.runtime.getURL("dict.json"))).json();
   let d = dict && (dict.version || "") >= (bundled.version || "") ? dict : bundled;
-  document.getElementById("info").textContent =
-    `작품 ${Object.keys(d.works).length}개 · 줄임말 ${Object.keys(d.aliases).length}개 · 사전 ${d.version}` +
-    (d === bundled ? " (내장)" : "") + " · 하루 한 번 자동 갱신";
+  document.getElementById("info1").textContent =
+    `작품 ${Object.keys(d.works).length.toLocaleString()}개 · 줄임말 ${Object.keys(d.aliases).length.toLocaleString()}개`;
+  document.getElementById("info2").textContent =
+    `사전 ${(d.version || "").replace("T", " ")}${d === bundled ? " (내장)" : ""} · 하루 한 번 자동 갱신`;
 };
 
 const drawOrder = order => {

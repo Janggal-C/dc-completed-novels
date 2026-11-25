@@ -16,6 +16,7 @@ textarea{width:100%;box-sizing:border-box;font:13px/1.5 "Malgun Gothic",sans-ser
 #rs,#fs{padding:5px 16px;border:0;border-radius:6px;background:#3B4890;color:#fff;cursor:pointer}
 #rs:disabled,#fs:disabled{opacity:.5;cursor:default}
 .rw{margin:6px 0}
+.info small{display:block;white-space:nowrap}
 </style>
 <div id="reportOnly" hidden>
   <h1>오류 신고</h1>
@@ -42,7 +43,7 @@ textarea{width:100%;box-sizing:border-box;font:13px/1.5 "Malgun Gothic",sans-ser
 <textarea id="fr" rows="4" placeholder="괴담동 이거 괴담동아리임&#10;괴담출 괴담호텔탈출기"></textarea>
 <button id="fs">보내기</button> <small id="fm"></small>
 </fieldset>
-<div><small id="info"></small></div>
+<div id="info" class="info"><small id="info1"></small><small id="info2"></small></div>
 <div><small>설정은 페이지를 새로고침하면 적용됩니다.</small></div>
 </div>
 <script src="platform.js"></script>
