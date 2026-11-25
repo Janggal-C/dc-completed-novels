@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       COMMIT_PATHS: "dict/ssn.json"
-    timeout-minutes: 200
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v5
         with:
@@ -29,7 +29,10 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
-      - run: python -u -m src.ssn run
+      # .github/run-ssn 첫 줄이 숫자면 새 작품만 그 개수(언급 많은 순), 아니면 기본 실행
+      - run: |
+          N=$(head -1 .github/run-ssn | tr -dc '0-9')
+          if [ -n "$N" ]; then python -u -m src.ssn new "$N"; else python -u -m src.ssn run; fi
       - name: 저장
         if: always()
         run: bash scripts/commit.sh "소설넷 $(TZ=Asia/Seoul date '+%F %H:%M')"

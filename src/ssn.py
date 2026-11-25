@@ -159,7 +159,7 @@ SETTLED_DAYS = 60        # 완결 후 이만큼 지나야 '안정'으로 봄
 REFRESH_DAYS = 7
 
 
-def run(max_minutes=180):
+def run(max_minutes=180, limit=None):
     works = read_json(WORKS, {})
     ssn = read_json(SSN, {})
     c = Client()
@@ -167,6 +167,16 @@ def run(max_minutes=180):
     # 1) 처음 보는 작품 / 못 찾은 지 7일 지난 작품
     # 2) 평점 갱신: 평가 100개 이상은 30일마다(거의 안 바뀜), 그 밖은 7일마다. 오래된 것부터
     new = [k for k in works if k not in ssn or (ssn[k].get("miss") and ssn[k].get("checked", "") <= str(today - timedelta(days=7)))]
+    # 새 작품은 언급 많은 순서로 먼저 (팝업에 자주 뜨는 작품부터 평점이 붙게)
+    try:
+        from .mentions import compute
+        daily, _ = compute()
+        pop = {w: sum(d.values()) for w, d in daily.items()}
+        new.sort(key=lambda k: -pop.get(k, 0))
+    except Exception as e:
+        print(f"  (언급 순 정렬 실패: {e})")
+    if limit:
+        new = new[:limit]
     statuses = read_json(DATA / "statuses.json", {})
     settled_before = str(today - timedelta(days=SETTLED_DAYS))
 
@@ -233,5 +243,7 @@ if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "run"
     if cmd == "test":
         test(int(sys.argv[2]) if len(sys.argv) > 2 else 5)
+    elif cmd == "new":      # python -m src.ssn new 200 → 새 작품만 N개 (언급 많은 순)
+        run(max_minutes=170, limit=int(sys.argv[2]) if len(sys.argv) > 2 else 200)
     else:
         run()
