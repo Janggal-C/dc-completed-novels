@@ -2,11 +2,11 @@ const DEFAULTS = {popup: true, skin: "light", icon: true, order: DCNX_DEFAULT_OR
 
 const info = async () => {
   const {dict, fetchedAt} = await chrome.storage.local.get(["dict", "fetchedAt"]);
-  let d = dict;
-  if (!d) d = await (await fetch(chrome.runtime.getURL("dict.json"))).json();
+  const bundled = await (await fetch(chrome.runtime.getURL("dict.json"))).json();
+  let d = dict && (dict.version || "") >= (bundled.version || "") ? dict : bundled;
   document.getElementById("info").textContent =
     `작품 ${Object.keys(d.works).length}개 · 줄임말 ${Object.keys(d.aliases).length}개 · 사전 ${d.version}` +
-    (fetchedAt ? "" : " (내장)") + " · 하루 한 번 자동 갱신";
+    (d === bundled ? " (내장)" : "") + " · 하루 한 번 자동 갱신";
 };
 
 const drawOrder = order => {

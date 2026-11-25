@@ -9,7 +9,9 @@
   if (!opt.popup) return;
 
   let {dict} = await chrome.storage.local.get("dict");
-  if (!dict) dict = await (await fetch(chrome.runtime.getURL("dict.json"))).json();
+  const bundled = await (await fetch(chrome.runtime.getURL("dict.json"))).json();
+  if (!dict || (bundled.version || "") > (dict.version || "")) dict = bundled;   // 내장 사전이 더 새것이면 그것
+
   const M = new DcnxMatcher(dict);
 
   const SEL = {
