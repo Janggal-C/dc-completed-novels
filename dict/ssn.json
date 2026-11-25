@@ -1989,6 +1989,10 @@
   "rc": 1,
   "title": "당선됐더니 가족들이 후회한다"
  },
+ "당신의환상향": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "대마법사였던것은다시대마법사를꿈꾼다": {
   "author": "day2day",
   "checked": "2026-11-25",
@@ -2048,6 +2052,16 @@
   "r": 2.05,
   "rc": 10,
   "title": "던전 갤러리의 무시무시한 뉴비"
+ },
+ "던전견문록": {
+  "author": "[[글럼프]]",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 307662,
+  "links": {
+   "joara": "https://www.joara.com/book/1025563"
+  },
+  "title": "던전 견문록"
  },
  "던전디펜스": {
   "author": "유헌화",
@@ -2216,6 +2230,17 @@
   "r": 2.25,
   "rc": 2,
   "title": "랭커들이 집착하는 편돌이가 되었다"
+ },
+ "러브코미디를후피집모드로시작했다": {
+  "author": "내가읽고싶은걸씀",
+  "checked": "2026-11-25",
+  "id": 288742,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/426643"
+  },
+  "r": 5.0,
+  "rc": 1,
+  "title": "러브 코미디를 후피집 모드로 시작했다"
  },
  "러브코미디속금태양이되었다": {
   "author": "밤이오는잠",
@@ -2403,6 +2428,17 @@
    "novelpia": "https://novelpia.com/novel/368823"
   },
   "title": "마도유화"
+ },
+ "마두아니라니까요": {
+  "author": "십삼중수소",
+  "checked": "2026-11-25",
+  "id": 331962,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/461112"
+  },
+  "r": 2.0,
+  "rc": 1,
+  "title": "마두 아니라니까요"
  },
  "마법대학에서살아남기": {
   "author": "우물안청개구리",
@@ -2815,6 +2851,10 @@
   "rc": 1,
   "title": "미국으로 튀었더니 장사가 대박남"
  },
+ "미궁기담": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "미궁도시의고인물은돌아가고싶다": {
   "author": "김취미",
   "checked": "2026-11-25",
@@ -3035,6 +3075,21 @@
  "병주일지": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "보스몹답게행동하세요스왈로우씨": {
+  "author": "렐트리,오리신",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 3514,
+  "links": {
+   "joara": "https://www.joara.com/book/1522826",
+   "kakao": "https://page.kakao.com/content/55864122",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=4893061",
+   "ridi": "https://ridibooks.com/books/777070789?_rdt_sid=category_books&_rdt_idx=5"
+  },
+  "r": 3.89,
+  "rc": 175,
+  "title": "보스 몹답게 행동하세요, 스왈로우 씨"
  },
  "부인은밀밭에서기다렸다": {
   "author": "papapa",
@@ -3456,6 +3511,18 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "심해어사냥전문방송": {
+  "author": "별짐목",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 289663,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/284268"
+  },
+  "r": 3.5,
+  "rc": 1,
+  "title": "심해어 사냥 전문방송"
+ },
  "심해엠생스트리머": {
   "author": "부들리",
   "checked": "2026-11-25",
@@ -3812,6 +3879,10 @@
   "rc": 18,
   "title": "약혼녀가 소천마였다"
  },
+ "양손의꽃": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "양치기마법사": {
   "author": "수박복숭아",
   "checked": "2026-11-25",
@@ -3824,6 +3895,10 @@
   "r": 3.77,
   "rc": 147,
   "title": "양치기 마법사"
+ },
+ "어떤과학의소년망상": {
+  "checked": "2026-11-25",
+  "miss": true
  },
  "언어의주인이란": {
   "author": "정보석(가을bee)",
@@ -3838,6 +3913,10 @@
   "r": 3.82,
   "rc": 158,
   "title": "언어의 주인이란"
+ },
+ "엄마가낳아준정실들": {
+  "checked": "2026-11-25",
+  "miss": true
  },
  "엑스칼리버뽑습니다": {
   "author": "NariaTa",
@@ -4000,6 +4079,21 @@
   "r": 2.08,
   "rc": 6,
   "title": "외신이 쓴 마도서를 주웠다."
+ },
+ "요리의신": {
+  "author": "양치기자리",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 1620,
+  "links": {
+   "kakao": "https://page.kakao.com/content/48458500",
+   "munpia": "https://novel.munpia.com/43773",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=2244134",
+   "ridi": "https://ridibooks.com/books/425002563?_rdt_sid=category_books&_rdt_idx=1"
+  },
+  "r": 4.02,
+  "rc": 667,
+  "title": "요리의 신"
  },
  "용사의발라드": {
   "author": "도동파",
@@ -4191,6 +4285,10 @@
   "r": 3.5,
   "rc": 2,
   "title": "이세계 멸망 갤러리"
+ },
+ "이세계밀프헌터": {
+  "checked": "2026-11-25",
+  "miss": true
  },
  "이세계불법체류사이비": {
   "checked": "2026-11-25",
@@ -4393,6 +4491,17 @@
   "r": 3.24,
   "rc": 581,
   "title": "전생검신"
+ },
+ "전생자의마법수업": {
+  "author": "saya",
+  "checked": "2026-11-25",
+  "id": 289551,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/363736"
+  },
+  "r": 4.0,
+  "rc": 1,
+  "title": "전생자의 마법 수업"
  },
  "전생하고보니크툴루": {
   "author": "감기도령",
@@ -4622,6 +4731,10 @@
   "rc": 65,
   "title": "즉사기 들고 무림에 떨어지다"
  },
+ "지구온라인의플레이어가되었다": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "지옥에서돌아온게임디렉터": {
   "author": "papapa.",
   "checked": "2026-11-25",
@@ -4640,6 +4753,10 @@
   "miss": true
  },
  "차원생존전략": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "창관전생娼館轉生": {
   "checked": "2026-11-25",
   "miss": true
  },
@@ -4736,6 +4853,14 @@
   "rc": 5,
   "title": "취미 방송입니다"
  },
+ "클래스이세계전이물의쓰레기갸루녀가되었다": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
+ "타락성녀": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "탐관오리가상태창을숨김": {
   "author": "코락스",
   "checked": "2026-11-25",
@@ -4786,6 +4911,15 @@
    "novelpia": "https://novelpia.com/novel/401934"
   },
   "title": "톱스타들이 나를 소유하려 한다"
+ },
+ "퇴마록": {
+  "author": "이우혁",
+  "checked": "2026-11-25",
+  "id": 238997,
+  "links": {
+   "kakao": "https://page.kakao.com/content/51315913"
+  },
+  "title": "퇴마록"
  },
  "투명드래곤": {
   "checked": "2026-11-25",
@@ -4981,6 +5115,17 @@
   "rc": 4,
   "title": "헌터갤러리의 국가권력급 기계공주"
  },
+ "헌터들이집착하는게이트소환사가되었다": {
+  "author": "오토투스",
+  "checked": "2026-11-25",
+  "id": 319993,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/439936"
+  },
+  "r": 0.5,
+  "rc": 1,
+  "title": "헌터들이 집착하는 게이트 소환사가 되었다."
+ },
  "헌터들이집착하는정신상담사가되었다": {
   "author": "수입참치",
   "checked": "2026-11-25",
@@ -5039,6 +5184,21 @@
  "화약시대의소드마스터": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "환생좌": {
+  "author": "ALLA",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 2164,
+  "links": {
+   "kakao": "https://page.kakao.com/content/49964686",
+   "munpia": "https://novel.munpia.com/46976",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=4453925",
+   "ridi": "https://ridibooks.com/v2/Detail?id=425003164"
+  },
+  "r": 3.38,
+  "rc": 472,
+  "title": "환생좌"
  },
  "회귀도13번이면지랄맞다": {
   "author": "사자혼",
@@ -5177,6 +5337,10 @@
    "novelpia": "https://novelpia.com/novel/456263"
   },
   "title": "흡혈귀가 약물로 태양을 극복함"
+ },
+ "히로인을강탈한악당이되었다": {
+  "checked": "2026-11-25",
+  "miss": true
  },
  "히어로in히로인": {
   "checked": "2026-11-25",
