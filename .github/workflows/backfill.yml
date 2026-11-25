@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
-      COMMIT_PATHS: "data/ai data/posts"
+      COMMIT_PATHS: "data/ai data/posts data/review_ai review"
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
     steps:
       - uses: actions/checkout@v5
@@ -31,6 +31,7 @@ jobs:
       - run: pip install -r requirements.txt
       - run: npm install -g @anthropic-ai/claude-code
       - run: python -u -m src.backfill judge
+      - run: python -u -m src.backfill review
       - name: 저장
         if: always()
         run: bash scripts/commit.sh "완결 1~5월 AI 판정 $(TZ=Asia/Seoul date '+%F %H:%M')"

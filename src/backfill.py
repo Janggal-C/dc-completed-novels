@@ -44,5 +44,38 @@ def judge():
         checkpoint(f"완결 1~5월 AI 판정 {n}/{len(todo)}", every_seconds=300)
 
 
+def review():
+    """규칙·AI 판정이 엇갈린 완결 글 → 상위 모델(sonnet)이 다시 판정 (한도 없이 전부)"""
+    from .common import REVIEW_DIR
+    from .resolve import decide, load_overrides
+    jc = load_config()["judge"]
+    posts = load_monthly(POSTS_DIR)
+    results = load_monthly(AI_DIR)
+    done = load_monthly(REVIEW_DIR)
+    ov = load_overrides()
+    todo = []
+    for p in sorted(posts.values(), key=lambda p: -p["no"]):
+        if p["no"] in done or p["no"] in ov:
+            continue
+        d = decide(p, results.get(p["no"]), None)
+        if d["disagree"]:
+            todo.append({"no": p["no"], "title": p["title"], "rule": d["rule"], "ai": d["ai"], "date": p["date"]})
+    print(f"엇갈린 판정 {len(todo)}건 → {jc['review_model']} 검수", flush=True)
+    n = 0
+    for i in range(0, len(todo), 30):
+        batch = todo[i:i + 30]
+        try:
+            res = ai.review_titles(batch, jc["review_model"])
+        except ai.AIError as e:
+            print(f"⚠️ {e}", file=sys.stderr)
+            if e.fatal:
+                break
+            continue
+        merge_monthly(REVIEW_DIR, [{**res[b["no"]], "no": b["no"], "date": b["date"]} for b in batch if b["no"] in res])
+        n += sum(b["no"] in res for b in batch)
+        print(f"  {n}/{len(todo)}", flush=True)
+        checkpoint(f"엇갈린 판정 검수 {n}/{len(todo)}", every_seconds=300)
+
+
 if __name__ == "__main__":
-    {"import": do_import, "judge": judge}[sys.argv[1]]()
+    {"import": do_import, "judge": judge, "review": review}[sys.argv[1]]()

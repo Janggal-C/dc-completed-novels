@@ -100,8 +100,12 @@ def run(cfg=None, run_stats=None, partial=False):
     for wid, st in statuses.items():
         if wid.startswith("?") or st["status"] not in COUNTED:
             continue
+        # 예전 완결(데이터 시작 전에 이미 완결) → 데이터 첫날부터 센다
+        start = first_day if st["status"] == "예전 완결" else st["date"]
+        if st["status"] == "예전 완결":
+            st["date"] = first_day
         for day, n in daily.get(wid, {}).items():
-            if day >= st["date"]:
+            if day >= start:
                 counted[wid][day[:7]] += n
     all_mentions = mentions
     months = sorted({mo for per in counted.values() for mo in per})

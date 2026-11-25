@@ -163,7 +163,7 @@ function rankView(kind) {
     <div class="card"><ol class="rank">${rows.map((e, i) => `<li>
       <div class="no">${i + 1}</div>
       <div><div class="t">${esc(e.title)}${e.author ? `<span class="au">${esc(e.author)}</span>` : ""}${e.status === "예전 완결" ? `<span class="badge" style="background:var(--surface-0);color:var(--text-secondary)">예전 완결</span>` : ""}</div>
-        <details class="samples"><summary>대표 글 ${e.samples.length}개 · ${e.status === "예전 완결" ? "완결일 불명(데이터 이전)" : `완결 ${esc((e.completion_date || "").slice(5).replace("-", "/"))}`}${e.before_start && e.status !== "예전 완결" ? " (이전 완결 가능)" : ""}</summary>
+        <details class="samples"><summary>대표 글 ${e.samples.length}개 · ${e.status === "예전 완결" ? `${+(R.data_start || "2026-01").slice(5)}월 이전 완결` : `완결 ${esc((e.completion_date || "").slice(5).replace("-", "/"))}`}${e.before_start && e.status !== "예전 완결" ? " (이전 완결 가능)" : ""}</summary>
         <div class="muted" style="font-size:12px">${esc(e.status_reason || "")}</div>
         ${e.samples.map(s => `<a href="${postUrl(s.no)}" target="_blank" rel="noopener">${esc(s.title)}</a>`).join("")}</details></div>
       <div class="num"><b>${e.writers}</b>명<small>글 ${e.mentions}개</small></div>
