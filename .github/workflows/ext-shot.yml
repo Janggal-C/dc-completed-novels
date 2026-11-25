@@ -1,0 +1,23 @@
+name: ext-shot
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  shot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm init -y >/dev/null && npm i playwright && npx playwright install --with-deps chromium && sudo apt-get install -y fonts-noto-cjk >/dev/null
+      - run: xvfb-run -a node scripts/ext-shot.mjs
+      - name: 캡처를 shots 브랜치에 올림
+        run: |
+          cd shots && git init -q && git checkout -q -b shots
+          git add -A && git -c user.name=github-actions -c user.email=actions@github.com commit -qm "확장 캡처 $(date -u +%F)"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" shots
