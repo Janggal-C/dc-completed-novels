@@ -1,0 +1,19 @@
+name: dc-verify
+
+on:
+  workflow_dispatch:
+    inputs:
+      post_no:
+        description: 글번호
+        required: true
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun add @green-1052/dcinside.js
+      - run: bun scripts/dc-verify.mjs
+        env:
+          POST_NO: ${{ inputs.post_no }}
