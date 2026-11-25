@@ -2051,6 +2051,18 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "독왕티르": {
+  "author": "남시온",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 34206,
+  "links": {
+   "kakao": "https://page.kakao.com/content/55318363",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=1456912",
+   "ridi": "https://ridibooks.com/books/2093048921?_rdt_sid=category_books&_rdt_idx=18"
+  },
+  "title": "독왕 티르"
+ },
  "돌아와서말하기": {
   "checked": "2026-11-25",
   "miss": true
@@ -2485,6 +2497,10 @@
   },
   "title": "무림에서 외과의로 살아가는 법"
  },
+ "무림에서점쟁이로살아남기": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "무림에서카드로살아남기": {
   "author": "과일바구니",
   "checked": "2026-11-25",
@@ -2868,6 +2884,10 @@
   "rc": 82,
   "title": "소드 아트 온라인"
  },
+ "소설속빌런은아카데미차석으로살아간다": {
+  "checked": "2026-11-25",
+  "miss": true
+ },
  "소설속엑스트라": {
   "author": "지갑송",
   "checked": "2026-11-25",
@@ -2933,6 +2953,21 @@
   "rc": 637,
   "title": "시한부 천재가 살아남는 법"
  },
+ "신비의제왕": {
+  "author": "커틀피쉬,노삼",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 93041,
+  "links": {
+   "joara": "https://www.joara.com/book/1428950",
+   "kakao": "https://page.kakao.com/content/68520273",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=5201984",
+   "ridi": "https://ridibooks.com/books/2391022149?_rdt_sid=category_books&_rdt_idx=17"
+  },
+  "r": 4.08,
+  "rc": 578,
+  "title": "신비의 제왕"
+ },
  "심해엠생스트리머": {
   "author": "부들리",
   "checked": "2026-11-25",
@@ -2996,6 +3031,21 @@
   "rc": 626,
   "title": "아카데미에서 살아남기."
  },
+ "아카데미편의점으로힐링할게요": {
+  "author": "커피는카누",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 116007,
+  "links": {
+   "kakao": "https://page.kakao.com/content/57770018",
+   "munpia": "https://novel.munpia.com/265586",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=6543405",
+   "ridi": "https://ridibooks.com/books/4323001287?_rdt_sid=category_books&_rdt_idx=9"
+  },
+  "r": 3.32,
+  "rc": 93,
+  "title": "아카데미 편의점으로 힐링 할게요"
+ },
  "아카데미히로인오른쪽대각선뒷자리": {
   "author": "사리망",
   "checked": "2026-11-25",
@@ -3012,6 +3062,26 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "아포칼립스속인간혐오수기": {
+  "author": "이미글",
+  "checked": "2026-11-25",
+  "id": 288825,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/383590"
+  },
+  "title": "아포칼립스 속 인간혐오 수기"
+ },
+ "아포칼립스시스템으로착각당했다": {
+  "author": "적당한놈",
+  "checked": "2026-11-25",
+  "id": 288552,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/422950"
+  },
+  "r": 0.5,
+  "rc": 2,
+  "title": "아포칼립스 시스템으로 착각당했다"
+ },
  "아포칼립스에집을숨김": {
   "author": "로드워리어",
   "checked": "2026-11-25",
@@ -3024,6 +3094,15 @@
   "r": 3.99,
   "rc": 881,
   "title": "아포칼립스에 집을 숨김"
+ },
+ "아포칼립스의살인남매": {
+  "author": "SirLogan",
+  "checked": "2026-11-25",
+  "id": 289777,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/383474"
+  },
+  "title": "아포칼립스의 살인 남매"
  },
  "악당은살고싶다": {
   "author": "지갑송",
@@ -3107,6 +3186,18 @@
   "rc": 8,
   "title": "엑스칼리버 뽑습니다"
  },
+ "여신이나만애호함": {
+  "author": "미츄리",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 289588,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/346855"
+  },
+  "r": 5.0,
+  "rc": 1,
+  "title": "여신이 나만 애호함"
+ },
  "여혐소설가의ts수기": {
   "author": "알레미카",
   "checked": "2026-11-25",
@@ -3149,6 +3240,17 @@
   "rc": 1,
   "title": "오지가 체질입니다"
  },
+ "외신이쓴마도서를주웠다": {
+  "author": "유성우성유",
+  "checked": "2026-11-25",
+  "id": 288572,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/375095"
+  },
+  "r": 2.08,
+  "rc": 6,
+  "title": "외신이 쓴 마도서를 주웠다."
+ },
  "용사의발라드": {
   "author": "도동파",
   "checked": "2026-11-25",
@@ -3161,6 +3263,18 @@
   "r": 3.88,
   "rc": 140,
   "title": "용사의 발라드"
+ },
+ "원수를지키는망나니기사": {
+  "author": "이만두",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 289580,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/307498"
+  },
+  "r": 3.5,
+  "rc": 1,
+  "title": "원수를 지키는 망나니 기사"
  },
  "월야환담": {
   "author": "홍정훈",
@@ -3440,6 +3554,17 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "절대회귀": {
+  "author": "장영훈",
+  "checked": "2026-11-25",
+  "id": 155721,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=8981942"
+  },
+  "r": 3.7,
+  "rc": 277,
+  "title": "절대회귀"
+ },
  "정령왕엘퀴네스": {
   "author": "이환",
   "checked": "2026-11-25",
@@ -3464,6 +3589,15 @@
   "r": 3.97,
   "rc": 383,
   "title": "제국사냥꾼"
+ },
+ "주딱이지만버튜버지망생입니다": {
+  "author": "일어나라코무기",
+  "checked": "2026-11-25",
+  "id": 288670,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/428454"
+  },
+  "title": "주딱이지만 버튜버 지망생입니다"
  },
  "주술사는초월을원한다": {
   "author": "노백곰",
@@ -3570,6 +3704,19 @@
   "rc": 968,
   "title": "탐식의 재림"
  },
+ "탑매니지먼트": {
+  "author": "장우산",
+  "checked": "2026-11-25",
+  "id": 638,
+  "links": {
+   "munpia": "https://novel.munpia.com/47247",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=2467854",
+   "ridi": "https://ridibooks.com/v2/Detail?id=425008223"
+  },
+  "r": 3.92,
+  "rc": 996,
+  "title": "탑 매니지먼트"
+ },
  "톱스타들이나를소유하려한다": {
   "author": "아기소금",
   "checked": "2026-11-25",
@@ -3616,6 +3763,18 @@
   },
   "title": "폭군을 너무 잘 꼬셔버렸다"
  },
+ "퓨전펑크의전생자": {
+  "author": "쫄면에삼겹",
+  "checked": "2026-11-25",
+  "id": 203859,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/345929",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=9707944"
+  },
+  "r": 3.73,
+  "rc": 107,
+  "title": "퓨전펑크의 전생자"
+ },
  "프롤로그에서30년이흘렀다": {
   "author": "맠엘라하",
   "checked": "2026-11-25",
@@ -3660,6 +3819,21 @@
   "r": 4.46,
   "rc": 873,
   "title": "피를 마시는 새"
+ },
+ "픽미업": {
+  "author": "헤르모드",
+  "checked": "2026-11-25",
+  "done": true,
+  "id": 3579,
+  "links": {
+   "joara": "https://www.joara.com/book/1193112",
+   "kakao": "https://page.kakao.com/content/50490834",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=3202024",
+   "ridi": "https://ridibooks.com/books/2901001542?_rdt_sid=category_books&_rdt_idx=6"
+  },
+  "r": 3.85,
+  "rc": 1117,
+  "title": "픽 미 업!"
  },
  "하루전으로돌아가는남매": {
   "checked": "2026-11-25",
@@ -3845,6 +4019,10 @@
   "r": 3.89,
   "rc": 15,
   "title": "흉성의 화신"
+ },
+ "히어로in히로인": {
+  "checked": "2026-11-25",
+  "miss": true
  },
  "히어로가집착하는악당이되었다": {
   "author": "서은하",
