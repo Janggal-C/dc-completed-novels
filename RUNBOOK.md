@@ -12,7 +12,7 @@
 | 04:40 쯤 | **Claude 예약 점검** (이 문서) | Claude 예약 작업 |
 
 `src/daily.py` 단계: 수집 → 완결 판정(규칙+haiku, 엇갈리면 sonnet) → 새 단어(작성자 10명·3일 이상, haiku 분류) →
-사전 등록(구글: Serper 남은 무료분 → SerpApi 하루 30회) → AI 검수(중구난방 검사 + sonnet) → 오류 신고(sonnet 판단·자동 반영) → 소설넷(40분).
+사전 등록(구글: Serper 남은 무료분 → SerpApi 하루 30회) → AI 검수(중구난방 검사 + sonnet) → 오류 신고(sonnet 판단·자동 반영) → 소설넷(40분, 평점 갱신: 평가 100개 이상 30일·그 밖 7일).
 단계별 성공/실패·시간: `data/daily_log.jsonl`. AI 검수·신고 처리 기록: `data/autoreview_log.jsonl`.
 
 ## 사전 규칙 (사용자 확정)
