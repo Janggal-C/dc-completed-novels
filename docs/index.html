@@ -7,18 +7,18 @@
 <style>
 :root {
   color-scheme: light;
-  --surface-0: #f4f3f0; --surface-1: #fcfcfb; --border: #e2e0da;
-  --text-primary: #0b0b0b; --text-secondary: #52514e; --text-muted: #8a8984;
-  --accent: #2a78d6; --badge: #e8f0fb; --warn-bg: #fdf3dc; --warn: #8a5a00;
-  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --s6: #008300;
+  --surface-0: #f4f5fb; --surface-1: #ffffff; --border: #e0e3f3;
+  --text-primary: #1c2240; --text-secondary: #5b6388; --text-muted: #7d85ab;
+  --accent: #3B4890; --badge: #e7eaf8; --warn-bg: #fdf3dc; --warn: #8a5a00;
+  --s1: #3B4890; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --s6: #008300;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --surface-0: #111110; --surface-1: #1a1a19; --border: #2e2e2c;
-    --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #8f8e88;
-    --accent: #3987e5; --badge: #1d2b3d; --warn-bg: #3a2e12; --warn: #f0c060;
-    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #0ca30c;
+    --surface-0: #12152b; --surface-1: #1b1f3a; --border: #2c3260;
+    --text-primary: #eef0fb; --text-secondary: #c7cdf0; --text-muted: #8f98c9;
+    --accent: #7c8ce0; --badge: #272d5c; --warn-bg: #3a2e12; --warn: #f0c060;
+    --s1: #7c8ce0; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #0ca30c;
   }
 }
 * { box-sizing: border-box; }
@@ -41,6 +41,8 @@ ol.rank { list-style: none; padding: 0; margin: 0; }
 ol.rank li { display: grid; grid-template-columns: 34px 1fr auto; gap: 8px; padding: 10px 0; border-top: 1px solid var(--border); }
 ol.rank li:first-child { border-top: 0; }
 .no { color: var(--text-muted); font-variant-numeric: tabular-nums; text-align: right; font-weight: 600; }
+ol.rank li:nth-child(1) .no { color: #F5B301; } ol.rank li:nth-child(2) .no { color: #9AA3B8; } ol.rank li:nth-child(3) .no { color: #C98A5B; }
+header h1 { color: var(--accent); }
 .t { font-weight: 600; }
 .au { color: var(--text-muted); font-size: 12px; font-weight: 400; margin-left: 4px; }
 .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
