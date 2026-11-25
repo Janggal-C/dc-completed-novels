@@ -1,9 +1,0 @@
-{
- "allowed_for_any": false,
- "allowed_for_us": false,
- "checked": "2026-11-25 17:01",
- "robots_status": 200,
- "robots_text": "User-agent: *\r\nDisallow: /\r\n\r\nUser-Agent: Googlebot\r\nUser-Agent: Yeti\r\nUser-Agent: Daum\r\nUser-Agent: Daumoa\r\nUser-Agent: Ads-Naver\r\nUser-Agent: facebookexternalhit\r\nAllow: /\r\nDisallow: /proc/\r\nDisallow: /json/\r\nDisallow: /api/\r\nDisallow: /error/\r\nDisallow: /viewer/\r\nDisallow: /comic_viewer/",
- "stage": "stopped_by_robots",
- "ua": "dc-completed-novels-research (personal, low-volume; +https://github.com/answhdtjr736-spec/dc-completed-novels)"
-}

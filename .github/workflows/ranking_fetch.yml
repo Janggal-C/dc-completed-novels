@@ -1,0 +1,38 @@
+name: 순위 페이지 제목 가져오기
+
+# Secrets RANKING_URL 한 페이지의 작품 제목 목록을 가져온다 (src/ranking_fetch.py).
+# robots.txt가 허용할 때만 가져오고, 아니면 멈춘다. 결과: data/ranking_titles.json
+on:
+  push:
+    paths: [".github/ranking-run"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ranking-fetch
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      RANKING_URL: ${{ secrets.RANKING_URL }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -u -m src.ranking_fetch
+      - name: 저장
+        if: always()
+        env:
+          COMMIT_PATHS: data/ranking_titles.json
+        run: bash scripts/commit.sh "순위 페이지 제목 갱신 $(TZ=Asia/Seoul date '+%F %H:%M')"
