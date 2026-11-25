@@ -12,9 +12,13 @@ from .fullcrawl import load_titles
 from .matcher import Matcher
 
 
-def run(top_n=100, trend_n=6):
-    t0 = time.time()
-    works = read_json(WORKS, {})
+_CACHE = {}
+
+
+def compute():
+    """→ (daily {작품: {날짜: 언급 수}}, 제목 수). 같은 실행 안에서는 한 번만 계산"""
+    if "r" in _CACHE:
+        return _CACHE["r"]
     aliases = read_json(ALIASES, {})
     m = Matcher(aliases)
     seen = set()                              # (작품, 날짜, 작성자)
@@ -28,6 +32,14 @@ def run(top_n=100, trend_n=6):
             if key not in seen:
                 seen.add(key)
                 daily[wid][day] += 1
+    _CACHE["r"] = (daily, len(titles))
+    return _CACHE["r"]
+
+
+def run(top_n=100, trend_n=6):
+    t0 = time.time()
+    works = read_json(WORKS, {})
+    daily, n_titles = compute()
     # 월별·분기별
     periods = defaultdict(lambda: defaultdict(int))  # 기간 → 작품 → 수
     series = defaultdict(lambda: defaultdict(int))   # 작품 → 월 → 수
@@ -38,7 +50,7 @@ def run(top_n=100, trend_n=6):
             periods[quarter_of(mon)][wid] += n
             series[wid][mon] += n
     months = sorted({p for p in periods if "Q" not in p})
-    out = {"generated": now_kst().strftime("%Y-%m-%d %H:%M"), "titles": len(titles), "months": months,
+    out = {"generated": now_kst().strftime("%Y-%m-%d %H:%M"), "titles": n_titles, "months": months,
            "periods": {}}
     for p, counts in periods.items():
         top = sorted(counts.items(), key=lambda x: -x[1])[:top_n]
@@ -50,7 +62,7 @@ def run(top_n=100, trend_n=6):
     out["trend"] = [{"id": wid, "title": works.get(wid, {}).get("title", wid),
                      "series": [ser.get(mm, 0) for mm in months]} for wid, ser in total]
     write_json(SITE_DATA / "mentions.json", out)
-    print(f"언급 집계: 제목 {len(titles):,}개, 작품 {len(daily)}개, {time.time() - t0:.0f}초")
+    print(f"언급 집계: 제목 {n_titles:,}개, 작품 {len(daily)}개, {time.time() - t0:.0f}초")
     return out
 
 

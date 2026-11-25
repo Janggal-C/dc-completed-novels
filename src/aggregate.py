@@ -91,54 +91,54 @@ def run(cfg=None, run_stats=None, partial=False):
             continue
         statuses[wid] = judge_status(c, against.get(wid, []), works.get(wid, {}).get("status"),
                                      first_day, cfg.get("status", {}))
-    # 완결작만, 완결일 이후 글만 남긴다
-    counted = defaultdict(lambda: defaultdict(list))
-    for wid, per in mentions.items():
-        st = statuses.get(wid)
-        if not st or st["status"] not in COUNTED:
+    # 완결작만, 완결일 이후의 언급만 센다.
+    # 언급 = 전체 글 제목에서 사전 대조로 찾은 하루 단위 작성자 수 (언급 탭과 같은 기준).
+    # 완결 글(C)은 완결 여부·완결일 판정에만 쓴다.
+    from .mentions import compute as mention_daily
+    daily, _ = mention_daily()
+    counted = defaultdict(lambda: defaultdict(int))     # wid → month → 언급 수
+    for wid, st in statuses.items():
+        if wid.startswith("?") or st["status"] not in COUNTED:
             continue
-        for mo, plist in per.items():
-            keep = [p for p in plist if p["date"][:10] >= st["date"]]
-            if keep:
-                counted[wid][mo] = keep
-    all_mentions, mentions = mentions, counted
-    months = sorted({mo for per in mentions.values() for mo in per})
-    completion = {wid: statuses[wid]["date"] for wid in mentions}
+        for day, n in daily.get(wid, {}).items():
+            if day >= st["date"]:
+                counted[wid][day[:7]] += n
+    all_mentions = mentions
+    months = sorted({mo for per in counted.values() for mo in per})
+    completion = {wid: statuses[wid]["date"] for wid in counted}
 
-    def entry(wid, plist, period):
-        writers = {p["writer"] for p in plist}
-        best = sorted(plist, key=lambda p: -p.get("replies", 0))[:3]
+    def entry(wid, n, period):
         w = works.get(wid, {})
+        c_after = [p for per in all_mentions.get(wid, {}).values() for p in per if p["date"][:10] >= completion[wid]]
+        best = sorted(c_after, key=lambda p: -p.get("replies", 0))[:3]
         return {"id": wid, "title": title_of(wid), "author": w.get("author", ""),
-                "mentions": len(plist), "writers": len(writers),
+                "mentions": n, "writers": n,
                 "new": (quarter_of(completion[wid][:7]) == period) if "Q" in period else (completion[wid][:7] == period),
                 "completion_date": completion[wid], "completion_month": completion[wid][:7],
                 "status": statuses[wid]["status"], "status_reason": statuses[wid]["reason"],
                 "before_start": bool(statuses[wid].get("before_start")),
-                "unresolved": wid.startswith("?"), "needs_review": bool(w.get("needs_review")),
+                "unresolved": False, "needs_review": bool(w.get("needs_review")),
                 "samples": [{"no": p["no"], "title": p["title"]} for p in best],
-                # 이 작품의 월별 언급 작성자 수 (R.months 순서) → 순위 목록에서 펼쳐 보는 그래프용
-                "series": [len({p["writer"] for p in mentions[wid].get(mo, [])}) for mo in months]}
+                "series": [counted[wid].get(mo, 0) for mo in months]}
 
     def ranking(period_of):
-        groups = defaultdict(lambda: defaultdict(list))
-        for wid, per in mentions.items():
-            for mo, plist in per.items():
-                groups[period_of(mo)][wid] += plist
+        groups = defaultdict(lambda: defaultdict(int))
+        for wid, per in counted.items():
+            for mo, n in per.items():
+                groups[period_of(mo)][wid] += n
         out = {}
         for period, by_work in groups.items():
-            rows = [entry(wid, pl, period) for wid, pl in by_work.items()]
-            rows.sort(key=lambda e: (-e["writers"], -e["mentions"], e["title"]))
+            rows = [entry(wid, n, period) for wid, n in by_work.items()]
+            rows.sort(key=lambda e: (-e["mentions"], e["title"]))
             out[period] = rows[: rc["top_n"]]
         return dict(sorted(out.items(), reverse=True))
 
     monthly = ranking(lambda mo: mo)
     quarterly = ranking(quarter_of)
 
-    totals = sorted(mentions, key=lambda w: -sum(len({p["writer"] for p in pl}) for pl in mentions[w].values()))
-    trend = [{"id": w, "title": title_of(w),
-              "series": [len({p["writer"] for p in mentions[w].get(mo, [])}) for mo in months]}
-             for w in totals if not w.startswith("?")][: rc["trend_top_n"]]
+    totals = sorted(counted, key=lambda w: -sum(counted[w].values()))
+    trend = [{"id": w, "title": title_of(w), "series": [counted[w].get(mo, 0) for mo in months]}
+             for w in totals][: rc["trend_top_n"]]
 
     pct = lambda a, b: round(100 * a / b, 1) if b else None
     metrics = {
