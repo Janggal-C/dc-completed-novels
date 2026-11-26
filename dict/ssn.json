@@ -1806,6 +1806,21 @@
   },
   "title": "납치혼 당했다 유목엘프들의 칸에게"
  },
+ "낭선기환담": {
+  "author": "낭선",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 8852,
+  "links": {
+   "joara": "https://www.joara.com/book/1691005",
+   "kakao": "https://page.kakao.com/content/52578785",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=11490640",
+   "ridi": "https://ridibooks.com/books/505031308?_rdt_sid=category_books&_rdt_idx=14"
+  },
+  "r": 2.95,
+  "rc": 34,
+  "title": "낭선기환담"
+ },
  "낭인은무림에산다": {
   "author": "인간방패",
   "checked": "2026-11-25",
@@ -2095,6 +2110,17 @@
   "r": 3.09,
   "rc": 1212,
   "title": "달빛조각사"
+ },
+ "당가수선전": {
+  "author": "차사",
+  "checked": "2026-11-27",
+  "id": 284034,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14005460"
+  },
+  "r": 0.5,
+  "rc": 1,
+  "title": "당가수선전"
  },
  "당문전": {
   "author": "제이허빈",
@@ -2430,6 +2456,10 @@
  },
  "동방고려개": {
   "checked": "2026-11-25",
+  "miss": true
+ },
+ "동방기연담": {
+  "checked": "2026-11-27",
   "miss": true
  },
  "동방내능력이망가진것같다": {
@@ -3968,6 +3998,10 @@
   "checked": "2026-11-26",
   "miss": true
  },
+ "봇치더록고토히토리는강간당한다": {
+  "checked": "2026-11-27",
+  "miss": true
+ },
  "부인은밀밭에서기다렸다": {
   "author": "papapa",
   "checked": "2026-11-25",
@@ -4355,9 +4389,30 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "세계를멸망시킨마녀가되었다": {
+  "author": "마이뉴엘",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 249287,
+  "links": {
+   "kakao": "https://page.kakao.com/content/66658160",
+   "novelpia": "https://novelpia.com/novel/123750"
+  },
+  "title": "세계를 멸망시킨 마녀가 되었다"
+ },
  "세계수를따먹다": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "세계최강딸내미": {
+  "author": "쥐돌이",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 289833,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/37790"
+  },
+  "title": "세계 최강 딸내미"
  },
  "세상에나쁜영애는없다": {
   "author": "코리타",
@@ -4474,6 +4529,10 @@
   "r": 3.47,
   "rc": 1139,
   "title": "소설 속 엑스트라"
+ },
+ "소설속회귀자를따먹음": {
+  "checked": "2026-11-27",
+  "miss": true
  },
  "소설속흑막이되련다": {
   "author": "유래향",
@@ -4777,6 +4836,21 @@
   "rc": 1,
   "title": "썩은물 망자가 버튜버로 데뷔함"
  },
+ "아빠가너무강함": {
+  "author": "개벽S",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 151,
+  "links": {
+   "kakao": "https://page.kakao.com/content/55257828",
+   "munpia": "https://novel.munpia.com/140616",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=5643679",
+   "ridi": "https://ridibooks.com/books/2065032978"
+  },
+  "r": 2.24,
+  "rc": 222,
+  "title": "아빠가 너무 강함"
+ },
  "아역배우를키잡하는미친매니저가되었다": {
   "checked": "2026-11-25",
   "miss": true
@@ -4849,6 +4923,16 @@
   "checked": "2026-11-26",
   "miss": true
  },
+ "아카데미에오랑캐가입학했다": {
+  "author": "오리먹고싶다",
+  "checked": "2026-11-27",
+  "id": 241085,
+  "links": {
+   "kakao": "https://page.kakao.com/content/64707348",
+   "novelpia": "https://novelpia.com/novel/97213"
+  },
+  "title": "아카데미에 오랑캐가 입학했다"
+ },
  "아카데미의사령술사가되었다": {
   "author": "_172",
   "checked": "2026-11-27",
@@ -4888,6 +4972,16 @@
  "아카데미의핑챙이되었다": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "아카데미주인공방해합니다": {
+  "author": "자기반성중",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 252540,
+  "links": {
+   "kakao": "https://page.kakao.com/content/66826747"
+  },
+  "title": "아카데미 주인공, 방해합니다"
  },
  "아카데미천재단역": {
   "author": "손프로",
@@ -4990,6 +5084,10 @@
  },
  "아카메디아카데미": {
   "checked": "2026-11-25",
+  "miss": true
+ },
+ "아포칼립스금속조작능력자": {
+  "checked": "2026-11-27",
   "miss": true
  },
  "아포칼립스셸터관리자": {
@@ -5107,6 +5205,10 @@
   "r": 3.25,
   "rc": 2,
   "title": "악녀를 갱생시켜라"
+ },
+ "악녀의오빠는피곤하다": {
+  "checked": "2026-11-27",
+  "miss": true
  },
  "악당들의후원자가되었다": {
   "author": "봄한방울",
@@ -5618,6 +5720,10 @@
   "rc": 1,
   "title": "오스만은 로마다"
  },
+ "오이예르이예르폴": {
+  "checked": "2026-11-27",
+  "miss": true
+ },
  "오지가체질입니다": {
   "author": "띵땅뚱땅",
   "checked": "2026-11-25",
@@ -5783,6 +5889,18 @@
    "novelpia": "https://novelpia.com/novel/113927"
   },
   "title": "우둔한 악마의 노예 기행기"
+ },
+ "우사히메카린버튜버가됩니다": {
+  "author": "기린튀김",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 289812,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/145563"
+  },
+  "r": 5.0,
+  "rc": 1,
+  "title": "우사히메 카린, 버튜버가 됩니다!"
  },
  "우주천마3077": {
   "author": "녹색여우",
@@ -5966,6 +6084,19 @@
   },
   "title": "음악 천재가 불륜을 못 숨김"
  },
+ "의원님이보우하사": {
+  "author": "김현빈",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 116089,
+  "links": {
+   "kakao": "https://page.kakao.com/content/65298899",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14565747"
+  },
+  "r": 4.14,
+  "rc": 396,
+  "title": "의원님이 보우하사"
+ },
  "이거럽코빙의물인가요": {
   "author": "두유하이볼",
   "checked": "2026-11-25",
@@ -5980,6 +6111,10 @@
  },
  "이거주식방송입니다": {
   "checked": "2026-11-25",
+  "miss": true
+ },
+ "이련": {
+  "checked": "2026-11-27",
   "miss": true
  },
  "이면세계의마법사": {
@@ -6091,6 +6226,17 @@
  "일진들이우리집을점거했다": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "일타강사백사부": {
+  "author": "간짜장",
+  "checked": "2026-11-27",
+  "id": 109723,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=5579750"
+  },
+  "r": 3.43,
+  "rc": 378,
+  "title": "일타강사 백사부"
  },
  "일편독심": {
   "author": "천사같은",
@@ -6960,6 +7106,19 @@
   },
   "title": "천만번 죽어본 검투사는 죽지 않는다"
  },
+ "천살검협": {
+  "author": "papapa",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 247157,
+  "links": {
+   "kakao": "https://page.kakao.com/content/66656916",
+   "novelpia": "https://novelpia.com/novel/109965"
+  },
+  "r": 2.42,
+  "rc": 6,
+  "title": "천살검협"
+ },
  "천재뉴비의흡수수선전": {
   "author": "망룡(蟒龍)",
   "checked": "2026-11-25",
@@ -7188,6 +7347,18 @@
  "카브시어스r": {
   "checked": "2026-11-27",
   "miss": true
+ },
+ "코인후기사단퇴직합니다": {
+  "author": "지아잔틴",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 225251,
+  "links": {
+   "kakao": "https://page.kakao.com/content/65961386"
+  },
+  "r": 2.25,
+  "rc": 2,
+  "title": "코인 후 기사단 퇴직합니다"
  },
  "쿠데타하겠습니다": {
   "author": "yunwun",
