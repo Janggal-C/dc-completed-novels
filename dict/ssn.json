@@ -2788,6 +2788,15 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "마도서들이집착하는신비도서관의사서가되었다": {
+  "author": "엔도트로피",
+  "checked": "2026-11-27",
+  "id": 289507,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/419656"
+  },
+  "title": "마도서들이 집착하는 신비도서관의 사서가 되었다"
+ },
  "마도서를줍다마법사가되다": {
   "author": "방구석와룡",
   "checked": "2026-11-25",
@@ -3284,6 +3293,10 @@
   "r": 3.98,
   "rc": 968,
   "title": "멸망한 세계의 사냥꾼"
+ },
+ "멸망한세상의수면술사": {
+  "checked": "2026-11-27",
+  "miss": true
  },
  "멸망할세계의파견용사": {
   "author": "첨G",
@@ -4002,6 +4015,19 @@
   "checked": "2026-11-27",
   "miss": true
  },
+ "부르고뉴의기사가되었다": {
+  "author": "불링거",
+  "checked": "2026-11-27",
+  "id": 281790,
+  "links": {
+   "kakao": "https://page.kakao.com/content/69383211",
+   "munpia": "https://www.munpia.com/novel/detail/525549",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14047906"
+  },
+  "r": 1.5,
+  "rc": 1,
+  "title": "부르고뉴의 기사가 되었다!"
+ },
  "부인은밀밭에서기다렸다": {
   "author": "papapa",
   "checked": "2026-11-25",
@@ -4255,6 +4281,19 @@
  "서울드래곤": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "서울에마탑세웠더니돈이미쳤다": {
+  "author": "낑깡깽",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 279950,
+  "links": {
+   "kakao": "https://page.kakao.com/content/68853514",
+   "munpia": "https://novel.munpia.com/523910"
+  },
+  "r": 1.0,
+  "rc": 2,
+  "title": "서울에 마탑 세웠더니 돈이 미쳤다"
  },
  "서울오브젝트이야기": {
   "author": "논리곰",
@@ -4700,6 +4739,20 @@
   "rc": 31,
   "title": "신을 만나면 신을 죽이고"
  },
+ "신을먹는마법사": {
+  "author": "검미성",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 1006,
+  "links": {
+   "munpia": "https://novel.munpia.com/114138",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=3775998",
+   "ridi": "https://ridibooks.com/v2/Detail?id=425085299"
+  },
+  "r": 3.7,
+  "rc": 120,
+  "title": "신을 먹는 마법사"
+ },
  "신입사원강회장": {
   "author": "산경(山景)",
   "checked": "2026-11-27",
@@ -4824,6 +4877,15 @@
   "r": 2.75,
   "rc": 2,
   "title": "쌀먹러가 너무 예쁨"
+ },
+ "쌍둥이가연예계를집어삼킴": {
+  "author": "팔미호",
+  "checked": "2026-11-27",
+  "id": 288800,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/393721"
+  },
+  "title": "쌍둥이가 연예계를 집어삼킴."
  },
  "썩은물망자가버튜버로데뷔함": {
   "author": "무카데",
@@ -5516,6 +5578,10 @@
   "rc": 8,
   "title": "엑스칼리버 뽑습니다"
  },
+ "엑스트라히로인을위한전쟁": {
+  "checked": "2026-11-27",
+  "miss": true
+ },
  "엔딩메이커": {
   "author": "취룡",
   "checked": "2026-11-25",
@@ -5802,6 +5868,10 @@
    "novelpia": "https://novelpia.com/novel/106179"
   },
   "title": "왜 다시 악녀가 되는거야?"
+ },
+ "외계괴물딸을키울수있을리없잖아": {
+  "checked": "2026-11-27",
+  "miss": true
  },
  "외신이쓴마도서를주웠다": {
   "author": "유성우성유",
@@ -6408,6 +6478,21 @@
   "rc": 4,
   "title": "재앙급 진조는 방구석에서 꿀 빱니다"
  },
+ "재앙을입양하다": {
+  "author": "분재나무",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 105272,
+  "links": {
+   "kakao": "https://page.kakao.com/content/57034293",
+   "munpia": "https://novel.munpia.com/243279",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=8144677",
+   "ridi": "https://ridibooks.com/books/1811187277?_rdt_sid=category_books&_rdt_idx=10"
+  },
+  "r": 3.19,
+  "rc": 8,
+  "title": "재앙을 입양하다"
+ },
  "저그런악녀아닌데요": {
   "author": "루루챠",
   "checked": "2026-11-25",
@@ -6607,6 +6692,20 @@
   "r": 3.31,
   "rc": 639,
   "title": "절대 검감(絶對 劍感)"
+ },
+ "절대군림": {
+  "author": "장영훈",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 9135,
+  "links": {
+   "kakao": "https://page.kakao.com/content/46391656",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=2768764",
+   "ridi": "https://ridibooks.com/v2/Detail?id=2351002296"
+  },
+  "r": 3.55,
+  "rc": 75,
+  "title": "절대군림"
  },
  "절대꺾이지않을거야": {
   "checked": "2026-11-26",
@@ -7019,6 +7118,17 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "진문장생": {
+  "author": "관허(觀虛)",
+  "checked": "2026-11-27",
+  "id": 285546,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14243509"
+  },
+  "r": 3.75,
+  "rc": 2,
+  "title": "진문장생"
+ },
  "진화하는우주괴물이되었다": {
   "author": "공포의거북이",
   "checked": "2026-11-26",
@@ -7269,6 +7379,10 @@
  },
  "최강의연인기사들을ntr당합니다": {
   "checked": "2026-11-25",
+  "miss": true
+ },
+ "최면야겜에빙의했다": {
+  "checked": "2026-11-27",
   "miss": true
  },
  "최악의파트너": {
@@ -7525,6 +7639,17 @@
   },
   "title": "퇴마록"
  },
+ "퇴물무당에게외신이들렸다": {
+  "author": "김마멋",
+  "checked": "2026-11-27",
+  "id": 316764,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14400403"
+  },
+  "r": 3.12,
+  "rc": 4,
+  "title": "퇴물 무당에게 외신이 들렸다"
+ },
  "퇴사후퇴마뉴비가주술로날먹함": {
   "checked": "2026-11-26",
   "miss": true
@@ -7612,6 +7737,10 @@
   },
   "title": "평범한 게임 보고서"
  },
+ "폐허에서성녀를주웠다": {
+  "checked": "2026-11-27",
+  "miss": true
+ },
  "폭군을너무잘꼬셔버렸다": {
   "author": "겨울맑음",
   "checked": "2026-11-25",
@@ -7673,6 +7802,19 @@
   "r": 3.73,
   "rc": 107,
   "title": "퓨전펑크의 전생자"
+ },
+ "퓨처워커": {
+  "author": "이영도",
+  "checked": "2026-11-27",
+  "id": 30862,
+  "links": {
+   "kakao": "https://page.kakao.com/content/63218856",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=12579746",
+   "ridi": "https://ridibooks.com/books/111010210?_rdt_sid=category_books&_rdt_idx=1"
+  },
+  "r": 3.99,
+  "rc": 482,
+  "title": "퓨처 워커"
  },
  "프롤로그에서30년이흘렀다": {
   "author": "맠엘라하",
@@ -7888,6 +8030,16 @@
   "rc": 1,
   "title": "헌터 때려치고 인방함"
  },
+ "헌터커뮤니티의초월급식물술사": {
+  "author": "몽중회랑",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 289595,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/402987"
+  },
+  "title": "헌터 커뮤니티의 초월급 식물술사"
+ },
  "헌터클럽": {
   "author": "촤하하",
   "checked": "2026-11-26",
@@ -7907,6 +8059,17 @@
    "novelpia": "https://novelpia.com/novel/457086"
   },
   "title": "헤픈 소꿉친구에게 나만 안된다고 차였다"
+ },
+ "헬난이도에서시작하는탑탈출": {
+  "author": "데프프픗",
+  "checked": "2026-11-27",
+  "id": 284535,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/548181"
+  },
+  "r": 4.5,
+  "rc": 1,
+  "title": "헬난이도에서 시작하는 탑탈출"
  },
  "혁명은내취향이아니었다": {
   "author": "코락스",
@@ -8195,6 +8358,17 @@
    "novelpia": "https://novelpia.com/novel/284835"
   },
   "title": "흑막의 소꿉친구가 된 것 같다"
+ },
+ "흑백무제": {
+  "author": "현임",
+  "checked": "2026-11-27",
+  "id": 106009,
+  "links": {
+   "kakao": "https://page.kakao.com/content/56598258"
+  },
+  "r": 3.26,
+  "rc": 75,
+  "title": "흑백무제"
  },
  "흡혈귀가약물로태양을극복함": {
   "author": "김크루",
