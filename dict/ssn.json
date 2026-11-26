@@ -2506,6 +2506,10 @@
   },
   "title": "들키지 않는 사제 사칭범이 되었다"
  },
+ "딥블랙시티": {
+  "checked": "2026-11-27",
+  "miss": true
+ },
  "라쿤아파트": {
   "checked": "2026-11-27",
   "miss": true
@@ -2712,6 +2716,15 @@
   "r": 2.25,
   "rc": 2,
   "title": "로판에 약을 풀었다"
+ },
+ "로판제국의치매검성이되었다": {
+  "author": "몰입력",
+  "checked": "2026-11-27",
+  "id": 290286,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/435703"
+  },
+  "title": "로판제국의 치매 검성이 되었다"
  },
  "롤빵영애를교정하는집사가되었다": {
   "checked": "2026-11-26",
@@ -3510,6 +3523,10 @@
   "rc": 25,
   "title": "무신급 점소이가 되었다"
  },
+ "무직백수계백순": {
+  "checked": "2026-11-27",
+  "miss": true
+ },
  "무직전생이세계에갔으면최선을다한다": {
   "checked": "2026-11-25",
   "miss": true
@@ -3527,6 +3544,10 @@
   "r": 3.02,
   "rc": 384,
   "title": "무한의 마법사"
+ },
+ "무한전생시리즈": {
+  "checked": "2026-11-27",
+  "miss": true
  },
  "무한회귀자들이집착하는긍정뉴비가되었다": {
   "author": "녹녹차",
@@ -4148,6 +4169,20 @@
   "checked": "2026-11-27",
   "miss": true
  },
+ "빌런독재자플레이어의세계정상화": {
+  "author": "한혜주",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 247837,
+  "links": {
+   "kakao": "https://page.kakao.com/content/67938879",
+   "munpia": "https://www.munpia.com/novel/detail/428514",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13302619"
+  },
+  "r": 3.5,
+  "rc": 1,
+  "title": "빌런 독재자 플레이어의 세계 정상화"
+ },
  "빌런옆자리의마법소녀": {
   "author": "이불짱",
   "checked": "2026-11-25",
@@ -4172,6 +4207,22 @@
   "r": 3.64,
   "rc": 11,
   "title": "빚을 져서라도 세상은 구해야 할 거 아니야"
+ },
+ "사상최강의매니저": {
+  "author": "글쟁이S",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 2089,
+  "links": {
+   "joara": "https://www.joara.com/book/1276402",
+   "kakao": "https://page.kakao.com/content/49882708",
+   "munpia": "https://novel.munpia.com/67420",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=2961810",
+   "ridi": "https://ridibooks.com/v2/Detail?id=425029091"
+  },
+  "r": 3.71,
+  "rc": 457,
+  "title": "사상 최강의 매니저"
  },
  "사상최강의보안관": {
   "author": "글쟁이S",
@@ -4600,6 +4651,10 @@
   "rc": 7,
   "title": "소요수선전(逍遙修仙傳)"
  },
+ "소천마는가족이되고싶지않다": {
+  "checked": "2026-11-27",
+  "miss": true
+ },
  "수상할정도로사이가좋은남매": {
   "checked": "2026-11-25",
   "miss": true
@@ -4898,6 +4953,19 @@
   "rc": 1,
   "title": "썩은물 망자가 버튜버로 데뷔함"
  },
+ "아기는악당을키운다": {
+  "author": "리샤",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 7767,
+  "links": {
+   "kakao": "https://page.kakao.com/content/68368207",
+   "ridi": "https://ridibooks.com/books/111035730?_rdt_sid=category-books&_rdt_idx=2"
+  },
+  "r": 3.27,
+  "rc": 259,
+  "title": "아기는 악당을 키운다"
+ },
  "아빠가너무강함": {
   "author": "개벽S",
   "checked": "2026-11-27",
@@ -5146,6 +5214,10 @@
  },
  "아카메디아카데미": {
   "checked": "2026-11-25",
+  "miss": true
+ },
+ "아팔루사는부서지지않는다": {
+  "checked": "2026-11-27",
   "miss": true
  },
  "아포칼립스금속조작능력자": {
@@ -5775,6 +5847,10 @@
   "rc": 46,
   "title": "오라전대 피스메이커"
  },
+ "오버로드황금경": {
+  "checked": "2026-11-27",
+  "miss": true
+ },
  "오스만은로마다": {
   "author": "초음중음",
   "checked": "2026-11-25",
@@ -6026,6 +6102,20 @@
   "checked": "2026-11-27",
   "miss": true
  },
+ "웰컴투nba": {
+  "author": "필리포스",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 205454,
+  "links": {
+   "kakao": "https://page.kakao.com/content/68562312",
+   "munpia": "https://novel.munpia.com/361868",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=10067295"
+  },
+  "r": 4.02,
+  "rc": 156,
+  "title": "웰컴 투 NBA"
+ },
  "위버멘쉬": {
   "author": "성상현",
   "checked": "2026-11-25",
@@ -6262,6 +6352,10 @@
   "title": "이세계에 뒷담 갤러리를 풀었다"
  },
  "이세계에서사이비로살아남기": {
+  "checked": "2026-11-27",
+  "miss": true
+ },
+ "이직로그": {
   "checked": "2026-11-27",
   "miss": true
  },
@@ -6550,6 +6644,20 @@
   "r": 3.5,
   "rc": 1,
   "title": "전능의 천사를 얻었다"
+ },
+ "전능의혀를얻었다": {
+  "author": "몽쉐르",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 227691,
+  "links": {
+   "kakao": "https://page.kakao.com/content/65873570",
+   "munpia": "https://novel.munpia.com/390325",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=10811950"
+  },
+  "r": 3.37,
+  "rc": 38,
+  "title": "전능의 혀를 얻었다"
  },
  "전래동화속지나가던선비가되었다": {
   "author": "엔도트로피",
@@ -6854,6 +6962,17 @@
   "rc": 2,
   "title": "제발 제발 회귀 좀"
  },
+ "제암진천경": {
+  "author": "유과",
+  "checked": "2026-11-27",
+  "id": 103270,
+  "links": {
+   "kakao": "https://page.kakao.com/content/56094375"
+  },
+  "r": 3.68,
+  "rc": 106,
+  "title": "제암진천경"
+ },
  "제자가나를죽이러왔다": {
   "author": "짱큰문어",
   "checked": "2026-11-27",
@@ -6994,6 +7113,22 @@
  "죽인만큼낳는마왕이되었다": {
   "checked": "2026-11-26",
   "miss": true
+ },
+ "중생지마교교주": {
+  "author": "봉칠월",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 88,
+  "links": {
+   "joara": "https://www.joara.com/book/1662180",
+   "kakao": "https://page.kakao.com/content/69549686",
+   "munpia": "https://novel.munpia.com/170770",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=4803149",
+   "ridi": "https://ridibooks.com/books/3144001974?_rdt_sid=category_books&_rdt_idx=10"
+  },
+  "r": 3.78,
+  "rc": 220,
+  "title": "중생지마교교주"
  },
  "중세시대검희가되었다": {
   "author": "루루챠",
@@ -7206,6 +7341,17 @@
   "r": 3.35,
   "rc": 88,
   "title": "천마육성 시뮬레이션"
+ },
+ "천마홈즈런던앙복": {
+  "author": "옴니버",
+  "checked": "2026-11-27",
+  "id": 207358,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=9516496"
+  },
+  "r": 3.24,
+  "rc": 17,
+  "title": "천마홈즈 런던앙복"
  },
  "천만번죽어본검투사는죽지않는다": {
   "author": "논리곰",
@@ -7503,6 +7649,19 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "킬방원조선을개벽시키다": {
+  "author": "약선(若善)",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 107563,
+  "links": {
+   "kakao": "https://page.kakao.com/content/58746981",
+   "munpia": "https://novel.munpia.com/248378",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=8137896",
+   "ridi": "https://ridibooks.com/books/425265124?_rdt_sid=category_books&_rdt_idx=12"
+  },
+  "title": "킬방원, 조선을 개벽시키다"
+ },
  "타락면역이라재앙급마검들고시작한다": {
   "author": "맘모스XM",
   "checked": "2026-11-26",
@@ -7701,6 +7860,20 @@
   "r": 4.21,
   "rc": 148,
   "title": "판초우의의 마법사"
+ },
+ "판타지세상에서작가로살아가는법": {
+  "author": "두부두부",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 286629,
+  "links": {
+   "kakao": "https://page.kakao.com/content/68937004",
+   "novelpia": "https://novelpia.com/novel/15366",
+   "ridi": "https://ridibooks.com/books/6038036774"
+  },
+  "r": 3.5,
+  "rc": 2,
+  "title": "판타지 세상에서 작가로 살아가는 법"
  },
  "판타지수학대전": {
   "checked": "2026-11-25",
@@ -8427,6 +8600,22 @@
   "r": 2.31,
   "rc": 8,
   "title": "히어로 만화 속으로 나 강림!"
+ },
+ "히어로메이커": {
+  "author": "마지막한자",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 2900,
+  "links": {
+   "joara": "https://www.joara.com/book/1275805",
+   "kakao": "https://page.kakao.com/content/48400719",
+   "munpia": "https://novel.munpia.com/32631",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=1887415",
+   "ridi": "https://ridibooks.com/v2/Detail?id=1534001592"
+  },
+  "r": 2.5,
+  "rc": 1,
+  "title": "히어로 메이커"
  },
  "힐러는도구가아니에요": {
   "author": "악흑련",
