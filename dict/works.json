@@ -1893,6 +1893,13 @@
   "status_source": "google-bulk",
   "title": "내 마법도서관이 살아있다"
  },
+ "내성좌가갤러리콘만보냄": {
+  "added": "2026-11-27",
+  "needs_review": true,
+  "platform": "노벨피아",
+  "source": "https://arca.live/b/bser/187913352",
+  "title": "내 성좌가 갤러리콘만 보냄"
+ },
  "내아내를소개합니다": {
   "added": "2026-11-25",
   "author": "문언희",
@@ -3094,6 +3101,16 @@
   "status_checked": "2026-11-25",
   "status_source": "google-bulk",
   "title": "마도조사"
+ },
+ "마도천하의회귀자가살아남는법": {
+  "added": "2026-11-27",
+  "author": "청시소",
+  "platform": "네이버 시리즈",
+  "source": "https://series.naver.com/novel/detail.series?productNo=14993617",
+  "status": "연재중",
+  "status_checked": "2026-11-27",
+  "status_source": "google-bulk",
+  "title": "마도천하의 회귀자가 살아남는 법"
  },
  "마두아니라니까요": {
   "added": "2026-11-25",
@@ -9899,7 +9916,7 @@
  "헌터들이집착하는정신상담사가되었다": {
   "added": "2026-11-25",
   "author": "수입참치",
-  "needs_review": false,
+  "needs_review": true,
   "platform": "노벨피아",
   "reviewed": "claude-2026-11-25",
   "source": "https://novelpia.com/novel/363368",
