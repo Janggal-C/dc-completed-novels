@@ -1750,6 +1750,15 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "남만야수궁의천재수의사": {
+  "author": "화씨",
+  "checked": "2026-11-27",
+  "id": 331345,
+  "links": {
+   "kakao": "https://page.kakao.com/content/71146493"
+  },
+  "title": "남만야수궁의 천재 수의사"
+ },
  "남자가게임을잘함": {
   "author": "치킨먹으려고돈범",
   "checked": "2026-11-26",
@@ -1926,6 +1935,10 @@
  },
  "네크로폴리스": {
   "checked": "2026-11-25",
+  "miss": true
+ },
+ "농ㅋㅋ한천마가되었다": {
+  "checked": "2026-11-27",
   "miss": true
  },
  "누나가쓴로판속에빙의했다": {
@@ -2541,6 +2554,17 @@
   },
   "title": "로판 속 벌레술사가 되었다"
  },
+ "로판속에파인다이닝을차렸다": {
+  "author": "곤약식빵",
+  "checked": "2026-11-27",
+  "id": 288563,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/434192"
+  },
+  "r": 2.0,
+  "rc": 2,
+  "title": "로판 속에 파인다이닝을 차렸다"
+ },
  "로판속주인공이나만좋아함": {
   "author": "버베나",
   "checked": "2026-11-25",
@@ -2563,6 +2587,16 @@
   "r": 0.5,
   "rc": 1,
   "title": "로판 속 집착당하는 인질이 되었다"
+ },
+ "로판속집착받는전남편이되었다": {
+  "author": "파르랑",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 289450,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/385428"
+  },
+  "title": "로판 속 집착받는 전남편이 되었다"
  },
  "로판속커플링브레이커가되었다": {
   "author": "평냉선인장멘헤라",
@@ -2994,6 +3028,20 @@
   },
   "title": "망해가는 세상의 비대칭전력이 되었다"
  },
+ "망향무사": {
+  "author": "성상현",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 8877,
+  "links": {
+   "kakao": "https://page.kakao.com/content/55045818",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=8351325",
+   "ridi": "https://ridibooks.com/books/777071755?_rdt_sid=category_books&_rdt_idx=15"
+  },
+  "r": 3.86,
+  "rc": 236,
+  "title": "망향무사"
+ },
  "매국노": {
   "checked": "2026-11-25",
   "miss": true
@@ -3133,6 +3181,10 @@
   "r": 3.5,
   "rc": 8,
   "title": "멸망할 세계의 파견 용사"
+ },
+ "명일방주0희망예비인원으로살아남기": {
+  "checked": "2026-11-27",
+  "miss": true
  },
  "모든걸기억하는천재무사": {
   "author": "적설목",
@@ -3691,6 +3743,22 @@
   "rc": 115,
   "title": "변경의 죄수는 검성을 꿈꾼다"
  },
+ "변방의외노자": {
+  "author": "후로스트",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 97089,
+  "links": {
+   "joara": "https://www.joara.com/book/1510241",
+   "kakao": "https://page.kakao.com/content/56164681",
+   "munpia": "https://novel.munpia.com/200726",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=8094380",
+   "ridi": "https://ridibooks.com/books/425259614?_rdt_sid=category_books&_rdt_idx=6"
+  },
+  "r": 3.96,
+  "rc": 1065,
+  "title": "변방의 외노자"
+ },
  "별그리는그림천재": {
   "author": "가화만사성™",
   "checked": "2026-11-25",
@@ -4054,6 +4122,16 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "성녀저주": {
+  "author": "해뮨",
+  "checked": "2026-11-27",
+  "id": 209898,
+  "links": {
+   "kakao": "https://page.kakao.com/content/63883034",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=9263799"
+  },
+  "title": "성녀, 저주"
+ },
  "성애교단의씨받이성녀가되었다": {
   "checked": "2026-11-25",
   "miss": true
@@ -4376,6 +4454,22 @@
  "심역밑영웅은없다": {
   "checked": "2026-11-26",
   "miss": true
+ },
+ "심판의군주": {
+  "author": "오늘도요",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 2210,
+  "links": {
+   "joara": "https://www.joara.com/book/1068215",
+   "kakao": "https://page.kakao.com/content/49644787",
+   "munpia": "https://novel.munpia.com/49813",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=2713832",
+   "ridi": "https://ridibooks.com/v2/Detail?id=809005063"
+  },
+  "r": 3.81,
+  "rc": 225,
+  "title": "심판의 군주"
  },
  "심해어사냥전문방송": {
   "author": "별짐목",
@@ -5118,6 +5212,20 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "열일하는과금기사": {
+  "author": "박건",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 104079,
+  "links": {
+   "joara": "https://www.joara.com/book/1809836",
+   "kakao": "https://page.kakao.com/content/67876087",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14036799"
+  },
+  "r": 3.66,
+  "rc": 99,
+  "title": "열일하는 과금 기사"
+ },
  "영웅마왕악당": {
   "author": "무영자",
   "checked": "2026-11-26",
@@ -5419,6 +5527,10 @@
   "rc": 4,
   "title": "월야환담"
  },
+ "웰빙마왕의중세교정기": {
+  "checked": "2026-11-27",
+  "miss": true
+ },
  "위버멘쉬": {
   "author": "성상현",
   "checked": "2026-11-25",
@@ -5581,6 +5693,10 @@
  },
  "이세계검은머리외국인": {
   "checked": "2026-11-25",
+  "miss": true
+ },
+ "이세계노예하렘판타지에서노예를담당하고있습니다": {
+  "checked": "2026-11-27",
   "miss": true
  },
  "이세계마탑의갤주가되었다": {
@@ -5862,6 +5978,15 @@
   "rc": 1,
   "title": "전능의 천사를 얻었다"
  },
+ "전래동화속지나가던선비가되었다": {
+  "author": "엔도트로피",
+  "checked": "2026-11-27",
+  "id": 319558,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/440340"
+  },
+  "title": "전래동화 속 지나가던 선비가 되었다"
+ },
  "전버튜버가하고싶은데요": {
   "author": "플라나리아햄버거",
   "checked": "2026-11-25",
@@ -5912,6 +6037,20 @@
   "r": 3.95,
   "rc": 620,
   "title": "전생하고 보니 크툴루"
+ },
+ "전생흑마법사의이단심문법": {
+  "author": "Gawayn",
+  "checked": "2026-11-27",
+  "id": 98668,
+  "links": {
+   "kakao": "https://page.kakao.com/content/55806768",
+   "munpia": "https://novel.munpia.com/209475",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=5722945",
+   "ridi": "https://ridibooks.com/books/2107069716?_rdt_sid=category_books&_rdt_idx=12"
+  },
+  "r": 2.97,
+  "rc": 52,
+  "title": "전생 흑마법사의 이단심문법"
  },
  "전쟁명장으로착각당했다": {
   "author": "애완작가",
@@ -6034,6 +6173,17 @@
   "r": 2.75,
   "rc": 2,
   "title": "절대은신으로 신화급 탑 공략"
+ },
+ "절대쾌청마법소녀": {
+  "author": "레몬식초",
+  "checked": "2026-11-27",
+  "id": 322691,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14585646"
+  },
+  "r": 2.75,
+  "rc": 2,
+  "title": "절대쾌청 마법소녀!"
  },
  "절대회귀": {
   "author": "장영훈",
@@ -6226,6 +6376,20 @@
   "r": 3.69,
   "rc": 8,
   "title": "죽었다 깨어도 수선"
+ },
+ "죽은협객의사회": {
+  "author": "김행시",
+  "checked": "2026-11-27",
+  "id": 131282,
+  "links": {
+   "kakao": "https://page.kakao.com/content/60776070",
+   "munpia": "https://www.munpia.com/novel/detail/297084",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=8506488",
+   "ridi": "https://ridibooks.com/books/425318547?_rdt_sid=category_books&_rdt_idx=7"
+  },
+  "r": 3.7,
+  "rc": 23,
+  "title": "죽은 협객의 사회"
  },
  "죽인만큼낳는마왕이되었다": {
   "checked": "2026-11-26",
@@ -7167,6 +7331,18 @@
  "활자들사이에서살아남기": {
   "checked": "2026-11-26",
   "miss": true
+ },
+ "회귀가너무과하다": {
+  "author": "준호킴",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 289398,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/178019"
+  },
+  "r": 2.5,
+  "rc": 1,
+  "title": "회귀가 너무 과하다"
  },
  "회귀도13번이면지랄맞다": {
   "author": "사자혼",
