@@ -92,7 +92,13 @@ def main():
     assert len(load_monthly(POSTS_DIR)) == len(expect) + 15
     print("✅ 재실행: 중복 저장 없음")
 
-    rep = json.loads((repo / "docs/data/report.json").read_text())
+    # 언급 수는 전체 제목(data/titles, fullcrawl이 모음)에서 센다 → 가짜 글을 전체 제목으로도 넣고 보고서를 다시 만든다
+    from src import fullcrawl, mentions, aggregate
+    fullcrawl.save_rows([{**p, "writer": p["ip"]} for p in posts2 if p["date"][:10] >= cutoff])
+    mentions._CACHE.clear()
+    aggregate.run()
+
+    rep =json.loads((repo / "docs/data/report.json").read_text())
     m = rep["months"]
     print(f"✅ 보고서: {len(m)}개월 ({m[0]}~{m[-1]}), 분기 {list(rep['quarterly'])}")
     top = rep["monthly"][m[-1]][:3]
