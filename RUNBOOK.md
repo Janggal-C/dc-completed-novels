@@ -7,12 +7,12 @@
 | 한국시간 | 무엇 | 어디 |
 |---|---|---|
 | 6시간마다 :23 | 새 글 제목 이어서 수집 | `.github/workflows/fullcrawl.yml` |
-| 02:07 | 매일 실행 (`src/daily.py`) | `.github/workflows/daily.yml` |
+| 02:07 예약 (GitHub 대기로 늦게 시작하기도 함 — 11-26은 02:52 시작·03:36 끝) | 매일 실행 (`src/daily.py`) | `.github/workflows/daily.yml` |
 | 끝난 직후 | 보고서·언급·확장 사전 생성 + 사이트 배포 | `.github/workflows/pages.yml` |
-| 04:40 쯤 | **Claude 예약 점검** (이 문서) | Claude 예약 작업 |
+| 04:41 | **Claude 예약 점검** (이 문서) | Claude 예약 작업 "장르소설갤 매일 점검" |
 
-`src/daily.py` 단계: 수집 → 완결 판정(규칙+haiku, 엇갈리면 sonnet) → 새 단어(작성자 10명·3일 이상, haiku 분류) →
-구글 검색(Serper 남은 무료분 → SerpApi 하루 30회, 새 작품 단어·연재처 링크 중 최근 언급 많은 순, 링크는 주소 형식+페이지 제목 확인) → AI 검수(중구난방 검사 + sonnet) → 오류 신고(sonnet 판단·자동 반영) → 소설넷(40분, 평점 갱신: 완결 후 60일 지나고 평가 100개 이상이면 30일, 그 밖 7일).
+`src/daily.py` 단계: 수집 → 완결 판정(규칙+haiku, 엇갈리면 sonnet) → 순위(노벨피아 24시간 top100 제목 누적, `data/ranking_history.json`) → 새 단어(작성자 10명·3일 이상, haiku 분류) →
+구글 검색(Serper 남은 무료분 → SerpApi 하루 30회, 새 작품 단어·연재처 링크 중 최근 언급 많은 순, 링크는 주소 형식+페이지 제목 확인) → AI 검수(중구난방 검사 + sonnet) → 오류 신고(sonnet 판단·자동 반영) → 소설넷(40분, 못 찾으면 제목 변형(괄호·태그 제거, "현 제목:")으로 한 번 더 검색, 평점 갱신: 완결 후 60일 지나고 평가 100개 이상이면 30일, 그 밖 7일).
 단계별 성공/실패·시간: `data/daily_log.jsonl`. AI 검수·신고 처리 기록: `data/autoreview_log.jsonl`.
 
 ## 사전 규칙 (사용자 확정)

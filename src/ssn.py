@@ -5,10 +5,12 @@
 - 소설넷에서 못 찾은 작품은 miss 로 기록, 7일마다 다시 검색 (그 사이 구글로 연재처만 채움)
 - 소설넷 규칙(robots.txt Crawl-delay: 10)대로 요청 간격 10초
 
-검색 규칙 (다음에 구현 — 못 찾은 작품 분석 결과, 2026-11-25 확정):
-  1) 전체 제목 그대로 검색
-  2) 제목 정리 후 검색: [ ] ( ) ~ ~ 안 부분과 "현 제목:" 같은 메모 제거. 괄호 안이 다른 제목이면 그것도 검색.
-     → 제목(정규화)이 정확히 같을 때만 인정
+검색 규칙 (못 찾은 작품 분석 결과, 2026-11-25 확정):
+  1) 전체 제목 그대로 검색                                   [구현]
+  2) 제목 변형으로 다시 검색 (title_variants)                 [구현 2026-11-26]
+     ① [..] (..) （..） ~..~ 를 지운 제목 ② "(현 제목: X)"의 X
+     ③ ( ) （ ） ~ ~ 안이 4글자 넘고 한자만·※ 메모가 아니면 그 안 글자 ([..]는 장르·원작 태그라 제외)
+     → 변형 제목과 정규화 제목이 정확히 같을 때만 인정. 변형은 최대 3개
   3) 앞 1~2단어 키워드로 검색 → 제목이 같거나 거의 같고 작가도 맞을 때만 인정
   4) 구글 "제목 웹소설" 1회: 소설넷 페이지 있으면 그걸로 평점까지, 없으면 연재처 작품 페이지 링크만 (주소 형식 검사, 하루 한도 지킴)
   - 작가 이름은 표기가 달라 매칭 필수 조건으로 쓰지 않음 (예: philceta = 똥필). 애매할 때 확인용만.
@@ -139,9 +141,40 @@ def clean(d):
     return d
 
 
+_BRACKETS = re.compile(r"\[[^\]]*\]|\([^)]*\)|（[^）]*）|~[^~]*~")
+_INNER = re.compile(r"\(([^)]*)\)|（([^）]*)）|~([^~]*)~")  # [..]는 장르·원작 태그라 제외
+_NOW = re.compile(r"현\s*제목\s*[:：]\s*([^)）\]]+)")
+_HANJA = re.compile(r"^[\u4e00-\u9fff\s·]+$")
+
+
+def title_variants(title, limit=3):
+    """2단계 검색용 제목 변형 (원래 제목과 정규화 키가 다른 것만, 순서 유지)"""
+    out = []
+    m = _NOW.search(title)
+    if m:
+        out.append(m.group(1).strip())
+    out.append(re.sub(r"\s+", " ", _BRACKETS.sub(" ", title)).strip())
+    for g in _INNER.finditer(title):
+        inner = next(x for x in g.groups() if x is not None).strip()
+        if len(norm_key(inner)) > 4 and not _HANJA.match(inner) and not inner.startswith("※") and not _NOW.search(inner):
+            out.append(inner)
+    seen, res = {norm_key(title)}, []
+    for v in out:
+        k = norm_key(v)
+        if k and k not in seen:
+            seen.add(k)
+            res.append(v)
+    return res[:limit]
+
+
 def lookup(c, w):
     """사전 작품 하나 → 소설넷 정보 또는 {"miss": True}"""
     hit = pick(search(c, w["title"]), w["title"], w.get("author", ""))
+    if not hit:
+        for v in title_variants(w["title"]):
+            hit = pick(search(c, v), v, w.get("author", ""))
+            if hit:
+                break
     if not hit:
         return {"miss": True}
     d = detail(c, hit["id"])
