@@ -1922,6 +1922,10 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "넣어키운걸그룹": {
+  "checked": "2026-11-27",
+  "miss": true
+ },
  "네크로맨서학교의소환천재": {
   "author": "일제사격",
   "checked": "2026-11-25",
@@ -1974,6 +1978,10 @@
   "r": 4.61,
   "rc": 1509,
   "title": "눈물을 마시는 새"
+ },
+ "느그플랑은무료로해줍니다": {
+  "checked": "2026-11-27",
+  "miss": true
  },
  "늬들이날수호룡이라부르든말든난잘거야": {
   "author": "아스타르테스",
@@ -2122,6 +2130,22 @@
    "novelpia": "https://novelpia.com/novel/162114"
   },
   "title": "당신의 공대장님"
+ },
+ "당신의머리위에": {
+  "author": "박건",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 3028,
+  "links": {
+   "joara": "https://www.joara.com/book/1764568",
+   "kakao": "https://page.kakao.com/content/64373292",
+   "munpia": "https://novel.munpia.com/24681",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=1471661",
+   "ridi": "https://ridibooks.com/books/875135587"
+  },
+  "r": 3.51,
+  "rc": 167,
+  "title": "당신의 머리 위에"
  },
  "당신의환상향": {
   "checked": "2026-11-25",
@@ -2301,6 +2325,20 @@
   "r": 4.04,
   "rc": 897,
   "title": "데뷔 못 하면 죽는 병 걸림"
+ },
+ "데스나이트였던아저x씨": {
+  "author": "양철통9",
+  "checked": "2026-11-27",
+  "id": 234,
+  "links": {
+   "joara": "https://www.joara.com/book/1408641",
+   "kakao": "https://page.kakao.com/content/54640031",
+   "munpia": "https://www.munpia.com/novel/detail/154461",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=4552474"
+  },
+  "r": 3.26,
+  "rc": 70,
+  "title": "데스 나이트였던 아저X씨"
  },
  "데스노트": {
   "checked": "2026-11-25",
@@ -2941,6 +2979,21 @@
    "novelpia": "https://novelpia.com/novel/455541"
   },
   "title": "마종의 성녀가 됐다"
+ },
+ "마탄의사수": {
+  "author": "이수백",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 3349,
+  "links": {
+   "joara": "https://www.joara.com/book/1653239",
+   "kakao": "https://page.kakao.com/content/61878548",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=9753260",
+   "ridi": "https://ridibooks.com/books/1377100183?_rdt_sid=category_books&_rdt_idx=2"
+  },
+  "r": 2.28,
+  "rc": 92,
+  "title": "마탄의 사수"
  },
  "막장드라마의엔딩에빙의했다": {
   "author": "핏콩",
@@ -3778,9 +3831,39 @@
   },
   "title": "백만을 사랑하는 황제가 됐다"
  },
+ "백작가의망나니가되었다": {
+  "author": "유려한",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 64,
+  "links": {
+   "kakao": "https://page.kakao.com/content/65595380",
+   "munpia": "https://novel.munpia.com/113612",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=11057500",
+   "ridi": "https://ridibooks.com/books/875103701?_rdt_sid=category_books&_rdt_idx=7"
+  },
+  "r": 3.33,
+  "rc": 643,
+  "title": "백작가의 망나니가 되었다"
+ },
  "뱀파이어소서리스": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "뱅퀴어더드래곤": {
+  "author": "YAGI",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 97600,
+  "links": {
+   "kakao": "https://page.kakao.com/content/56183259",
+   "munpia": "https://novel.munpia.com/212440",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=5400561",
+   "ridi": "https://ridibooks.com/books/425214605?_rdt_sid=category-books&_rdt_idx=14"
+  },
+  "r": 3.79,
+  "rc": 127,
+  "title": "뱅퀴어 더 드래곤"
  },
  "버튜버지만출근합니다": {
   "author": "망크빵",
@@ -5168,6 +5251,19 @@
   },
   "title": "암흑전사 탑등반물"
  },
+ "앙신의강림": {
+  "author": "쥬논",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 3889,
+  "links": {
+   "kakao": "https://page.kakao.com/home?seriesId=46731624",
+   "ridi": "https://ridibooks.com/books/3170049713"
+  },
+  "r": 4.02,
+  "rc": 636,
+  "title": "앙신의 강림"
+ },
  "애호받는뉴비가되었다": {
   "author": "데프프픗",
   "checked": "2026-11-25",
@@ -5221,6 +5317,17 @@
  "양심없는파티의짐이되었다": {
   "checked": "2026-11-26",
   "miss": true
+ },
+ "양철기사가되었다": {
+  "author": "모노카카",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 279174,
+  "links": {
+   "kakao": "https://page.kakao.com/content/68535568",
+   "novelpia": "https://novelpia.com/novel/253974"
+  },
+  "title": "양철 기사가 되었다"
  },
  "양치기마법사": {
   "author": "수박복숭아",
@@ -6610,6 +6717,10 @@
   },
   "title": "주인공 일행이 지나치게 성실하다"
  },
+ "주종역전세계": {
+  "checked": "2026-11-27",
+  "miss": true
+ },
  "죽었다깨어도수선": {
   "author": "돌마늘",
   "checked": "2026-11-25",
@@ -6940,6 +7051,17 @@
   },
   "title": "초성마문:선협 속 마교에서 인간재료로 살아남기"
  },
+ "초월자들이집착하는티어표를만들었다": {
+  "author": "맘대로쓴",
+  "checked": "2026-11-27",
+  "id": 327744,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/451664"
+  },
+  "r": 1.0,
+  "rc": 1,
+  "title": "초월자들이 집착하는 티어표를 만들었다"
+ },
  "초차원미식가의일상": {
   "author": "검은학자",
   "checked": "2026-11-26",
@@ -7002,6 +7124,15 @@
   },
   "title": "최악의 파트너"
  },
+ "최약기사는던전한정소드마스터가되었다": {
+  "author": "치킨소년",
+  "checked": "2026-11-27",
+  "id": 322397,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/443069"
+  },
+  "title": "최약 기사는 던전 한정 소드마스터가 되었다"
+ },
  "최약체마왕의스승이되었다": {
   "author": "글쓰는이브",
   "checked": "2026-11-25",
@@ -7023,6 +7154,10 @@
   "r": 2.7,
   "rc": 5,
   "title": "취미 방송입니다"
+ },
+ "친애하는나의언니에게": {
+  "checked": "2026-11-27",
+  "miss": true
  },
  "침대위의대마법사": {
   "author": "TEKTAK",
@@ -7069,6 +7204,10 @@
  },
  "퀘스트슈퍼리어": {
   "checked": "2026-11-26",
+  "miss": true
+ },
+ "퀸에스": {
+  "checked": "2026-11-27",
   "miss": true
  },
  "클래스이세계전이물의쓰레기갸루녀가되었다": {
@@ -7119,6 +7258,10 @@
   "r": 4.01,
   "rc": 347,
   "title": "탐관오리가 상태창을 숨김"
+ },
+ "탐식수선전": {
+  "checked": "2026-11-27",
+  "miss": true
  },
  "탐식의재림": {
   "author": "로유진",
@@ -7519,6 +7662,10 @@
   "rc": 4,
   "title": "해고 후 인생역전"
  },
+ "해리포터사이다패스해리포터가살아가는법": {
+  "checked": "2026-11-27",
+  "miss": true
+ },
  "헌터갤러리의국가권력급기계공주": {
   "author": "쟈장가",
   "checked": "2026-11-25",
@@ -7589,6 +7736,20 @@
    "novelpia": "https://novelpia.com/novel/457086"
   },
   "title": "헤픈 소꿉친구에게 나만 안된다고 차였다"
+ },
+ "혁명은내취향이아니었다": {
+  "author": "코락스",
+  "checked": "2026-11-27",
+  "done": true,
+  "id": 201842,
+  "links": {
+   "joara": "https://www.joara.com/book/1739399",
+   "kakao": "https://page.kakao.com/content/65548995",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=11891617"
+  },
+  "r": 3.72,
+  "rc": 121,
+  "title": "혁명은 내 취향이 아니었다"
  },
  "현질수선전": {
   "author": "시저디",
@@ -7801,6 +7962,21 @@
   "r": 3.38,
   "rc": 24,
   "title": "회장님, 신점 보시려면 줄부터 서세요"
+ },
+ "후작가의망령재림": {
+  "author": "Lab.No9",
+  "checked": "2026-11-27",
+  "id": 504,
+  "links": {
+   "joara": "https://www.joara.com/book/1462356",
+   "kakao": "https://page.kakao.com/content/52296094",
+   "munpia": "https://novel.munpia.com/126210",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=3856368",
+   "ridi": "https://ridibooks.com/v2/Detail?id=2057061911"
+  },
+  "r": 3.26,
+  "rc": 21,
+  "title": "후작가의 망령재림"
  },
  "후회안하는프로듀서": {
   "author": "하나호",
