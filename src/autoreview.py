@@ -58,6 +58,12 @@ def _samples(keys, n=8):
     return out
 
 
+def in_order(alias, title):
+    """줄임말 글자가 정식 제목에 순서대로 다 들어 있나 (마먹마 ↛ 약먹는 천재마법사 같은 오연결 힌트용)"""
+    it = iter(norm_key(title))
+    return all(ch in it for ch in norm_key(alias))
+
+
 def _remove(aliases, works, k, removed, why):
     wid = aliases.pop(k, None)
     removed.add(k)
@@ -107,10 +113,15 @@ def audit(days=2, batch=25):
     co = cooccur(todo, aliases)
 
     def hint(k):
+        h = ""
         c = co.get(k)
         if c and c["n"] >= 10 and c["co"] >= 0.2:
-            return f"  (주의: 갤 제목의 {int(c['co'] * 100)}%에서 같은 작품의 다른 이름과 함께 쓰임 → 등장인물·작품 속 용어 의심)\n"
-        return ""
+            h += f"  (주의: 갤 제목의 {int(c['co'] * 100)}%에서 같은 작품의 다른 이름과 함께 쓰임 → 등장인물·작품 속 용어 의심)\n"
+        title = works.get(aliases.get(k, ""), {}).get("title", "")
+        if title and not in_order(k, title):
+            h += ("  (주의: 이름 글자가 연결된 제목에 순서대로 들어 있지 않음 → 오타·숫자 읽기·순서 바꾼 줄임말이 아니면 "
+                  "다른 작품 연결 의심. 예시에 연재처·화수·작가가 연결된 작품과 안 맞으면 remove)\n")
+        return h
     for i in range(0, len(todo), batch):
         part = todo[i:i + batch]
         blocks = [f"[{k}] → {works.get(aliases[k], {}).get('title', '')}\n" + hint(k) +

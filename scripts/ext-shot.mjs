@@ -62,5 +62,34 @@ for (let i = 0; i < n && shot < 15; i++) {
   await page.screenshot({ path: `${out}/tip-${++shot}.png`, clip: { x, y, width: w, height: h } });
   console.log(`캡처 ${shot}: [${word}] 글제목="${title}" → ${text}`);
 }
-await ctx.close();
 console.log('캡처 수:', shot);
+
+// 모바일 목록(m.dcinside.com): 밑줄·팝업이 붙는지 확인 (2026-11-25 "목록에서 팝업이 안 뜬다" 신고 점검용)
+const mp = await ctx.newPage();
+await mp.setViewportSize({ width: 412, height: 900 });
+await mp.setExtraHTTPHeaders({ 'User-Agent': 'Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Mobile Safari/537.36' });
+await mp.goto('https://m.dcinside.com/board/genrenovel', { waitUntil: 'domcontentloaded' });
+await sleep(5000);
+const rows = await mp.locator('.gall-detail-lnktb .subjectin').count();
+const mspans = mp.locator('.gall-detail-lnktb .dcnx');
+const mn = await mspans.count();
+console.log(`모바일 목록: 제목 ${rows}개, 밑줄 줄임말 수: ${mn}`);
+let mshot = 0;
+for (let i = 0; i < mn && mshot < 3; i++) {
+  const el = mspans.nth(i);
+  if (!(await el.isVisible())) continue;
+  await el.scrollIntoViewIfNeeded();
+  await mp.mouse.move(0, 0);
+  await sleep(300);
+  const eb = await el.boundingBox();
+  if (!eb) continue;
+  await mp.mouse.move(eb.x + eb.width * 0.6, eb.y + eb.height * 0.55);
+  await sleep(700);
+  const tip = mp.locator('.dcnx-tip');
+  if (!(await tip.isVisible())) continue;
+  const text = (await tip.innerText()).replace(/\s+/g, ' ');
+  await mp.screenshot({ path: `${out}/m-tip-${++mshot}.png` });
+  console.log(`모바일 캡처 ${mshot}: [${await el.innerText()}] → ${text}`);
+}
+console.log('모바일 팝업 수:', mshot);
+await ctx.close();
