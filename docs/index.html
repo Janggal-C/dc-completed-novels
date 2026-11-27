@@ -44,6 +44,9 @@ ol.rank li:first-child { border-top: 0; }
 ol.rank li:nth-child(1) .no { color: #F5B301; } ol.rank li:nth-child(2) .no { color: #9AA3B8; } ol.rank li:nth-child(3) .no { color: #C98A5B; }
 header h1 { color: var(--accent); }
 .t { font-weight: 600; }
+a.wl { color: inherit; text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; }
+a.wl:hover { color: var(--accent); text-decoration-color: var(--accent); }
+a.wl::after { content: "↗"; font-size: 11px; color: var(--text-muted); margin-left: 2px; font-weight: 400; }
 .au { color: var(--text-muted); font-size: 12px; font-weight: 400; margin-left: 4px; }
 .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .num b { font-size: 16px; }
@@ -124,6 +127,10 @@ if (tab === "monthly" || tab === "quarterly") { compKind = tab; tab = "complete"
 const subTabs = (items, cur, attr) => `<div class="pbtns" style="--cols:${items.length};margin-bottom:10px">${items.map(([k, v]) =>
   `<button class="pbtn ${k === cur ? "on" : ""}" data-${attr}="${k}">${v}</button>`).join("")}</div>`;
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+// 작품명: 연재처 링크가 있으면 새 탭 링크, 없으면 글자만
+const wt = e => /^https:\/\//.test(e.url || "")
+  ? `<a class="wl" href="${esc(e.url)}" target="_blank" rel="noopener" title="${esc(e.plat || "연재처")}에서 보기">${esc(e.title)}</a>`
+  : esc(e.title);
 const postUrl = no => `https://gall.dcinside.com/mgallery/board/view/?id=${R.gallery}&no=${no}`;
 const fmtPeriod = p => p.includes("Q") ? p.replace("-Q", "년 ") + "분기" : p.replace("-", "년 ") + "월";
 
@@ -164,7 +171,7 @@ function rankView(kind) {
     <div class="muted" style="margin-top:6px">완결작만, 완결일 이후 글만 셉니다 · 순위: 고유 작성자 수 → 글 수 · ▸ 월별 그래프</div>${startNote}</div>
     <div class="card"><ol class="rank">${rows.map((e, i) => `<li>
       <div class="no">${i + 1}</div>
-      <div><div class="t">${esc(e.title)}${e.author ? `<span class="au">${esc(e.author)}</span>` : ""}${e.status === "예전 완결" ? `<span class="badge" style="background:var(--surface-0);color:var(--text-secondary)">예전 완결</span>` : ""}</div>
+      <div><div class="t">${wt(e)}${e.author ? `<span class="au">${esc(e.author)}</span>` : ""}${e.status === "예전 완결" ? `<span class="badge" style="background:var(--surface-0);color:var(--text-secondary)">예전 완결</span>` : ""}</div>
         <details class="samples"><summary>대표 글 ${e.samples.length}개 · ${e.status === "예전 완결" ? `${+(R.data_start || "2026-01").slice(5)}월 이전 완결` : `완결 ${esc((e.completion_date || "").slice(5).replace("-", "/"))}`}${e.before_start && e.status !== "예전 완결" ? " (이전 완결 가능)" : ""}</summary>
         <div class="muted" style="font-size:12px">${esc(e.status_reason || "")}</div>
         ${e.samples.map(s => `<a href="${postUrl(s.no)}" target="_blank" rel="noopener">${esc(s.title)}</a>`).join("")}</details></div>
@@ -213,7 +220,7 @@ function mentions() {
     <div class="muted" style="margin-top:0">완결 여부와 상관없이 전체 글 제목에서 셉니다 (완결 전 연재 중 언급도 포함) · 언급 수 = 하루 단위 작성자 수 (같은 사람이 같은 날 여러 번 써도 1) · ▸ 월별 그래프</div></div>
     <div class="card"><ol class="rank">${rows.map((e, i) => `<li>
       <div class="no">${i + 1}</div>
-      <div><div class="t">${esc(e.title)}${e.status === "완결" ? `<span class="badge">완결${e.cdate ? " " + esc(e.cdate.slice(5).replace("-", "/")) : ""}</span>` : ""}</div></div>
+      <div><div class="t">${wt(e)}${e.status === "완결" ? `<span class="badge">완결${e.cdate ? " " + esc(e.cdate.slice(5).replace("-", "/")) : ""}</span>` : ""}</div></div>
       <div class="num"><b>${e.n.toLocaleString()}</b></div>
       <button class="tog" data-i="${i}" aria-label="월별 그래프 열기" aria-expanded="false">▸</button>
       <div class="mchart" id="mc${i}"></div></li>`).join("") || `<div class="empty">해당하는 작품이 없습니다.</div>`}</ol></div>`;
@@ -318,7 +325,7 @@ function dict() {
   VIEW.innerHTML = `<div class="card"><div class="t">줄임말 사전 ${ds.aliases ?? R.dictionary.length}개</div>
     <div class="muted">고칠 게 있으면 <b>검수</b> 탭에서 입력하세요.</div>
     <table style="margin-top:8px"><tr><th>줄임말</th><th>정식 제목</th></tr>
-    ${R.dictionary.map(d => `<tr><td>${esc(d.alias)}</td><td>${esc(d.title)}${d.author ? `<span class="au">${esc(d.author)}</span>` : ""}${d.needs_review ? `<span class="badge warn">확인 필요</span>` : ""}</td></tr>`).join("")}</table></div>`;
+    ${R.dictionary.map(d => `<tr><td>${esc(d.alias)}</td><td>${wt(d)}${d.author ? `<span class="au">${esc(d.author)}</span>` : ""}${d.needs_review ? `<span class="badge warn">확인 필요</span>` : ""}</td></tr>`).join("")}</table></div>`;
 }
 
 let checkMode = "review";

@@ -15,6 +15,13 @@ from .matcher import Matcher
 _CACHE = {}
 
 
+def _link(wid):
+    """연재처 링크가 있으면 {"url", "plat"} (사이트에서 작품명을 링크로)"""
+    from .export_dict import link_of
+    m = link_of(wid)
+    return {"url": m["u"], "plat": m["p"]} if m else {}
+
+
 def compute():
     """→ (daily {작품: {날짜: 언급 수}}, 제목 수). 같은 실행 안에서는 한 번만 계산"""
     if "r" in _CACHE:
@@ -76,7 +83,7 @@ def run(top_n=100, trend_n=6):
         out["periods"][p] = [{"id": wid, "title": works.get(wid, {}).get("title", wid), "n": n,
                               "status": "완결" if done(wid) else works.get(wid, {}).get("status", ""),
                               "done": done(wid), "cdate": cdate(wid), "new": in_period(wid, p),
-                              "series": [series[wid].get(mm, 0) for mm in months]}
+                              "series": [series[wid].get(mm, 0) for mm in months], **_link(wid)}
                              for wid, n in ranked if wid in keep]
     # 추이: 전체 기간 언급 수 상위 작품의 월별 언급 수
     total = sorted(series.items(), key=lambda x: -sum(x[1].values()))[:trend_n]

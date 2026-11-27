@@ -10,6 +10,13 @@ from .status import COUNTED, judge as judge_status
 from .matcher import Matcher
 
 
+def _link(wid):
+    """연재처 링크가 있으면 {"url", "plat"} (사이트에서 작품명을 링크로)"""
+    from .export_dict import link_of
+    m = link_of(wid)
+    return {"url": m["u"], "plat": m["p"]} if m else {}
+
+
 def run(cfg=None, run_stats=None, partial=False):
     cfg = cfg or load_config()
     rc = cfg["report"]
@@ -128,7 +135,7 @@ def run(cfg=None, run_stats=None, partial=False):
                 "before_start": bool(statuses[wid].get("before_start")),
                 "unresolved": False, "needs_review": bool(w.get("needs_review")),
                 "samples": [{"no": p["no"], "title": p["title"]} for p in best],
-                "series": [counted[wid].get(mo, 0) for mo in months]}
+                "series": [counted[wid].get(mo, 0) for mo in months], **_link(wid)}
 
     def ranking(period_of):
         groups = defaultdict(lambda: defaultdict(int))
@@ -169,7 +176,7 @@ def run(cfg=None, run_stats=None, partial=False):
     cache = read_json(SEARCH_CACHE, {})
     dictionary = sorted(
         [{"alias": a, "title": works.get(w, {}).get("title", w), "author": works.get(w, {}).get("author", ""),
-          "needs_review": bool(works.get(w, {}).get("needs_review"))}
+          "needs_review": bool(works.get(w, {}).get("needs_review")), **_link(w)}
          for a, w in aliases.items() if a != w],
         key=lambda d: d["alias"])
     # 줄임말 사전·구글 검색 지표

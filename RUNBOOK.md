@@ -48,6 +48,8 @@
 - 완결 순위 = 완결작(완결·예전 완결)의 완결일 이후 언급 수. 예전 완결은 "1월 이전 완결", 1월부터 셈
 - 데이터 시작 2026-01-01
 
+- 사이트 작품명 링크: `src/export_dict.link_of(id)`가 연재처 대표 링크 하나를 고름(소설넷 → AI 웹검색 `dict/links.json` → works.json source 중 작품 페이지 형식만, 조아라 제외. 여러 개면 works.json `platform` 글에 먼저 나온 연재처). `report.json`(완결·사전)·`mentions.json`(언급) 항목에 `url`·`plat`로 들어가고, 페이지는 `wt()`로 https 링크만 새 탭 링크로 그림. 링크 없으면 글자만
+
 ## 비용·한도 (넘기지 말 것)
 - 구글: SerpApi 하루 30회·월 240회, Serper 총 2,450회(일회성 무료분)
 - AI: Claude Pro 구독 토큰 (haiku 판정, sonnet 검수). 대량 AI 작업(수천 건)은 하루에 몰지 말고 나눠서
