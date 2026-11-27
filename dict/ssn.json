@@ -3756,6 +3756,10 @@
   "checked": "2026-11-27",
   "miss": true
  },
+ "모노가타리시리즈": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "모드설치는신중히": {
   "checked": "2026-11-27",
   "miss": true
@@ -4069,6 +4073,18 @@
   },
   "title": "문담피 갸루는 무적이라고"
  },
+ "문학소녀": {
+  "author": "타케오카 미호,노무라 미즈키,최고은",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 50788,
+  "links": {
+   "ridi": "https://ridibooks.com/books/505013978"
+  },
+  "r": 3.5,
+  "rc": 1,
+  "title": "문학소녀"
+ },
  "문학판의재앙여고생이되었다": {
   "author": "설관",
   "checked": "2026-11-28",
@@ -4081,6 +4097,18 @@
  "물을마시는새": {
   "checked": "2026-11-26",
   "miss": true
+ },
+ "미국남부의악덕대지주가되었다": {
+  "author": "폭식마왕",
+  "checked": "2026-11-28",
+  "id": 275533,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/502508",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13445468"
+  },
+  "r": 2.96,
+  "rc": 23,
+  "title": "미국 남부의 악덕 대지주가 되었다"
  },
  "미국시골에서올드카복원으로대박": {
   "author": "우수상",
@@ -4105,6 +4133,18 @@
   "r": 1.0,
   "rc": 1,
   "title": "미국으로 튀었더니 장사가 대박남"
+ },
+ "미국트럭커가골동품으로대박남": {
+  "author": "지나83",
+  "checked": "2026-11-28",
+  "id": 277789,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/513793",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13707985"
+  },
+  "r": 2.75,
+  "rc": 8,
+  "title": "미국 트럭커가 골동품으로 대박남"
  },
  "미궁기담": {
   "checked": "2026-11-25",
@@ -4238,6 +4278,29 @@
   "rc": 1702,
   "title": "바바리안 퀘스트"
  },
+ "바보와시험과소환수": {
+  "author": "하가 유이,이노우에 켄지,김애란",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 50771,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=1542251",
+   "ridi": "https://ridibooks.com/books/111015785?_rdt_sid=category_books&_rdt_idx=4"
+  },
+  "r": 3.74,
+  "rc": 21,
+  "title": "바보와 시험과 소환수"
+ },
+ "바텐더는건들지말것": {
+  "author": "건두부",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 284232,
+  "links": {
+   "ridi": "https://ridibooks.com/books/6245000002"
+  },
+  "title": "바텐더는 건들지 말 것"
+ },
  "반강제적제국주의자": {
   "author": "지갑송",
   "checked": "2026-11-25",
@@ -4265,6 +4328,10 @@
   "rc": 6,
   "title": "반로환동한 천마의 마경방송"
  },
+ "반룡盘龙": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "반룡이지만며느리는안할거예요": {
   "checked": "2026-11-25",
   "miss": true
@@ -4291,6 +4358,18 @@
   "r": 1.5,
   "rc": 1,
   "title": "반지하 오크"
+ },
+ "반지하천재래퍼": {
+  "author": "일리커피",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 220129,
+  "links": {
+   "kakao": "https://page.kakao.com/content/63142439",
+   "munpia": "https://novel.munpia.com/374889",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=10476618"
+  },
+  "title": "반지하 천재 래퍼"
  },
  "방구석겁쟁이발도술사": {
   "author": "정담연",
@@ -4404,6 +4483,10 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "뱀파이어제자가초인의독재를꿈꾼다": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "뱅퀴어더드래곤": {
   "author": "YAGI",
   "checked": "2026-11-27",
@@ -4428,6 +4511,19 @@
    "novelpia": "https://novelpia.com/novel/310025"
   },
   "title": "버튜버지만, 출근합니다"
+ },
+ "베르세르크": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
+ "베일veil": {
+  "author": "에밀 슈트라우스",
+  "checked": "2026-11-28",
+  "id": 170462,
+  "links": {
+   "ridi": "https://ridibooks.com/books/896000445?_rdt_sid=category_books&_rdt_idx=12"
+  },
+  "title": "베일"
  },
  "변경의죄수는검성을꿈꾼다": {
   "author": "Cadilet",
@@ -4484,6 +4580,10 @@
   "rc": 432,
   "title": "별을 품은 소드마스터"
  },
+ "별이삼샵": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "병아리반헌터는효도중": {
   "author": "밀차",
   "checked": "2026-11-27",
@@ -4520,6 +4620,10 @@
  },
  "봇치더락결속밴드헤이터로살겠다": {
   "checked": "2026-11-26",
+  "miss": true
+ },
+ "봇치더록": {
+  "checked": "2026-11-28",
   "miss": true
  },
  "봇치더록고토히토리는강간당한다": {
@@ -4640,6 +4744,10 @@
   "rc": 6,
   "title": "불굴의 엘페리온"
  },
+ "불살을맹세하니무림생활이힘겹다": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "블랙기업조선": {
   "author": "국뽕™",
   "checked": "2026-11-27",
@@ -4654,6 +4762,17 @@
   "r": 3.07,
   "rc": 450,
   "title": "블랙기업조선"
+ },
+ "블랙불릿": {
+  "author": "우카이 사키,칸자키 시덴,김동욱",
+  "checked": "2026-11-28",
+  "id": 50721,
+  "links": {
+   "ridi": "https://ridibooks.com/books/505013207"
+  },
+  "r": 1.0,
+  "rc": 1,
+  "title": "블랙 불릿"
  },
  "블루아카이브미움받는약을마셨다": {
   "checked": "2026-11-25",
@@ -4676,8 +4795,22 @@
   "rc": 368,
   "title": "비뢰도"
  },
+ "비밀의흑마경찰": {
+  "author": "신용하",
+  "checked": "2026-11-28",
+  "id": 271152,
+  "links": {
+   "kakao": "https://page.kakao.com/content/68361698",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13724323"
+  },
+  "title": "비밀의 흑마경찰"
+ },
  "비천색마飛天色魔": {
   "checked": "2026-11-27",
+  "miss": true
+ },
+ "비키니아머는방어구가아니다": {
+  "checked": "2026-11-28",
   "miss": true
  },
  "빌런독재자플레이어의세계정상화": {
@@ -4722,6 +4855,17 @@
  "빌어먹을미국애니메이션에빙의했다": {
   "checked": "2026-11-26",
   "miss": true
+ },
+ "빙과": {
+  "author": "요네자와 호노부",
+  "checked": "2026-11-28",
+  "id": 165934,
+  "links": {
+   "ridi": "https://ridibooks.com/books/371001494?_rdt_sid=category_books&_rdt_idx=15"
+  },
+  "r": 4.75,
+  "rc": 2,
+  "title": "빙과"
  },
  "빚을져서라도세상은구해야할거아니야": {
   "author": "1_394",
