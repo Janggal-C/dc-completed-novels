@@ -2522,6 +2522,10 @@
   "checked": "2026-11-27",
   "miss": true
  },
+ "동방나비꽃": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "동방내능력이망가진것같다": {
   "checked": "2026-11-26",
   "miss": true
@@ -2675,6 +2679,10 @@
    "novelpia": "https://novelpia.com/novel/437116"
   },
   "title": "럽코 속 서브 남주가 되었다."
+ },
+ "로리네밥벌레": {
+  "checked": "2026-11-28",
+  "miss": true
  },
  "로판속공무원": {
   "author": "보르지긴",
@@ -3652,6 +3660,20 @@
   "rc": 1,
   "title": "무림 속 검은머리 외국인"
  },
+ "무림속공무원으로살아가는법": {
+  "author": "글쓰는기계",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 203887,
+  "links": {
+   "kakao": "https://page.kakao.com/content/63263320",
+   "munpia": "https://novel.munpia.com/349467",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=9764293"
+  },
+  "r": 3.74,
+  "rc": 201,
+  "title": "무림 속 공무원으로 살아가는 법"
+ },
  "무림속바둑천재가살아가는법": {
   "checked": "2026-11-26",
   "miss": true
@@ -3791,9 +3813,30 @@
   },
   "title": "문담피 갸루는 무적이라고"
  },
+ "문학판의재앙여고생이되었다": {
+  "author": "설관",
+  "checked": "2026-11-28",
+  "id": 288704,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/434381"
+  },
+  "title": "문학판의 재앙 여고생이 되었다"
+ },
  "물을마시는새": {
   "checked": "2026-11-26",
   "miss": true
+ },
+ "미국시골에서올드카복원으로대박": {
+  "author": "우수상",
+  "checked": "2026-11-28",
+  "id": 280733,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/525227",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13913944"
+  },
+  "r": 3.5,
+  "rc": 4,
+  "title": "미국 시골에서 올드카 복원으로 대박"
  },
  "미국으로튀었더니장사가대박남": {
   "author": "소령이33",
@@ -3859,6 +3902,15 @@
  "미소녀동물원": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "미소녀외신님은애착인간이필요해요": {
+  "author": "보리추수",
+  "checked": "2026-11-28",
+  "id": 288709,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/412825"
+  },
+  "title": "미소녀 외신님은 애착인간이 필요해요"
  },
  "미스터리쫓는블로거": {
   "author": "자연룬",
@@ -4311,6 +4363,15 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "북해빙궁의소궁주가되었다": {
+  "author": "신뒤",
+  "checked": "2026-11-28",
+  "id": 329222,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14783502"
+  },
+  "title": "북해빙궁의 소궁주가 되었다"
+ },
  "불굴의엘페리온": {
   "author": "Cadilet",
   "checked": "2026-11-25",
@@ -4387,6 +4448,21 @@
   },
   "title": "빌런 옆자리의 마법소녀"
  },
+ "빌런의경제학": {
+  "author": "드림보트",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 105143,
+  "links": {
+   "kakao": "https://page.kakao.com/content/57340150",
+   "munpia": "https://novel.munpia.com/243479",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=6086706",
+   "ridi": "https://ridibooks.com/books/425247202?_rdt_sid=category_books&_rdt_idx=1"
+  },
+  "r": 2.7,
+  "rc": 101,
+  "title": "빌런의 경제학"
+ },
  "빌어먹을미국애니메이션에빙의했다": {
   "checked": "2026-11-26",
   "miss": true
@@ -4401,6 +4477,10 @@
   "r": 3.64,
   "rc": 11,
   "title": "빚을 져서라도 세상은 구해야 할 거 아니야"
+ },
+ "뽀롱뽀롱느와르": {
+  "checked": "2026-11-28",
+  "miss": true
  },
  "사상최강의매니저": {
   "author": "글쟁이S",
@@ -4495,6 +4575,21 @@
   "r": 3.86,
   "rc": 22,
   "title": "사이버펑크 협객전"
+ },
+ "사이킥위저드": {
+  "author": "김재한",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 34439,
+  "links": {
+   "joara": "https://www.joara.com/book/1286705",
+   "kakao": "https://page.kakao.com/content/46477684",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=1354839",
+   "ridi": "https://ridibooks.com/v2/Detail?id=945003240"
+  },
+  "r": 3.67,
+  "rc": 48,
+  "title": "사이킥 위저드"
  },
  "샤이닝로드": {
   "author": "더노트",
@@ -4799,6 +4894,10 @@
   "checked": "2026-11-26",
   "miss": true
  },
+ "소녀용사의항문이되었다": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "소년만화속총대장이되었다": {
   "author": "슈로바",
   "checked": "2026-11-25",
@@ -5000,6 +5099,17 @@
  "시한부히로인을살리는법": {
   "checked": "2026-11-27",
   "miss": true
+ },
+ "시해4사단수색대대": {
+  "author": "먼지별",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 281970,
+  "links": {
+   "kakao": "https://page.kakao.com/content/68637498",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13743920"
+  },
+  "title": "시해: 4사단 수색대대"
  },
  "신비의제왕": {
   "author": "커틀피쉬,노삼",
@@ -5304,6 +5414,17 @@
   },
   "title": "아카데미에 오랑캐가 입학했다"
  },
+ "아카데미에위장취업당했다": {
+  "author": "sayren",
+  "checked": "2026-11-28",
+  "id": 124613,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=6729246"
+  },
+  "r": 3.55,
+  "rc": 204,
+  "title": "아카데미에 위장취업당했다"
+ },
  "아카데미의사령술사가되었다": {
   "author": "_172",
   "checked": "2026-11-27",
@@ -5397,6 +5518,15 @@
    "novelpia": "https://novelpia.com/novel/371213"
   },
   "title": "아카데미 턴제 검사가 되었다"
+ },
+ "아카데미특별전형생도가되었다": {
+  "author": "두두두우",
+  "checked": "2026-11-28",
+  "id": 289419,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/251984"
+  },
+  "title": "아카데미 특별전형 생도가 되었다"
  },
  "아카데미패드립면역": {
   "checked": "2026-11-25",
@@ -6208,6 +6338,15 @@
   "rc": 30,
   "title": "와인의 신"
  },
+ "완벽녀가되기로했습니다": {
+  "author": "완비",
+  "checked": "2026-11-28",
+  "id": 289576,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/166452"
+  },
+  "title": "완벽녀가 되기로 했습니다"
+ },
  "왕도사전": {
   "author": "검미성",
   "checked": "2026-11-25",
@@ -6630,6 +6769,10 @@
   "r": 3.5,
   "rc": 90,
   "title": "이계진입 리로디드"
+ },
+ "이단심문관은은퇴하고싶다": {
+  "checked": "2026-11-28",
+  "miss": true
  },
  "이련": {
   "checked": "2026-11-27",
@@ -8153,6 +8296,10 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "키보토스통합갤러리": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "킬더드래곤": {
   "checked": "2026-11-25",
   "miss": true
@@ -8229,6 +8376,18 @@
   "r": 3.71,
   "rc": 968,
   "title": "탐식의 재림"
+ },
+ "탑등반하는여우신버튜버": {
+  "author": "쿠폰노예카쿠로",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 289503,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/288864"
+  },
+  "r": 3.0,
+  "rc": 2,
+  "title": "탑 등반하는 여우신 버튜버"
  },
  "탑매니지먼트": {
   "author": "장우산",
