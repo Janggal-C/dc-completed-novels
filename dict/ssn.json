@@ -1920,6 +1920,25 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "내여자친구는이미조교완료되었다": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
+ "내조선에세종은없다": {
+  "author": "핏콩",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 201838,
+  "links": {
+   "joara": "https://www.joara.com/book/1775623",
+   "kakao": "https://page.kakao.com/content/65289677",
+   "munpia": "https://novel.munpia.com/334226",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=9205662"
+  },
+  "r": 3.18,
+  "rc": 42,
+  "title": "내 조선에 세종은 없다"
+ },
  "내청춘러브코메디는잘못됐다": {
   "checked": "2026-11-25",
   "miss": true
@@ -2257,6 +2276,19 @@
   "r": 3.43,
   "rc": 148,
   "title": "대장장이 지그"
+ },
+ "대지마법사로살아가는법": {
+  "author": "휴헤",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 280926,
+  "links": {
+   "munpia": "https://novel.munpia.com/525274",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13916339"
+  },
+  "r": 1.0,
+  "rc": 1,
+  "title": "대지 마법사로 살아가는 법"
  },
  "댓글보는천재의사": {
   "author": "렛츠두딧스",
@@ -3083,6 +3115,20 @@
    "novelpia": "https://novelpia.com/novel/455541"
   },
   "title": "마종의 성녀가 됐다"
+ },
+ "마지막바이킹": {
+  "author": "까다롭스키",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 203858,
+  "links": {
+   "kakao": "https://page.kakao.com/content/62188021",
+   "munpia": "https://novel.munpia.com/344837",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=9711257"
+  },
+  "r": 3.79,
+  "rc": 54,
+  "title": "마지막 바이킹"
  },
  "마탄의사수": {
   "author": "이수백",
@@ -4560,6 +4606,22 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "성운을먹는자": {
+  "author": "김재한",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 1958,
+  "links": {
+   "joara": "https://www.joara.com/book/963587",
+   "kakao": "https://page.kakao.com/content/64528674",
+   "munpia": "https://novel.munpia.com/23201",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=3260618",
+   "ridi": "https://ridibooks.com/v2/Detail?id=875080971"
+  },
+  "r": 3.68,
+  "rc": 87,
+  "title": "성운을 먹는 자"
+ },
  "세계를멸망시킨마녀가되었다": {
   "author": "마이뉴엘",
   "checked": "2026-11-27",
@@ -5816,6 +5878,17 @@
   "rc": 1,
   "title": "여신이 나만 애호함"
  },
+ "여자가되었으니버튜버합니다": {
+  "author": "다장",
+  "checked": "2026-11-28",
+  "id": 289421,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/194441"
+  },
+  "r": 1.0,
+  "rc": 1,
+  "title": "여자가 되었으니, 버튜버 합니다."
+ },
  "여자친구님이너무잘해줌": {
   "author": "AloEN",
   "checked": "2026-11-26",
@@ -6160,6 +6233,20 @@
   "rc": 45,
   "title": "용사 파티 때려치웁니다"
  },
+ "용신의게임": {
+  "author": "홍정훈",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 3477,
+  "links": {
+   "kakao": "https://page.kakao.com/content/53457414",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=6063745",
+   "ridi": "https://ridibooks.com/books/120051420?_rdt_sid=category_books&_rdt_idx=12"
+  },
+  "r": 2.35,
+  "rc": 27,
+  "title": "용신의 게임"
+ },
  "우둔한악마의노예기행기": {
   "author": "늙은치기",
   "checked": "2026-11-25",
@@ -6181,6 +6268,18 @@
   "r": 5.0,
   "rc": 1,
   "title": "우사히메 카린, 버튜버가 됩니다!"
+ },
+ "우주망나니에서교수까지": {
+  "author": "AiBi",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 289536,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/222538"
+  },
+  "r": 3.75,
+  "rc": 2,
+  "title": "우주 망나니에서 교수까지"
  },
  "우주의함대장": {
   "author": "복숭아작가",
@@ -6206,6 +6305,10 @@
   "r": 3.41,
   "rc": 97,
   "title": "우주천마 3077"
+ },
+ "울트라리스크": {
+  "checked": "2026-11-28",
+  "miss": true
  },
  "원수를지키는망나니기사": {
   "author": "이만두",
@@ -6448,6 +6551,18 @@
   "r": 3.33,
   "rc": 20,
   "title": "이 무림의 미친년은 나야"
+ },
+ "이번생은무역왕": {
+  "author": "영완(映完)",
+  "checked": "2026-11-28",
+  "id": 319636,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/563339",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14719603"
+  },
+  "r": 2.62,
+  "rc": 4,
+  "title": "이번 생은 무역왕"
  },
  "이세계trpg게임마스터": {
   "author": "1_394",
@@ -6905,6 +7020,18 @@
   "rc": 52,
   "title": "전생 흑마법사의 이단심문법"
  },
+ "전장의중기병으로사는법": {
+  "author": "글럼프",
+  "checked": "2026-11-28",
+  "id": 273540,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/489311",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13250325"
+  },
+  "r": 2.79,
+  "rc": 7,
+  "title": "전장의 중기병으로 사는 법"
+ },
  "전쟁명장으로착각당했다": {
   "author": "애완작가",
   "checked": "2026-11-25",
@@ -7224,6 +7351,19 @@
   "rc": 2,
   "title": "주술사들이 집착하는 천재 대장장이가 되었다"
  },
+ "주인공의키다리아저씨": {
+  "author": "말물말물",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 228871,
+  "links": {
+   "kakao": "https://page.kakao.com/content/65556847",
+   "novelpia": "https://novelpia.com/novel/80625"
+  },
+  "r": 2.5,
+  "rc": 1,
+  "title": "주인공의 키다리 아저씨"
+ },
  "주인공이공략당함": {
   "author": "낙비1",
   "checked": "2026-11-26",
@@ -7461,6 +7601,15 @@
   "r": 4.2,
   "rc": 5,
   "title": "진화하는 우주괴물이 되었다"
+ },
+ "질풍의무희": {
+  "author": "겨울날새벽",
+  "checked": "2026-11-28",
+  "id": 289418,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/400127"
+  },
+  "title": "질풍의 무희"
  },
  "짜장한그릇에제갈세가데릴사위": {
   "author": "에르훗",
@@ -7815,6 +7964,16 @@
  "카브시어스r": {
   "checked": "2026-11-27",
   "miss": true
+ },
+ "카지노마법사": {
+  "author": "지아잔틴",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 316027,
+  "links": {
+   "kakao": "https://page.kakao.com/content/70428993"
+  },
+  "title": "카지노 마법사"
  },
  "코인후기사단퇴직합니다": {
   "author": "지아잔틴",
@@ -8438,6 +8597,22 @@
   "rc": 1,
   "title": "해방노예인데 주인이 집착한다"
  },
+ "해피해피고문재단": {
+  "author": "작가G",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 109,
+  "links": {
+   "joara": "https://www.joara.com/book/1407308",
+   "kakao": "https://page.kakao.com/content/58694798",
+   "munpia": "https://novel.munpia.com/155668",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=6462259",
+   "ridi": "https://ridibooks.com/v2/Detail?id=2107051057"
+  },
+  "r": 2.74,
+  "rc": 53,
+  "title": "해피해피 고문재단"
+ },
  "헌터갤러리의국가권력급기계공주": {
   "author": "쟈장가",
   "checked": "2026-11-25",
@@ -8608,6 +8783,17 @@
    "novelpia": "https://novelpia.com/novel/404614"
   },
   "title": "환생자에게는 미학이 필요해"
+ },
+ "환생자의스트리밍": {
+  "author": "흑아인",
+  "checked": "2026-11-28",
+  "id": 236820,
+  "links": {
+   "kakao": "https://page.kakao.com/content/64419241"
+  },
+  "r": 4.25,
+  "rc": 12,
+  "title": "환생자의 스트리밍"
  },
  "환생좌": {
   "author": "ALLA",
