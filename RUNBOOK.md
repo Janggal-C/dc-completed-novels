@@ -76,6 +76,7 @@
    - 테스트: `python -m tests.test_matcher`·`test_spread`·`test_status`·`test_fullcrawl`·`test_pipeline` (pytest 아님, 모듈로 실행. 실제 데이터는 안 건드림)
    - 확장 실제 동작: `ext-shot` 워크플로 수동 실행(PC 목록 1쪽 + 모바일 목록 m.dcinside 캡처) → 로그의 "밑줄 줄임말 수"·"모바일 목록"·팝업 내용 확인.
      실행은 `gh api -X POST repos/Janggal-C/dc-completed-novels/actions/workflows/ext-shot.yml/dispatches -f ref=main` (Claude 세션에서는 `gh workflow run`이 GraphQL 막힘으로 안 됨. `gh run list`·`gh api` REST는 됨)
+   - 사이트 확인: Claude 세션에서 github.io·Pages 결과물 다운로드가 네트워크로 막히면 `python -m src.aggregate && python -m src.mentions` 후 `docs/`를 로컬 http 서버로 띄워 Playwright로 캡처(배포와 같은 명령, 생성 파일은 git 무시됨)
    - 구조를 크게 바꾸거나 비용이 늘어나는 일은 하지 않고 제안만 보고
 9. **보고** (PushNotification, 2026-11-27 사용자 지시로 형식 고정): 아래 칸으로 나눠 짧게. 칸마다 확인·수정한 것, 문제 없으면 "이상 없음"
    - **실행 보고**: 어젯밤 매일 실행·배포·수집 성공/실패 단계
