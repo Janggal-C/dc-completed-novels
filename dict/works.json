@@ -6343,8 +6343,9 @@
  "약빨이신선함": {
   "added": "2026-11-28",
   "author": "아로鴉路",
-  "needs_review": true,
+  "needs_review": false,
   "platform": "네이버 시리즈",
+  "reviewed": "ai-2026-11-28",
   "source": "https://series.naver.com/novel/detail.series?productNo=4437583",
   "status": "연재중",
   "status_checked": "2026-11-28",
