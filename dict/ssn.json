@@ -2244,6 +2244,20 @@
   "rc": 39,
   "title": "대영제국에서 작가로 살아남기"
  },
+ "대장장이지그": {
+  "author": "강찬",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 4651,
+  "links": {
+   "kakao": "https://page.kakao.com/content/65810126",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=9101655",
+   "ridi": "https://ridibooks.com/v2/Detail?id=777037008"
+  },
+  "r": 3.43,
+  "rc": 148,
+  "title": "대장장이 지그"
+ },
  "댓글보는천재의사": {
   "author": "렛츠두딧스",
   "checked": "2026-11-26",
@@ -2866,6 +2880,17 @@
   "rc": 176,
   "title": "마도전생기"
  },
+ "마도천하의회귀자가살아남는법": {
+  "author": "청시소",
+  "checked": "2026-11-28",
+  "id": 334104,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=14993617"
+  },
+  "r": 3.0,
+  "rc": 1,
+  "title": "마도천하의 회귀자가 살아남는 법"
+ },
  "마두아니라니까요": {
   "author": "십삼중수소",
   "checked": "2026-11-25",
@@ -2898,6 +2923,10 @@
    "novelpia": "https://novelpia.com/novel/307276"
   },
   "title": "마법 대학에서 살아남기"
+ },
+ "마법먹는마법사": {
+  "checked": "2026-11-28",
+  "miss": true
  },
  "마법소녀ㄴ은은퇴하고싶다": {
   "author": "에스필아",
@@ -4777,6 +4806,10 @@
   "rc": 11,
   "title": "시간 정지 능력으로 탑 등반"
  },
+ "시스터즈가되었다": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "시체를잘치우는성녀가되었다": {
   "author": "텅빈무지개",
   "checked": "2026-11-26",
@@ -5290,6 +5323,17 @@
   "checked": "2026-11-27",
   "miss": true
  },
+ "아포칼립스를걷는우체부": {
+  "author": "오드로버",
+  "checked": "2026-11-28",
+  "id": 243659,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=11467915"
+  },
+  "r": 3.38,
+  "rc": 12,
+  "title": "아포칼립스를 걷는 우체부"
+ },
  "아포칼립스셸터관리자": {
   "checked": "2026-11-25",
   "miss": true
@@ -5582,6 +5626,17 @@
  "야겜속튜토리얼보스가되었다": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "야생에서갤러리를얻었다": {
+  "author": "두부두부",
+  "checked": "2026-11-28",
+  "id": 240253,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=11397259"
+  },
+  "r": 3.12,
+  "rc": 34,
+  "title": "야생에서 갤러리를 얻었다"
  },
  "약관동의는신중히": {
   "checked": "2026-11-25",
@@ -6092,6 +6147,19 @@
   "rc": 58,
   "title": "용사의 옆집에 산다는 것"
  },
+ "용사파티때려치웁니다": {
+  "author": "NariaTa",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 225591,
+  "links": {
+   "kakao": "https://page.kakao.com/content/67154426",
+   "novelpia": "https://novelpia.com/novel/6269"
+  },
+  "r": 3.97,
+  "rc": 45,
+  "title": "용사 파티 때려치웁니다"
+ },
  "우둔한악마의노예기행기": {
   "author": "늙은치기",
   "checked": "2026-11-25",
@@ -6113,6 +6181,16 @@
   "r": 5.0,
   "rc": 1,
   "title": "우사히메 카린, 버튜버가 됩니다!"
+ },
+ "우주의함대장": {
+  "author": "복숭아작가",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 289803,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/146854"
+  },
+  "title": "우주의 함대장"
  },
  "우주천마3077": {
   "author": "녹색여우",
@@ -6338,6 +6416,19 @@
  "이거주식방송입니다": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "이계진입리로디드": {
+  "author": "임경배",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 84225,
+  "links": {
+   "kakao": "https://page.kakao.com/home?seriesId=56806452",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=1727697"
+  },
+  "r": 3.5,
+  "rc": 90,
+  "title": "이계진입 리로디드"
  },
  "이련": {
   "checked": "2026-11-27",
@@ -6569,6 +6660,10 @@
   "checked": "2026-11-26",
   "miss": true
  },
+ "잔불의기사": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "잘생기면편해지는인방생활": {
   "author": "민트초코주먹밥",
   "checked": "2026-11-25",
@@ -6672,6 +6767,17 @@
   "r": 4.5,
   "rc": 2,
   "title": "저능아 하꼬 버튜버가 나데나데 받는다"
+ },
+ "저머리좋은데요": {
+  "author": "집먼지진드기",
+  "checked": "2026-11-28",
+  "id": 323410,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/258784"
+  },
+  "r": 1.5,
+  "rc": 1,
+  "title": "저 머리 좋은데요"
  },
  "전과4범공녀님이되었다": {
   "checked": "2026-11-26",
@@ -7536,6 +7642,15 @@
   "rc": 691,
   "title": "철수를 구하시오"
  },
+ "쳇바퀴의생쥐사도가되었다": {
+  "author": "김크루",
+  "checked": "2026-11-28",
+  "id": 288891,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/406113"
+  },
+  "title": "쳇바퀴의 생쥐 사도가 되었다"
+ },
  "초성마문선협속마교에서인간재료로살아남기": {
   "author": "학수월만지",
   "checked": "2026-11-25",
@@ -7906,6 +8021,21 @@
   "checked": "2026-11-26",
   "miss": true
  },
+ "퇴역병찬미가": {
+  "author": "어진용",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 96529,
+  "links": {
+   "joara": "https://www.joara.com/book/1576784",
+   "kakao": "https://page.kakao.com/content/58163782",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=8252357",
+   "ridi": "https://ridibooks.com/books/2008027516?_rdt_sid=category_books&_rdt_idx=15"
+  },
+  "r": 3.88,
+  "rc": 398,
+  "title": "퇴역병 찬미가"
+ },
  "투명드래곤": {
   "checked": "2026-11-25",
   "miss": true
@@ -7941,6 +8071,21 @@
  "파테르분파의2인자라니무리무리무리역시무리였다": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "판사이한영": {
+  "author": "이해날",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 1295,
+  "links": {
+   "kakao": "https://page.kakao.com/home?seriesId=50930931",
+   "munpia": "https://novel.munpia.com/96510",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=3149674",
+   "ridi": "https://ridibooks.com/v2/Detail?id=1811116509"
+  },
+  "r": 3.1,
+  "rc": 36,
+  "title": "판사 이한영"
  },
  "판초우의의마법사": {
   "author": "하드폭발",
@@ -7994,6 +8139,10 @@
   "rc": 12,
   "title": "패왕영애"
  },
+ "펠라키아눈을감은건저하나면충분하니까": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "평범한게임보고서": {
   "author": "검은학자",
   "checked": "2026-11-26",
@@ -8028,6 +8177,21 @@
   "r": 1.5,
   "rc": 1,
   "title": "폭군이 날 너무 좋아한다"
+ },
+ "폭염의용제": {
+  "author": "김재한",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 4304,
+  "links": {
+   "joara": "https://www.joara.com/book/1535076",
+   "kakao": "https://page.kakao.com/content/68904417",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=2941703",
+   "ridi": "https://ridibooks.com/books/875073774?_rdt_sid=category_books&_rdt_idx=7"
+  },
+  "r": 3.83,
+  "rc": 263,
+  "title": "폭염의 용제"
  },
  "폴라리스랩소디": {
   "checked": "2026-11-26",
@@ -8140,6 +8304,10 @@
   "r": 4.46,
   "rc": 873,
   "title": "피를 마시는 새"
+ },
+ "피안도": {
+  "checked": "2026-11-28",
+  "miss": true
  },
  "픽미업": {
   "author": "헤르모드",
@@ -8258,6 +8426,17 @@
  "해리포터사이다패스해리포터가살아가는법": {
   "checked": "2026-11-27",
   "miss": true
+ },
+ "해방노예인데주인이집착한다": {
+  "author": "물길따라",
+  "checked": "2026-11-28",
+  "id": 289396,
+  "links": {
+   "novelpia": "https://novelpia.com/novel/403536"
+  },
+  "r": 4.0,
+  "rc": 1,
+  "title": "해방노예인데 주인이 집착한다"
  },
  "헌터갤러리의국가권력급기계공주": {
   "author": "쟈장가",
