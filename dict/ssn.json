@@ -4867,6 +4867,34 @@
   "rc": 2,
   "title": "빙과"
  },
+ "빙궁전설": {
+  "author": "인향",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 101955,
+  "links": {
+   "kakao": "https://page.kakao.com/content/55960109",
+   "munpia": "https://novel.munpia.com/234507",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=5970714",
+   "ridi": "https://ridibooks.com/books/945057552?_rdt_sid=category_books&_rdt_idx=9"
+  },
+  "title": "빙궁전설"
+ },
+ "빙하기아포칼립스의회사원": {
+  "author": "희나리T",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 218884,
+  "links": {
+   "joara": "https://www.joara.com/book/1783450",
+   "kakao": "https://page.kakao.com/content/65654978",
+   "munpia": "https://novel.munpia.com/374828",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13420568"
+  },
+  "r": 1.79,
+  "rc": 7,
+  "title": "빙하기 아포칼립스의 회사원"
+ },
  "빚을져서라도세상은구해야할거아니야": {
   "author": "1_394",
   "checked": "2026-11-25",
@@ -4914,6 +4942,20 @@
   "rc": 346,
   "title": "사상 최강의 보안관"
  },
+ "사상최강의양손투수": {
+  "author": "RAS",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 118444,
+  "links": {
+   "kakao": "https://page.kakao.com/content/66456132",
+   "munpia": "https://novel.munpia.com/468707",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=6441095"
+  },
+  "r": 2.75,
+  "rc": 2,
+  "title": "사상 최강의 양손 투수"
+ },
  "사시미한자루로아카데미를씹어먹음": {
   "author": "탕아후루",
   "checked": "2026-11-27",
@@ -4927,6 +4969,21 @@
   "r": 3.21,
   "rc": 39,
   "title": "사시미 한 자루로 아카데미를 씹어먹음"
+ },
+ "사신": {
+  "author": "설봉",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 2254,
+  "links": {
+   "kakao": "https://page.kakao.com/home?seriesId=50106944",
+   "munpia": "https://novel.munpia.com/62882",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=8679363",
+   "ridi": "https://ridibooks.com/v2/Detail?id=775000340"
+  },
+  "r": 3.94,
+  "rc": 462,
+  "title": "사신"
  },
  "사이버펑크게임속성녀가되었다": {
   "author": "밤별구름",
@@ -4961,6 +5018,10 @@
   "r": 3.0,
   "rc": 2,
   "title": "사이버펑크 속 드래곤이 되었다"
+ },
+ "사이버펑크엣지러너2기opportunitytochange": {
+  "checked": "2026-11-28",
+  "miss": true
  },
  "사이버펑크협객전": {
   "author": "더블타임",
@@ -5211,6 +5272,10 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "세계의관리자로태어났다": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "세계최강딸내미": {
   "author": "쥐돌이",
   "checked": "2026-11-27",
@@ -5321,6 +5386,21 @@
   "rc": 82,
   "title": "소드 아트 온라인"
  },
+ "소마환동": {
+  "author": "일학",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 113852,
+  "links": {
+   "kakao": "https://page.kakao.com/content/59681399",
+   "munpia": "https://novel.munpia.com/310877",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=9385228",
+   "ridi": "https://ridibooks.com/books/1483023930?_rdt_sid=category_books&_rdt_idx=5"
+  },
+  "r": 2.3,
+  "rc": 5,
+  "title": "소마환동"
+ },
  "소설속빌런은아카데미차석으로살아간다": {
   "checked": "2026-11-25",
   "miss": true
@@ -5359,6 +5439,19 @@
   "r": 3.37,
   "rc": 30,
   "title": "소설 속 흑막이 되련다"
+ },
+ "소오강호": {
+  "author": "김용",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 12796,
+  "links": {
+   "kakao": "https://page.kakao.com/home?seriesId=51963578",
+   "ridi": "https://ridibooks.com/books/111016277?_rdt_sid=category_books&_rdt_idx=0"
+  },
+  "r": 4.25,
+  "rc": 313,
+  "title": "소오강호"
  },
  "소요수선전逍遙修仙傳": {
   "author": "아이라울",
@@ -5418,6 +5511,18 @@
   "rc": 33,
   "title": "스마트폰 너머의 악신님"
  },
+ "스위스깡촌호텔을물려받았다": {
+  "author": "체대생",
+  "checked": "2026-11-28",
+  "id": 281035,
+  "links": {
+   "munpia": "https://www.munpia.com/novel/detail/526298",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13966098"
+  },
+  "r": 2.88,
+  "rc": 5,
+  "title": "스위스 깡촌 호텔을 물려받았다"
+ },
  "스탯350점을받았습니다": {
   "checked": "2026-11-25",
   "miss": true
@@ -5464,6 +5569,18 @@
  "시스터즈가되었다": {
   "checked": "2026-11-28",
   "miss": true
+ },
+ "시체공양으로데미갓": {
+  "author": "도래돗",
+  "checked": "2026-11-28",
+  "id": 165440,
+  "links": {
+   "kakao": "https://page.kakao.com/content/61093861",
+   "munpia": "https://novel.munpia.com/327873"
+  },
+  "r": 3.62,
+  "rc": 4,
+  "title": "시체공양으로 데미갓"
  },
  "시체를잘치우는성녀가되었다": {
   "author": "텅빈무지개",
@@ -5559,6 +5676,10 @@
   "rc": 120,
   "title": "신을 먹는 마법사"
  },
+ "신의탑": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "신입사원강회장": {
   "author": "산경(山景)",
   "checked": "2026-11-27",
@@ -5569,6 +5690,17 @@
   "r": 3.63,
   "rc": 69,
   "title": "신입사원 강 회장"
+ },
+ "신조협려": {
+  "author": "김용, 이덕옥",
+  "checked": "2026-11-28",
+  "id": 9370,
+  "links": {
+   "kakao": "https://page.kakao.com/home?seriesId=49358184"
+  },
+  "r": 4.18,
+  "rc": 395,
+  "title": "신조협려"
  },
  "신화속양치기노예가되었다": {
   "author": "간다왼쪽",
@@ -5658,6 +5790,16 @@
   "rc": 67,
   "title": "심해의 마법사"
  },
+ "싱글플레이어멀티에서top먹다": {
+  "author": "노마1",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 302769,
+  "links": {
+   "joara": "https://www.joara.com/book/1377027"
+  },
+  "title": "싱글플레이어, 멀티에서 TOP먹다"
+ },
  "싸울아비룬": {
   "author": "가위(可衛)",
   "checked": "2026-11-26",
@@ -5704,6 +5846,10 @@
   "rc": 1,
   "title": "썩은물 망자가 버튜버로 데뷔함"
  },
+ "쓰르라미울적에": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "아기는악당을키운다": {
   "author": "리샤",
   "checked": "2026-11-27",
@@ -5716,6 +5862,19 @@
   "r": 3.27,
   "rc": 259,
   "title": "아기는 악당을 키운다"
+ },
+ "아기다람쥐가다잘해요": {
+  "author": "군청주단",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 116055,
+  "links": {
+   "kakao": "https://page.kakao.com/content/67934760",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=9937949"
+  },
+  "r": 3.14,
+  "rc": 7,
+  "title": "아기 다람쥐가 다 잘해요"
  },
  "아빠가너무강함": {
   "author": "개벽S",
