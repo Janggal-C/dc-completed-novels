@@ -2133,6 +2133,10 @@
   "rc": 1,
   "title": "니들 생각 다 들린다"
  },
+ "니세코이": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "다크게이머": {
   "author": "최예균",
   "checked": "2026-11-25",
@@ -2200,6 +2204,21 @@
   "rc": 3,
   "title": "다크 판타지 정상화"
  },
+ "다해먹는슈퍼스타": {
+  "author": "피제이",
+  "checked": "2026-11-28",
+  "id": 259602,
+  "links": {
+   "kakao": "https://page.kakao.com/content/66044826"
+  },
+  "r": 4.0,
+  "rc": 3,
+  "title": "다 해먹는 슈퍼스타"
+ },
+ "단간론파의17번째초고교급이되었다": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "단종구하러4군6진": {
   "author": "간다왼쪽",
   "checked": "2026-11-25",
@@ -2225,6 +2244,21 @@
   "r": 3.09,
   "rc": 1212,
   "title": "달빛조각사"
+ },
+ "달의미궁": {
+  "author": "배고픈판다",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 3792,
+  "links": {
+   "joara": "https://www.joara.com/book/1232532",
+   "kakao": "https://page.kakao.com/content/55295974",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=3355694",
+   "ridi": "https://ridibooks.com/books/111026221"
+  },
+  "r": 1.0,
+  "rc": 3,
+  "title": "달의 미궁"
  },
  "당가수선전": {
   "author": "차사",
@@ -2355,6 +2389,20 @@
   "rc": 39,
   "title": "대영제국에서 작가로 살아남기"
  },
+ "대윤회전생": {
+  "author": "강승환",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 3660,
+  "links": {
+   "kakao": "https://page.kakao.com/content/65488012",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=11823231",
+   "ridi": "https://ridibooks.com/books/1377086032?_rdt_sid=category_books&_rdt_idx=14"
+  },
+  "r": 3.29,
+  "rc": 51,
+  "title": "대윤회전생"
+ },
  "대장장이지그": {
   "author": "강찬",
   "checked": "2026-11-28",
@@ -2414,6 +2462,10 @@
   "rc": 8,
   "title": "댓글창의 천재 마법사"
  },
+ "더게이머": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "더로그": {
   "author": "홍정훈",
   "checked": "2026-11-25",
@@ -2427,6 +2479,21 @@
   "r": 3.98,
   "rc": 311,
   "title": "더 로그"
+ },
+ "더스트dust": {
+  "author": "글라딘",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 2855,
+  "links": {
+   "kakao": "https://page.kakao.com/content/59558608",
+   "munpia": "https://novel.munpia.com/33186",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=1927449",
+   "ridi": "https://ridibooks.com/books/425005305?_rdt_sid=category_books&_rdt_idx=4"
+  },
+  "r": 3.81,
+  "rc": 8,
+  "title": "더스트"
  },
  "던전갤러리의무시무시한뉴비": {
   "author": "박연진",
@@ -2464,6 +2531,10 @@
   "rc": 892,
   "title": "던전 디펜스"
  },
+ "던전밥": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "던전에서만남을추구하면안되는걸까": {
   "author": "오모리 후지노",
   "checked": "2026-11-25",
@@ -2477,6 +2548,20 @@
   "r": 3.63,
   "rc": 68,
   "title": "던전에서 만남을 추구하면 안 되는 걸까"
+ },
+ "데모닉": {
+  "author": "정민",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 31995,
+  "links": {
+   "kakao": "https://page.kakao.com/home?seriesId=46683096",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=8037612",
+   "ridi": "https://ridibooks.com/books/1962082937?_rdt_sid=category_books&_rdt_idx=8"
+  },
+  "r": 3.7,
+  "rc": 5,
+  "title": "데모닉"
  },
  "데몬소드": {
   "author": "백수귀족.",
@@ -2520,6 +2605,10 @@
  },
  "데스노트": {
   "checked": "2026-11-25",
+  "miss": true
+ },
+ "덴마": {
+  "checked": "2026-11-28",
   "miss": true
  },
  "도굴왕": {
@@ -2588,6 +2677,21 @@
   },
   "title": "돈 많고 멍청한 악역영애를 키우게 되었다"
  },
+ "돌아온용병왕": {
+  "author": "32일",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 93235,
+  "links": {
+   "kakao": "https://page.kakao.com/content/56673461",
+   "munpia": "https://novel.munpia.com/185187",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=5560674",
+   "ridi": "https://ridibooks.com/books/1534096582"
+  },
+  "r": 2.5,
+  "rc": 3,
+  "title": "돌아온 용병왕"
+ },
  "돌아와서말하기": {
   "checked": "2026-11-25",
   "miss": true
@@ -2650,6 +2754,10 @@
   "rc": 2,
   "title": "뒷골목 님프의 도시"
  },
+ "듀얼시스템": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "드림사이드": {
   "author": "홍정훈",
   "checked": "2026-11-26",
@@ -2669,6 +2777,21 @@
    "novelpia": "https://novelpia.com/novel/444733"
   },
   "title": "들키지 않는 사제 사칭범이 되었다"
+ },
+ "디자이어desire": {
+  "author": "목마",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 1979,
+  "links": {
+   "kakao": "https://page.kakao.com/content/55097513",
+   "munpia": "https://novel.munpia.com/24446",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=3269656",
+   "ridi": "https://ridibooks.com/v2/Detail?id=1377054521"
+  },
+  "r": 3.74,
+  "rc": 278,
+  "title": "디자이어(Desire)"
  },
  "딥블랙시티": {
   "checked": "2026-11-27",
@@ -2954,6 +3077,10 @@
   "rc": 48,
   "title": "르피너스의 장난감"
  },
+ "리메전1": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "리턴투플레이어": {
   "author": "인덱스",
   "checked": "2026-11-25",
@@ -3052,6 +3179,19 @@
   "r": 2.94,
   "rc": 176,
   "title": "마도전생기"
+ },
+ "마도조사": {
+  "author": "묵향동후",
+  "checked": "2026-11-28",
+  "done": true,
+  "id": 6970,
+  "links": {
+   "kakao": "https://page.kakao.com/content/53801300",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=4534735"
+  },
+  "r": 4.08,
+  "rc": 79,
+  "title": "마도조사"
  },
  "마도천하의회귀자가살아남는법": {
   "author": "청시소",
@@ -3182,6 +3322,14 @@
   "rc": 5,
   "title": "마법 좋아좋아좋아"
  },
+ "마법천자문": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
+ "마법천자문혼세마왕전": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "마법학교마법사로살아가는법": {
   "author": "글쓰는기계",
   "checked": "2026-11-25",
@@ -3261,6 +3409,10 @@
   },
   "title": "마왕탑 갤러리의 천재뉴비"
  },
+ "마인도시": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "마종의성녀가됐다": {
   "author": "얽히고설킨",
   "checked": "2026-11-25",
@@ -3326,6 +3478,10 @@
   "r": 3.27,
   "rc": 292,
   "title": "막장드라마의 제왕"
+ },
+ "만신": {
+  "checked": "2026-11-28",
+  "miss": true
  },
  "만주군벌이한국인을숨김": {
   "author": "수팅스타",
@@ -3465,6 +3621,10 @@
   "checked": "2026-11-27",
   "miss": true
  },
+ "먼가작고귀여운녀석먼작귀": {
+  "checked": "2026-11-28",
+  "miss": true
+ },
  "먼치킨스킬도둑이되었다": {
   "author": "무화꽃란",
   "checked": "2026-11-26",
@@ -3490,6 +3650,10 @@
   "r": 3.63,
   "rc": 1026,
   "title": "메모라이즈"
+ },
+ "메이드인어비스": {
+  "checked": "2026-11-28",
+  "miss": true
  },
  "메이지슬레이어": {
   "author": "학인생",
