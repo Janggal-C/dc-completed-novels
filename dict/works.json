@@ -3316,6 +3316,7 @@
  },
  "마왕탑갤러리의천재뉴비": {
   "added": "2026-11-25",
+  "author": "아케인인",
   "platform": "노벨피아",
   "source": "https://novelpia.com/novel/417175",
   "title": "마왕탑 갤러리의 천재뉴비"
@@ -6338,6 +6339,17 @@
   "status_checked": "2026-11-24",
   "status_source": "google-bulk",
   "title": "약먹는 천재마법사"
+ },
+ "약빨이신선함": {
+  "added": "2026-11-28",
+  "author": "아로鴉路",
+  "needs_review": true,
+  "platform": "네이버 시리즈",
+  "source": "https://series.naver.com/novel/detail.series?productNo=4437583",
+  "status": "연재중",
+  "status_checked": "2026-11-28",
+  "status_source": "google-bulk",
+  "title": "약빨이 신선함"
  },
  "약혼녀가소천마였다": {
   "added": "2026-11-25",
