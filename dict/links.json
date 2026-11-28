@@ -82,6 +82,13 @@
   "checked": "2026-11-28",
   "miss": true
  },
+ "마법먹는마법사": {
+  "checked": "2026-11-29",
+  "links": {
+   "novelpia": "https://novelpia.com/novel/412350"
+  },
+  "via": "google"
+ },
  "멸망한세상의수면술사": {
   "checked": "2026-11-28",
   "links": {
@@ -180,6 +187,10 @@
   },
   "via": "google"
  },
+ "울트라리스크": {
+  "checked": "2026-11-29",
+  "miss": true
+ },
  "유희생활": {
   "checked": "2026-11-25",
   "links": {
@@ -218,6 +229,10 @@
  },
  "임신시켰더니황녀였다": {
   "checked": "2026-11-27",
+  "miss": true
+ },
+ "잔불의기사": {
+  "checked": "2026-11-29",
   "miss": true
  },
  "차원생존전략": {
