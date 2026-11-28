@@ -7726,9 +7726,35 @@
   "checked": "2026-11-28",
   "miss": true
  },
+ "이드": {
+  "author": "김대우",
+  "checked": "2026-11-29",
+  "id": 3551,
+  "links": {
+   "kakao": "https://page.kakao.com/content/48132875",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=1912646",
+   "ridi": "https://ridibooks.com/v2/Detail?id=3170003150"
+  },
+  "r": 2.75,
+  "rc": 110,
+  "title": "이드"
+ },
  "이련": {
   "checked": "2026-11-27",
   "miss": true
+ },
+ "이멋진세계에축복을": {
+  "author": "아카츠키 나츠메",
+  "checked": "2026-11-29",
+  "id": 4106,
+  "links": {
+   "kakao": "https://page.kakao.com/content/49441943",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=2627952",
+   "ridi": "https://ridibooks.com/books/777008547"
+  },
+  "r": 3.91,
+  "rc": 142,
+  "title": "이 멋진 세계에 축복을!"
  },
  "이면세계의마법사": {
   "checked": "2026-11-26",
@@ -7780,6 +7806,10 @@
  },
  "이세계노예하렘판타지에서노예를담당하고있습니다": {
   "checked": "2026-11-27",
+  "miss": true
+ },
+ "이세계로전생한난군체가되었다": {
+  "checked": "2026-11-29",
   "miss": true
  },
  "이세계마탑의갤주가되었다": {
@@ -7835,6 +7865,10 @@
   "rc": 209,
   "title": "이차원 용병"
  },
+ "인간찬가": {
+  "checked": "2026-11-29",
+  "miss": true
+ },
  "인류보호회사": {
   "author": "짤짤이",
   "checked": "2026-11-25",
@@ -7860,6 +7894,34 @@
   "r": 2.75,
   "rc": 2,
   "title": "인벤토리로 암시장의 거물이 되었다."
+ },
+ "인생설계사차강준": {
+  "author": "강은유",
+  "checked": "2026-11-29",
+  "done": true,
+  "id": 31165,
+  "links": {
+   "kakao": "https://page.kakao.com/content/51049751",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=3304238",
+   "ridi": "https://ridibooks.com/v2/Detail?id=120042531"
+  },
+  "title": "인생설계사 차강준"
+ },
+ "인형술사": {
+  "author": "이슬먹은눈물",
+  "checked": "2026-11-29",
+  "done": true,
+  "id": 123928,
+  "links": {
+   "kakao": "https://page.kakao.com/content/57918809",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=8414221",
+   "ridi": "https://ridibooks.com/books/1823025234?_rdt_sid=category_books&_rdt_idx=1"
+  },
+  "title": "인형술사"
+ },
+ "일리단녀": {
+  "checked": "2026-11-29",
+  "miss": true
  },
  "일진녀의소꿉친구가되었다": {
   "checked": "2026-11-27",
@@ -8012,6 +8074,10 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "장송의프리렌": {
+  "checked": "2026-11-29",
+  "miss": true
+ },
  "재벌집막내딸이되었다": {
   "author": "경화수열",
   "checked": "2026-11-25",
@@ -8108,6 +8174,18 @@
   "checked": "2026-11-26",
   "miss": true
  },
+ "전국시대진시황의오른팔이되다": {
+  "author": "5프로",
+  "checked": "2026-11-29",
+  "id": 276527,
+  "links": {
+   "munpia": "https://novel.munpia.com/501276",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=13442402"
+  },
+  "r": 2.42,
+  "rc": 8,
+  "title": "전국시대 : 진시황의 오른팔이 되다."
+ },
  "전남친이품절됐다": {
   "author": "막둥둥이",
   "checked": "2026-11-26",
@@ -8189,6 +8267,10 @@
   "rc": 581,
   "title": "전생검신"
  },
+ "전생마왕의합리적인생존전략": {
+  "checked": "2026-11-29",
+  "miss": true
+ },
  "전생자의마법수업": {
   "author": "saya",
   "checked": "2026-11-25",
@@ -8215,6 +8297,20 @@
   "r": 3.95,
   "rc": 620,
   "title": "전생하고 보니 크툴루"
+ },
+ "전생했더니슬라임이었던건에대하여": {
+  "author": "후세,밋츠바,도영명",
+  "checked": "2026-11-29",
+  "done": true,
+  "id": 3442,
+  "links": {
+   "kakao": "https://page.kakao.com/content/69122664",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=3175921",
+   "ridi": "https://ridibooks.com/books/2066000069?_rdt_sid=category_books&_rdt_idx=15"
+  },
+  "r": 3.24,
+  "rc": 166,
+  "title": "전생했더니 슬라임이었던 건에 대하여"
  },
  "전생흑마법사의이단심문법": {
   "author": "Gawayn",
@@ -8265,6 +8361,25 @@
   "r": 2.25,
   "rc": 4,
   "title": "전쟁 명장으로 착각당했다"
+ },
+ "전쟁의신": {
+  "author": "노경찬",
+  "checked": "2026-11-29",
+  "done": true,
+  "id": 5381,
+  "links": {
+   "kakao": "https://page.kakao.com/content/50195692",
+   "munpia": "https://novel.munpia.com/82304",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=4176232",
+   "ridi": "https://ridibooks.com/v2/Detail?id=1377065435"
+  },
+  "r": 3.25,
+  "rc": 27,
+  "title": "전쟁의 신"
+ },
+ "전쟁이끝난뒤에야대장장이가되었다": {
+  "checked": "2026-11-29",
+  "miss": true
  },
  "전지적1인칭시점": {
   "author": "고속도루",
@@ -8425,6 +8540,22 @@
   "rc": 277,
   "title": "절대회귀"
  },
+ "절창": {
+  "checked": "2026-11-29",
+  "miss": true
+ },
+ "점괘보는공녀님": {
+  "author": "사이딘",
+  "checked": "2026-11-29",
+  "done": true,
+  "id": 151413,
+  "links": {
+   "kakao": "https://page.kakao.com/content/65101545"
+  },
+  "r": 3.53,
+  "rc": 17,
+  "title": "점괘보는 공녀님"
+ },
  "정령분양합니다": {
   "author": "수정주의",
   "checked": "2026-11-25",
@@ -8483,6 +8614,19 @@
   "r": 3.97,
   "rc": 383,
   "title": "제국사냥꾼"
+ },
+ "제로의사역마": {
+  "author": "우사츠카 에이지,야마구치 노보루,윤영의",
+  "checked": "2026-11-29",
+  "done": true,
+  "id": 50672,
+  "links": {
+   "kakao": "https://page.kakao.com/content/52431760",
+   "ridi": "https://ridibooks.com/books/111014981"
+  },
+  "r": 3.72,
+  "rc": 46,
+  "title": "제로의 사역마"
  },
  "제발제발회귀좀": {
   "author": "소원다미",
@@ -8543,6 +8687,15 @@
   "rc": 611,
   "title": "좀비묵시록 82-08"
  },
+ "종말의다이스": {
+  "author": "1인5역",
+  "checked": "2026-11-29",
+  "id": 325493,
+  "links": {
+   "kakao": "https://page.kakao.com/content/70570683"
+  },
+  "title": "종말의 다이스"
+ },
  "종말의뱀이되었다": {
   "author": "비도™",
   "checked": "2026-11-25",
@@ -8554,6 +8707,17 @@
   "r": 3.15,
   "rc": 82,
   "title": "종말의 뱀이 되었다"
+ },
+ "종말이나를억까해": {
+  "author": "가을비",
+  "checked": "2026-11-29",
+  "done": true,
+  "id": 207306,
+  "links": {
+   "kakao": "https://page.kakao.com/content/64915062",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=9316950"
+  },
+  "title": "종말이 나를 억까해"
  },
  "종말후외톨이갤러리": {
   "checked": "2026-11-25",
@@ -8835,6 +8999,10 @@
  },
  "지잡아카데미와폐급히로인들": {
   "checked": "2026-11-25",
+  "miss": true
+ },
+ "진격거속의이레귤러가되었다": {
+  "checked": "2026-11-29",
   "miss": true
  },
  "진문장생": {
