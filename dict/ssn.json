@@ -6789,6 +6789,10 @@
   "rc": 158,
   "title": "언어의 주인이란"
  },
+ "얼음과불의노래": {
+  "checked": "2026-11-29",
+  "miss": true
+ },
  "엄마가낳아준정실들": {
   "checked": "2026-11-25",
   "miss": true
@@ -6812,6 +6816,21 @@
  "에덴프로젝트": {
   "checked": "2026-11-28",
   "miss": true
+ },
+ "에테르흡수하고지상최강": {
+  "author": "이준호",
+  "checked": "2026-11-29",
+  "done": true,
+  "id": 3473,
+  "links": {
+   "joara": "https://www.joara.com/book/1431037",
+   "kakao": "https://page.kakao.com/content/52938724",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=5076002",
+   "ridi": "https://ridibooks.com/books/2200031836"
+  },
+  "r": 2.17,
+  "rc": 3,
+  "title": "에테르 흡수하고 지상 최강"
  },
  "엑스칼리버뽑습니다": {
   "author": "NariaTa",
@@ -6842,6 +6861,10 @@
   "r": 3.57,
   "rc": 229,
   "title": "엔딩메이커"
+ },
+ "여동생이맛있다": {
+  "checked": "2026-11-29",
+  "miss": true
  },
  "여사친들이최면어플을쓰려고한다": {
   "checked": "2026-11-26",
@@ -6906,6 +6929,10 @@
   "checked": "2026-11-28",
   "miss": true
  },
+ "여포군으로천하통일까지": {
+  "checked": "2026-11-29",
+  "miss": true
+ },
  "여헌터를따먹으면주인공이강해짐": {
   "checked": "2026-11-28",
   "miss": true
@@ -6921,6 +6948,23 @@
   "r": 5.0,
   "rc": 2,
   "title": "여혐 소설가의 TS 수기"
+ },
+ "역시내청춘러브코메디는잘못됐다": {
+  "author": "퐁칸⑧,와타리 와타루,박정원",
+  "checked": "2026-11-29",
+  "done": true,
+  "id": 50523,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=6884572",
+   "ridi": "https://ridibooks.com/books/777063649?_rdt_sid=category_books&_rdt_idx=17"
+  },
+  "r": 3.76,
+  "rc": 89,
+  "title": "역시 내 청춘 러브코메디는 잘못됐다."
+ },
+ "연애혁명": {
+  "checked": "2026-11-29",
+  "miss": true
  },
  "연인에서원수가되었다": {
   "checked": "2026-11-25",
@@ -6939,6 +6983,10 @@
   "r": 3.66,
   "rc": 99,
   "title": "열일하는 과금 기사"
+ },
+ "열혈강호": {
+  "checked": "2026-11-29",
+  "miss": true
  },
  "영웅따위개나줘": {
   "author": "로유진",
@@ -7028,6 +7076,10 @@
   "checked": "2026-11-25",
   "miss": true
  },
+ "오늘의한요일은여자다": {
+  "checked": "2026-11-29",
+  "miss": true
+ },
  "오라전대피스메이커": {
   "author": "반재원",
   "checked": "2026-11-27",
@@ -7039,6 +7091,20 @@
   "r": 3.12,
   "rc": 46,
   "title": "오라전대 피스메이커"
+ },
+ "오버로드": {
+  "author": "마루야마 쿠가네",
+  "checked": "2026-11-29",
+  "done": true,
+  "id": 3580,
+  "links": {
+   "kakao": "https://page.kakao.com/content/49391101",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=2797880",
+   "ridi": "https://ridibooks.com/books/111040452?_rdt_sid=category_books&_rdt_idx=7"
+  },
+  "r": 3.31,
+  "rc": 256,
+  "title": "오버로드"
  },
  "오버로드황금경": {
   "checked": "2026-11-27",
@@ -7083,6 +7149,31 @@
   },
   "title": "오타쿠에게 상냥한 갸루 타이탄에 탄다"
  },
+ "옥타곤의제왕": {
+  "author": "필립(筆立)",
+  "checked": "2026-11-29",
+  "done": true,
+  "id": 5302,
+  "links": {
+   "kakao": "https://page.kakao.com/content/55371328",
+   "munpia": "https://novel.munpia.com/96598",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=4163727",
+   "ridi": "https://ridibooks.com/v2/Detail?id=777066286"
+  },
+  "r": 3.78,
+  "rc": 20,
+  "title": "옥타곤의 제왕"
+ },
+ "옥탑방세계수": {
+  "author": "챠슈",
+  "checked": "2026-11-29",
+  "id": 232109,
+  "links": {
+   "kakao": "https://page.kakao.com/content/65934182",
+   "naver": "https://series.naver.com/novel/detail.series?productNo=12186048"
+  },
+  "title": "옥탑방 세계수"
+ },
  "올마스터": {
   "author": "박건",
   "checked": "2026-11-26",
@@ -7096,6 +7187,16 @@
   "r": 3.53,
   "rc": 129,
   "title": "올 마스터"
+ },
+ "옵세션obsession": {
+  "author": "완전천재",
+  "checked": "2026-11-29",
+  "done": true,
+  "id": 333558,
+  "links": {
+   "kakao": "https://page.kakao.com/content/71156396"
+  },
+  "title": "옵세션 (Obsession)"
  },
  "와인의신": {
   "author": "최풍뎅",
@@ -7177,6 +7278,10 @@
   "rc": 667,
   "title": "요리의 신"
  },
+ "용비불패": {
+  "checked": "2026-11-29",
+  "miss": true
+ },
  "용사는연금수령대상이아닙니다": {
   "author": "상책상책",
   "checked": "2026-11-26",
@@ -7241,6 +7346,10 @@
   "rc": 45,
   "title": "용사 파티 때려치웁니다"
  },
+ "용사파티만화": {
+  "checked": "2026-11-29",
+  "miss": true
+ },
  "용신의게임": {
   "author": "홍정훈",
   "checked": "2026-11-28",
@@ -7264,6 +7373,16 @@
    "novelpia": "https://novelpia.com/novel/113927"
   },
   "title": "우둔한 악마의 노예 기행기"
+ },
+ "우리집메이드는학교제일의미인입니다": {
+  "author": "S004",
+  "checked": "2026-11-29",
+  "done": true,
+  "id": 287511,
+  "links": {
+   "kakao": "https://page.kakao.com/content/68967200"
+  },
+  "title": "우리 집 메이드는 학교 제일의 미인입니다"
  },
  "우사히메카린버튜버가됩니다": {
   "author": "기린튀김",
@@ -7329,6 +7448,10 @@
   "r": 3.5,
   "rc": 1,
   "title": "원수를 지키는 망나니 기사"
+ },
+ "원피스": {
+  "checked": "2026-11-29",
+  "miss": true
  },
  "월스트리트천재의시한부투자법": {
   "author": "글망쟁이",
@@ -7400,6 +7523,20 @@
   "rc": 340,
   "title": "위저드 스톤"
  },
+ "유녀전기": {
+  "author": "카를로 젠",
+  "checked": "2026-11-29",
+  "done": true,
+  "id": 4222,
+  "links": {
+   "kakao": "https://page.kakao.com/content/50382013",
+   "naver": "https://series.naver.com/novel/detail.nhn?productNo=2797979",
+   "ridi": "https://ridibooks.com/books/111040177?_rdt_sid=category_books&_rdt_idx=19"
+  },
+  "r": 3.32,
+  "rc": 65,
+  "title": "유녀전기"
+ },
  "유랑기사와움직이는성": {
   "author": "구소재",
   "checked": "2026-11-26",
@@ -7470,6 +7607,19 @@
   "rc": 672,
   "title": "은둔형 마법사"
  },
+ "은하영웅전설": {
+  "author": "다나카 요시키",
+  "checked": "2026-11-29",
+  "done": true,
+  "id": 88946,
+  "links": {
+   "naver": "https://series.naver.com/novel/detail.series?productNo=1544457",
+   "ridi": "https://ridibooks.com/books/777001511?_rdt_sid=category_books&_rdt_idx=7"
+  },
+  "r": 4.24,
+  "rc": 474,
+  "title": "은하영웅전설"
+ },
  "은하천마전설": {
   "author": "아메리카노더블샷",
   "checked": "2026-11-25",
@@ -7478,6 +7628,15 @@
    "novelpia": "https://novelpia.com/novel/207906"
   },
   "title": "은하천마전설"
+ },
+ "은혼": {
+  "author": "┏飛上┛",
+  "checked": "2026-11-29",
+  "id": 311634,
+  "links": {
+   "joara": "https://www.joara.com/book/564438"
+  },
+  "title": "은혼"
  },
  "을위한세계는없다": {
   "author": "샤이닝",
@@ -7511,6 +7670,18 @@
   "r": 4.14,
   "rc": 396,
   "title": "의원님이 보우하사"
+ },
+ "의천도룡기": {
+  "author": "김용",
+  "checked": "2026-11-29",
+  "done": true,
+  "id": 167941,
+  "links": {
+   "ridi": "https://ridibooks.com/books/111013244?_rdt_sid=category_books&_rdt_idx=12"
+  },
+  "r": 3.25,
+  "rc": 4,
+  "title": "의천도룡기"
  },
  "이거럽코빙의물인가요": {
   "author": "두유하이볼",
