@@ -77,6 +77,7 @@
    - 확장 실제 동작: `ext-shot` 워크플로 수동 실행(PC 목록 1쪽 + 모바일 목록 m.dcinside 캡처) → 로그의 "밑줄 줄임말 수"·"모바일 목록"·팝업 내용 확인.
      실행은 `gh api -X POST repos/Janggal-C/dc-completed-novels/actions/workflows/ext-shot.yml/dispatches -f ref=main` (Claude 세션에서는 `gh workflow run`이 GraphQL 막힘으로 안 됨. `gh run list`·`gh api` REST는 됨)
    - 사이트 확인: Claude 세션에서 github.io·Pages 결과물 다운로드가 네트워크로 막히면 `python -m src.aggregate && python -m src.mentions` 후 `docs/`를 로컬 http 서버로 띄워 Playwright로 캡처(배포와 같은 명령, 생성 파일은 git 무시됨)
+   - **배포본 확인**: `ext-shot` 워크플로가 `scripts/site-shot.mjs`로 github.io 실제 사이트(PC 6탭 + 모바일 언급·완결)도 찍는다 → `shots` 브랜치 `site-*.png`·`site.txt`(탭별 표 줄·링크 수·페이지 오류·배포 데이터 갱신 시각). `git fetch origin shots && git show origin/shots:site.txt`로 본다 (2026-11-29)
    - 구조를 크게 바꾸거나 비용이 늘어나는 일은 하지 않고 제안만 보고
 9. **보고** (PushNotification, 2026-11-27 사용자 지시로 형식 고정): 아래 칸으로 나눠 짧게. 칸마다 확인·수정한 것, 문제 없으면 "이상 없음"
    - **실행 보고**: 어젯밤 매일 실행·배포·수집 성공/실패 단계

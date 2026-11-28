@@ -205,6 +205,13 @@ def run(cfg=None, run_stats=None, partial=False):
         "free_quota": 250,
         "daily": sorted([[k, v] for k, v in usage.items() if len(k) == 10])[-14:],
     }
+    # Serper (일회성 무료분, 지금 실제로 쓰는 구글 검색) — 지표 탭에 남은 횟수 표시
+    su = read_json(DICT / "serper_usage.json", {})
+    google_stats["serper"] = {
+        "total": su.get("total", 0), "limit": cfg.get("bulk", {}).get("total_limit", 0),
+        "today": su.get(now.strftime("%Y-%m-%d"), 0),
+        "daily": sorted([[k, v] for k, v in su.items() if len(k) == 10])[-14:],
+    }
     # 완결 목록에서 빠진 작품 (연재중·보류) — 확인용
     excluded = sorted(
         [{"title": title_of(w) if not w.startswith("?") else w[1:] + " (미확인)", "status": st["status"], "reason": st["reason"],

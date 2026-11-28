@@ -289,5 +289,12 @@
  "회귀수선전": {
   "checked": "2026-11-25",
   "miss": true
+ },
+ "내성좌가갤러리콘만보냄": {
+  "checked": "2026-11-29",
+  "links": {
+   "novelpia": "https://novelpia.com/novel/464072"
+  },
+  "via": "claude"
  }
 }

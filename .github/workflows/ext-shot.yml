@@ -24,6 +24,9 @@ jobs:
           if [ -n "$TARGETS" ]; then xvfb-run -a node scripts/ext-shot-target.mjs; else xvfb-run -a node scripts/ext-shot.mjs; fi
         env:
           TARGETS: ${{ inputs.targets }}
+      - name: 배포된 사이트 캡처 (Claude 세션에서는 github.io가 막혀서 여기서 찍음)
+        continue-on-error: true
+        run: node scripts/site-shot.mjs
       - name: 캡처를 shots 브랜치에 올림
         run: |
           cd shots && git init -q && git checkout -q -b shots

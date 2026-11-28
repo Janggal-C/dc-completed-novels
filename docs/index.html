@@ -473,11 +473,16 @@ function metrics() {
   const m = R.metrics, f = v => v == null ? "-" : v + "%", ds = R.dict_stats || {}, g = R.google || {};
   const tile = (k, v, sub) => `<div class="tile"><div class="v">${v}</div><div class="k">${k}</div>${sub || ""}</div>`;
   const viaLab = {google: "구글", google2: "구글", ai: "AI 검색", "직접 입력": "직접 입력", "검색": "검색"};
-  VIEW.innerHTML = `<div class="card"><div class="t">구글 검색 (SerpApi)</div><div class="tiles" style="margin-top:8px">
+  VIEW.innerHTML = `<div class="card"><div class="t">구글 검색 (SerpApi — Serper 무료분이 끝나면 씀)</div><div class="tiles" style="margin-top:8px">
       ${tile("오늘 사용", `${g.today ?? 0}<small style="font-size:14px"> / ${g.day_limit}</small>`, `<div class="bar"><i style="width:${Math.min(100, 100 * (g.today || 0) / (g.day_limit || 1))}%"></i></div>`)}
       ${tile("이번 달 사용", `${g.month ?? 0}<small style="font-size:14px"> / ${g.month_limit}</small>`, `<div class="bar"><i style="width:${Math.min(100, 100 * (g.month || 0) / (g.month_limit || 1))}%"></i></div>`)}
       ${tile("이번 달 무료 잔여", Math.max(0, (g.free_quota || 250) - (g.month || 0)))}</div>
     ${(g.daily || []).length ? `<table style="margin-top:10px"><tr><th>날짜</th><th class="n">검색</th></tr>${g.daily.slice().reverse().map(([d, n]) => `<tr><td>${d}</td><td class="n">${n}</td></tr>`).join("")}</table>` : ""}</div>
+    ${g.serper ? `<div class="card"><div class="t">구글 검색 (Serper 무료분 — 지금 쓰는 것)</div><div class="tiles" style="margin-top:8px">
+      ${tile("오늘 사용", g.serper.today ?? 0)}
+      ${tile("누적 사용", `${g.serper.total}<small style="font-size:14px"> / ${g.serper.limit}</small>`, `<div class="bar"><i style="width:${Math.min(100, 100 * g.serper.total / (g.serper.limit || 1))}%"></i></div>`)}
+      ${tile("남은 횟수", Math.max(0, g.serper.limit - g.serper.total))}</div>
+      ${(g.serper.daily || []).length ? `<table style="margin-top:10px"><tr><th>날짜</th><th class="n">검색</th></tr>${g.serper.daily.slice().reverse().slice(0, 7).map(([d, n]) => `<tr><td>${d}</td><td class="n">${n}</td></tr>`).join("")}</table>` : ""}</div>` : ""}
     <div class="card"><div class="t">줄임말 사전</div><div class="tiles" style="margin-top:8px">
       ${tile("등록된 줄임말", ds.aliases ?? "-")}${tile("작품 수", ds.works ?? "-")}
       ${tile("오늘 신규", ds.new_today ?? 0)}${tile("최근 7일 신규", ds.new_week ?? 0)}
